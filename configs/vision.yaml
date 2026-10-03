@@ -1,0 +1,22 @@
+backbone: ResNet18
+initialization: official_ImageNet_weights
+image_size: [224, 384]
+input: [front_rgb, vehicle_speed, navigation_command]
+output: lateral_waypoints
+lookahead_metres: [3, 6, 9, 12, 15]
+head: [256, 128, 5]
+optimizer: AdamW
+learning_rate: 0.0001
+weight_decay: 0.0001
+loss: SmoothL1
+suggested_epochs: 30
+batch_size: 16
+teacher: CARLA_lane_waypoints
+collection:
+  physics_delta_seconds: 0.1
+  image_resolution: [360, 640]
+  camera_fov: 90
+  initial_speed_mps: 3.0
+  steering_perturbation_std: 0.025
+# Current runnable implementation supports road-following with command 0.
+# Separate routes/towns should be reserved for a formal generalization evaluation.

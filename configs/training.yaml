@@ -1,0 +1,35 @@
+# Planned production curriculum. Each stage must pass held-out evaluation.
+physics_hz: 500
+control_hz: 50
+algorithm: PPO
+actor: [256, 256, 128]
+critic: [256, 256, 128]
+activation: ELU
+observation_dim: 112
+action_dim: 26
+action: 14_arm_joint_residuals_and_12_hand_joint_residuals
+learning_rate: 0.0003
+rollout_steps_per_env: 512
+batch_size: 256
+epochs: 10
+gamma: 0.99
+gae_lambda: 0.95
+clip_range: 0.2
+entropy_coefficient: 0.002
+initial_log_std: -2.0
+stages:
+  hold:
+    target: random_step
+    amplitude_deg: 15
+    suggested_steps: 2000000
+  track:
+    target: sine
+    amplitude_deg: 30
+    suggested_steps: 4000000
+  robust:
+    target: sine
+    amplitude_deg: 45
+    randomize: [wheel_damping, wheel_friction, contact_friction, target_phase]
+    suggested_steps: 4000000
+# These budgets are starting estimates, not a guarantee of convergence.
+# Regrasping is a later curriculum and needs a different controller/state machine.

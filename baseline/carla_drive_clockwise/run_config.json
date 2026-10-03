@@ -1,0 +1,39 @@
+{
+  "host": "127.0.0.1",
+  "port": 2000,
+  "map": "Town04",
+  "mode": "vision-robot",
+  "steps": 3000,
+  "spawn": 0,
+  "speed": 3.0,
+  "adaptive_speed": true,
+  "wheel_fullscale_deg": 90.0,
+  "wheel_sign": 1.0,
+  "robot_policy": "runs/ppo_track/best/best_model.zip",
+  "robot_guard": true,
+  "target_rate_deg": 20.0,
+  "integral_gain": 1.0,
+  "vision_policy": "runs/vision_routes/best.pt",
+  "path_geometry": "fixed",
+  "navigation": "route",
+  "device": "cuda",
+  "output": "outputs/carla_drive_clockwise",
+  "video": true,
+  "stop_on_collision": true,
+  "viewer": false,
+  "seed": 7,
+  "collect_noise": 0.025,
+  "server_version": "0.9.15",
+  "policy_sha256": {
+    "robot": "33fc3da108bfed55917d86b248a4c12a45fdf787dd269e6cb72019a88f5c53b5",
+    "vision": "d462b6629da0cc69cd6e16b9f75fd0131548a1115d7975d4e39499e73f27348e"
+  },
+  "max_front_angle_degrees": 69.99999237060547,
+  "camera": {
+    "width": 640,
+    "height": 360,
+    "fov_degrees": 90,
+    "mount_x_m": 0.8,
+    "mount_z_m": 1.5
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "mode": "vision-robot",
+  "frames": 3000,
+  "requested_frames": 3000,
+  "completed": true,
+  "collisions": 0,
+  "lane_invasions": 4,
+  "first_collision_time_s": null,
+  "lane_error_mean_m": 0.7528150679818355,
+  "lateral_error_abs_mean_m": 0.6582139100576619,
+  "lateral_error_abs_max_m": 1.9643858744005873,
+  "distance_m": 412.67702015236335,
+  "speed_mean_mps": 1.3744040540553384,
+  "sim_seconds": 300.0,
+  "wall_seconds": 138.77811797399772,
+  "navigation": "route",
+  "lane_marking_events": {
+    "Solid": 3,
+    "Broken": 1
+  },
+  "wheel_fullscale_deg": 90.0,
+  "target_clipped_fraction": 0.0,
+  "target_rate_limited_fraction": 0.001,
+  "wheel_tracking_rmse_deg": 8.547314952217885,
+  "sampled_hand_contact_fraction": 0.9953333333333333,
+  "sampled_peak_contact_force_N": 103.61693785781362,
+  "wheel_to_vehicle_max_error": 0.06145463606710996
+}
