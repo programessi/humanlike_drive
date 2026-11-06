@@ -1,0 +1,133 @@
+{
+  "interface": "driving-v9-all-compatible-forbidden-physical-pairs",
+  "speed_deg_s": 5.0,
+  "acceleration_deg_s2": 40.0,
+  "tangent_geometry": "results/driving_r0_geometry_roll_v1/summary.json",
+  "phase_lead_deg": 30.0,
+  "demonstrator": {
+    "angle_gain": 6.0,
+    "preview_seconds": 0.15,
+    "position_gain": 3.0,
+    "orientation_gain": 3.0,
+    "hand_gain": 0.1
+  },
+  "criteria": "complete; motionRMSE<=1deg; every stop final3s physics peak<=1deg; overall>=95%, each direction>=90%; any physical/QP hard failure rejects candidate",
+  "template": "short=3s endpoint and zero holds;long=10s holds;sequence=two opposite complete roundtrips with3s holds",
+  "independence": "Physical diagnostic46301 consumed. Training48001/48011;development49001/49011; independent55001..55100 reserved. Previous430xx now consumed for R1.",
+  "physical_scene": "original +/-450deg; all physical gates and v4 execution unchanged",
+  "experiment": "driving-R2-command-wrist-phase-closed-contact-v50",
+  "cases": [
+    [
+      180,
+      -1,
+      "short",
+      48071,
+      {
+        "expert_parameters": {
+          "load_servo_gain": 0.0
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      48071,
+      {
+        "expert_parameters": {
+          "load_servo_gain": 0.2
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      48071,
+      {
+        "expert_parameters": {
+          "load_servo_gain": 0.6
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      48071,
+      {
+        "expert_parameters": {
+          "load_servo_gain": 0.0
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      48071,
+      {
+        "expert_parameters": {
+          "load_servo_gain": 0.2
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      48071,
+      {
+        "expert_parameters": {
+          "load_servo_gain": 0.6
+        }
+      }
+    ]
+  ],
+  "expert_type": "shuffle",
+  "scope": "Training-only ipsilateral early-regrasp driving-style variant. Original fixed-upper-to180 remains unproven. Same24 actions; unchanged physical safety and load. No script at learned evaluation.",
+  "correction": "Release before withdrawal; park phase lies beyond the release band plus phase lead. Earlier candidates could stall the rim while the lower hand was still closed.",
+  "arm_command_margin_deg": 4.0,
+  "guard_elbows_against_wheel": true,
+  "retain_preparation_hand_command": true,
+  "qp_backend": "active-set",
+  "canonical_distance_guard_order": true,
+  "shuffle_parameters": {
+    "release_start_deg": 5.0,
+    "release_end_deg": 20.0,
+    "cycle_start_deg": 20.0,
+    "clearance_m": 0.07,
+    "contact_seconds": 0.4,
+    "min_contact_force_n": 8.0,
+    "pregrasp_thumb_yaw": 1.0,
+    "pregrasp_thumb_pitch": 0.18,
+    "approach_tolerance_m": 0.003,
+    "verify_thumb_before_transfer": true,
+    "opposite_regrasp": true,
+    "enforce_free_phase_unwind": true,
+    "follow_reference_direction": true,
+    "gradual_load_transfer": true,
+    "rebase_on_contact": false,
+    "free_axial_plane_m": null,
+    "arc_relocate": true,
+    "transfer_ramp_seconds": 1.0,
+    "free_orientation_speed_deg_s": 50.0,
+    "free_arc_radius_m": 0.22,
+    "adaptive_pitch_soft_rad": 0.32,
+    "park_after_two_transfers": false,
+    "ipsilateral_regrasp": true,
+    "ipsilateral_span_deg": 35.0,
+    "support_extra_rad": 0.0,
+    "adaptive_grasp_roll_gain": 0.0,
+    "ipsilateral_signed_cycle": false,
+    "drive_from_wrist_phase": true
+  },
+  "guard_opposite_hand_meshes": true,
+  "collision_guard_margin_m": 0.025,
+  "collision_guard_activation_m": 0.06,
+  "controller": {
+    "wrist_linear_speed": 0.1,
+    "wrist_angular_speed_deg": 60.0
+  },
+  "guard_full_physical_pairs": true
+}

@@ -1,0 +1,15 @@
+# Frozen-weight protocol. No optimizer updates in this diagnostic command.
+initial_checkpoint: runs/m2_smoke_seed7_v1/initial.pt
+final_checkpoint: runs/m2_smoke_seed7_v1/final.pt
+archived_result: results/m2_smoke_seed7_v1
+workers: 4
+noise_seeds: [101,102,103,104,105,106,107,108,109,110]
+hold_seconds: 3.0
+probe_amplitude_deg: 5.0
+probe_seconds: 1.5
+probe_anchors: [initial,neutral_1s,positive_approach_2s]
+baseline_std: [0.35,0.50]
+arm_low_std: [0.10,0.50]
+hand_low_std: [0.35,0.15]
+combined_std: [0.10,0.15]
+combine_rule: lexicographic_hold_success_then_safety_then_completed_rmse_10percent

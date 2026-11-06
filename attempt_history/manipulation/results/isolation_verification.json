@@ -1,0 +1,17 @@
+{
+  "task": "manipulation",
+  "cross_project_import_guard_passed": true,
+  "qpos_exactly_equal": true,
+  "actions_exactly_equal": true,
+  "steps": 20,
+  "scene_regeneration_identical": true,
+  "package_root": "/home/nubot/humanlike_drive/manipulation",
+  "checkpoint_loaded": true,
+  "tests_passed": 10,
+  "test_log": "results/isolation_tests.log",
+  "cli_smoke": {
+    "seconds": 2,
+    "completed": true,
+    "directory": "outputs/isolation_smoke"
+  }
+}

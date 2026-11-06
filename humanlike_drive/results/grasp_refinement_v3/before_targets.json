@@ -1,0 +1,73 @@
+{
+  "version": 2,
+  "description": "Active hand target in the wheel frame at 9/3; reflect for the right hand and rotate for upper-rim grasps. Mimic ratios are imported separately from the matching URDF.",
+  "active_grasp": {
+    "grip_pose": {
+      "position_m": [
+        -0.013245609522591344,
+        0.13233057395795067,
+        -0.0026677187767941875
+      ],
+      "rotation_matrix": [
+        [
+          0.8453902156348196,
+          -0.1695450200733082,
+          -0.5065272642980395
+        ],
+        [
+          0.24088423764737907,
+          0.9673961764320808,
+          0.07822673377836882
+        ],
+        [
+          0.47674958559180225,
+          -0.18814654924534852,
+          0.8586679851054844
+        ]
+      ]
+    },
+    "hand_drives": [
+      0.5,
+      0.23,
+      0.8700668108579016,
+      0.9857891116881708,
+      1.1238544181958683,
+      0.95
+    ],
+    "approach_seconds": 1.0
+  },
+  "labels": {
+    "nine_three": "9 / 3 \u00b7 palm, four fingers and light thumb contact",
+    "ten_two": "10 / 2 \u00b7 enveloping contact",
+    "left_support": "Left enveloping support / right hand clear",
+    "right_support": "Right enveloping support / left hand clear"
+  },
+  "presets": {
+    "ten_two": {
+      "grip_pose": {
+        "position_m": [
+          -0.010245609522591344,
+          0.13233057395795067,
+          -0.0026677187767941875
+        ],
+        "rotation_matrix": [
+          [
+            0.8192804922750947,
+            -0.1594658349471972,
+            -0.5507722963821556
+          ],
+          [
+            0.24088423764737904,
+            0.9673961764320806,
+            0.0782267337783688
+          ],
+          [
+            0.5203405221876541,
+            -0.1967620016903266,
+            0.830981621734377
+          ]
+        ]
+      }
+    }
+  }
+}

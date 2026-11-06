@@ -1,0 +1,69 @@
+{
+  "case": [
+    180,
+    -1,
+    "short",
+    49101,
+    {
+      "phase_deg": 2.0
+    }
+  ],
+  "amplitude_deg": 180,
+  "direction": -1,
+  "template": "short",
+  "seed": 49101,
+  "complete": true,
+  "passed": true,
+  "hard_failure": false,
+  "termination_reason": "",
+  "planned_seconds": 142.8,
+  "actual_seconds": 142.79999999999822,
+  "samples": 2856,
+  "full_rmse_deg": 0.5808301210487231,
+  "prefix_rmse_deg": 0.5808301210487231,
+  "motion_rmse_deg": 0.5945854663346514,
+  "segment_rmse_deg": [
+    0.47406806899987225,
+    0.6962099140151002
+  ],
+  "stop_peaks_deg": [
+    0.0520440795132948,
+    0.0064970878366650145
+  ],
+  "peak_error_deg": 3.542975795668211,
+  "min_arm_margin_deg": 2.5480392957798847,
+  "collision_peak_n": 0.0,
+  "qp_failures": 0,
+  "initial_wheel_deg": 3.4088076384542316,
+  "qp_diagnostic": {
+    "reason": "optimal",
+    "iterations": 2,
+    "primal_residual": 0.0,
+    "dual_residual": 1.0164395367051604e-20
+  },
+  "joint_violations_at_end": [],
+  "expert_events": null,
+  "timeline": {
+    "seconds": 142.8,
+    "hold_seconds": 3.0,
+    "segments": [
+      {
+        "start": 0.5,
+        "end": 69.27830286442034,
+        "hold_end": 72.27830286442034,
+        "initial": 0.05949491685815881,
+        "target": -3.141592653589793
+      },
+      {
+        "start": 72.27830286442034,
+        "end": 139.77830286442034,
+        "hold_end": 142.77830286442034,
+        "initial": -3.141592653589793,
+        "target": 0.0
+      }
+    ]
+  },
+  "expert_probability": null,
+  "learned_evaluation": true,
+  "wall_seconds": 68.15815078699961
+}

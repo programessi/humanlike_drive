@@ -1,0 +1,326 @@
+[
+  {
+    "key": "U99EXDRX",
+    "itemID": 696,
+    "folder": "01_旋转与换握/DIPS",
+    "collectionID": 36
+  },
+  {
+    "key": "TUXQ9UU2",
+    "itemID": 699,
+    "folder": "01_旋转与换握/DexMani",
+    "collectionID": 36
+  },
+  {
+    "key": "A8C33MTP",
+    "itemID": 702,
+    "folder": "01_旋转与换握/DexScrew",
+    "collectionID": 36
+  },
+  {
+    "key": "JL5KLLUE",
+    "itemID": 707,
+    "folder": "01_旋转与换握/DexterityGen",
+    "collectionID": 36
+  },
+  {
+    "key": "ISUBIIPM",
+    "itemID": 710,
+    "folder": "01_旋转与换握/HORA",
+    "collectionID": 36
+  },
+  {
+    "key": "KEW9U265",
+    "itemID": 714,
+    "folder": "01_旋转与换握/Proprioceptive_Transformer",
+    "collectionID": 36
+  },
+  {
+    "key": "S9BM8SZF",
+    "itemID": 719,
+    "folder": "02_双臂双手协同/AsymDex",
+    "collectionID": 37
+  },
+  {
+    "key": "V5MEDCUZ",
+    "itemID": 723,
+    "folder": "02_双臂双手协同/BiDexHD",
+    "collectionID": 37
+  },
+  {
+    "key": "MIETF9GD",
+    "itemID": 727,
+    "folder": "02_双臂双手协同/CHORD",
+    "collectionID": 37
+  },
+  {
+    "key": "7GUZ9HHY",
+    "itemID": 731,
+    "folder": "02_双臂双手协同/DexImit",
+    "collectionID": 37
+  },
+  {
+    "key": "FAEGT78X",
+    "itemID": 735,
+    "folder": "02_双臂双手协同/DexMachina",
+    "collectionID": 37
+  },
+  {
+    "key": "CWWMGFTR",
+    "itemID": 737,
+    "folder": "02_双臂双手协同/DexMimicGen",
+    "collectionID": 37
+  },
+  {
+    "key": "7CYDYRSN",
+    "itemID": 741,
+    "folder": "02_双臂双手协同/Grasp2Twist",
+    "collectionID": 37
+  },
+  {
+    "key": "IFJIHG5A",
+    "itemID": 744,
+    "folder": "02_双臂双手协同/HATO",
+    "collectionID": 37
+  },
+  {
+    "key": "EG7HCRLW",
+    "itemID": 747,
+    "folder": "02_双臂双手协同/PatternDex",
+    "collectionID": 37
+  },
+  {
+    "key": "Y9GIF5JK",
+    "itemID": 750,
+    "folder": "02_双臂双手协同/PhysGraph",
+    "collectionID": 37
+  },
+  {
+    "key": "QS8H8Z94",
+    "itemID": 753,
+    "folder": "02_双臂双手协同/Twisting_Lids",
+    "collectionID": 37
+  },
+  {
+    "key": "SNFXW497",
+    "itemID": 756,
+    "folder": "03_sim2real/Dactyl",
+    "collectionID": 38
+  },
+  {
+    "key": "DW8GYD3C",
+    "itemID": 761,
+    "folder": "03_sim2real/DeXtreme",
+    "collectionID": 38
+  },
+  {
+    "key": "CR7D79FV",
+    "itemID": 765,
+    "folder": "03_sim2real/DexCtrl",
+    "collectionID": 38
+  },
+  {
+    "key": "KRRG2AKD",
+    "itemID": 769,
+    "folder": "03_sim2real/DexNDM",
+    "collectionID": 38
+  },
+  {
+    "key": "83IE45ZS",
+    "itemID": 771,
+    "folder": "03_sim2real/IndustReal",
+    "collectionID": 38
+  },
+  {
+    "key": "GMUSNAVK",
+    "itemID": 775,
+    "folder": "03_sim2real/Inspire_Articulated_Tools",
+    "collectionID": 38
+  },
+  {
+    "key": "Y8LMNRCD",
+    "itemID": 779,
+    "folder": "03_sim2real/Rubiks_Cube",
+    "collectionID": 38
+  },
+  {
+    "key": "WDKBFKKT",
+    "itemID": 783,
+    "folder": "03_sim2real/SimToolReal",
+    "collectionID": 38
+  },
+  {
+    "key": "8GE6LPGF",
+    "itemID": 786,
+    "folder": "03_sim2real/TRANSIC",
+    "collectionID": 38
+  },
+  {
+    "key": "URVR6BDL",
+    "itemID": 791,
+    "folder": "04_阀门与手部硬件/ArticuBot",
+    "collectionID": 39
+  },
+  {
+    "key": "CNHE5BN4",
+    "itemID": 793,
+    "folder": "04_阀门与手部硬件/Atlas_Valve",
+    "collectionID": 39
+  },
+  {
+    "key": "C2TTN4B8",
+    "itemID": 795,
+    "folder": "04_阀门与手部硬件/COMAN_Valve",
+    "collectionID": 39
+  },
+  {
+    "key": "IQVDE6QA",
+    "itemID": 797,
+    "folder": "04_阀门与手部硬件/CyberDemo",
+    "collectionID": 39
+  },
+  {
+    "key": "KBZCXBIC",
+    "itemID": 800,
+    "folder": "04_阀门与手部硬件/DClaw",
+    "collectionID": 39
+  },
+  {
+    "key": "CL9CKXMV",
+    "itemID": 804,
+    "folder": "04_阀门与手部硬件/DexArt",
+    "collectionID": 39
+  },
+  {
+    "key": "N7UI257V",
+    "itemID": 808,
+    "folder": "04_阀门与手部硬件/Inspire_RH56DFX",
+    "collectionID": 39
+  },
+  {
+    "key": "PBMHPTG5",
+    "itemID": 812,
+    "folder": "04_阀门与手部硬件/RBO_Hand",
+    "collectionID": 39
+  },
+  {
+    "key": "4LFLU5S9",
+    "itemID": 816,
+    "folder": "05_人形驾驶与驾驶行为/Humanoid_Steering_Admittance",
+    "collectionID": 40
+  },
+  {
+    "key": "5BQQ5VNA",
+    "itemID": 818,
+    "folder": "05_人形驾驶与驾驶行为/Musashi_Driving",
+    "collectionID": 40
+  },
+  {
+    "key": "T6LUDYDM",
+    "itemID": 822,
+    "folder": "05_人形驾驶与驾驶行为/Natural_Driving_Hand_Position",
+    "collectionID": 40
+  },
+  {
+    "key": "KAWRYX33",
+    "itemID": 824,
+    "folder": "05_人形驾驶与驾驶行为/Steering_Hand_Coordination",
+    "collectionID": 40
+  },
+  {
+    "key": "7BG5LX4D",
+    "itemID": 826,
+    "folder": "05_人形驾驶与驾驶行为/Steering_Hand_Position_Differences",
+    "collectionID": 40
+  },
+  {
+    "key": "N7WQM6HG",
+    "itemID": 829,
+    "folder": "05_人形驾驶与驾驶行为/Steering_Low_Speed_Maneuvers",
+    "collectionID": 40
+  },
+  {
+    "key": "LN7MCHF3",
+    "itemID": 831,
+    "folder": "06_视觉与通用操作/CoDex",
+    "collectionID": 41
+  },
+  {
+    "key": "4HEDNZ5U",
+    "itemID": 834,
+    "folder": "06_视觉与通用操作/DextrAH_RGB",
+    "collectionID": 41
+  },
+  {
+    "key": "46EYVCQI",
+    "itemID": 837,
+    "folder": "06_视觉与通用操作/Extrinsic_Dexterity",
+    "collectionID": 41
+  },
+  {
+    "key": "ISVLJME6",
+    "itemID": 840,
+    "folder": "06_视觉与通用操作/One_Hand_to_Rule_Them_All",
+    "collectionID": 41
+  },
+  {
+    "key": "IVDDXN65",
+    "itemID": 843,
+    "folder": "06_视觉与通用操作/ViserDex",
+    "collectionID": 41
+  },
+  {
+    "key": "QHV7LUJD",
+    "itemID": 846,
+    "folder": "07_抓持承载与拖拉/GD2P",
+    "collectionID": 42
+  },
+  {
+    "key": "K3H7U3W4",
+    "itemID": 850,
+    "folder": "07_抓持承载与拖拉/Grasp_Reflex",
+    "collectionID": 42
+  },
+  {
+    "key": "7WDS38YY",
+    "itemID": 854,
+    "folder": "07_抓持承载与拖拉/Grasp_to_Act",
+    "collectionID": 42
+  },
+  {
+    "key": "Q3WKADSD",
+    "itemID": 858,
+    "folder": "07_抓持承载与拖拉/HANDFUL",
+    "collectionID": 42
+  },
+  {
+    "key": "PXL5FJPT",
+    "itemID": 862,
+    "folder": "07_抓持承载与拖拉/Multi_Contact_Grasp_Control",
+    "collectionID": 42
+  },
+  {
+    "key": "ZS4D6EJQ",
+    "itemID": 866,
+    "folder": "07_抓持承载与拖拉/Rickshaw_Pulling",
+    "collectionID": 42
+  },
+  {
+    "key": "6CTX5WKS",
+    "itemID": 869,
+    "folder": "07_抓持承载与拖拉/TAC_LOCO",
+    "collectionID": 42
+  },
+  {
+    "key": "X8T6VUD2",
+    "itemID": 874,
+    "folder": "07_抓持承载与拖拉/TaskDexGrasp",
+    "collectionID": 42
+  },
+  {
+    "key": "IZM8JAKZ",
+    "itemID": 878,
+    "folder": "07_抓持承载与拖拉/Whole_Hand_Force_Regulation",
+    "collectionID": 42
+  }
+]

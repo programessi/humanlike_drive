@@ -1,0 +1,26 @@
+{
+  "driving_r2_conservative_clearance_v73": {
+    "count": 4,
+    "passes": 4,
+    "hard_failures": 0,
+    "worst_motion_rmse_deg": 0.6074457608561452,
+    "worst_stop_peak_deg": 0.3397268406576983,
+    "minimum_arm_margin_deg": 2.1198612874564704
+  },
+  "driving_r2_history_aligned_labels_v77": {
+    "count": 12,
+    "passes": 12,
+    "hard_failures": 0,
+    "worst_motion_rmse_deg": 0.6218705267238235,
+    "worst_stop_peak_deg": 0.5231382323996436,
+    "minimum_arm_margin_deg": 2.1402732567466365
+  },
+  "driving_r2_initial_phase_audit_v89": {
+    "count": 4,
+    "passes": 4,
+    "hard_failures": 0,
+    "worst_motion_rmse_deg": 0.602594535138506,
+    "worst_stop_peak_deg": 0.591093404028324,
+    "minimum_arm_margin_deg": 2.2955935715205222
+  }
+}

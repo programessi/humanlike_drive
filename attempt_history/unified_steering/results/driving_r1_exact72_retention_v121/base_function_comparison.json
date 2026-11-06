@@ -1,0 +1,13 @@
+{
+  "compared_cases": 72,
+  "reference_version": "v119",
+  "current_version": "v121",
+  "max_absolute_differences": {
+    "angle_deg": 0.0,
+    "target_deg": 0.0,
+    "forces_n": 0.0,
+    "active_q": 0.0
+  },
+  "all_physical_fields_exact": true,
+  "independent": false
+}

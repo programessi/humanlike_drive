@@ -1,0 +1,234 @@
+[
+  {
+    "direction": -1,
+    "seed": 55031,
+    "template": "sequence",
+    "v119": {
+      "record": "results/driving_r2_independent_v119/cases/a180_d-1_sequence_s55031_b9085cc3f1.json",
+      "complete": false,
+      "passed": false,
+      "hard_failure": true,
+      "reason": "joint_limit",
+      "motion_rmse_deg": null,
+      "stop_peak_deg": null,
+      "initial_left_finger_target_mean": 1.152116298675537,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 136.34999999999675,
+          "left_finger_target_mean": 1.3018654584884644
+        }
+      ]
+    },
+    "v120": {
+      "record": "results/driving_r2_fixed_hand_anchor_sentinel_v120/cases/a180_d-1_sequence_s55031_b9085cc3f1.json",
+      "complete": true,
+      "passed": true,
+      "hard_failure": false,
+      "reason": "",
+      "motion_rmse_deg": 0.6088252533218412,
+      "stop_peak_deg": 0.8362927686322261,
+      "initial_left_finger_target_mean": 1.152116298675537,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 136.34999999999675,
+          "left_finger_target_mean": 1.152116060256958
+        }
+      ]
+    },
+    "v121": {
+      "record": "results/driving_r2_phase_bound_sentinel_v121/cases/a180_d-1_sequence_s55031_b9085cc3f1.json",
+      "complete": true,
+      "passed": true,
+      "hard_failure": false,
+      "reason": "",
+      "motion_rmse_deg": 0.6152224936781636,
+      "stop_peak_deg": 0.07166091864018849,
+      "initial_left_finger_target_mean": 1.152116298675537,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 136.34999999999675,
+          "left_finger_target_mean": 1.152116060256958
+        }
+      ]
+    }
+  },
+  {
+    "direction": -1,
+    "seed": 55051,
+    "template": "sequence",
+    "v119": {
+      "record": "results/driving_r2_independent_v119/cases/a180_d-1_sequence_s55051_b9085cc3f1.json",
+      "complete": true,
+      "passed": false,
+      "hard_failure": false,
+      "reason": "",
+      "motion_rmse_deg": 0.5717242543235695,
+      "stop_peak_deg": 1.0198560044358413,
+      "initial_left_finger_target_mean": 1.1449335813522339,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 136.5999999999968,
+          "left_finger_target_mean": 1.2949249744415283
+        },
+        {
+          "time_s": 280.5500000000295,
+          "left_finger_target_mean": 1.4449430704116821
+        }
+      ]
+    },
+    "v120": {
+      "record": "results/driving_r2_fixed_hand_anchor_sentinel_v120/cases/a180_d-1_sequence_s55051_b9085cc3f1.json",
+      "complete": true,
+      "passed": false,
+      "hard_failure": false,
+      "reason": "",
+      "motion_rmse_deg": 0.845504409881219,
+      "stop_peak_deg": 1.3220382918746807,
+      "initial_left_finger_target_mean": 1.1449335813522339,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 136.5999999999968,
+          "left_finger_target_mean": 1.1449334621429443
+        }
+      ]
+    },
+    "v121": {
+      "record": "results/driving_r2_phase_bound_sentinel_v121/cases/a180_d-1_sequence_s55051_b9085cc3f1.json",
+      "complete": true,
+      "passed": true,
+      "hard_failure": false,
+      "reason": "",
+      "motion_rmse_deg": 0.6130591113525163,
+      "stop_peak_deg": 0.08293155443055873,
+      "initial_left_finger_target_mean": 1.1449335813522339,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 136.5999999999968,
+          "left_finger_target_mean": 1.1449334621429443
+        }
+      ]
+    }
+  },
+  {
+    "direction": -1,
+    "seed": 49011,
+    "template": "sequence",
+    "v119": {
+      "record": "results/driving_unified_sentinel_v119/cases/a180_d-1_sequence_s49011.json",
+      "complete": true,
+      "passed": true,
+      "hard_failure": false,
+      "reason": "",
+      "motion_rmse_deg": 0.589617319842273,
+      "stop_peak_deg": 0.31535364992271653,
+      "initial_left_finger_target_mean": 1.1503627300262451,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 136.29999999999674,
+          "left_finger_target_mean": 1.3003841638565063
+        },
+        {
+          "time_s": 279.1500000000292,
+          "left_finger_target_mean": 1.4495381116867065
+        }
+      ]
+    },
+    "v120": {
+      "record": "results/driving_r2_fixed_hand_anchor_sentinel_v120/cases/a180_d-1_sequence_s49011.json",
+      "complete": true,
+      "passed": true,
+      "hard_failure": false,
+      "reason": "",
+      "motion_rmse_deg": 0.5782907032220708,
+      "stop_peak_deg": 0.4556443290493725,
+      "initial_left_finger_target_mean": 1.1503627300262451,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 136.29999999999674,
+          "left_finger_target_mean": 1.1503627300262451
+        }
+      ]
+    },
+    "v121": {
+      "record": "results/driving_r2_phase_bound_sentinel_v121/cases/a180_d-1_sequence_s49011.json",
+      "complete": true,
+      "passed": true,
+      "hard_failure": false,
+      "reason": "",
+      "motion_rmse_deg": 0.6234426395709756,
+      "stop_peak_deg": 0.04036978923625408,
+      "initial_left_finger_target_mean": 1.1503627300262451,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 136.29999999999674,
+          "left_finger_target_mean": 1.1503627300262451
+        }
+      ]
+    }
+  },
+  {
+    "direction": 1,
+    "seed": 49011,
+    "template": "sequence",
+    "v119": {
+      "record": "results/driving_unified_sentinel_v119/cases/a180_d+1_sequence_s49011.json",
+      "complete": true,
+      "passed": true,
+      "hard_failure": false,
+      "reason": "",
+      "motion_rmse_deg": 0.5531888156045408,
+      "stop_peak_deg": 0.14011639089803668,
+      "initial_left_finger_target_mean": 1.1503627300262451,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 134.7999999999964,
+          "left_finger_target_mean": 1.3003545999526978
+        },
+        {
+          "time_s": 275.35000000002833,
+          "left_finger_target_mean": 1.4502685070037842
+        }
+      ]
+    },
+    "v120": {
+      "record": "results/driving_r2_fixed_hand_anchor_sentinel_v120/cases/a180_d+1_sequence_s49011.json",
+      "complete": true,
+      "passed": true,
+      "hard_failure": false,
+      "reason": "",
+      "motion_rmse_deg": 0.6212866824576241,
+      "stop_peak_deg": 0.04960237134067547,
+      "initial_left_finger_target_mean": 1.1503627300262451,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 134.7999999999964,
+          "left_finger_target_mean": 1.1503627300262451
+        },
+        {
+          "time_s": 275.80000000002843,
+          "left_finger_target_mean": 1.1503627300262451
+        }
+      ]
+    },
+    "v121": {
+      "record": "results/driving_r2_phase_bound_sentinel_v121/cases/a180_d+1_sequence_s49011.json",
+      "complete": true,
+      "passed": true,
+      "hard_failure": false,
+      "reason": "",
+      "motion_rmse_deg": 0.6219611327161089,
+      "stop_peak_deg": 0.04960237134067547,
+      "initial_left_finger_target_mean": 1.1503627300262451,
+      "after_internal_anchor_updates": [
+        {
+          "time_s": 134.7999999999964,
+          "left_finger_target_mean": 1.1503627300262451
+        },
+        {
+          "time_s": 275.7500000000284,
+          "left_finger_target_mean": 1.1503627300262451
+        }
+      ]
+    }
+  }
+]

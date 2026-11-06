@@ -1,0 +1,413 @@
+{
+  "baseline_git_commit": "9b4c65fcfe21d9c85e9065c47295a5811c3b5de9",
+  "policy": "track PPO, deterministic inference",
+  "target_hz": 10,
+  "control_hz": 50,
+  "physics_hz": 500,
+  "force_peak_hz": 500,
+  "target_rate_deg_s": 20,
+  "integral_gain": 1,
+  "guard": true,
+  "nominal_seed": 7,
+  "randomized_seeds": [
+    101,
+    102,
+    103
+  ],
+  "observer_validation": {
+    "steps": 100,
+    "max_state_observation_reward_difference": 0.0,
+    "wheel_actuator_present": false
+  },
+  "hashes": {
+    "runs/ppo_track/best/best_model.zip": "33fc3da108bfed55917d86b248a4c12a45fdf787dd269e6cb72019a88f5c53b5",
+    "outputs/carla_drive_clockwise/drive_metrics.csv": "f3a45c0c39a32571f6f0a8c63341702301a978761a72244aa5241c6053561472",
+    "assets/cockpit.xml": "6e99c9134fd8d77cf4684ba9784b750aec527fde4ef7362fcc48e8de4661155e",
+    "assets/cockpit.ik.npz": "23579a1df3dc8decbf05cce2b495490a30289575460ed94637cfa8b1c9d5cb05",
+    "humanlike_drive/env.py": "0f3394f416c46ed61d3a235ef94c55ad36f8ce5f271c9f40f8b6d41509e313bc",
+    "humanlike_drive/controller.py": "951af8ce71e80e4942fb438da7b93c48b6b851749f7bb208e553adbddd35bc5b",
+    "humanlike_drive/carla_bridge.py": "ab23ef62490dd29e0c58ce60852a8ee824f5f0b758cb775b527ac5790d7a0855"
+  },
+  "cases": [
+    {
+      "name": "hold_center",
+      "mode": "hold",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "hold_center",
+      "mode": "hold",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "hold_pos15",
+      "mode": "hold",
+      "amplitude_deg": 15,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "hold_pos15",
+      "mode": "hold",
+      "amplitude_deg": 15,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "hold_neg15",
+      "mode": "hold",
+      "amplitude_deg": -15,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "hold_neg15",
+      "mode": "hold",
+      "amplitude_deg": -15,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "hold_pos30",
+      "mode": "hold",
+      "amplitude_deg": 30,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "hold_pos30",
+      "mode": "hold",
+      "amplitude_deg": 30,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "hold_neg30",
+      "mode": "hold",
+      "amplitude_deg": -30,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "hold_neg30",
+      "mode": "hold",
+      "amplitude_deg": -30,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "sine15_slow",
+      "mode": "sine",
+      "amplitude_deg": 15,
+      "frequency_hz": 0.02,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "sine15_slow",
+      "mode": "sine",
+      "amplitude_deg": 15,
+      "frequency_hz": 0.02,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "sine30_slow",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.02,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "sine30_slow",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.02,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "stop_reverse",
+      "mode": "sequence",
+      "amplitude_deg": 30,
+      "frequency_hz": 0,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "stop_reverse",
+      "mode": "sequence",
+      "amplitude_deg": 30,
+      "frequency_hz": 0,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "no_contact",
+      "mode": "sine",
+      "amplitude_deg": 15,
+      "frequency_hz": 0.1,
+      "seconds": 10,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": true
+    },
+    {
+      "name": "no_contact",
+      "mode": "sine",
+      "amplitude_deg": 15,
+      "frequency_hz": 0.1,
+      "seconds": 10,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": true
+    },
+    {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 101,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 101,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 101,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 101,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 102,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 102,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 102,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 102,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 103,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 103,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 103,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 103,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    }
+  ],
+  "versions": {
+    "mujoco": "3.3.2",
+    "torch": "2.7.0+cu126",
+    "numpy": "2.2.6"
+  },
+  "note": "No training, regrasp, state writes, wheel actuator, CARLA, or real hardware. Production termination remains at 50 Hz; 500 Hz force telemetry does not change it."
+}

@@ -1,0 +1,29 @@
+# M1 environment only; no neural policy or PPO yet.
+scene: assets/scene.xml
+policy_hz: 20
+episode_seconds: 10.0
+initial_support: mixed
+initial_state_directories:
+  - assets/initial_states/s00_support_v1
+  - assets/initial_states/m1_both_v1
+wheel_load:
+  center_angle_deg: 0.0
+  centering_stiffness_nm_per_rad: 0.3
+  centering_torque_limit_nm: 1.0
+  viscous_damping_nm_s_per_rad: 0.15
+  coulomb_friction_nm: 0.03
+reference:
+  mode: roundtrip
+  amplitude_deg: 5.0
+  speed_deg_s: 10.0
+  acceleration_deg_s2: 30.0
+  hold_seconds: 1.0
+reward_weights:
+  tracking: 2.0
+  speed: 0.5
+  error: -0.2
+  margin: -0.2
+  clearance: -0.1
+  smooth: -0.02
+  effort: -0.005
+  failure: -20.0

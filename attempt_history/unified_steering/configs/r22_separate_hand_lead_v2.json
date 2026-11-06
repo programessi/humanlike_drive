@@ -1,0 +1,23 @@
+{
+  "experiment": "R2.2-separate-hand-lead-v2",
+  "parent": "runs/r2_sigma2_comparison_v1/qualified_development.zip",
+  "paired_control": "runs/r22_balanced_course_v2",
+  "only_learning_execution_change_relative_to_paired_control": "Hand target lead0.087266rad ->0.15rad. Arm lead remains5deg; both runs use identical64-episode balanced curriculum and evaluation protocol.",
+  "interface": "structured-wrist-teacher-v4-separate-hand-lead",
+  "hand_joint_lead_rad": 0.15,
+  "arm_joint_lead_rad": 0.08726646259971647,
+  "hand_actuator_force_cap_nm": 0.35,
+  "requested_steps": 65536,
+  "seed": 7,
+  "workers": 4,
+  "learning_rate": 0.0000025,
+  "angle_sigma_deg": 2,
+  "hand_mode": "leaky",
+  "hand_alpha": 0.995,
+  "development_seeds": [1007, 1107, 1117],
+  "include_reverse_sequence": true,
+  "qualification_rmse_deg": 1,
+  "independent_seeds": [1207, 1217, 1227],
+  "causal_evidence": "Frozen sigma2 right negative-start sequences: hand-only lead0.15 reduced meanRMSE1.64986->1.20153deg and all tail peaks<=0.433deg, without changing initial preparation, arm limits or actuator caps. None meets1deg fullRMSE yet.",
+  "stop": "Fixed65536-step budget or declared regression stop. No diagnostic action masking or hand locking in training/execution."
+}

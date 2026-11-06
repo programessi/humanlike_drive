@@ -1,0 +1,79 @@
+{
+  "model": "runs/driving_r2_frozen_v121/teacher.zip",
+  "sha256": "bc2699474b133f26135ae36b354865a6291b31d944d38361da7ef547aa58451b",
+  "stages": {
+    "development_a": {
+      "output": "results/driving_r2_development_a_v121",
+      "count": 36,
+      "passes": 36,
+      "hard": 0,
+      "worst_rmse_deg": 0.6560016516098828,
+      "worst_stop_deg": 0.6126577304364832,
+      "full_physics_peak_deg": 5.094452211516972,
+      "min_margin_deg": 2.273832765016405,
+      "collision_peak_n": 0.0,
+      "qp_failures": 0
+    },
+    "development_b": {
+      "output": "results/driving_r2_development_b_v121",
+      "count": 36,
+      "passes": 36,
+      "hard": 0,
+      "worst_rmse_deg": 0.6494406395210854,
+      "worst_stop_deg": 0.33612351679426644,
+      "full_physics_peak_deg": 4.982216925726525,
+      "min_margin_deg": 2.2618739613791017,
+      "collision_peak_n": 0.0,
+      "qp_failures": 0
+    },
+    "consumed550_stress": {
+      "output": "results/driving_r2_consumed550_stress_v121",
+      "count": 120,
+      "passes": 120,
+      "hard": 0,
+      "worst_rmse_deg": 0.6523848513044448,
+      "worst_stop_deg": 0.15832583705508138,
+      "full_physics_peak_deg": 5.036359877624534,
+      "min_margin_deg": 2.170623502754235,
+      "collision_peak_n": 0.0,
+      "qp_failures": 0
+    },
+    "r1_retention": {
+      "output": "results/driving_r1_exact72_retention_v121",
+      "count": 72,
+      "passes": 72,
+      "hard": 0,
+      "worst_rmse_deg": 0.5150538774864838,
+      "worst_stop_deg": 0.19614080191078823,
+      "full_physics_peak_deg": 2.2313821899537065,
+      "min_margin_deg": 3.210546463509972,
+      "collision_peak_n": 0.0,
+      "qp_failures": 0
+    },
+    "old240_retention": {
+      "output": "results/driving_r2_old240_retention_v121",
+      "count": 240,
+      "passes": 240,
+      "hard": 0,
+      "worst_rmse_deg": 0.41379887002177695,
+      "worst_stop_deg": 0.5647236725220709,
+      "full_physics_peak_deg": 1.4752703973796073,
+      "min_margin_deg": 8.796703824358904,
+      "collision_peak_n": 0.0,
+      "qp_failures": 0
+    },
+    "independent": {
+      "output": "results/driving_r2_independent_v121",
+      "count": 120,
+      "passes": 120,
+      "hard": 0,
+      "worst_rmse_deg": 0.6490020242978017,
+      "worst_stop_deg": 0.6057581644850611,
+      "full_physics_peak_deg": 5.199953734907234,
+      "min_margin_deg": 2.234106956583152,
+      "collision_peak_n": 0.0,
+      "qp_failures": 0
+    }
+  },
+  "scope": "finite nominal initial-grasp conditions; <=90deg and nominal180deg early-regrasp variant, 5deg/s"
+}

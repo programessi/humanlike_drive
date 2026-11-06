@@ -1,0 +1,118 @@
+{
+  "model": "runs/driving_r2_frozen_v121/teacher.zip",
+  "model_sha256": "bc2699474b133f26135ae36b354865a6291b31d944d38361da7ef547aa58451b",
+  "original_suite": "results/driving_r2_independent_v121",
+  "case": [
+    180,
+    -1,
+    "sequence",
+    56051,
+    {
+      "phase_deg": 0.0
+    }
+  ],
+  "playback_speed": 4,
+  "output_fps": 20,
+  "capture_every_policy_steps": 4,
+  "source_policy_hz": 20,
+  "policy_updated": false,
+  "script_at_execution": false,
+  "physical_settings_changed": false,
+  "display_only": "Two cameras, brightness, telemetry overlay",
+  "original_trace_max_absolute_difference": {
+    "time": 0.0,
+    "angle_deg": 0.0,
+    "target_deg": 0.0,
+    "forces_n": 0.0,
+    "torques_nm": 0.0,
+    "active_q": 0.0
+  },
+  "result": {
+    "case": [
+      180,
+      -1,
+      "sequence",
+      56051,
+      {
+        "phase_deg": 0.0
+      }
+    ],
+    "amplitude_deg": 180,
+    "direction": -1,
+    "template": "sequence",
+    "seed": 56051,
+    "complete": true,
+    "passed": true,
+    "hard_failure": false,
+    "termination_reason": "",
+    "planned_seconds": 283.1,
+    "actual_seconds": 283.1000000000301,
+    "samples": 5662,
+    "full_rmse_deg": 0.6351038193979112,
+    "prefix_rmse_deg": 0.6351038193979112,
+    "motion_rmse_deg": 0.6490020242978017,
+    "segment_rmse_deg": [
+      0.4726886958098789,
+      0.7260750034789598,
+      0.44893939919131187,
+      0.8568896448848015
+    ],
+    "stop_peaks_deg": [
+      0.047789013148293306,
+      0.018559215386845622,
+      0.02624793374069703,
+      0.6057581644850611
+    ],
+    "peak_error_deg": 4.399722495671497,
+    "min_arm_margin_deg": 2.5286453093342027,
+    "collision_peak_n": 0.0,
+    "qp_failures": 0,
+    "initial_wheel_deg": 1.4736628923423214,
+    "qp_diagnostic": {
+      "reason": "optimal",
+      "iterations": 2,
+      "primal_residual": 0.0,
+      "dual_residual": 2.168404344971009e-19
+    },
+    "joint_violations_at_end": [],
+    "expert_events": null,
+    "timeline": {
+      "seconds": 283.1,
+      "hold_seconds": 3.0,
+      "segments": [
+        {
+          "start": 0.5,
+          "end": 68.55262358462836,
+          "hold_end": 71.55262358462836,
+          "initial": 0.02572026953583624,
+          "target": -3.141592653589793
+        },
+        {
+          "start": 71.55262358462836,
+          "end": 139.05262358462835,
+          "hold_end": 142.05262358462835,
+          "initial": -3.141592653589793,
+          "target": 0.0
+        },
+        {
+          "start": 142.05262358462835,
+          "end": 209.55262358462835,
+          "hold_end": 212.55262358462835,
+          "initial": 0.0,
+          "target": 3.141592653589793
+        },
+        {
+          "start": 212.55262358462835,
+          "end": 280.05262358462835,
+          "hold_end": 283.05262358462835,
+          "initial": 3.141592653589793,
+          "target": 0.0
+        }
+      ]
+    },
+    "expert_probability": null,
+    "learned_evaluation": true,
+    "wall_seconds": 189.79974070901517
+  },
+  "scope": "90deg both-hand or180deg early-regrasp variant; not360/540deg"
+}

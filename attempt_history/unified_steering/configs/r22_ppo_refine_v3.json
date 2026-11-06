@@ -1,0 +1,18 @@
+{
+  "experiment": "R2.2-PPO-refinement-v3",
+  "date": "2026-10-28",
+  "parent": "runs/r22_balanced_course_v2/final.zip",
+  "reason": "Parent development69/72; remaining right negative-start sequence precision. Previous2.5e-6 learning rate/65536-step trials did not converge to all gates. Test sustained optimization with unchanged policy, reward, curriculum and physical limits.",
+  "requested_steps": 131072,
+  "learning_rate": 0.00001,
+  "hand_mode": "leaky",
+  "hand_alpha": 0.995,
+  "hand_lead_rad": null,
+  "angle_sigma_deg": 2,
+  "balanced_course": true,
+  "development_seeds": [1007, 1107, 1117],
+  "include_reverse_sequence": true,
+  "qualification_rmse_deg": 1,
+  "acceptance_seeds": [1207, 1217, 1227],
+  "stop": "131072 steps, two strict development passes, or existing three-evaluation physical/retained-hold regression stop. All attempted checkpoints retained. This is a pragmatic optimization trial, not a same-budget ablation."
+}

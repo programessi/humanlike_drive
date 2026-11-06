@@ -1,0 +1,46 @@
+# S00-B scripted physical feasibility only. No RL and no runtime wheel-angle servo.
+scene: assets/scene.xml
+policy_hz: 20
+settle_seconds: 2.0
+wheel_load:
+  center_angle_deg: 0.0
+  centering_stiffness_nm_per_rad: 0.3
+  centering_torque_limit_nm: 1.0
+  viscous_damping_nm_s_per_rad: 0.15
+  coulomb_friction_nm: 0.03
+initial_hand_open: [0.3, 0.1, 0.15, 0.15, 0.15, 0.15]
+initial_hand_closed: [0.6, 0.42, 1.0, 1.0, 1.0, 1.0]
+angles_deg: [0.0, 15.0, -15.0, 30.0, -30.0]
+hold_seconds: 3.0
+motion_amplitude_deg: 5.0
+motion_segment_seconds: 5.0
+motion_pause_seconds: 0.5
+release_open_seconds: 3.0
+release_move_seconds: 3.0
+park_local_left_m: [-0.12, 0.20, -0.04]
+park_local_right_m: [-0.12, -0.20, -0.04]
+randomization:
+  seed: 7
+  samples_per_side: 5
+  joint_jitter_deg: 2.0
+  max_attempts_per_side: 100
+  probe_angle_deg: 30.0
+preparation_jig:
+  kp_nm_per_rad: 5.0
+  kd_nm_s_per_rad: 0.3
+  torque_limit_nm: 1.0
+gates:
+  max_initial_angle_error_deg: 2.0
+  max_initial_speed_deg_s: 1.0
+  min_initial_arm_margin_deg: 5.0
+  min_runtime_arm_margin_deg: 2.0
+  min_free_hand_wheel_gap_m: 0.02
+  min_free_assembly_other_gap_m: 0.012
+  max_free_hand_contact_n: 0.1
+  min_support_contact_n: 0.2
+  min_support_contact_fraction: 0.95
+  max_non_hand_collision_force_n: 1.0
+  max_hold_drift_deg: 2.0
+  max_motion_rmse_deg: 2.0
+  max_release_error_deg: 3.0
+  max_arm_target_speed_rad_s: 0.6

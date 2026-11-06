@@ -1,0 +1,191 @@
+{
+  "kind": "physically_validated_parked_single_hand_initial_states",
+  "source_run": "/home/nubot/humanlike_drive/unified_steering/outputs/s00_support_jitter_v1",
+  "source_summary_sha256": "df45b324020a024622f32d8d6e47790316063df7d539797c13ec689124c3cff5",
+  "scene_sha256": "6254e8ce711eb7534eac93746886ed599e8806a025a9286b3e93e61e393b1233",
+  "config_sha256": "33f0667d4ef827143ddedaa1e04daeac6a6b6358fcac2849636d563ba7cf46fd",
+  "states": [
+    {
+      "file": "jitter_left_00.initial.npz",
+      "sha256": "4285892af36bf5b3bbb0d19c80b572ced75c05b6b6313d5c4c9643b95c06352b",
+      "support": "left",
+      "requested_angle_deg": 30.0,
+      "actual_angle_deg": 31.37523184771413,
+      "free_arm_jitter_rad": [
+        0.008733311086280202,
+        0.027730754645122146,
+        0.01924649198164736,
+        -0.019184157181885608,
+        -0.013951025139165555,
+        0.026078950217334498,
+        -0.034538997436728315
+      ],
+      "validation_trace": "/home/nubot/humanlike_drive/unified_steering/outputs/s00_support_jitter_v1/jitter_left_00.csv",
+      "hold_max_error_deg": 1.4872595596572644
+    },
+    {
+      "file": "jitter_left_01.initial.npz",
+      "sha256": "dc69461f0ffa6347da2a8731956e36a6ffb3fd3eae45636ab8cffecc3dffd423",
+      "support": "left",
+      "requested_angle_deg": 30.0,
+      "actual_angle_deg": 31.37523184771736,
+      "free_arm_jitter_rad": [
+        0.0224259742070126,
+        0.020739358554967665,
+        -0.002238562590737269,
+        -0.013750930686663436,
+        -0.015468810427730349,
+        -0.01711333116882753,
+        -0.0038343971988242325
+      ],
+      "validation_trace": "/home/nubot/humanlike_drive/unified_steering/outputs/s00_support_jitter_v1/jitter_left_01.csv",
+      "hold_max_error_deg": 1.4872595596528342
+    },
+    {
+      "file": "jitter_left_02.initial.npz",
+      "sha256": "ed2114cfc630a7fd04de05d012caf801d29e6e28ee884e8b54d0eef49bccfec1",
+      "support": "left",
+      "requested_angle_deg": 30.0,
+      "actual_angle_deg": 31.375231847712264,
+      "free_arm_jitter_rad": [
+        0.00031752837619844563,
+        0.003734819739194049,
+        0.03459244556198107,
+        0.02043165634194258,
+        0.00852971932519152,
+        0.03413585795234644,
+        -0.01987520227031016
+      ],
+      "validation_trace": "/home/nubot/humanlike_drive/unified_steering/outputs/s00_support_jitter_v1/jitter_left_02.csv",
+      "hold_max_error_deg": 1.487259559660849
+    },
+    {
+      "file": "jitter_left_03.initial.npz",
+      "sha256": "b40e058c82c991481e23a68ef97cdd7981f9e702ba46b7914f6a90c0865c2386",
+      "support": "left",
+      "requested_angle_deg": 30.0,
+      "actual_angle_deg": 31.375231847697112,
+      "free_arm_jitter_rad": [
+        -0.02372167507134251,
+        0.007856746533823466,
+        -0.03183885416443179,
+        -0.0324156316693718,
+        0.0010394357418923483,
+        -0.00235926450163714,
+        0.029123804701712837
+      ],
+      "validation_trace": "/home/nubot/humanlike_drive/unified_steering/outputs/s00_support_jitter_v1/jitter_left_03.csv",
+      "hold_max_error_deg": 1.4872595596742784
+    },
+    {
+      "file": "jitter_left_04.initial.npz",
+      "sha256": "74897e1120996a4a32db7ccb3e6fe654335c1080653b4d4c08d5c31d1b18433b",
+      "support": "left",
+      "requested_angle_deg": 30.0,
+      "actual_angle_deg": 31.37523184765609,
+      "free_arm_jitter_rad": [
+        0.009021694483552965,
+        0.0009855976631779932,
+        -0.00021827538663868627,
+        -0.017626783691110745,
+        -0.03408320672876244,
+        -0.02147438143812709,
+        0.013406371115903402
+      ],
+      "validation_trace": "/home/nubot/humanlike_drive/unified_steering/outputs/s00_support_jitter_v1/jitter_left_04.csv",
+      "hold_max_error_deg": 1.48725955972035
+    },
+    {
+      "file": "jitter_right_00.initial.npz",
+      "sha256": "58aa68e4fd5d00e6af93e27b3c7f2d019afd98924eead6591c0bd175025a6778",
+      "support": "right",
+      "requested_angle_deg": 30.0,
+      "actual_angle_deg": 28.781707988195844,
+      "free_arm_jitter_rad": [
+        -0.02090159369903638,
+        -0.009108083737162844,
+        -0.03464588576438597,
+        0.023041678295092287,
+        -0.024123167317038657,
+        -0.016224629277146015,
+        0.026552193352670072
+      ],
+      "validation_trace": "/home/nubot/humanlike_drive/unified_steering/outputs/s00_support_jitter_v1/jitter_right_00.csv",
+      "hold_max_error_deg": 1.473654486272686
+    },
+    {
+      "file": "jitter_right_01.initial.npz",
+      "sha256": "8b5a28b5d1b5beac3a054b009cdf6828ac1e1ed9ff9c743e4ca2020b716123c7",
+      "support": "right",
+      "requested_angle_deg": 30.0,
+      "actual_angle_deg": 28.781707988141505,
+      "free_arm_jitter_rad": [
+        0.000683527474562949,
+        0.024235659192775597,
+        0.009754098338822646,
+        0.01687879626852122,
+        -0.02851898680206843,
+        0.002872380599488617,
+        0.0005426044547365185
+      ],
+      "validation_trace": "/home/nubot/humanlike_drive/unified_steering/outputs/s00_support_jitter_v1/jitter_right_01.csv",
+      "hold_max_error_deg": 1.47365448628193
+    },
+    {
+      "file": "jitter_right_02.initial.npz",
+      "sha256": "a2115ceca887d4006a4f4ef3883530df7481b3efd7224373ccefd2c199b053b8",
+      "support": "right",
+      "requested_angle_deg": 30.0,
+      "actual_angle_deg": 28.781707988057917,
+      "free_arm_jitter_rad": [
+        0.02592437906237704,
+        -0.009685595844221991,
+        0.006854540983061047,
+        -0.030770040055314057,
+        -0.007844780180614477,
+        -0.012354393656613909,
+        -0.024420665808355283
+      ],
+      "validation_trace": "/home/nubot/humanlike_drive/unified_steering/outputs/s00_support_jitter_v1/jitter_right_02.csv",
+      "hold_max_error_deg": 1.473654486295512
+    },
+    {
+      "file": "jitter_right_03.initial.npz",
+      "sha256": "237359773630c3d005db03c80aefe0ffcebd62ca8b2884b6868c324029272f73",
+      "support": "right",
+      "requested_angle_deg": 30.0,
+      "actual_angle_deg": 28.781707988121063,
+      "free_arm_jitter_rad": [
+        0.022084565844634075,
+        -0.008416244929325835,
+        0.03342290747973221,
+        0.006282605369916471,
+        0.007334310116567231,
+        0.009633978765002996,
+        0.012318550881919634
+      ],
+      "validation_trace": "/home/nubot/humanlike_drive/unified_steering/outputs/s00_support_jitter_v1/jitter_right_03.csv",
+      "hold_max_error_deg": 1.4736544862847722
+    },
+    {
+      "file": "jitter_right_04.initial.npz",
+      "sha256": "40641eca9e50d8bac857b73638fcccffc26b988ea720985dc8cc6ad1cdeacd58",
+      "support": "right",
+      "requested_angle_deg": 30.0,
+      "actual_angle_deg": 28.78170798827658,
+      "free_arm_jitter_rad": [
+        -0.02437959541169317,
+        -0.004166906066663026,
+        -0.01818186542769779,
+        -0.006806902897534073,
+        -0.02815536568281927,
+        0.03266055929596018,
+        -0.019896471612122633
+      ],
+      "validation_trace": "/home/nubot/humanlike_drive/unified_steering/outputs/s00_support_jitter_v1/jitter_right_04.csv",
+      "hold_max_error_deg": 1.4736544862582583
+    }
+  ],
+  "restore_notes": "Restore qpos/qvel/act/target, reset time and external forces, then mj_forward. Never restore the preparation jig. qacc_warmstart is saved for reproducibility.",
+  "scope": "Only nominal wheel load, +30 degree wheel initial states, +/-2 degree free-arm joint jitter; fixed support grasp."
+}

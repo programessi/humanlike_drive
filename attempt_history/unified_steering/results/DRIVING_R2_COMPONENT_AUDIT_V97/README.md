@@ -1,0 +1,5 @@
+# R2组件隔离诊断：不具备验收资格
+
+专家阶段配合网络意图仍失败；完整专家意图配合actor内反馈双向完整执行。后一个干预替换了全部位姿与手目标，因此不能单独验证神经阶段转移的正确性。两种干预均不计纯网络成绩。
+
+逐例记录在`runs/driving_r2_oracle_transition_audit_v97`和`runs/driving_r2_oracle_intent_audit_v97`；本目录保留诊断脚本。

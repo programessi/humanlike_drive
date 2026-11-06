@@ -1,0 +1,35 @@
+{
+  "baseline": {
+    "steps": 20,
+    "qpos_exactly_equal": true,
+    "actions_exactly_equal": true
+  },
+  "manipulation": {
+    "steps": 20,
+    "qpos_exactly_equal": true,
+    "actions_exactly_equal": true
+  },
+  "artifacts": {
+    "checked_files": 135,
+    "all_sha256_unchanged": true
+  },
+  "tests": {
+    "baseline": {
+      "passed": 15
+    },
+    "manipulation": {
+      "passed": 10,
+      "log": "manipulation/results/reorganization_tests.log"
+    }
+  },
+  "cli_entrypoints_checked": 9,
+  "scene_regeneration_identical": true,
+  "carla_api_import_passed": true,
+  "baseline_checkpoint_load_passed": true,
+  "visual_dataset_load_passed": true,
+  "smoke_evaluation": {
+    "directory": "manipulation/outputs/reorganization_smoke",
+    "seconds": 2,
+    "purpose": "Path and checkpoint smoke check, not range acceptance"
+  }
+}

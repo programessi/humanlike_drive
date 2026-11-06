@@ -1,0 +1,15 @@
+{
+  "seed": 69,
+  "epochs": 100,
+  "bc_learning_rate": 2e-05,
+  "bc_batch_size": 512,
+  "retention_dataset": "runs/r23_screened_bootstrap_v4/dataset.npz",
+  "retention_samples": 20000,
+  "budget": "one BC50-epoch feasibility run, then bounded DAgger adjustments from observed closed-loop failure; no independent-set tuning",
+  "script_at_learned_evaluation": false,
+  "all24_mean_action_channels_trainable": true,
+  "critic_updated": false,
+  "wrist_loss_weight": 4.0,
+  "hold_loss_weight": 2.0,
+  "freeze_encoder": false
+}

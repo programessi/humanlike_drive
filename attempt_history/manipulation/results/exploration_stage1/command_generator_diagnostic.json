@@ -1,0 +1,31 @@
+{
+  "hold": {
+    "generated_traces": 300,
+    "mean_command_deg": 0.0,
+    "first_nonzero_positive_fraction": 0.0,
+    "positive_time_fraction": 0.0,
+    "negative_time_fraction": 0.0
+  },
+  "sine": {
+    "generated_traces": 300,
+    "mean_command_deg": 0.7803022721565499,
+    "first_nonzero_positive_fraction": 1.0,
+    "positive_time_fraction": 0.7007111111111112,
+    "negative_time_fraction": 0.2959555555555555
+  },
+  "sequence": {
+    "generated_traces": 300,
+    "mean_command_deg": 0.2325001370929229,
+    "first_nonzero_positive_fraction": 1.0,
+    "positive_time_fraction": 0.3933333333333333,
+    "negative_time_fraction": 0.2800000000000001
+  },
+  "random_steps": {
+    "generated_traces": 300,
+    "mean_command_deg": 0.020473642679656887,
+    "first_nonzero_positive_fraction": 0.55,
+    "positive_time_fraction": 0.49713333333333337,
+    "negative_time_fraction": 0.4495333333333333
+  },
+  "note": "Command-generator diagnostic only; not replay of actual training RNG or simulator evaluation."
+}

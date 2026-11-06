@@ -1,0 +1,11 @@
+# Held-out parameter combinations; do not use for checkpoint selection.
+suite: single_direction
+amplitude_deg: [1.10,1.35,1.65,1.90]
+speed_deg_s: [1.20,1.80]
+hold_seconds: [3.0,4.5,8.0,10.0]
+final_hold_seconds: 3.0
+rmse_gate_deg: 1.0
+endpoint_gate_deg: 1.0
+hold_peak_gate_deg: 1.0
+min_baseline_improvement: 0.30
+min_signed_progress_fraction: 0.50

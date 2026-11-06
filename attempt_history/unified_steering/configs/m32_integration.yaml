@@ -1,0 +1,63 @@
+# Feature integration only; shortened development grid and one update.
+design: configs/stage_a.yaml
+environment_config: configs/m1.yaml
+run_kind: M3_B_infrastructure_integration_not_skill_result
+seed: 7
+device: cpu
+torch_threads: 1
+total_steps: 512
+checkpoint_every_updates: 1
+initialization:
+  checkpoint: runs/m2_smoke_seed7_v1/initial.pt
+  arm_std: 0.1
+  hand_std: 0.5
+environment_overrides:
+  initial_support: both
+  episode_seconds: 10.0
+  reference:
+    mode: hold
+    speed_deg_s: 2.0
+    hold_seconds: 1.0
+tasks:
+  mode: single_direction
+  balanced_episode_counts:
+    hold: 4
+    positive: 3
+    negative: 3
+  amplitude_range_deg:
+  - 1.0
+  - 2.0
+  speed_range_deg_s:
+  - 1.0
+  - 2.0
+  final_hold_seconds: 3.0
+  hold_episode_seconds: 10.0
+ppo:
+  num_envs: 4
+  rollout_steps: 128
+  recurrent_sequence_steps: 64
+  minibatch_steps: 256
+  update_epochs: 4
+  entropy_coefficient: 0.001
+evaluation:
+  suite: single_direction
+  amplitude_deg:
+  - 1.0
+  - 2.0
+  speed_deg_s:
+  - 1.0
+  hold_seconds:
+  - 3.0
+  final_hold_seconds: 3.0
+  rmse_gate_deg: 1.0
+  endpoint_gate_deg: 1.0
+  hold_peak_gate_deg: 1.0
+  min_baseline_improvement: 0.3
+  min_signed_progress_fraction: 0.5
+monitoring:
+  evaluation_every_steps: 512
+  retain_step_checkpoints: true
+  diagnostics: false
+tensorboard:
+  enabled: true
+  histogram_every_updates: 1

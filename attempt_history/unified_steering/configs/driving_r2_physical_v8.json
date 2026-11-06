@@ -1,0 +1,151 @@
+{
+  "interface": "driving-v1-v4-executor",
+  "speed_deg_s": 5.0,
+  "acceleration_deg_s2": 40.0,
+  "tangent_geometry": "results/driving_r0_geometry_roll_v1/summary.json",
+  "phase_lead_deg": 30.0,
+  "demonstrator": {
+    "angle_gain": 6.0,
+    "preview_seconds": 0.15,
+    "position_gain": 3.0,
+    "orientation_gain": 3.0,
+    "hand_gain": 0.1
+  },
+  "criteria": "complete; motionRMSE<=1deg; every stop final3s physics peak<=1deg; overall>=95%, each direction>=90%; any physical/QP hard failure rejects candidate",
+  "template": "short=3s endpoint and zero holds;long=10s holds;sequence=two opposite complete roundtrips with3s holds",
+  "independence": "training410xx;development420xx;independent430xx reserved; R0 diagnostics400xx consumed",
+  "physical_scene": "original +/-450deg; all physical gates and v4 execution unchanged",
+  "experiment": "driving-R2-upper-palm-late-roll-physical-v8",
+  "cases": [
+    [
+      120,
+      -1,
+      "short",
+      45201,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_thumb_yaw_rad": 0.15,
+          "upper_thumb_pitch_rad": 0.03,
+          "upper_late_roll_deg": 20.0,
+          "upper_late_start_deg": 60.0
+        }
+      }
+    ],
+    [
+      120,
+      1,
+      "short",
+      45202,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_thumb_yaw_rad": 0.15,
+          "upper_thumb_pitch_rad": 0.03,
+          "upper_late_roll_deg": 20.0,
+          "upper_late_start_deg": 60.0
+        }
+      }
+    ],
+    [
+      120,
+      -1,
+      "short",
+      45203,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_thumb_yaw_rad": 0.15,
+          "upper_thumb_pitch_rad": 0.03,
+          "upper_late_roll_deg": 40.0,
+          "upper_late_start_deg": 60.0
+        }
+      }
+    ],
+    [
+      120,
+      1,
+      "short",
+      45204,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_thumb_yaw_rad": 0.15,
+          "upper_thumb_pitch_rad": 0.03,
+          "upper_late_roll_deg": 40.0,
+          "upper_late_start_deg": 60.0
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      45205,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_thumb_yaw_rad": 0.15,
+          "upper_thumb_pitch_rad": 0.03,
+          "upper_late_roll_deg": 20.0,
+          "upper_late_start_deg": 60.0
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      45206,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_thumb_yaw_rad": 0.15,
+          "upper_thumb_pitch_rad": 0.03,
+          "upper_late_roll_deg": 20.0,
+          "upper_late_start_deg": 60.0
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      45207,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_thumb_yaw_rad": 0.15,
+          "upper_thumb_pitch_rad": 0.03,
+          "upper_late_roll_deg": 40.0,
+          "upper_late_start_deg": 60.0
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      45208,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_thumb_yaw_rad": 0.15,
+          "upper_thumb_pitch_rad": 0.03,
+          "upper_late_roll_deg": 40.0,
+          "upper_late_start_deg": 60.0
+        }
+      }
+    ]
+  ],
+  "expert_type": "halfturn",
+  "halfturn_parameters": {
+    "release_start_deg": 30.0,
+    "release_end_deg": 50.0,
+    "park_phase_deg": 100.0,
+    "withdrawal_m": 0.07,
+    "return_to_initial_park": false
+  },
+  "scope": "Expert-only smooth extra tangent roll above60deg, to redistribute wrist rotation before the150deg roll boundary. Same physical joints,24 actions and actuator caps.",
+  "correction": "Release before withdrawal; park phase lies beyond the release band plus phase lead. Earlier candidates could stall the rim while the lower hand was still closed."
+}

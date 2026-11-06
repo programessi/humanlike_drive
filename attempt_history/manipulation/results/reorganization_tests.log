@@ -1,0 +1,19 @@
+test_actor_isolation_export_and_separately_trainable_hand_ablation (test_task.ContactResidualTests) ... ok
+test_constant_offsets_do_not_accumulate_and_do_not_write_physics (test_task.ContactResidualTests) ... ok
+test_gym_contract_and_goal_reference_fields (test_task.ContactResidualTests) ... /home/nubot/anaconda3/envs/mujoco/lib/python3.10/site-packages/gymnasium/utils/env_checker.py:311: UserWarning: [33mWARN: A Box observation space minimum value is -infinity. This is probably too low.[0m
+  logger.warn(
+/home/nubot/anaconda3/envs/mujoco/lib/python3.10/site-packages/gymnasium/utils/env_checker.py:315: UserWarning: [33mWARN: A Box observation space maximum value is infinity. This is probably too high.[0m
+  logger.warn(
+ok
+test_implicit_motor_law_preserves_total_pd_force_limits (test_task.ContactResidualTests) ... ok
+test_incomplete_suites_cannot_pass_acceptance (test_task.ContactResidualTests) ... ok
+test_kinematic_continuity_uses_current_scene (test_task.ContactResidualTests) ... ok
+test_preserved_checkpoint_loads_without_deleted_module (test_task.ContactResidualTests) ... ok
+test_training_lock_rejects_overlap_and_releases_after_failure (test_task.ContactResidualTests) ... ok
+test_velocity_checkpoint_is_rejected_even_with_same_action_dimension (test_task.ContactResidualTests) ... ok
+test_zero_policy_turns_arms_but_cannot_turn_disconnected_wheel (test_task.ContactResidualTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 8.557s
+
+OK

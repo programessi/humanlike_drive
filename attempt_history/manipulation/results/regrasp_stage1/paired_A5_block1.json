@@ -1,0 +1,27 @@
+{
+  "kind": "paired_last5s_diagnostic_not_success",
+  "target_response_deg": 10,
+  "pairs": [
+    {
+      "preparation_seed": 1007,
+      "positive_tail_mean_deg": 2.124747889054382,
+      "negative_tail_mean_deg": -6.734958063511634,
+      "paired_response_deg": 8.859705952566015,
+      "paired_common_bias_deg": -2.3051050872286263
+    },
+    {
+      "preparation_seed": 1017,
+      "positive_tail_mean_deg": 2.1125669872113613,
+      "negative_tail_mean_deg": -6.760537813227562,
+      "paired_response_deg": 8.873104800438924,
+      "paired_common_bias_deg": -2.3239854130081
+    },
+    {
+      "preparation_seed": 1027,
+      "positive_tail_mean_deg": 2.1319850167356313,
+      "negative_tail_mean_deg": -6.755041221907489,
+      "paired_response_deg": 8.88702623864312,
+      "paired_common_bias_deg": -2.311528102585929
+    }
+  ]
+}

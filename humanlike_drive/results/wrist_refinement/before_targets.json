@@ -1,0 +1,73 @@
+{
+  "version": 3,
+  "description": "Rim-only support, avoiding rear metal paddles and spokes. Left hand target in the wheel frame at 9/3; reflect for the right and rotate for upper-rim grasps. Six independent hand drives retain matching H1-2 URDF mimic constraints.",
+  "active_grasp": {
+    "grip_pose": {
+      "position_m": [
+        -0.019147328692320893,
+        0.14962512504104075,
+        -0.008776255846199578
+      ],
+      "rotation_matrix": [
+        [
+          0.7674326219081217,
+          -0.39879571030778144,
+          -0.5020051317181319
+        ],
+        [
+          0.4629017162498879,
+          0.8864027398670699,
+          0.0034905370735395197
+        ],
+        [
+          0.4435867129706831,
+          -0.235057789056788,
+          0.8648575974572931
+        ]
+      ]
+    },
+    "hand_drives": [
+      0.41050503758223916,
+      0.20563817743595506,
+      0.7134111273373944,
+      0.8532220589633774,
+      1.0957733198714101,
+      1.2726747289932514
+    ],
+    "approach_seconds": 1.0
+  },
+  "labels": {
+    "nine_three": "9 / 3 \u00b7 palm, four fingers and light thumb on rim; paddles clear",
+    "ten_two": "10 / 2 \u00b7 enveloping contact",
+    "left_support": "Left enveloping support / right hand clear",
+    "right_support": "Right enveloping support / left hand clear"
+  },
+  "presets": {
+    "ten_two": {
+      "grip_pose": {
+        "position_m": [
+          -0.018147328692320892,
+          0.14962512504104075,
+          -0.008776255846199578
+        ],
+        "rotation_matrix": [
+          [
+            0.7674326219081217,
+            -0.39879571030778144,
+            -0.5020051317181319
+          ],
+          [
+            0.4629017162498879,
+            0.8864027398670699,
+            0.0034905370735395197
+          ],
+          [
+            0.4435867129706831,
+            -0.235057789056788,
+            0.8648575974572931
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "interface": "structured-wrist-teacher-v3-incremental-hand",
+  "reason": "Frozen-policy intervention: left hold peak 2.402deg ->0.143deg with initial measured hand targets; zeroing wrists leaves2.402deg. Absolute hand commands are locally insensitive under target-lead saturation.",
+  "parent": "runs/r1_structured_v1/qualified_development.zip",
+  "hand_action_mode": "leaky",
+  "alpha_per_20hz": 0.995,
+  "delta_rad_per_20hz": 0.03,
+  "target_update_hz": 50,
+  "initialization": "Preserve wrist actor/encoder/critic. Zero hand action-head rows and their optimizer moments, keep checkpoint log_std; explicitly changed hand semantics.",
+  "remaining_interface": "same152/54/24 tensors; actor previous-hand-action semantics change; target integrator observable through q and motor_target-q",
+  "reward_change": false,
+  "angle_sigma_deg": 4,
+  "nominal_steps": 131072,
+  "reference_protocol": "r1_r2_v1.json",
+  "initial_pose_protocol": "r2_screened_v1.json",
+  "note": "This is an interface adaptation plus necessary initialization, not a single-factor reward ablation. No live hand locking; all12 hand outputs remain learnable.",
+  "parent_candidates": [
+    "runs/r1_structured_v1/qualified_development.zip",
+    "runs/r2_nominal_continuation_v2/latest.zip"
+  ],
+  "selection": "development only: complete and lower hold peak, then lower worst motion RMSE; no held-out cases used",
+  "selected_parent": "runs/r1_structured_v1/qualified_development.zip",
+  "selection_note": "Alpha0.995 preflight16/21, hold peak0.712deg; initial right movement still loses contact. This is an initialization for learning preload, not a passing controller. Alpha0.95 and1.0 remain frozen diagnostic comparisons."
+}

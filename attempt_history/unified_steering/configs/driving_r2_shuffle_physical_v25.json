@@ -1,0 +1,227 @@
+{
+  "interface": "driving-v6-canonical-distance-gradient",
+  "speed_deg_s": 5.0,
+  "acceleration_deg_s2": 40.0,
+  "tangent_geometry": "results/driving_r0_geometry_roll_v1/summary.json",
+  "phase_lead_deg": 30.0,
+  "demonstrator": {
+    "angle_gain": 6.0,
+    "preview_seconds": 0.15,
+    "position_gain": 3.0,
+    "orientation_gain": 3.0,
+    "hand_gain": 0.1
+  },
+  "criteria": "complete; motionRMSE<=1deg; every stop final3s physics peak<=1deg; overall>=95%, each direction>=90%; any physical/QP hard failure rejects candidate",
+  "template": "short=3s endpoint and zero holds;long=10s holds;sequence=two opposite complete roundtrips with3s holds",
+  "independence": "training410xx;development420xx;independent430xx reserved; R0 diagnostics400xx consumed",
+  "physical_scene": "original +/-450deg; all physical gates and v4 execution unchanged",
+  "experiment": "driving-R2-regrasp-thumb-and-depth-physical-v25",
+  "cases": [
+    [
+      180,
+      -1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "pregrasp_thumb_yaw": 0.6,
+          "pregrasp_thumb_pitch": 0.42
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "pregrasp_thumb_yaw": 1.05,
+          "pregrasp_thumb_pitch": 0.1
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "pregrasp_thumb_yaw": 0.6,
+          "pregrasp_thumb_pitch": 0.3
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "pregrasp_thumb_yaw": 0.6,
+          "pregrasp_thumb_pitch": 0.42,
+          "regrasp_axial_offset_m": 0.01
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "pregrasp_thumb_yaw": 0.6,
+          "pregrasp_thumb_pitch": 0.42,
+          "regrasp_axial_offset_m": -0.01
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "regrasp_axial_offset_m": 0.01
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "regrasp_radial_offset_m": 0.01
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "regrasp_radial_offset_m": -0.01
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "pregrasp_thumb_yaw": 0.6,
+          "pregrasp_thumb_pitch": 0.42
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "pregrasp_thumb_yaw": 1.05,
+          "pregrasp_thumb_pitch": 0.1
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "pregrasp_thumb_yaw": 0.6,
+          "pregrasp_thumb_pitch": 0.3
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "pregrasp_thumb_yaw": 0.6,
+          "pregrasp_thumb_pitch": 0.42,
+          "regrasp_axial_offset_m": 0.01
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "pregrasp_thumb_yaw": 0.6,
+          "pregrasp_thumb_pitch": 0.42,
+          "regrasp_axial_offset_m": -0.01
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "regrasp_axial_offset_m": 0.01
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "regrasp_radial_offset_m": 0.01
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      46301,
+      {
+        "expert_parameters": {
+          "regrasp_radial_offset_m": -0.01
+        }
+      }
+    ]
+  ],
+  "expert_type": "shuffle",
+  "scope": "Alternative earlier same-side regrasp physical baseline only; does not certify fixed upper-hand180-degree grasp. Tracking and physical gates unchanged.",
+  "correction": "Release before withdrawal; park phase lies beyond the release band plus phase lead. Earlier candidates could stall the rim while the lower hand was still closed.",
+  "arm_command_margin_deg": 4.0,
+  "guard_elbows_against_wheel": true,
+  "retain_preparation_hand_command": true,
+  "qp_backend": "active-set",
+  "canonical_distance_guard_order": true,
+  "shuffle_parameters": {
+    "release_start_deg": 5.0,
+    "release_end_deg": 20.0,
+    "cycle_start_deg": 20.0,
+    "clearance_m": 0.06,
+    "contact_seconds": 0.4,
+    "min_contact_force_n": 8.0
+  }
+}

@@ -1,1 +1,0 @@
-"""Physical humanoid steering experiments."""

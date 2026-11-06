@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.egg-info/
+runs/
+outputs/
+data/
+weights/
+third_party/
+assets/*.ik.npz
+.venv/

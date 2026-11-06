@@ -1,0 +1,103 @@
+{
+  "interface": "driving-v1-v4-executor",
+  "speed_deg_s": 5.0,
+  "acceleration_deg_s2": 40.0,
+  "tangent_geometry": "results/driving_r0_geometry_roll_v1/summary.json",
+  "phase_lead_deg": 30.0,
+  "demonstrator": {
+    "angle_gain": 6.0,
+    "preview_seconds": 0.15,
+    "position_gain": 3.0,
+    "orientation_gain": 3.0,
+    "hand_gain": 0.1
+  },
+  "criteria": "complete; motionRMSE<=1deg; every stop final3s physics peak<=1deg; overall>=95%, each direction>=90%; any physical/QP hard failure rejects candidate",
+  "template": "short=3s endpoint and zero holds;long=10s holds;sequence=two opposite complete roundtrips with3s holds",
+  "independence": "training410xx;development420xx;independent430xx reserved; R0 diagnostics400xx consumed",
+  "physical_scene": "original +/-450deg; all physical gates and v4 execution unchanged",
+  "experiment": "driving-R2-corrected-park-feedforward-physical-v6",
+  "cases": [
+    [
+      120,
+      -1,
+      "short",
+      45001,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "phase_lead_deg": 10.0
+        }
+      }
+    ],
+    [
+      120,
+      1,
+      "short",
+      45002,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "phase_lead_deg": 10.0
+        }
+      }
+    ],
+    [
+      120,
+      -1,
+      "short",
+      45003,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "phase_lead_deg": 20.0
+        }
+      }
+    ],
+    [
+      120,
+      1,
+      "short",
+      45004,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "phase_lead_deg": 20.0
+        }
+      }
+    ],
+    [
+      120,
+      -1,
+      "short",
+      45005,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "phase_lead_deg": 30.0
+        }
+      }
+    ],
+    [
+      120,
+      1,
+      "short",
+      45006,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "phase_lead_deg": 30.0
+        }
+      }
+    ]
+  ],
+  "expert_type": "halfturn",
+  "halfturn_parameters": {
+    "release_start_deg": 30.0,
+    "release_end_deg": 50.0,
+    "park_phase_deg": 100.0,
+    "withdrawal_m": 0.1,
+    "return_to_initial_park": true
+  },
+  "scope": "Physical expert only. Half-turn software envelope versioned to185/200deg; physical joint ranges, forces and collision gates unchanged.",
+  "correction": "Finite-difference feedforward now compares the same unblended trajectory pose at adjacent phases; park interpolation is applied only once."
+}

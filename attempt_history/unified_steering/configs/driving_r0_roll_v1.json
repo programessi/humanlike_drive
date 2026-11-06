@@ -1,0 +1,35 @@
+{
+  "experiment": "driving-R0-tangent-roll-physical-v1",
+  "amplitudes_deg": [
+    30,
+    60,
+    90
+  ],
+  "actors": [
+    "expert"
+  ],
+  "supports": [
+    "both"
+  ],
+  "directions": [
+    -1,
+    1
+  ],
+  "seeds": [
+    40001
+  ],
+  "speed_deg_s": 5.0,
+  "acceleration_deg_s2": 40.0,
+  "hold_seconds": 3.0,
+  "demonstrator": {
+    "angle_gain": 6.0,
+    "preview_seconds": 0.15,
+    "position_gain": 3.0,
+    "orientation_gain": 3.0,
+    "hand_gain": 0.1
+  },
+  "reference": "absolute signed endpoint;3s hold;absolute zero return;3s hold;0.5s initial actual-angle hold",
+  "stop": "Stop ladder on any termination or first QP failure; larger unrun angles remain unknown.",
+  "scope": "Explicit tangent-roll baseline only, same24 actions and unchanged physics. No learned-policy or dynamic grasp claim from static search alone.",
+  "tangent_geometry": "results/driving_r0_geometry_roll_v1/summary.json"
+}

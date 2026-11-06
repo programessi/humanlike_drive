@@ -1,0 +1,4970 @@
+[
+  {
+    "case": {
+      "name": "hold_pos15",
+      "mode": "hold",
+      "amplitude_deg": 15,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 1.3300230274588798,
+    "mae_deg": 0.9146317238534556,
+    "max_abs_error_deg": 8.579364541122942,
+    "final_error_deg": 1.591297259949429,
+    "last60_rmse_deg": 1.350864571506454,
+    "fraction_within_3deg": 0.9504666666666667,
+    "both_hands_contact_fraction": 0.4673333333333333,
+    "any_hand_contact_fraction": 0.9031333333333333,
+    "longest_no_hand_contact_s": 0.1,
+    "longest_not_both_contact_s": 0.74,
+    "peak_single_contact_force_N_500hz": 129.60562390980454,
+    "peak_single_contact_force_N_50hz": 123.78136098537324,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 15.662300270826902,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.0,
+    "mean_policy_scale": 0.999965786842744,
+    "policy_faded_fraction": 0.0002,
+    "peak_arm_reference_speed_rad_s": 2.8516545218276232,
+    "peak_actual_motor_speed_rad_s": 11.881916732573828,
+    "peak_opposing_hand_force_proxy_N": 25.62809919588237,
+    "peak_net_axial_contact_force_N": 91.55286179877248,
+    "max_left_palm_wheel_relative_change_deg": 15.795361578593429,
+    "max_right_palm_wheel_relative_change_deg": 20.45111084715542,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.4584803628956964,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.752654316578142,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 1.5768477039058477,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 1.2861000563779497,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 1.5768477039058477,
+        "both_contact_fraction": 0.364,
+        "any_contact_fraction": 0.8633333333333333,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 1.3931802573510688,
+        "both_contact_fraction": 0.3323333333333333,
+        "any_contact_fraction": 0.858,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 0.5688012863222288,
+        "both_contact_fraction": 0.7033333333333334,
+        "any_contact_fraction": 0.9846666666666667,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 1.5063320892802319,
+        "both_contact_fraction": 0.4643333333333333,
+        "any_contact_fraction": 0.8953333333333333,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 1.350864571506454,
+        "both_contact_fraction": 0.4726666666666667,
+        "any_contact_fraction": 0.9143333333333333,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 51.574906735000695
+  },
+  {
+    "case": {
+      "name": "hold_pos15",
+      "mode": "hold",
+      "amplitude_deg": 15,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 0.3903027108301078,
+    "mae_deg": 0.08630212376298611,
+    "max_abs_error_deg": 8.852632213781751,
+    "final_error_deg": 1.2722218725854067e-14,
+    "last60_rmse_deg": 1.2722218725854064e-14,
+    "fraction_within_3deg": 0.9959333333333333,
+    "both_hands_contact_fraction": 0.9881333333333333,
+    "any_hand_contact_fraction": 0.9996666666666667,
+    "longest_no_hand_contact_s": 0.02,
+    "longest_not_both_contact_s": 0.1,
+    "peak_single_contact_force_N_500hz": 125.08907341704143,
+    "peak_single_contact_force_N_50hz": 107.90049638248048,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 15.603590984768308,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.05853333333333333,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 2.8516545218276232,
+    "peak_actual_motor_speed_rad_s": 9.08759023603124,
+    "peak_opposing_hand_force_proxy_N": 5.912088621861606,
+    "peak_net_axial_contact_force_N": 59.46918759625202,
+    "max_left_palm_wheel_relative_change_deg": 14.733768510794652,
+    "max_right_palm_wheel_relative_change_deg": 19.819866277215098,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.1229184784430215,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.2256464965825378,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.867829332255094,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 0.181010432596441,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.867829332255094,
+        "both_contact_fraction": 0.9406666666666667,
+        "any_contact_fraction": 0.9983333333333333,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.09248394717101618,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 8.402858752296952e-12,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 1.2722218725854064e-14,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 1.2722218725854064e-14,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 57.227464807001525
+  },
+  {
+    "case": {
+      "name": "hold_center",
+      "mode": "hold",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 599.9999999997443,
+    "requested_seconds": 600,
+    "early_failure": false,
+    "rmse_deg": 0.2823121349832626,
+    "mae_deg": 0.027267147890609134,
+    "max_abs_error_deg": 8.279340848443809,
+    "final_error_deg": -5.8431433362907515e-15,
+    "last60_rmse_deg": 6.520905820315965e-15,
+    "fraction_within_3deg": 0.9978,
+    "both_hands_contact_fraction": 0.9976666666666667,
+    "any_hand_contact_fraction": 0.9998333333333334,
+    "longest_no_hand_contact_s": 0.02,
+    "longest_not_both_contact_s": 0.1,
+    "peak_single_contact_force_N_500hz": 79.52162171905,
+    "peak_single_contact_force_N_50hz": 79.52162171905,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 7.409790221967451,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.0,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 2.8516545218276232,
+    "peak_actual_motor_speed_rad_s": 10.998987115168463,
+    "peak_opposing_hand_force_proxy_N": 17.83915165005766,
+    "peak_net_axial_contact_force_N": 63.652255550566366,
+    "max_left_palm_wheel_relative_change_deg": 13.374054981532774,
+    "max_right_palm_wheel_relative_change_deg": 14.087003081679612,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.438478975580886,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.2618603783395599,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.8927117188988164,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 600,
+        "samples": 29501,
+        "rmse_deg": 0.020605991954104338,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.8927117188988164,
+        "both_contact_fraction": 0.9766666666666667,
+        "any_contact_fraction": 0.9983333333333333,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.008196910794766497,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 0.00011480854749084028,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 1.1041202481172968e-06,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 1.0539995787262916e-08,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      },
+      {
+        "start_s": 300,
+        "end_s": 360,
+        "rmse_deg": 1.0059616569055322e-10,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 360
+      },
+      {
+        "start_s": 360,
+        "end_s": 420,
+        "rmse_deg": 1.2686198847429315e-12,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 420
+      },
+      {
+        "start_s": 420,
+        "end_s": 480,
+        "rmse_deg": 7.474143302292869e-15,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 480
+      },
+      {
+        "start_s": 480,
+        "end_s": 540,
+        "rmse_deg": 7.418248553557472e-15,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 540
+      },
+      {
+        "start_s": 540,
+        "end_s": 600,
+        "rmse_deg": 6.520905820315965e-15,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 103.73648266999953
+  },
+  {
+    "case": {
+      "name": "hold_neg15",
+      "mode": "hold",
+      "amplitude_deg": -15,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 0.3208840489791503,
+    "mae_deg": 0.06051941767355695,
+    "max_abs_error_deg": 5.686802726642503,
+    "final_error_deg": 1.5050225724951288e-09,
+    "last60_rmse_deg": 4.3638066340878366e-09,
+    "fraction_within_3deg": 0.9977333333333334,
+    "both_hands_contact_fraction": 0.9581333333333333,
+    "any_hand_contact_fraction": 1.0,
+    "longest_no_hand_contact_s": 0.0,
+    "longest_not_both_contact_s": 0.52,
+    "peak_single_contact_force_N_500hz": 93.51856637256594,
+    "peak_single_contact_force_N_50hz": 63.357483226918305,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 24.535388315891403,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.0,
+    "mean_policy_scale": 1.0,
+    "policy_faded_fraction": 0.0,
+    "peak_arm_reference_speed_rad_s": 2.255777750989801,
+    "peak_actual_motor_speed_rad_s": 10.854451865077564,
+    "peak_opposing_hand_force_proxy_N": 4.503912125647573,
+    "peak_net_axial_contact_force_N": 44.941630676656956,
+    "max_left_palm_wheel_relative_change_deg": 16.28546248867634,
+    "max_right_palm_wheel_relative_change_deg": 18.272351297260958,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 1.6903190422039547,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.0147204438857993,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.7175185461713519,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 0.15630019116722282,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.7175185461713519,
+        "both_contact_fraction": 0.7906666666666666,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 1.8612303208619295e-05,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 9.624622380912434e-09,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 4.684996754729555e-09,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 4.3638066340878366e-09,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 63.46995114499805
+  },
+  {
+    "case": {
+      "name": "hold_neg15",
+      "mode": "hold",
+      "amplitude_deg": -15,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 0.3420534760652915,
+    "mae_deg": 0.07270700799001957,
+    "max_abs_error_deg": 5.257593203165389,
+    "final_error_deg": -2.2263882770244617e-14,
+    "last60_rmse_deg": 8.51025543596289e-14,
+    "fraction_within_3deg": 0.9963333333333333,
+    "both_hands_contact_fraction": 0.9402,
+    "any_hand_contact_fraction": 1.0,
+    "longest_no_hand_contact_s": 0.0,
+    "longest_not_both_contact_s": 0.54,
+    "peak_single_contact_force_N_500hz": 80.1516917870876,
+    "peak_single_contact_force_N_50hz": 66.07076523584567,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 24.544575005152733,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.0,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 4.392271520183627,
+    "peak_actual_motor_speed_rad_s": 11.118818599718908,
+    "peak_opposing_hand_force_proxy_N": 8.265239275726326,
+    "peak_net_axial_contact_force_N": 59.051629321103356,
+    "max_left_palm_wheel_relative_change_deg": 14.86964904037572,
+    "max_right_palm_wheel_relative_change_deg": 18.303296546047438,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 1.451455154340675,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.0816634026287377,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.7648537826655896,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 0.2349697175597236,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.7648537826655896,
+        "both_contact_fraction": 0.701,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.0012623722755010836,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 3.4936205595755724e-07,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 6.057542446806242e-11,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 8.51025543596289e-14,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 58.59188522000113
+  },
+  {
+    "case": {
+      "name": "hold_center",
+      "mode": "hold",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 599.9999999997443,
+    "requested_seconds": 600,
+    "early_failure": false,
+    "rmse_deg": 0.22309705409427036,
+    "mae_deg": 0.020305698110492452,
+    "max_abs_error_deg": 7.948978095724647,
+    "final_error_deg": -3.888030939965497e-06,
+    "last60_rmse_deg": 6.017095733955293e-06,
+    "fraction_within_3deg": 0.9982666666666666,
+    "both_hands_contact_fraction": 0.9954333333333333,
+    "any_hand_contact_fraction": 0.9998333333333334,
+    "longest_no_hand_contact_s": 0.02,
+    "longest_not_both_contact_s": 0.26,
+    "peak_single_contact_force_N_500hz": 69.27014268057448,
+    "peak_single_contact_force_N_50hz": 65.87908214581273,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 4.68368451099839,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.0,
+    "mean_policy_scale": 0.999990865802892,
+    "policy_faded_fraction": 0.0001,
+    "peak_arm_reference_speed_rad_s": 2.8516545218276232,
+    "peak_actual_motor_speed_rad_s": 10.681375977727587,
+    "peak_opposing_hand_force_proxy_N": 2.6881367995798096,
+    "peak_net_axial_contact_force_N": 40.589511457757084,
+    "max_left_palm_wheel_relative_change_deg": 12.512034383191333,
+    "max_right_palm_wheel_relative_change_deg": 13.377259379401885,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 1.930428700590439,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 0.9975571093787446,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.7054878144717603,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 600,
+        "samples": 29501,
+        "rmse_deg": 0.009008318842142893,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.7054878144717603,
+        "both_contact_fraction": 0.9543333333333334,
+        "any_contact_fraction": 0.9983333333333333,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.0028031750778629546,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 0.0012592344564260319,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 0.0005972413749284224,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 0.0002784750958458385,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      },
+      {
+        "start_s": 300,
+        "end_s": 360,
+        "rmse_deg": 0.00012951761731547985,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 360
+      },
+      {
+        "start_s": 360,
+        "end_s": 420,
+        "rmse_deg": 6.0167616283086875e-05,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 420
+      },
+      {
+        "start_s": 420,
+        "end_s": 480,
+        "rmse_deg": 2.7934866302564302e-05,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 480
+      },
+      {
+        "start_s": 480,
+        "end_s": 540,
+        "rmse_deg": 1.2968697357027111e-05,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 540
+      },
+      {
+        "start_s": 540,
+        "end_s": 600,
+        "rmse_deg": 6.017095733955293e-06,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 116.26522689699777
+  },
+  {
+    "case": {
+      "name": "hold_pos30",
+      "mode": "hold",
+      "amplitude_deg": 30,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 0.9840270530407073,
+    "mae_deg": 0.6065942033775905,
+    "max_abs_error_deg": 10.323624071997633,
+    "final_error_deg": 0.9757623427965394,
+    "last60_rmse_deg": 1.2961071534421218,
+    "fraction_within_3deg": 0.9844666666666667,
+    "both_hands_contact_fraction": 0.6308,
+    "any_hand_contact_fraction": 0.9624,
+    "longest_no_hand_contact_s": 0.06,
+    "longest_not_both_contact_s": 0.24,
+    "peak_single_contact_force_N_500hz": 126.64169806365182,
+    "peak_single_contact_force_N_50hz": 114.10386515634477,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 33.9248485090492,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.0,
+    "mean_policy_scale": 0.9996854291472458,
+    "policy_faded_fraction": 0.0013333333333333333,
+    "peak_arm_reference_speed_rad_s": 15.126589090112455,
+    "peak_actual_motor_speed_rad_s": 11.87048205603362,
+    "peak_opposing_hand_force_proxy_N": 26.59090663314607,
+    "peak_net_axial_contact_force_N": 93.66299805719794,
+    "max_left_palm_wheel_relative_change_deg": 15.312293016460911,
+    "max_right_palm_wheel_relative_change_deg": 27.216029458122286,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.27428157926433,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.2009220825468432,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.856617627828584,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 0.9263760598464007,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.856617627828584,
+        "both_contact_fraction": 0.7303333333333333,
+        "any_contact_fraction": 0.997,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.18064125440461642,
+        "both_contact_fraction": 0.7396666666666667,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 1.140438249123376,
+        "both_contact_fraction": 0.5803333333333334,
+        "any_contact_fraction": 0.9453333333333334,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 1.046244727209136,
+        "both_contact_fraction": 0.5683333333333334,
+        "any_contact_fraction": 0.94,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 1.2961071534421218,
+        "both_contact_fraction": 0.5353333333333333,
+        "any_contact_fraction": 0.9296666666666666,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 59.70310328100095
+  },
+  {
+    "case": {
+      "name": "hold_pos30",
+      "mode": "hold",
+      "amplitude_deg": 30,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 0.8610941181508278,
+    "mae_deg": 0.3274849685619192,
+    "max_abs_error_deg": 10.003183593942905,
+    "final_error_deg": 4.111036422085793,
+    "last60_rmse_deg": 0.23088505370408297,
+    "fraction_within_3deg": 0.9802666666666666,
+    "both_hands_contact_fraction": 0.8414666666666667,
+    "any_hand_contact_fraction": 0.9951333333333333,
+    "longest_no_hand_contact_s": 0.04,
+    "longest_not_both_contact_s": 0.16,
+    "peak_single_contact_force_N_500hz": 119.30966828127534,
+    "peak_single_contact_force_N_50hz": 110.45418366852203,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 33.51433620150495,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.03333333333333333,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.126589090112455,
+    "peak_actual_motor_speed_rad_s": 13.994672656179887,
+    "peak_opposing_hand_force_proxy_N": 21.666927903578472,
+    "peak_net_axial_contact_force_N": 97.81360228378205,
+    "max_left_palm_wheel_relative_change_deg": 17.910333397440546,
+    "max_right_palm_wheel_relative_change_deg": 29.05898692660143,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.6448367385431695,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.688845387984428,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 1.2023308137858997,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 0.7459144583270632,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 1.2023308137858997,
+        "both_contact_fraction": 0.7346666666666667,
+        "any_contact_fraction": 0.9823333333333333,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 1.031772596380981,
+        "both_contact_fraction": 0.773,
+        "any_contact_fraction": 0.996,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 0.7144719912397566,
+        "both_contact_fraction": 0.788,
+        "any_contact_fraction": 0.999,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 0.79591657280013,
+        "both_contact_fraction": 0.9166666666666666,
+        "any_contact_fraction": 0.9983333333333333,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 0.23088505370408297,
+        "both_contact_fraction": 0.995,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 56.82677635000073
+  },
+  {
+    "case": {
+      "name": "hold_neg30",
+      "mode": "hold",
+      "amplitude_deg": -30,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 0.23972918390483391,
+    "mae_deg": 0.03711147332488643,
+    "max_abs_error_deg": 5.257483961515951,
+    "final_error_deg": -0.967279315830404,
+    "last60_rmse_deg": 0.2449645962757281,
+    "fraction_within_3deg": 0.9986,
+    "both_hands_contact_fraction": 0.9924666666666667,
+    "any_hand_contact_fraction": 1.0,
+    "longest_no_hand_contact_s": 0.0,
+    "longest_not_both_contact_s": 0.28,
+    "peak_single_contact_force_N_500hz": 69.65569967528377,
+    "peak_single_contact_force_N_50hz": 56.828721956234624,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 29.113220038658305,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.0,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.12658896103497,
+    "peak_actual_motor_speed_rad_s": 13.251484727650144,
+    "peak_opposing_hand_force_proxy_N": 5.290762098894596,
+    "peak_net_axial_contact_force_N": 33.31759075950066,
+    "max_left_palm_wheel_relative_change_deg": 20.427668239529478,
+    "max_right_palm_wheel_relative_change_deg": 4.126498727599339,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 1.3036049510437688,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 0.6735749931894923,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.47644239146994927,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 0.11211708132292232,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.47644239146994927,
+        "both_contact_fraction": 0.9873333333333333,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.0014690874246536755,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 0.006532711903657416,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 0.017336888924373184,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 0.2449645962757281,
+        "both_contact_fraction": 0.975,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 61.50082868800018
+  },
+  {
+    "case": {
+      "name": "hold_neg30",
+      "mode": "hold",
+      "amplitude_deg": -30,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 0.5181263683074641,
+    "mae_deg": 0.11178815247691916,
+    "max_abs_error_deg": 12.737535884513434,
+    "final_error_deg": -8.099282496346845e-10,
+    "last60_rmse_deg": 3.777634167379906e-09,
+    "fraction_within_3deg": 0.9944,
+    "both_hands_contact_fraction": 0.9224666666666667,
+    "any_hand_contact_fraction": 0.9982666666666666,
+    "longest_no_hand_contact_s": 0.04,
+    "longest_not_both_contact_s": 0.14,
+    "peak_single_contact_force_N_500hz": 111.90191357471882,
+    "peak_single_contact_force_N_50hz": 94.44659182937903,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 33.562620062753304,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.0,
+    "mean_policy_scale": 0.9995911780980045,
+    "policy_faded_fraction": 0.001,
+    "peak_arm_reference_speed_rad_s": 15.12658896103497,
+    "peak_actual_motor_speed_rad_s": 14.682858270494648,
+    "peak_opposing_hand_force_proxy_N": 18.808720059848568,
+    "peak_net_axial_contact_force_N": 73.17845621308514,
+    "max_left_palm_wheel_relative_change_deg": 12.583279261072839,
+    "max_right_palm_wheel_relative_change_deg": 15.91066782488799,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 3.029182471372951,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.6276186126020464,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 1.1550057352693206,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 0.15050025523309482,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 1.1550057352693206,
+        "both_contact_fraction": 0.7166666666666667,
+        "any_contact_fraction": 0.9913333333333333,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.09031971328827947,
+        "both_contact_fraction": 0.8956666666666667,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 0.0088751655701771,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 1.0380860299878823e-07,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 3.777634167379906e-09,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 67.36341111399815
+  },
+  {
+    "case": {
+      "name": "sine30_slow",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.02,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 307.44000000001034,
+    "requested_seconds": 600,
+    "early_failure": true,
+    "rmse_deg": 19.3931971832076,
+    "mae_deg": 17.688877837412015,
+    "max_abs_error_deg": 50.58456231963686,
+    "final_error_deg": -50.58456231963686,
+    "last60_rmse_deg": 23.914858290518435,
+    "fraction_within_3deg": 0.09504293520686963,
+    "both_hands_contact_fraction": 0.8028233151183971,
+    "any_hand_contact_fraction": 0.9982435597189696,
+    "longest_no_hand_contact_s": 0.04,
+    "longest_not_both_contact_s": 0.22,
+    "peak_single_contact_force_N_500hz": 158.61650126595464,
+    "peak_single_contact_force_N_50hz": 156.14714121624635,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 46.52471699845301,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.9767109029404112,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 11.980077980749797,
+    "peak_actual_motor_speed_rad_s": 12.203478889123373,
+    "peak_opposing_hand_force_proxy_N": 14.580403001519542,
+    "peak_net_axial_contact_force_N": 88.06449360477401,
+    "max_left_palm_wheel_relative_change_deg": 79.0422276790079,
+    "max_right_palm_wheel_relative_change_deg": 76.89722724119979,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.79554388512546,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.7333398575946275,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 5.109325170976255,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 600,
+        "samples": 14873,
+        "rmse_deg": 19.71037074976113,
+        "actual_end_s": 307.44000000001034
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 5.109325170976255,
+        "both_contact_fraction": 0.8006666666666666,
+        "any_contact_fraction": 0.9986666666666667,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 18.84218787233971,
+        "both_contact_fraction": 0.8196666666666667,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 23.23116528285531,
+        "both_contact_fraction": 0.785,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 19.28344031470194,
+        "both_contact_fraction": 0.9056666666666666,
+        "any_contact_fraction": 0.9996666666666667,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 23.344892251555052,
+        "both_contact_fraction": 0.7373333333333333,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      },
+      {
+        "start_s": 300,
+        "end_s": 360,
+        "rmse_deg": 26.860008712163463,
+        "both_contact_fraction": 0.5268817204301075,
+        "any_contact_fraction": 0.9408602150537635,
+        "actual_end_s": 307.44000000001034
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 57.629626645000826,
+    "failure_info": {
+      "finite": true,
+      "peak_force": 9.472246725092816,
+      "non_hand_wheel_force": 0.0,
+      "wheel_angle": 1.302566654996336
+    }
+  },
+  {
+    "case": {
+      "name": "sine15_slow",
+      "mode": "sine",
+      "amplitude_deg": 15,
+      "frequency_hz": 0.02,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 599.9999999997443,
+    "requested_seconds": 600,
+    "early_failure": false,
+    "rmse_deg": 0.3037917371104629,
+    "mae_deg": 0.14171833546813833,
+    "max_abs_error_deg": 8.600817510587191,
+    "final_error_deg": -0.3558962178517178,
+    "last60_rmse_deg": 0.15800698802403898,
+    "fraction_within_3deg": 0.9975,
+    "both_hands_contact_fraction": 0.9966,
+    "any_hand_contact_fraction": 0.9992333333333333,
+    "longest_no_hand_contact_s": 0.06,
+    "longest_not_both_contact_s": 0.1,
+    "peak_single_contact_force_N_500hz": 139.86365345763122,
+    "peak_single_contact_force_N_50hz": 83.11141451039634,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 17.027438170636614,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.0,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 2.8516545218276232,
+    "peak_actual_motor_speed_rad_s": 10.331263837931537,
+    "peak_opposing_hand_force_proxy_N": 9.69366614106518,
+    "peak_net_axial_contact_force_N": 89.12345299973322,
+    "max_left_palm_wheel_relative_change_deg": 14.42446517880296,
+    "max_right_palm_wheel_relative_change_deg": 17.513468456027766,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.282026102117592,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.187584772827201,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.8462237199830553,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 600,
+        "samples": 29501,
+        "rmse_deg": 0.1523815433276005,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.8462237199830553,
+        "both_contact_fraction": 0.966,
+        "any_contact_fraction": 0.9923333333333333,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.148160135058612,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 0.1558051547732775,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 0.1437134284431421,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 0.15800997469360328,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      },
+      {
+        "start_s": 300,
+        "end_s": 360,
+        "rmse_deg": 0.1466538354673241,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 360
+      },
+      {
+        "start_s": 360,
+        "end_s": 420,
+        "rmse_deg": 0.1544742980194766,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 420
+      },
+      {
+        "start_s": 420,
+        "end_s": 480,
+        "rmse_deg": 0.15483021396555036,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 480
+      },
+      {
+        "start_s": 480,
+        "end_s": 540,
+        "rmse_deg": 0.1436801238340402,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 540
+      },
+      {
+        "start_s": 540,
+        "end_s": 600,
+        "rmse_deg": 0.15800698802403898,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 102.61454231099924
+  },
+  {
+    "case": {
+      "name": "sine30_slow",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.02,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 599.9999999997443,
+    "requested_seconds": 600,
+    "early_failure": false,
+    "rmse_deg": 3.122714126712679,
+    "mae_deg": 2.1857992054942694,
+    "max_abs_error_deg": 13.71750722878574,
+    "final_error_deg": -4.024266672540044,
+    "last60_rmse_deg": 2.241331171697562,
+    "fraction_within_3deg": 0.7624,
+    "both_hands_contact_fraction": 0.6154333333333334,
+    "any_hand_contact_fraction": 0.9549666666666666,
+    "longest_no_hand_contact_s": 0.1,
+    "longest_not_both_contact_s": 1.94,
+    "peak_single_contact_force_N_500hz": 128.45168986073037,
+    "peak_single_contact_force_N_50hz": 110.90798044792997,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 38.773470318842776,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.2586333333333333,
+    "mean_policy_scale": 0.9864594692362538,
+    "policy_faded_fraction": 0.061533333333333336,
+    "peak_arm_reference_speed_rad_s": 15.126589090112452,
+    "peak_actual_motor_speed_rad_s": 14.763542647620328,
+    "peak_opposing_hand_force_proxy_N": 35.95051350510102,
+    "peak_net_axial_contact_force_N": 102.29125872985712,
+    "max_left_palm_wheel_relative_change_deg": 31.58163108008253,
+    "max_right_palm_wheel_relative_change_deg": 31.82867319603402,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 6.525846634477199,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 5.903894604241533,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 4.469723811879077,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 600,
+        "samples": 29501,
+        "rmse_deg": 3.0348649811021158,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 4.469723811879077,
+        "both_contact_fraction": 0.6563333333333333,
+        "any_contact_fraction": 0.9613333333333334,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 1.9912165018856713,
+        "both_contact_fraction": 0.6316666666666667,
+        "any_contact_fraction": 0.9686666666666667,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 2.613401241755573,
+        "both_contact_fraction": 0.6833333333333333,
+        "any_contact_fraction": 0.9363333333333334,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 5.684966212004676,
+        "both_contact_fraction": 0.7116666666666667,
+        "any_contact_fraction": 0.9703333333333334,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 2.6208404471843516,
+        "both_contact_fraction": 0.716,
+        "any_contact_fraction": 0.9803333333333333,
+        "actual_end_s": 300
+      },
+      {
+        "start_s": 300,
+        "end_s": 360,
+        "rmse_deg": 3.006593547132366,
+        "both_contact_fraction": 0.512,
+        "any_contact_fraction": 0.932,
+        "actual_end_s": 360
+      },
+      {
+        "start_s": 360,
+        "end_s": 420,
+        "rmse_deg": 1.8575255771110315,
+        "both_contact_fraction": 0.62,
+        "any_contact_fraction": 0.9703333333333334,
+        "actual_end_s": 420
+      },
+      {
+        "start_s": 420,
+        "end_s": 480,
+        "rmse_deg": 2.448146745334628,
+        "both_contact_fraction": 0.5536666666666666,
+        "any_contact_fraction": 0.9313333333333333,
+        "actual_end_s": 480
+      },
+      {
+        "start_s": 480,
+        "end_s": 540,
+        "rmse_deg": 2.0113566548505104,
+        "both_contact_fraction": 0.472,
+        "any_contact_fraction": 0.9486666666666667,
+        "actual_end_s": 540
+      },
+      {
+        "start_s": 540,
+        "end_s": 600,
+        "rmse_deg": 2.241331171697562,
+        "both_contact_fraction": 0.5976666666666667,
+        "any_contact_fraction": 0.9503333333333334,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 114.5148326339986
+  },
+  {
+    "case": {
+      "name": "sine15_slow",
+      "mode": "sine",
+      "amplitude_deg": 15,
+      "frequency_hz": 0.02,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 599.9999999997443,
+    "requested_seconds": 600,
+    "early_failure": false,
+    "rmse_deg": 19.44718310264094,
+    "mae_deg": 18.89006620492971,
+    "max_abs_error_deg": 28.658840279654054,
+    "final_error_deg": -16.720615000358457,
+    "last60_rmse_deg": 20.527740623401478,
+    "fraction_within_3deg": 0.0023666666666666667,
+    "both_hands_contact_fraction": 0.9463333333333334,
+    "any_hand_contact_fraction": 0.9999333333333333,
+    "longest_no_hand_contact_s": 0.02,
+    "longest_not_both_contact_s": 0.22,
+    "peak_single_contact_force_N_500hz": 140.6250099146943,
+    "peak_single_contact_force_N_50hz": 80.4776381299847,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 31.07847572041813,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.9929,
+    "mean_policy_scale": 0.10107568039346612,
+    "policy_faded_fraction": 0.9702666666666667,
+    "peak_arm_reference_speed_rad_s": 7.509653975358843,
+    "peak_actual_motor_speed_rad_s": 11.429201226136927,
+    "peak_opposing_hand_force_proxy_N": 6.574242005864393,
+    "peak_net_axial_contact_force_N": 69.16767594294153,
+    "max_left_palm_wheel_relative_change_deg": 45.03460480856996,
+    "max_right_palm_wheel_relative_change_deg": 49.727534889799976,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 5.6704469720806,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 7.347091570725195,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 8.934294308747274,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 600,
+        "samples": 29501,
+        "rmse_deg": 19.594285349342137,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 8.934294308747274,
+        "both_contact_fraction": 0.8933333333333333,
+        "any_contact_fraction": 0.9993333333333333,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 14.184989660372763,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 17.51369431794156,
+        "both_contact_fraction": 0.9486666666666667,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 21.830232192628316,
+        "both_contact_fraction": 0.941,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 21.659702764841317,
+        "both_contact_fraction": 0.93,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      },
+      {
+        "start_s": 300,
+        "end_s": 360,
+        "rmse_deg": 21.22704018193657,
+        "both_contact_fraction": 0.9186666666666666,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 360
+      },
+      {
+        "start_s": 360,
+        "end_s": 420,
+        "rmse_deg": 21.384534083424562,
+        "both_contact_fraction": 0.9593333333333334,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 420
+      },
+      {
+        "start_s": 420,
+        "end_s": 480,
+        "rmse_deg": 21.526753979405967,
+        "both_contact_fraction": 0.96,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 480
+      },
+      {
+        "start_s": 480,
+        "end_s": 540,
+        "rmse_deg": 21.34918511012502,
+        "both_contact_fraction": 0.949,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 540
+      },
+      {
+        "start_s": 540,
+        "end_s": 600,
+        "rmse_deg": 20.527740623401478,
+        "both_contact_fraction": 0.9633333333333334,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 131.57569643600073
+  },
+  {
+    "case": {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 599.9999999997443,
+    "requested_seconds": 600,
+    "early_failure": false,
+    "rmse_deg": 4.034234116111846,
+    "mae_deg": 3.183512840140847,
+    "max_abs_error_deg": 15.41322278321264,
+    "final_error_deg": 1.7496031587749248,
+    "last60_rmse_deg": 3.6274566791465443,
+    "fraction_within_3deg": 0.5718,
+    "both_hands_contact_fraction": 0.5558,
+    "any_hand_contact_fraction": 0.9280333333333334,
+    "longest_no_hand_contact_s": 0.08,
+    "longest_not_both_contact_s": 0.64,
+    "peak_single_contact_force_N_500hz": 162.89424973896462,
+    "peak_single_contact_force_N_50hz": 140.747412899921,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 40.603637906589405,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.0008666666666666666,
+    "mean_policy_scale": 0.9806893135853938,
+    "policy_faded_fraction": 0.1021,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 15.413171693251112,
+    "peak_opposing_hand_force_proxy_N": 26.559499682829887,
+    "peak_net_axial_contact_force_N": 102.57681340402999,
+    "max_left_palm_wheel_relative_change_deg": 19.82019560056882,
+    "max_right_palm_wheel_relative_change_deg": 25.806124105163775,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 3.1830974345466783,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 4.1714129015804104,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 4.441355856255432,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 600,
+        "samples": 29501,
+        "rmse_deg": 4.0414072760627215,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 4.441355856255432,
+        "both_contact_fraction": 0.5386666666666666,
+        "any_contact_fraction": 0.9236666666666666,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 4.165375058054318,
+        "both_contact_fraction": 0.5326666666666666,
+        "any_contact_fraction": 0.917,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 3.6950484128684145,
+        "both_contact_fraction": 0.5723333333333334,
+        "any_contact_fraction": 0.929,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 3.8678448330868695,
+        "both_contact_fraction": 0.587,
+        "any_contact_fraction": 0.9306666666666666,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 3.8217579692828614,
+        "both_contact_fraction": 0.536,
+        "any_contact_fraction": 0.921,
+        "actual_end_s": 300
+      },
+      {
+        "start_s": 300,
+        "end_s": 360,
+        "rmse_deg": 4.267404732257868,
+        "both_contact_fraction": 0.554,
+        "any_contact_fraction": 0.9313333333333333,
+        "actual_end_s": 360
+      },
+      {
+        "start_s": 360,
+        "end_s": 420,
+        "rmse_deg": 4.079884556883937,
+        "both_contact_fraction": 0.541,
+        "any_contact_fraction": 0.9333333333333333,
+        "actual_end_s": 420
+      },
+      {
+        "start_s": 420,
+        "end_s": 480,
+        "rmse_deg": 4.058613479590135,
+        "both_contact_fraction": 0.5766666666666667,
+        "any_contact_fraction": 0.9366666666666666,
+        "actual_end_s": 480
+      },
+      {
+        "start_s": 480,
+        "end_s": 540,
+        "rmse_deg": 4.2388714223958415,
+        "both_contact_fraction": 0.5406666666666666,
+        "any_contact_fraction": 0.9253333333333333,
+        "actual_end_s": 540
+      },
+      {
+        "start_s": 540,
+        "end_s": 600,
+        "rmse_deg": 3.6274566791465443,
+        "both_contact_fraction": 0.579,
+        "any_contact_fraction": 0.9323333333333333,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 109.7267329690003
+  },
+  {
+    "case": {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 599.9999999997443,
+    "requested_seconds": 600,
+    "early_failure": false,
+    "rmse_deg": 4.689613530966499,
+    "mae_deg": 3.1236611773701286,
+    "max_abs_error_deg": 26.10676953115513,
+    "final_error_deg": -2.2982654845739092,
+    "last60_rmse_deg": 4.165918886878386,
+    "fraction_within_3deg": 0.6475,
+    "both_hands_contact_fraction": 0.7011333333333334,
+    "any_hand_contact_fraction": 0.9673666666666667,
+    "longest_no_hand_contact_s": 0.06,
+    "longest_not_both_contact_s": 0.5,
+    "peak_single_contact_force_N_500hz": 162.3101719332758,
+    "peak_single_contact_force_N_50hz": 125.34575694679495,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 45.2971494938828,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.15136666666666668,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 15.527359035358545,
+    "peak_opposing_hand_force_proxy_N": 27.039769564931596,
+    "peak_net_axial_contact_force_N": 99.43314974658816,
+    "max_left_palm_wheel_relative_change_deg": 44.270553947810306,
+    "max_right_palm_wheel_relative_change_deg": 46.54512448075669,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 4.540517996478772,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 3.351048625843945,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 3.178565149652269,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 600,
+        "samples": 29501,
+        "rmse_deg": 4.698779064817097,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 3.178565149652269,
+        "both_contact_fraction": 0.7573333333333333,
+        "any_contact_fraction": 0.975,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 3.426699152487041,
+        "both_contact_fraction": 0.6856666666666666,
+        "any_contact_fraction": 0.9606666666666667,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 5.2321954670084345,
+        "both_contact_fraction": 0.675,
+        "any_contact_fraction": 0.966,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 7.151644100518863,
+        "both_contact_fraction": 0.7626666666666667,
+        "any_contact_fraction": 0.9873333333333333,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 7.302303650913094,
+        "both_contact_fraction": 0.7163333333333334,
+        "any_contact_fraction": 0.9676666666666667,
+        "actual_end_s": 300
+      },
+      {
+        "start_s": 300,
+        "end_s": 360,
+        "rmse_deg": 3.55226003778449,
+        "both_contact_fraction": 0.6836666666666666,
+        "any_contact_fraction": 0.965,
+        "actual_end_s": 360
+      },
+      {
+        "start_s": 360,
+        "end_s": 420,
+        "rmse_deg": 2.9390724795773773,
+        "both_contact_fraction": 0.8103333333333333,
+        "any_contact_fraction": 0.986,
+        "actual_end_s": 420
+      },
+      {
+        "start_s": 420,
+        "end_s": 480,
+        "rmse_deg": 3.0120401311775793,
+        "both_contact_fraction": 0.699,
+        "any_contact_fraction": 0.973,
+        "actual_end_s": 480
+      },
+      {
+        "start_s": 480,
+        "end_s": 540,
+        "rmse_deg": 4.3069387632364515,
+        "both_contact_fraction": 0.6333333333333333,
+        "any_contact_fraction": 0.9486666666666667,
+        "actual_end_s": 540
+      },
+      {
+        "start_s": 540,
+        "end_s": 600,
+        "rmse_deg": 4.165918886878386,
+        "both_contact_fraction": 0.588,
+        "any_contact_fraction": 0.9443333333333334,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 101.53946986799929
+  },
+  {
+    "case": {
+      "name": "stop_reverse",
+      "mode": "sequence",
+      "amplitude_deg": 30,
+      "frequency_hz": 0,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 599.9999999997443,
+    "requested_seconds": 600,
+    "early_failure": false,
+    "rmse_deg": 12.550025702469279,
+    "mae_deg": 8.122191246707636,
+    "max_abs_error_deg": 28.311499037900372,
+    "final_error_deg": 0.03281279577199396,
+    "last60_rmse_deg": 13.086619253277691,
+    "fraction_within_3deg": 0.5701666666666667,
+    "both_hands_contact_fraction": 0.8648,
+    "any_hand_contact_fraction": 0.9943333333333333,
+    "longest_no_hand_contact_s": 0.06,
+    "longest_not_both_contact_s": 0.52,
+    "peak_single_contact_force_N_500hz": 139.04228373099633,
+    "peak_single_contact_force_N_50hz": 135.04584783445299,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 46.423600726685244,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.4422333333333333,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 14.022330700094951,
+    "peak_opposing_hand_force_proxy_N": 22.678904585446094,
+    "peak_net_axial_contact_force_N": 101.27995594428263,
+    "max_left_palm_wheel_relative_change_deg": 46.6545382109195,
+    "max_right_palm_wheel_relative_change_deg": 49.75332670935096,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.438478975580886,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.3273931741124634,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 1.0034504635894055,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 600,
+        "samples": 29501,
+        "rmse_deg": 12.652534802545285,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 1.0034504635894055,
+        "both_contact_fraction": 0.9766666666666667,
+        "any_contact_fraction": 0.9983333333333333,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 11.19221904641831,
+        "both_contact_fraction": 0.7676666666666667,
+        "any_contact_fraction": 0.9936666666666667,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 1.0215193483150269,
+        "both_contact_fraction": 0.989,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 1.6418784884509907,
+        "both_contact_fraction": 0.89,
+        "any_contact_fraction": 0.9956666666666667,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 1.5203001224788264,
+        "both_contact_fraction": 0.9,
+        "any_contact_fraction": 0.9996666666666667,
+        "actual_end_s": 300
+      },
+      {
+        "start_s": 300,
+        "end_s": 360,
+        "rmse_deg": 2.1737222595348933,
+        "both_contact_fraction": 0.689,
+        "any_contact_fraction": 0.9773333333333334,
+        "actual_end_s": 360
+      },
+      {
+        "start_s": 360,
+        "end_s": 420,
+        "rmse_deg": 18.373779776659887,
+        "both_contact_fraction": 0.915,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 420
+      },
+      {
+        "start_s": 420,
+        "end_s": 480,
+        "rmse_deg": 22.304131297872686,
+        "both_contact_fraction": 0.778,
+        "any_contact_fraction": 0.999,
+        "actual_end_s": 480
+      },
+      {
+        "start_s": 480,
+        "end_s": 540,
+        "rmse_deg": 20.776271655965704,
+        "both_contact_fraction": 0.931,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 540
+      },
+      {
+        "start_s": 540,
+        "end_s": 600,
+        "rmse_deg": 13.086619253277691,
+        "both_contact_fraction": 0.8116666666666666,
+        "any_contact_fraction": 0.9796666666666667,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 106.84792592599842
+  },
+  {
+    "case": {
+      "name": "no_contact",
+      "mode": "sine",
+      "amplitude_deg": 15,
+      "frequency_hz": 0.1,
+      "seconds": 10,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": true
+    },
+    "simulated_seconds": 9.999999999999876,
+    "requested_seconds": 10,
+    "early_failure": false,
+    "rmse_deg": 10.606601717798211,
+    "mae_deg": 9.546154786132186,
+    "max_abs_error_deg": 14.999999999999998,
+    "final_error_deg": -0.941857792939699,
+    "last60_rmse_deg": 10.606601717798211,
+    "fraction_within_3deg": 0.14,
+    "both_hands_contact_fraction": 0.0,
+    "any_hand_contact_fraction": 0.0,
+    "longest_no_hand_contact_s": 10.0,
+    "longest_not_both_contact_s": 10.0,
+    "peak_single_contact_force_N_500hz": 0.0,
+    "peak_single_contact_force_N_50hz": 0.0,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 29.459155902616462,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.602,
+    "mean_policy_scale": 0.5487643362436437,
+    "policy_faded_fraction": 0.7,
+    "peak_arm_reference_speed_rad_s": 15.126589090112457,
+    "peak_actual_motor_speed_rad_s": 13.539790681273487,
+    "peak_opposing_hand_force_proxy_N": 0.0,
+    "peak_net_axial_contact_force_N": 0.0,
+    "max_left_palm_wheel_relative_change_deg": 31.46793974264998,
+    "max_right_palm_wheel_relative_change_deg": 31.377877722036505,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 10.853434286950497,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 500,
+        "rmse_deg": 10.606601717798211,
+        "actual_end_s": 9.999999999999876
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 500,
+        "rmse_deg": 10.606601717798211,
+        "actual_end_s": 9.999999999999876
+      },
+      {
+        "start_s": 10,
+        "end_s": 10,
+        "samples": 1,
+        "rmse_deg": 0.941857792939699,
+        "actual_end_s": 9.999999999999876
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 10.606601717798211,
+        "both_contact_fraction": 0.0,
+        "any_contact_fraction": 0.0,
+        "actual_end_s": 9.999999999999876
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": 0.0,
+      "error_deg": 3.752863998140009,
+      "wheel_velocity": 0.0,
+      "left_force": 0.0,
+      "right_force": 0.0,
+      "peak_force": 0.0,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 1.0775981939987105
+  },
+  {
+    "case": {
+      "name": "no_contact",
+      "mode": "sine",
+      "amplitude_deg": 15,
+      "frequency_hz": 0.1,
+      "seconds": 10,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": true
+    },
+    "simulated_seconds": 9.999999999999876,
+    "requested_seconds": 10,
+    "early_failure": false,
+    "rmse_deg": 10.606601717798211,
+    "mae_deg": 9.546154786132186,
+    "max_abs_error_deg": 14.999999999999998,
+    "final_error_deg": -0.941857792939699,
+    "last60_rmse_deg": 10.606601717798211,
+    "fraction_within_3deg": 0.14,
+    "both_hands_contact_fraction": 0.0,
+    "any_hand_contact_fraction": 0.0,
+    "longest_no_hand_contact_s": 10.0,
+    "longest_not_both_contact_s": 10.0,
+    "peak_single_contact_force_N_500hz": 0.0,
+    "peak_single_contact_force_N_50hz": 0.0,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 29.459155902616462,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.602,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.126589090112457,
+    "peak_actual_motor_speed_rad_s": 13.540689107903129,
+    "peak_opposing_hand_force_proxy_N": 0.0,
+    "peak_net_axial_contact_force_N": 0.0,
+    "max_left_palm_wheel_relative_change_deg": 31.46527007915652,
+    "max_right_palm_wheel_relative_change_deg": 31.372494926574912,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 10.853434286950497,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 500,
+        "rmse_deg": 10.606601717798211,
+        "actual_end_s": 9.999999999999876
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 500,
+        "rmse_deg": 10.606601717798211,
+        "actual_end_s": 9.999999999999876
+      },
+      {
+        "start_s": 10,
+        "end_s": 10,
+        "samples": 1,
+        "rmse_deg": 0.941857792939699,
+        "actual_end_s": 9.999999999999876
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 10.606601717798211,
+        "both_contact_fraction": 0.0,
+        "any_contact_fraction": 0.0,
+        "actual_end_s": 9.999999999999876
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": 0.0,
+      "error_deg": 3.752863998140009,
+      "wheel_velocity": 0.0,
+      "left_force": 0.0,
+      "right_force": 0.0,
+      "peak_force": 0.0,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 0.841651382001146
+  },
+  {
+    "case": {
+      "name": "stop_reverse",
+      "mode": "sequence",
+      "amplitude_deg": 30,
+      "frequency_hz": 0,
+      "seconds": 600,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 599.9999999997443,
+    "requested_seconds": 600,
+    "early_failure": false,
+    "rmse_deg": 2.7874315611377862,
+    "mae_deg": 1.6343875275998276,
+    "max_abs_error_deg": 16.244463055983463,
+    "final_error_deg": 1.654169996062969,
+    "last60_rmse_deg": 2.111347398127414,
+    "fraction_within_3deg": 0.8264333333333334,
+    "both_hands_contact_fraction": 0.5902666666666667,
+    "any_hand_contact_fraction": 0.9647666666666667,
+    "longest_no_hand_contact_s": 0.08,
+    "longest_not_both_contact_s": 3.64,
+    "peak_single_contact_force_N_500hz": 153.5960006252227,
+    "peak_single_contact_force_N_50hz": 119.06815620354413,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 42.14107674744191,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.1351,
+    "mean_policy_scale": 0.9813306722647416,
+    "policy_faded_fraction": 0.05536666666666667,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 15.315291788095815,
+    "peak_opposing_hand_force_proxy_N": 26.40266112808368,
+    "peak_net_axial_contact_force_N": 97.80639238764547,
+    "max_left_palm_wheel_relative_change_deg": 27.55789965093365,
+    "max_right_palm_wheel_relative_change_deg": 29.828635323826774,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 1.930428700590439,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.287198802138838,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 1.9087344761404141,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 600,
+        "samples": 29501,
+        "rmse_deg": 2.8019038062221373,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 1.9087344761404141,
+        "both_contact_fraction": 0.6936666666666667,
+        "any_contact_fraction": 0.9766666666666667,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 2.089658081985585,
+        "both_contact_fraction": 0.6866666666666666,
+        "any_contact_fraction": 0.9636666666666667,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 2.562091959796687,
+        "both_contact_fraction": 0.6246666666666667,
+        "any_contact_fraction": 0.9523333333333334,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 5.389843806831681,
+        "both_contact_fraction": 0.5763333333333334,
+        "any_contact_fraction": 0.9833333333333333,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 2.942031450903353,
+        "both_contact_fraction": 0.652,
+        "any_contact_fraction": 0.9516666666666667,
+        "actual_end_s": 300
+      },
+      {
+        "start_s": 300,
+        "end_s": 360,
+        "rmse_deg": 2.7135511656377576,
+        "both_contact_fraction": 0.5543333333333333,
+        "any_contact_fraction": 0.9523333333333334,
+        "actual_end_s": 360
+      },
+      {
+        "start_s": 360,
+        "end_s": 420,
+        "rmse_deg": 1.8550973062203435,
+        "both_contact_fraction": 0.438,
+        "any_contact_fraction": 0.9706666666666667,
+        "actual_end_s": 420
+      },
+      {
+        "start_s": 420,
+        "end_s": 480,
+        "rmse_deg": 2.5552843849751072,
+        "both_contact_fraction": 0.5666666666666667,
+        "any_contact_fraction": 0.9466666666666667,
+        "actual_end_s": 480
+      },
+      {
+        "start_s": 480,
+        "end_s": 540,
+        "rmse_deg": 1.9040788539074465,
+        "both_contact_fraction": 0.459,
+        "any_contact_fraction": 0.9873333333333333,
+        "actual_end_s": 540
+      },
+      {
+        "start_s": 540,
+        "end_s": 600,
+        "rmse_deg": 2.111347398127414,
+        "both_contact_fraction": 0.6513333333333333,
+        "any_contact_fraction": 0.963,
+        "actual_end_s": 599.9999999997443
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 116.32245990600131
+  },
+  {
+    "case": {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 8.547166328620309,
+    "mae_deg": 4.670993047908616,
+    "max_abs_error_deg": 29.050253293206666,
+    "final_error_deg": 21.151698240020412,
+    "last60_rmse_deg": 17.358115394707124,
+    "fraction_within_3deg": 0.688,
+    "both_hands_contact_fraction": 0.8852,
+    "any_hand_contact_fraction": 0.9967333333333334,
+    "longest_no_hand_contact_s": 0.06,
+    "longest_not_both_contact_s": 0.9,
+    "peak_single_contact_force_N_500hz": 123.34520765230782,
+    "peak_single_contact_force_N_50hz": 108.61366440938565,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 39.83322973730686,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.36633333333333334,
+    "mean_policy_scale": 0.7793366040812765,
+    "policy_faded_fraction": 0.29586666666666667,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 11.79196522070976,
+    "peak_opposing_hand_force_proxy_N": 9.568685752748717,
+    "peak_net_axial_contact_force_N": 70.4254269710955,
+    "max_left_palm_wheel_relative_change_deg": 41.7982644504987,
+    "max_right_palm_wheel_relative_change_deg": 31.544979508881973,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.1071386805176293,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.1717249786428485,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.8296499638904451,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 8.685461345162981,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.8296499638904451,
+        "both_contact_fraction": 0.8953333333333333,
+        "any_contact_fraction": 0.9836666666666667,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.05423074815675433,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 0.5896218146814194,
+        "both_contact_fraction": 0.8983333333333333,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 7.93266520587867,
+        "both_contact_fraction": 0.7613333333333333,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 17.358115394707124,
+        "both_contact_fraction": 0.871,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 61.52558851200229
+  },
+  {
+    "case": {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 7,
+      "randomize": false,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 9.811002828016582,
+    "mae_deg": 5.880743270910971,
+    "max_abs_error_deg": 31.212983608123327,
+    "final_error_deg": 31.212983608123327,
+    "last60_rmse_deg": 19.234659102459513,
+    "fraction_within_3deg": 0.5759333333333333,
+    "both_hands_contact_fraction": 0.9182666666666667,
+    "any_hand_contact_fraction": 0.9999333333333333,
+    "longest_no_hand_contact_s": 0.02,
+    "longest_not_both_contact_s": 0.14,
+    "peak_single_contact_force_N_500hz": 148.54084389575274,
+    "peak_single_contact_force_N_50hz": 101.96618524912647,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 40.9390352410236,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.44853333333333334,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 12.28954554361306,
+    "peak_opposing_hand_force_proxy_N": 10.105095049691535,
+    "peak_net_axial_contact_force_N": 77.88785383954972,
+    "max_left_palm_wheel_relative_change_deg": 44.2039373584325,
+    "max_right_palm_wheel_relative_change_deg": 32.421786804065725,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 1.459978664540878,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 0.7556808125350879,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.5354559144193223,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 9.975431473536322,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.5354559144193223,
+        "both_contact_fraction": 0.985,
+        "any_contact_fraction": 0.9996666666666667,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.05006580247269332,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 1.4833262809650756,
+        "both_contact_fraction": 0.9066666666666666,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 10.431552865813055,
+        "both_contact_fraction": 0.8053333333333333,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 19.234659102459513,
+        "both_contact_fraction": 0.8943333333333333,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.0654998331471015,
+      "wheel_angle": -0.09374571584158246,
+      "error_deg": 9.124097863295388,
+      "wheel_velocity": -0.34407047865441537,
+      "left_force": 0.0,
+      "right_force": 23.958430560027523,
+      "peak_force": 21.810438308459638,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.07692307692307693,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.15,
+      "wheel_frictionloss": 0.03,
+      "rim_friction": [
+        1.5,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 54.2560074719986
+  },
+  {
+    "case": {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 101,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 3.5372621640351367,
+    "mae_deg": 2.9368439958969152,
+    "max_abs_error_deg": 13.721415940399359,
+    "final_error_deg": -6.223071447338898,
+    "last60_rmse_deg": 3.483861028034568,
+    "fraction_within_3deg": 0.5857333333333333,
+    "both_hands_contact_fraction": 0.4498666666666667,
+    "any_hand_contact_fraction": 0.8811333333333333,
+    "longest_no_hand_contact_s": 0.1,
+    "longest_not_both_contact_s": 1.02,
+    "peak_single_contact_force_N_500hz": 153.68696483423906,
+    "peak_single_contact_force_N_50hz": 132.29194649244303,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 40.86843433081272,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.003533333333333333,
+    "mean_policy_scale": 0.9919679112306782,
+    "policy_faded_fraction": 0.045,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 14.845254166648628,
+    "peak_opposing_hand_force_proxy_N": 25.660909800732785,
+    "peak_net_axial_contact_force_N": 86.91157686362499,
+    "max_left_palm_wheel_relative_change_deg": 19.35043405739336,
+    "max_right_palm_wheel_relative_change_deg": 17.409573928983505,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 4.003877181868418,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 3.5972789777571395,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 3.4655433707943915,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 3.5265684334734484,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 3.4655433707943915,
+        "both_contact_fraction": 0.4493333333333333,
+        "any_contact_fraction": 0.8796666666666667,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 3.554914645265019,
+        "both_contact_fraction": 0.4646666666666667,
+        "any_contact_fraction": 0.8966666666666666,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 3.6025358756395502,
+        "both_contact_fraction": 0.44566666666666666,
+        "any_contact_fraction": 0.8793333333333333,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 3.5774511453921947,
+        "both_contact_fraction": 0.428,
+        "any_contact_fraction": 0.8713333333333333,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 3.483861028034568,
+        "both_contact_fraction": 0.46166666666666667,
+        "any_contact_fraction": 0.8786666666666667,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": -0.07360697481722636,
+      "wheel_angle": 0.10347793680559296,
+      "error_deg": -10.146218051434724,
+      "wheel_velocity": -0.4837731804517454,
+      "left_force": 0.0,
+      "right_force": 0.0,
+      "peak_force": 0.0,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.0,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.17563248707729795,
+      "wheel_frictionloss": 0.032190676445505884,
+      "rim_friction": [
+        1.3457464208976961,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 54.52093304099981
+  },
+  {
+    "case": {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 101,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 10.495742262313016,
+    "mae_deg": 7.601498209813256,
+    "max_abs_error_deg": 29.104233482169214,
+    "final_error_deg": 11.380895352669436,
+    "last60_rmse_deg": 5.255725297835485,
+    "fraction_within_3deg": 0.40453333333333336,
+    "both_hands_contact_fraction": 0.7130666666666666,
+    "any_hand_contact_fraction": 0.97,
+    "longest_no_hand_contact_s": 0.08,
+    "longest_not_both_contact_s": 0.72,
+    "peak_single_contact_force_N_500hz": 170.91683867725746,
+    "peak_single_contact_force_N_50hz": 135.69936477913345,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 46.204462283941425,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.5152666666666667,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 15.430744401538117,
+    "peak_opposing_hand_force_proxy_N": 24.67476987475874,
+    "peak_net_axial_contact_force_N": 113.75887582921628,
+    "max_left_palm_wheel_relative_change_deg": 48.83257226931698,
+    "max_right_palm_wheel_relative_change_deg": 42.501107520635486,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 3.070585905177055,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 2.9975298557941588,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 3.3652752381112716,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 10.658723347375902,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 3.3652752381112716,
+        "both_contact_fraction": 0.6413333333333333,
+        "any_contact_fraction": 0.9493333333333334,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 7.674672673504322,
+        "both_contact_fraction": 0.7236666666666667,
+        "any_contact_fraction": 0.9653333333333334,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 17.249154480866107,
+        "both_contact_fraction": 0.8183333333333334,
+        "any_contact_fraction": 0.9903333333333333,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 12.466810795056917,
+        "both_contact_fraction": 0.7536666666666667,
+        "any_contact_fraction": 0.9836666666666667,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 5.255725297835485,
+        "both_contact_fraction": 0.6283333333333333,
+        "any_contact_fraction": 0.9613333333333334,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": -0.07360697481722636,
+      "wheel_angle": 0.10347793680559296,
+      "error_deg": -10.146218051434724,
+      "wheel_velocity": -0.4837731804517454,
+      "left_force": 0.0,
+      "right_force": 0.0,
+      "peak_force": 0.0,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.0,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.17563248707729795,
+      "wheel_frictionloss": 0.032190676445505884,
+      "rim_friction": [
+        1.3457464208976961,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 52.96988998500092
+  },
+  {
+    "case": {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 101,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 1.5154518005830315,
+    "mae_deg": 0.889899843620469,
+    "max_abs_error_deg": 10.666229052030898,
+    "final_error_deg": -0.7543047427026687,
+    "last60_rmse_deg": 2.3378688002377475,
+    "fraction_within_3deg": 0.9404,
+    "both_hands_contact_fraction": 0.6526,
+    "any_hand_contact_fraction": 0.916,
+    "longest_no_hand_contact_s": 0.14,
+    "longest_not_both_contact_s": 1.18,
+    "peak_single_contact_force_N_500hz": 142.88809214508257,
+    "peak_single_contact_force_N_50hz": 125.5596443950701,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 28.651980081739577,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.06353333333333333,
+    "mean_policy_scale": 0.9993815473984945,
+    "policy_faded_fraction": 0.0033333333333333335,
+    "peak_arm_reference_speed_rad_s": 14.051274673461302,
+    "peak_actual_motor_speed_rad_s": 13.507556508756371,
+    "peak_opposing_hand_force_proxy_N": 26.735299503095895,
+    "peak_net_axial_contact_force_N": 84.1999203609368,
+    "max_left_palm_wheel_relative_change_deg": 13.214831253660012,
+    "max_right_palm_wheel_relative_change_deg": 13.482904261743464,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 1.8534203503335651,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 0.9606930395929608,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.6804920752042045,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 1.5102000718617956,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.6804920752042045,
+        "both_contact_fraction": 0.9933333333333333,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.04674422742049812,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 1.5031772635730505,
+        "both_contact_fraction": 0.546,
+        "any_contact_fraction": 0.8876666666666667,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 1.8145368277857714,
+        "both_contact_fraction": 0.44733333333333336,
+        "any_contact_fraction": 0.8846666666666667,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 2.3378688002377475,
+        "both_contact_fraction": 0.2763333333333333,
+        "any_contact_fraction": 0.8076666666666666,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": -0.07360697481722636,
+      "wheel_angle": 0.10347793680559296,
+      "error_deg": -10.146218051434724,
+      "wheel_velocity": -0.4837731804517454,
+      "left_force": 0.0,
+      "right_force": 0.0,
+      "peak_force": 0.0,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.0,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.17563248707729795,
+      "wheel_frictionloss": 0.032190676445505884,
+      "rim_friction": [
+        1.3457464208976961,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 55.54117515099642
+  },
+  {
+    "case": {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 101,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 12.676254881036423,
+    "mae_deg": 8.331104769922364,
+    "max_abs_error_deg": 31.33901916085687,
+    "final_error_deg": 31.33901916085687,
+    "last60_rmse_deg": 22.967072879420325,
+    "fraction_within_3deg": 0.5312666666666667,
+    "both_hands_contact_fraction": 0.9144666666666666,
+    "any_hand_contact_fraction": 0.9999333333333333,
+    "longest_no_hand_contact_s": 0.02,
+    "longest_not_both_contact_s": 0.12,
+    "peak_single_contact_force_N_500hz": 142.73139774020268,
+    "peak_single_contact_force_N_50hz": 142.73139774020268,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 42.56203161078259,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.5054,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.126589090112457,
+    "peak_actual_motor_speed_rad_s": 12.916792785962375,
+    "peak_opposing_hand_force_proxy_N": 11.10376816517671,
+    "peak_net_axial_contact_force_N": 79.8405000789586,
+    "max_left_palm_wheel_relative_change_deg": 56.16998367533198,
+    "max_right_palm_wheel_relative_change_deg": 43.94640962393083,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.1046285391598056,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.0889168760186163,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.7707744179892081,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 12.887770410700645,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.7707744179892081,
+        "both_contact_fraction": 0.9783333333333334,
+        "any_contact_fraction": 0.9996666666666667,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.04612012626632667,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 5.016396677941662,
+        "both_contact_fraction": 0.8116666666666666,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 15.81740485972514,
+        "both_contact_fraction": 0.9383333333333334,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 22.967072879420325,
+        "both_contact_fraction": 0.844,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": -0.07360697481722636,
+      "wheel_angle": 0.10347793680559296,
+      "error_deg": -10.146218051434724,
+      "wheel_velocity": -0.4837731804517454,
+      "left_force": 0.0,
+      "right_force": 0.0,
+      "peak_force": 0.0,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.0,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.17563248707729795,
+      "wheel_frictionloss": 0.032190676445505884,
+      "rim_friction": [
+        1.3457464208976961,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 54.75966583799891
+  },
+  {
+    "case": {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 102,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 4.194571405445585,
+    "mae_deg": 3.151259301976357,
+    "max_abs_error_deg": 17.462517293839436,
+    "final_error_deg": 6.290497749692899,
+    "last60_rmse_deg": 4.694837487364665,
+    "fraction_within_3deg": 0.5945333333333334,
+    "both_hands_contact_fraction": 0.6812,
+    "any_hand_contact_fraction": 0.9662,
+    "longest_no_hand_contact_s": 0.06,
+    "longest_not_both_contact_s": 0.26,
+    "peak_single_contact_force_N_500hz": 140.242611180211,
+    "peak_single_contact_force_N_50hz": 134.02236961424026,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 43.763941313638085,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.045533333333333335,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 16.146437701752745,
+    "peak_opposing_hand_force_proxy_N": 28.67246234009066,
+    "peak_net_axial_contact_force_N": 102.01808787070645,
+    "max_left_palm_wheel_relative_change_deg": 29.889399767457878,
+    "max_right_palm_wheel_relative_change_deg": 28.999115494098547,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.3274517863731847,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 3.2329051094934087,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 3.7263189346313426,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 4.2400353186336615,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 3.7263189346313426,
+        "both_contact_fraction": 0.6873333333333334,
+        "any_contact_fraction": 0.9703333333333334,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 4.503323285407402,
+        "both_contact_fraction": 0.634,
+        "any_contact_fraction": 0.959,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 4.384627871212591,
+        "both_contact_fraction": 0.6966666666666667,
+        "any_contact_fraction": 0.9713333333333334,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 3.5412303454654515,
+        "both_contact_fraction": 0.7183333333333334,
+        "any_contact_fraction": 0.974,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 4.694837487364665,
+        "both_contact_fraction": 0.6696666666666666,
+        "any_contact_fraction": 0.9563333333333334,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.044999919140957245,
+      "wheel_angle": -0.06340676969423159,
+      "error_deg": 6.211245741244302,
+      "wheel_velocity": 0.000843074660990491,
+      "left_force": 6.700751879787683,
+      "right_force": 5.849193816798465,
+      "peak_force": 4.326890140871745,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.0,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.1791453099464562,
+      "wheel_frictionloss": 0.02513424568224711,
+      "rim_friction": [
+        1.6386746411597264,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 49.3547212669946
+  },
+  {
+    "case": {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 102,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 4.121023379185212,
+    "mae_deg": 3.1859365518847143,
+    "max_abs_error_deg": 15.272243540618057,
+    "final_error_deg": -3.463288739956931,
+    "last60_rmse_deg": 4.215539535447161,
+    "fraction_within_3deg": 0.5764,
+    "both_hands_contact_fraction": 0.6124,
+    "any_hand_contact_fraction": 0.9528,
+    "longest_no_hand_contact_s": 0.08,
+    "longest_not_both_contact_s": 0.68,
+    "peak_single_contact_force_N_500hz": 146.86830968833112,
+    "peak_single_contact_force_N_50hz": 146.86830968833112,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 41.8097438780171,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.0078,
+    "mean_policy_scale": 0.9762882233227536,
+    "policy_faded_fraction": 0.11086666666666667,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 15.091302795915407,
+    "peak_opposing_hand_force_proxy_N": 29.16312957976865,
+    "peak_net_axial_contact_force_N": 92.46651292726034,
+    "max_left_palm_wheel_relative_change_deg": 19.113118402579214,
+    "max_right_palm_wheel_relative_change_deg": 21.622705880635483,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 3.838468090069267,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 3.4516721391621945,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 3.693514952504929,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 4.137446821338469,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 3.693514952504929,
+        "both_contact_fraction": 0.645,
+        "any_contact_fraction": 0.9576666666666667,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 3.9027475568404686,
+        "both_contact_fraction": 0.6,
+        "any_contact_fraction": 0.9463333333333334,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 4.503747311249937,
+        "both_contact_fraction": 0.5866666666666667,
+        "any_contact_fraction": 0.944,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 4.241009766982939,
+        "both_contact_fraction": 0.63,
+        "any_contact_fraction": 0.9576666666666667,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 4.215539535447161,
+        "both_contact_fraction": 0.6003333333333334,
+        "any_contact_fraction": 0.9583333333333334,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.044999919140957245,
+      "wheel_angle": -0.06340676969423159,
+      "error_deg": 6.211245741244302,
+      "wheel_velocity": 0.000843074660990491,
+      "left_force": 6.700751879787683,
+      "right_force": 5.849193816798465,
+      "peak_force": 4.326890140871745,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.0,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.1791453099464562,
+      "wheel_frictionloss": 0.02513424568224711,
+      "rim_friction": [
+        1.6386746411597264,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 56.63911373200244
+  },
+  {
+    "case": {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 102,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 11.591621957621744,
+    "mae_deg": 6.800371343553913,
+    "max_abs_error_deg": 31.10130669742456,
+    "final_error_deg": 31.10130669742456,
+    "last60_rmse_deg": 23.533490065176885,
+    "fraction_within_3deg": 0.6172,
+    "both_hands_contact_fraction": 0.8257333333333333,
+    "any_hand_contact_fraction": 0.9952666666666666,
+    "longest_no_hand_contact_s": 0.06,
+    "longest_not_both_contact_s": 0.48,
+    "peak_single_contact_force_N_500hz": 119.90682851935559,
+    "peak_single_contact_force_N_50hz": 96.11531425105642,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 40.374667785203165,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.47173333333333334,
+    "mean_policy_scale": 0.7123976101629341,
+    "policy_faded_fraction": 0.3107333333333333,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 11.925043643662267,
+    "peak_opposing_hand_force_proxy_N": 12.002318133315814,
+    "peak_net_axial_contact_force_N": 81.60415596590659,
+    "max_left_palm_wheel_relative_change_deg": 45.94153739819142,
+    "max_right_palm_wheel_relative_change_deg": 38.54333353429608,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 2.0846717559096914,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 1.154832820361275,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.8173090785110279,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 11.78423715461394,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.8173090785110279,
+        "both_contact_fraction": 0.8493333333333334,
+        "any_contact_fraction": 0.9763333333333334,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.048217858941513494,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 1.2896609990902324,
+        "both_contact_fraction": 0.6936666666666667,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 10.754989484420788,
+        "both_contact_fraction": 0.8283333333333334,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 23.533490065176885,
+        "both_contact_fraction": 0.7573333333333333,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.044999919140957245,
+      "wheel_angle": -0.06340676969423159,
+      "error_deg": 6.211245741244302,
+      "wheel_velocity": 0.000843074660990491,
+      "left_force": 6.700751879787683,
+      "right_force": 5.849193816798465,
+      "peak_force": 4.326890140871745,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.0,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.1791453099464562,
+      "wheel_frictionloss": 0.02513424568224711,
+      "rim_friction": [
+        1.6386746411597264,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 60.915950991999125
+  },
+  {
+    "case": {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 102,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 7.962966130326217,
+    "mae_deg": 4.2646708329091325,
+    "max_abs_error_deg": 29.351745760693934,
+    "final_error_deg": 29.351745760693934,
+    "last60_rmse_deg": 16.39131104870378,
+    "fraction_within_3deg": 0.6945333333333333,
+    "both_hands_contact_fraction": 0.9517333333333333,
+    "any_hand_contact_fraction": 1.0,
+    "longest_no_hand_contact_s": 0.0,
+    "longest_not_both_contact_s": 0.2,
+    "peak_single_contact_force_N_500hz": 140.10103448050543,
+    "peak_single_contact_force_N_50hz": 91.49518726900678,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 39.52000640308104,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.3074,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.126589090112455,
+    "peak_actual_motor_speed_rad_s": 12.610018787419316,
+    "peak_opposing_hand_force_proxy_N": 11.97386667952876,
+    "peak_net_axial_contact_force_N": 80.44118120249861,
+    "max_left_palm_wheel_relative_change_deg": 42.158609013945025,
+    "max_right_palm_wheel_relative_change_deg": 33.338854384744074,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 1.0041309089876593,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 0.527027634525454,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.37445642642237453,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 8.097078455706173,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.37445642642237453,
+        "both_contact_fraction": 0.9936666666666667,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.049153711371161105,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 0.596023622545942,
+        "both_contact_fraction": 0.909,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 6.918901083769767,
+        "both_contact_fraction": 0.8743333333333333,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 16.39131104870378,
+        "both_contact_fraction": 0.9816666666666667,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": 0.044999919140957245,
+      "wheel_angle": -0.06340676969423159,
+      "error_deg": 6.211245741244302,
+      "wheel_velocity": 0.000843074660990491,
+      "left_force": 6.700751879787683,
+      "right_force": 5.849193816798465,
+      "peak_force": 4.326890140871745,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.0,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.1791453099464562,
+      "wheel_frictionloss": 0.02513424568224711,
+      "rim_friction": [
+        1.6386746411597264,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 55.248384915001225
+  },
+  {
+    "case": {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 103,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 4.654424580083184,
+    "mae_deg": 3.6011085718983264,
+    "max_abs_error_deg": 19.1605349093709,
+    "final_error_deg": 9.646243354030146,
+    "last60_rmse_deg": 4.961157685676412,
+    "fraction_within_3deg": 0.5242666666666667,
+    "both_hands_contact_fraction": 0.6442,
+    "any_hand_contact_fraction": 0.9559333333333333,
+    "longest_no_hand_contact_s": 0.12,
+    "longest_not_both_contact_s": 0.38,
+    "peak_single_contact_force_N_500hz": 138.60554711130115,
+    "peak_single_contact_force_N_50hz": 131.34287964587523,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 43.05146217693227,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.038933333333333334,
+    "mean_policy_scale": 0.9593081961425669,
+    "policy_faded_fraction": 0.15433333333333332,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 15.189379547502591,
+    "peak_opposing_hand_force_proxy_N": 26.008770922692246,
+    "peak_net_axial_contact_force_N": 89.58922944008333,
+    "max_left_palm_wheel_relative_change_deg": 25.07571700981545,
+    "max_right_palm_wheel_relative_change_deg": 29.22918637489956,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 3.6384850938629123,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 5.048850445978562,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 4.764346157758365,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 4.682560568240986,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 4.764346157758365,
+        "both_contact_fraction": 0.6536666666666666,
+        "any_contact_fraction": 0.9623333333333334,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 4.714892994835103,
+        "both_contact_fraction": 0.6443333333333333,
+        "any_contact_fraction": 0.9526666666666667,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 4.484072200167767,
+        "both_contact_fraction": 0.6173333333333333,
+        "any_contact_fraction": 0.9483333333333334,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 4.320780197632952,
+        "both_contact_fraction": 0.6673333333333333,
+        "any_contact_fraction": 0.9586666666666667,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 4.961157685676412,
+        "both_contact_fraction": 0.6383333333333333,
+        "any_contact_fraction": 0.9576666666666667,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": -0.14434664108776427,
+      "wheel_angle": -0.03063230557407299,
+      "error_deg": -6.5153514950691225,
+      "wheel_velocity": 0.5169857498962227,
+      "left_force": 31.1629497999337,
+      "right_force": 0.0,
+      "peak_force": 31.1629497999337,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.15384615384615385,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.12138087552848746,
+      "wheel_frictionloss": 0.03864428749424237,
+      "rim_friction": [
+        1.7681568662852771,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 55.70760357600375
+  },
+  {
+    "case": {
+      "name": "sine30_fast",
+      "mode": "sine",
+      "amplitude_deg": 30,
+      "frequency_hz": 0.1,
+      "seconds": 300,
+      "seed": 103,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 3.569512860692174,
+    "mae_deg": 2.5017962043457183,
+    "max_abs_error_deg": 18.091617011272508,
+    "final_error_deg": -0.07278947585912118,
+    "last60_rmse_deg": 4.166859916762288,
+    "fraction_within_3deg": 0.7177333333333333,
+    "both_hands_contact_fraction": 0.7634,
+    "any_hand_contact_fraction": 0.985,
+    "longest_no_hand_contact_s": 0.06,
+    "longest_not_both_contact_s": 0.2,
+    "peak_single_contact_force_N_500hz": 128.7128728242298,
+    "peak_single_contact_force_N_50hz": 118.69878015180767,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 43.23636999618431,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.028266666666666666,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 14.539344144179443,
+    "peak_opposing_hand_force_proxy_N": 27.7398756069676,
+    "peak_net_axial_contact_force_N": 86.93974109110613,
+    "max_left_palm_wheel_relative_change_deg": 22.244099557002553,
+    "max_right_palm_wheel_relative_change_deg": 27.761426225233116,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 1.420881779537092,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 2.776868226970114,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 3.808978102017041,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 3.6198042960065693,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 3.808978102017041,
+        "both_contact_fraction": 0.7816666666666666,
+        "any_contact_fraction": 0.9853333333333333,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 3.6820514200742798,
+        "both_contact_fraction": 0.7356666666666667,
+        "any_contact_fraction": 0.979,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 3.4404626563013743,
+        "both_contact_fraction": 0.746,
+        "any_contact_fraction": 0.983,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 2.538067890383005,
+        "both_contact_fraction": 0.8386666666666667,
+        "any_contact_fraction": 0.9966666666666667,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 4.166859916762288,
+        "both_contact_fraction": 0.715,
+        "any_contact_fraction": 0.981,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": -0.14434664108776427,
+      "wheel_angle": -0.03063230557407299,
+      "error_deg": -6.5153514950691225,
+      "wheel_velocity": 0.5169857498962227,
+      "left_force": 31.1629497999337,
+      "right_force": 0.0,
+      "peak_force": 31.1629497999337,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.15384615384615385,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.12138087552848746,
+      "wheel_frictionloss": 0.03864428749424237,
+      "rim_friction": [
+        1.7681568662852771,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 51.40452285000356
+  },
+  {
+    "case": {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 103,
+      "randomize": true,
+      "policy": "ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 7.721885881632236,
+    "mae_deg": 4.449294595150542,
+    "max_abs_error_deg": 28.437000911229095,
+    "final_error_deg": 28.075529518165578,
+    "last60_rmse_deg": 14.873721764667751,
+    "fraction_within_3deg": 0.6881333333333334,
+    "both_hands_contact_fraction": 0.8876666666666667,
+    "any_hand_contact_fraction": 0.9999333333333333,
+    "longest_no_hand_contact_s": 0.02,
+    "longest_not_both_contact_s": 0.3,
+    "peak_single_contact_force_N_500hz": 114.17111677087743,
+    "peak_single_contact_force_N_50hz": 78.06688594319463,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 40.1504295632963,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.47086666666666666,
+    "mean_policy_scale": 0.7805500835519118,
+    "policy_faded_fraction": 0.3015333333333333,
+    "peak_arm_reference_speed_rad_s": 15.126589090112457,
+    "peak_actual_motor_speed_rad_s": 12.708622008991075,
+    "peak_opposing_hand_force_proxy_N": 9.675565640401052,
+    "peak_net_axial_contact_force_N": 83.5688301804027,
+    "max_left_palm_wheel_relative_change_deg": 46.14394620569955,
+    "max_right_palm_wheel_relative_change_deg": 31.892354778930834,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 1.6068618329102813,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 0.921958214016222,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.6535058193276333,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 7.848515995258348,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.6535058193276333,
+        "both_contact_fraction": 0.9173333333333333,
+        "any_contact_fraction": 0.9996666666666667,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.057154448356075825,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 0.8617997394010171,
+        "both_contact_fraction": 0.7563333333333333,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 8.702699203943075,
+        "both_contact_fraction": 0.789,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 14.873721764667751,
+        "both_contact_fraction": 0.9756666666666667,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": -0.14434664108776427,
+      "wheel_angle": -0.03063230557407299,
+      "error_deg": -6.5153514950691225,
+      "wheel_velocity": 0.5169857498962227,
+      "left_force": 31.1629497999337,
+      "right_force": 0.0,
+      "peak_force": 31.1629497999337,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.15384615384615385,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.12138087552848746,
+      "wheel_frictionloss": 0.03864428749424237,
+      "rim_friction": [
+        1.7681568662852771,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 62.504716356001154
+  },
+  {
+    "case": {
+      "name": "replay_clockwise",
+      "mode": "replay",
+      "amplitude_deg": 0,
+      "frequency_hz": 0,
+      "seconds": 300,
+      "seed": 103,
+      "randomize": true,
+      "policy": "no_ppo",
+      "no_contact": false
+    },
+    "simulated_seconds": 300.0000000000171,
+    "requested_seconds": 300,
+    "early_failure": false,
+    "rmse_deg": 10.641611944458125,
+    "mae_deg": 6.571507833250442,
+    "max_abs_error_deg": 32.04158792762205,
+    "final_error_deg": 32.03588192414326,
+    "last60_rmse_deg": 21.046154241734545,
+    "fraction_within_3deg": 0.5296,
+    "both_hands_contact_fraction": 0.9283333333333333,
+    "any_hand_contact_fraction": 1.0,
+    "longest_no_hand_contact_s": 0.0,
+    "longest_not_both_contact_s": 0.16,
+    "peak_single_contact_force_N_500hz": 109.85121639549595,
+    "peak_single_contact_force_N_50hz": 102.00910434989271,
+    "peak_non_hand_wheel_force_N_500hz": 0.0,
+    "force_over_300N_intervals": 0,
+    "max_reference_abs_deg": 41.028408845080946,
+    "reference_at_limit_fraction": 0.0,
+    "integral_at_limit_fraction": 0.4756666666666667,
+    "mean_policy_scale": 0.0,
+    "policy_faded_fraction": 1.0,
+    "peak_arm_reference_speed_rad_s": 15.126589090112462,
+    "peak_actual_motor_speed_rad_s": 11.103153304542639,
+    "peak_opposing_hand_force_proxy_N": 9.149814814483921,
+    "peak_net_axial_contact_force_N": 81.92180785686801,
+    "max_left_palm_wheel_relative_change_deg": 51.2804846880969,
+    "max_right_palm_wheel_relative_change_deg": 35.10038482819399,
+    "windows": [
+      {
+        "start_s": 0,
+        "end_s": 8,
+        "samples": 400,
+        "rmse_deg": 1.114653784506559,
+        "actual_end_s": 8
+      },
+      {
+        "start_s": 0,
+        "end_s": 30,
+        "samples": 1500,
+        "rmse_deg": 0.5855072904223987,
+        "actual_end_s": 30
+      },
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "samples": 3000,
+        "rmse_deg": 0.41587407805071414,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 10,
+        "end_s": 300,
+        "samples": 14501,
+        "rmse_deg": 10.821567397283824,
+        "actual_end_s": 300
+      }
+    ],
+    "minute_windows": [
+      {
+        "start_s": 0,
+        "end_s": 60,
+        "rmse_deg": 0.41587407805071414,
+        "both_contact_fraction": 0.9876666666666667,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 60
+      },
+      {
+        "start_s": 60,
+        "end_s": 120,
+        "rmse_deg": 0.049434268851485004,
+        "both_contact_fraction": 1.0,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 120
+      },
+      {
+        "start_s": 120,
+        "end_s": 180,
+        "rmse_deg": 2.6204203391204,
+        "both_contact_fraction": 0.7996666666666666,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 180
+      },
+      {
+        "start_s": 180,
+        "end_s": 240,
+        "rmse_deg": 10.781322635274435,
+        "both_contact_fraction": 0.9746666666666667,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 240
+      },
+      {
+        "start_s": 240,
+        "end_s": 300,
+        "rmse_deg": 21.046154241734545,
+        "both_contact_fraction": 0.8796666666666667,
+        "any_contact_fraction": 1.0,
+        "actual_end_s": 300
+      }
+    ],
+    "initial_state": {
+      "time": 0.0,
+      "target_angle": -0.14434664108776427,
+      "wheel_angle": -0.03063230557407299,
+      "error_deg": -6.5153514950691225,
+      "wheel_velocity": 0.5169857498962227,
+      "left_force": 31.1629497999337,
+      "right_force": 0.0,
+      "peak_force": 31.1629497999337,
+      "non_hand_wheel_force": 0.0,
+      "saturation": 0.15384615384615385,
+      "success": false,
+      "finite": true
+    },
+    "physics_parameters": {
+      "wheel_damping": 0.12138087552848746,
+      "wheel_frictionloss": 0.03864428749424237,
+      "rim_friction": [
+        1.7681568662852771,
+        0.02,
+        0.002
+      ]
+    },
+    "wall_seconds": 55.44399802500266
+  }
+]

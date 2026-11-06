@@ -1,0 +1,5088 @@
+{
+  "status": "all_active_goal_requirements_proved",
+  "audited_utc": "2026-10-28T19:55:53.491264+00:00",
+  "model_sha256": "bc2699474b133f26135ae36b354865a6291b31d944d38361da7ef547aa58451b",
+  "model_and_protocol_manifest_files_verified": 77,
+  "runtime_source_files_verified": 70,
+  "total_suite_cases": 624,
+  "suites": {
+    "development_a": {
+      "cases": 36,
+      "complete": 36,
+      "passed": 36,
+      "hard_failures": 0,
+      "min_arm_margin_deg": 2.273832765016405,
+      "source": "results/driving_r2_development_a_v121/summary.json"
+    },
+    "development_b": {
+      "cases": 36,
+      "complete": 36,
+      "passed": 36,
+      "hard_failures": 0,
+      "min_arm_margin_deg": 2.2618739613791017,
+      "source": "results/driving_r2_development_b_v121/summary.json"
+    },
+    "consumed550_stress": {
+      "cases": 120,
+      "complete": 120,
+      "passed": 120,
+      "hard_failures": 0,
+      "min_arm_margin_deg": 2.170623502754235,
+      "source": "results/driving_r2_consumed550_stress_v121/summary.json"
+    },
+    "r1_retention": {
+      "cases": 72,
+      "complete": 72,
+      "passed": 72,
+      "hard_failures": 0,
+      "min_arm_margin_deg": 3.210546463509972,
+      "source": "results/driving_r1_exact72_retention_v121/summary.json"
+    },
+    "old240_retention": {
+      "cases": 240,
+      "complete": 240,
+      "passed": 240,
+      "hard_failures": 0,
+      "min_arm_margin_deg": 8.796703824358904,
+      "source": "results/driving_r2_old240_retention_v121/summary.json"
+    },
+    "independent": {
+      "cases": 120,
+      "complete": 120,
+      "passed": 120,
+      "hard_failures": 0,
+      "min_arm_margin_deg": 2.234106956583152,
+      "source": "results/driving_r2_independent_v121/summary.json"
+    }
+  },
+  "scope": "Planned R0--R2: <=90deg and nominal180deg early load-transfer variant, fixed executable reference sequences at 5deg/s, nominal and reset-preturned2deg.",
+  "method": "Demonstration-assisted structured mixed actor plus IK/QP; not autonomous PPO discovery.",
+  "exclusions": [
+    "Original fixed-upper-hand-to180 human-style variant",
+    "Unvalidated arbitrary90--180deg endpoints or online command changes",
+    "360deg/540deg and hardware/history-student deployment"
+  ],
+  "transient_error_disclosure": {
+    "independent_full_physics_peak_deg": 5.199953734907234,
+    "criterion": "Motion RMSE and final3s stop peaks <=1deg; no all-time1deg claim."
+  },
+  "engineering_tests": 126,
+  "requirements": [
+    {
+      "requirement": "R0 physical range, interfaces, sign, initial grasp and feasibility audit",
+      "status": "proved",
+      "evidence": [
+        "results/DRIVING_R0_AUDIT_V1/README.md",
+        "docs/RESEARCH_PLAN.md: R0 and R2 physical-entry records"
+      ]
+    },
+    {
+      "requirement": "One frozen 24-action wrist/hand policy using the physical executor",
+      "status": "proved",
+      "evidence": [
+        "runs/driving_r2_frozen_v121/config.json",
+        "src/unified_steering/structured/driving_path_basis.py",
+        "src/unified_steering/structured/driving_learning.py"
+      ]
+    },
+    {
+      "requirement": "R1 0--90deg bidirectional both-hand tracking, holds and controlled return",
+      "status": "proved",
+      "evidence": [
+        "results/driving_r1_exact72_retention_v121",
+        "contact_audits.r1"
+      ]
+    },
+    {
+      "requirement": "R2 0--180deg load-bearing/release coordination and controlled return",
+      "status": "proved",
+      "evidence": [
+        "results/driving_r2_independent_v121",
+        "contact_audits.r2"
+      ]
+    },
+    {
+      "requirement": "Preserved physical safety, centering load, joint and actuator limits",
+      "status": "proved",
+      "evidence": [
+        "src/unified_steering/structured/env.py:_physics_step",
+        "runs/driving_r2_frozen_v121/config.json",
+        "all six suite case records and physical-step metrics"
+      ]
+    },
+    {
+      "requirement": "Two complete development rounds before freeze and independent evaluation",
+      "status": "proved",
+      "evidence": [
+        "runs/driving_r2_acceptance_pipeline_v121.json",
+        "runs/driving_r2_frozen_v121/manifest.json",
+        "results/driving_r2_independent_v121/metadata.json"
+      ]
+    },
+    {
+      "requirement": "Same-weight R1 and exact old 240-case capability retention",
+      "status": "proved",
+      "evidence": [
+        "results/driving_r1_exact72_retention_v121",
+        "results/driving_r2_old240_retention_v121"
+      ]
+    },
+    {
+      "requirement": "Preserve result, failed-candidate, model and plan artifacts",
+      "status": "proved",
+      "evidence": [
+        "docs/RESEARCH_PLAN.md",
+        "results/DRIVING_R2_REJECTED_V119/README.md",
+        "results/DRIVING_R0_R2_ACCEPTANCE_V121/README.md",
+        "runs/driving_r2_frozen_v121"
+      ]
+    }
+  ],
+  "contact_audits": {
+    "r1": {
+      "cases": 72,
+      "both_contact_fraction_min": 1.0,
+      "loaded_release_cases_by_hand": [
+        0,
+        0
+      ],
+      "min_loaded_release_seconds_by_hand": [
+        0.0,
+        0.0
+      ],
+      "both_below_02N_samples": 0,
+      "raw_metric_reproduction_max_error": 0.0,
+      "details": [
+        {
+          "case": [
+            30,
+            1,
+            "long",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4547427284946726,
+          "reproduced_stop_peaks_deg": [
+            0.04147859436976488,
+            0.000662968800378668
+          ]
+        },
+        {
+          "case": [
+            30,
+            1,
+            "long",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.45786591082281997,
+          "reproduced_stop_peaks_deg": [
+            0.02529407389047781,
+            0.0015306486047568044
+          ]
+        },
+        {
+          "case": [
+            30,
+            1,
+            "long",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.457349042944851,
+          "reproduced_stop_peaks_deg": [
+            0.029414762356912434,
+            0.0011120817118739628
+          ]
+        },
+        {
+          "case": [
+            30,
+            1,
+            "long",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.45988609370604705,
+          "reproduced_stop_peaks_deg": [
+            0.03961447240862444,
+            0.003295855203575741
+          ]
+        },
+        {
+          "case": [
+            30,
+            1,
+            "sequence",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.454872542429781,
+          "reproduced_stop_peaks_deg": [
+            0.047605184783896436,
+            0.025337839581578158,
+            0.0298504265333647,
+            0.01525433482158913
+          ]
+        },
+        {
+          "case": [
+            30,
+            1,
+            "sequence",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4560377174100584,
+          "reproduced_stop_peaks_deg": [
+            0.03024647679616745,
+            0.02390648288278972,
+            0.030548917380028448,
+            0.019572748364819485
+          ]
+        },
+        {
+          "case": [
+            30,
+            1,
+            "sequence",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4569834684364395,
+          "reproduced_stop_peaks_deg": [
+            0.03923383033651315,
+            0.017344443943864137,
+            0.0639878533033484,
+            0.017835907936431587
+          ]
+        },
+        {
+          "case": [
+            30,
+            1,
+            "sequence",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.456052571917214,
+          "reproduced_stop_peaks_deg": [
+            0.05383314319338754,
+            0.0296570942510741,
+            0.029495175855545116,
+            0.01868944351784047
+          ]
+        },
+        {
+          "case": [
+            30,
+            1,
+            "short",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.45339349389741834,
+          "reproduced_stop_peaks_deg": [
+            0.047605184783896436,
+            0.025337839581578158
+          ]
+        },
+        {
+          "case": [
+            30,
+            1,
+            "short",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4575663777699224,
+          "reproduced_stop_peaks_deg": [
+            0.03024647679616745,
+            0.02390648288278972
+          ]
+        },
+        {
+          "case": [
+            30,
+            1,
+            "short",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.45833840424053995,
+          "reproduced_stop_peaks_deg": [
+            0.03923383033651315,
+            0.017344443943864137
+          ]
+        },
+        {
+          "case": [
+            30,
+            1,
+            "short",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.45848529137732286,
+          "reproduced_stop_peaks_deg": [
+            0.05383314319338754,
+            0.0296570942510741
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "long",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.45074393331017965,
+          "reproduced_stop_peaks_deg": [
+            0.05307558185554541,
+            0.002379568752684961
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "long",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.451778560359402,
+          "reproduced_stop_peaks_deg": [
+            0.05406745159333702,
+            0.0021311556535684884
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "long",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.44642061923352766,
+          "reproduced_stop_peaks_deg": [
+            0.05288046930926306,
+            0.002070041223546065
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "long",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.44524349189933277,
+          "reproduced_stop_peaks_deg": [
+            0.0327146933565295,
+            0.0006794757044583117
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "sequence",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.45078109976416225,
+          "reproduced_stop_peaks_deg": [
+            0.059188192555600115,
+            0.026032690435137,
+            0.025465266205746368,
+            0.01986648114276391
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "sequence",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4544635841996681,
+          "reproduced_stop_peaks_deg": [
+            0.04898375010187838,
+            0.0189899155986584,
+            0.022365991301885765,
+            0.024662915206342246
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "sequence",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.45231387138466794,
+          "reproduced_stop_peaks_deg": [
+            0.0586407547139161,
+            0.026255027521574444,
+            0.03420578455747061,
+            0.017784319320827913
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "sequence",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.44728334608185366,
+          "reproduced_stop_peaks_deg": [
+            0.0635253464665522,
+            0.02186044187934066,
+            0.034345631313969754,
+            0.022492796407847727
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "short",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4583809890126027,
+          "reproduced_stop_peaks_deg": [
+            0.059188192555600115,
+            0.026032690435137
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "short",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4556352682632577,
+          "reproduced_stop_peaks_deg": [
+            0.04898375010187838,
+            0.0189899155986584
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "short",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4561387154330229,
+          "reproduced_stop_peaks_deg": [
+            0.0586407547139161,
+            0.026255027521574444
+          ]
+        },
+        {
+          "case": [
+            30,
+            -1,
+            "short",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.45205408622096366,
+          "reproduced_stop_peaks_deg": [
+            0.0635253464665522,
+            0.02186044187934066
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "long",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4794291679963417,
+          "reproduced_stop_peaks_deg": [
+            0.036012494834493064,
+            0.0005701939867755536
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "long",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.48697652868502456,
+          "reproduced_stop_peaks_deg": [
+            0.05819854901707788,
+            0.0039006700114017526
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "long",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4885832386441731,
+          "reproduced_stop_peaks_deg": [
+            0.06127704473218096,
+            0.0017620126285916827
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "long",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.48178173079164843,
+          "reproduced_stop_peaks_deg": [
+            0.06590706779943344,
+            0.01004283686607284
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "sequence",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.49335485916774635,
+          "reproduced_stop_peaks_deg": [
+            0.09596126716760096,
+            0.033056025061827456,
+            0.05510598851171786,
+            0.023869230366060805
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "sequence",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5067318469436218,
+          "reproduced_stop_peaks_deg": [
+            0.08491082224503177,
+            0.025436871456516404,
+            0.05677615779794975,
+            0.026871699917012444
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "sequence",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.49948694528690246,
+          "reproduced_stop_peaks_deg": [
+            0.08911297214738502,
+            0.03267834226696071,
+            0.05910235088778214,
+            0.032172102071771055
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "sequence",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.49766002860549463,
+          "reproduced_stop_peaks_deg": [
+            0.07802830846530345,
+            0.04067993545109197,
+            0.05476459934895789,
+            0.030834939589498057
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "short",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.48894059194125583,
+          "reproduced_stop_peaks_deg": [
+            0.09596126716760096,
+            0.033056025061827456
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "short",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5069803038855307,
+          "reproduced_stop_peaks_deg": [
+            0.08491082224503177,
+            0.025436871456516404
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "short",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5000761913056735,
+          "reproduced_stop_peaks_deg": [
+            0.08911297214738502,
+            0.03267834226696071
+          ]
+        },
+        {
+          "case": [
+            60,
+            1,
+            "short",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.49123740642305175,
+          "reproduced_stop_peaks_deg": [
+            0.07802830846530345,
+            0.04067993545109197
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "long",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5002448202964385,
+          "reproduced_stop_peaks_deg": [
+            0.029333400664963368,
+            0.007553376110652318
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "long",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5150538774864838,
+          "reproduced_stop_peaks_deg": [
+            0.03139347921976897,
+            0.009476816395420178
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "long",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.500061068304787,
+          "reproduced_stop_peaks_deg": [
+            0.025128043485811494,
+            0.0072428102342369525
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "long",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5012892735228252,
+          "reproduced_stop_peaks_deg": [
+            0.029277206599877554,
+            0.06122091354829732
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "sequence",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.49091051679994085,
+          "reproduced_stop_peaks_deg": [
+            0.07427755579354574,
+            0.030237704954406336,
+            0.054790543152463414,
+            0.03330035304658696
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "sequence",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5017353677549056,
+          "reproduced_stop_peaks_deg": [
+            0.07486421305668621,
+            0.03313163317050489,
+            0.05981922987277608,
+            0.01861750282713556
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "sequence",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4952811607808483,
+          "reproduced_stop_peaks_deg": [
+            0.08613216872446167,
+            0.02908963897884293,
+            0.0547162144936748,
+            0.02144856021451573
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "sequence",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4910948111120296,
+          "reproduced_stop_peaks_deg": [
+            0.07905085067273716,
+            0.02946479934859861,
+            0.07154755360921113,
+            0.038664395189666696
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "short",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.49274883781209705,
+          "reproduced_stop_peaks_deg": [
+            0.07427755579354574,
+            0.030237704954406336
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "short",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5030245187239756,
+          "reproduced_stop_peaks_deg": [
+            0.07486421305668621,
+            0.03313163317050489
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "short",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.49178020604018324,
+          "reproduced_stop_peaks_deg": [
+            0.08613216872446167,
+            0.02908963897884293
+          ]
+        },
+        {
+          "case": [
+            60,
+            -1,
+            "short",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4920448767801147,
+          "reproduced_stop_peaks_deg": [
+            0.07905085067273716,
+            0.02946479934859861
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "long",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4796215787584956,
+          "reproduced_stop_peaks_deg": [
+            0.14728694767238312,
+            0.005234543671735412
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "long",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4786364527339854,
+          "reproduced_stop_peaks_deg": [
+            0.13076409975656852,
+            0.007776248296035581
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "long",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4791136914488364,
+          "reproduced_stop_peaks_deg": [
+            0.11446763451042755,
+            0.0026810279923290712
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "long",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4769314982833631,
+          "reproduced_stop_peaks_deg": [
+            0.12503207015035647,
+            0.01653208623335595
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "sequence",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.48561434259534764,
+          "reproduced_stop_peaks_deg": [
+            0.057770408104739795,
+            0.012001100628280142,
+            0.13179351926108007,
+            0.01284859020654724
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "sequence",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.49453064168603855,
+          "reproduced_stop_peaks_deg": [
+            0.04787399294026278,
+            0.013225926577405827,
+            0.12393355136355266,
+            0.017756284724552467
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "sequence",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.49039093486681856,
+          "reproduced_stop_peaks_deg": [
+            0.044517411570908695,
+            0.011317648566650164,
+            0.12060868036220193,
+            0.014304461183408548
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "sequence",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.48712602698396706,
+          "reproduced_stop_peaks_deg": [
+            0.05364775558710177,
+            0.0116558136278131,
+            0.12314883227962051,
+            0.015712578191267056
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "short",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.47390936605372436,
+          "reproduced_stop_peaks_deg": [
+            0.057770408104739795,
+            0.012001100628280142
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "short",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4849448607401995,
+          "reproduced_stop_peaks_deg": [
+            0.04787399294026278,
+            0.013225926577405827
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "short",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.483259849910681,
+          "reproduced_stop_peaks_deg": [
+            0.044517411570908695,
+            0.011317648566650164
+          ]
+        },
+        {
+          "case": [
+            90,
+            1,
+            "short",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4780025332455727,
+          "reproduced_stop_peaks_deg": [
+            0.05364775558710177,
+            0.0116558136278131
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "long",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4925922598065397,
+          "reproduced_stop_peaks_deg": [
+            0.12095054138213111,
+            0.012647871686475694
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "long",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4915043603993255,
+          "reproduced_stop_peaks_deg": [
+            0.11676674236327238,
+            0.007595699566556457
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "long",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4896165813616547,
+          "reproduced_stop_peaks_deg": [
+            0.12478942032182508,
+            0.010979884570117712
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "long",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.49722283829029135,
+          "reproduced_stop_peaks_deg": [
+            0.10775029801848475,
+            0.009921759351666792
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "sequence",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4863075542037269,
+          "reproduced_stop_peaks_deg": [
+            0.06978412674304975,
+            0.008199486149153307,
+            0.19614080191078823,
+            0.008081748389341796
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "sequence",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.48602242880833973,
+          "reproduced_stop_peaks_deg": [
+            0.07597342307020886,
+            0.02482330626607895,
+            0.14271365455005577,
+            0.021471597698745227
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "sequence",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.48806607381418965,
+          "reproduced_stop_peaks_deg": [
+            0.07053548848286913,
+            0.013153539326215295,
+            0.12792862235631458,
+            0.024534662209059938
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "sequence",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.48505143813762613,
+          "reproduced_stop_peaks_deg": [
+            0.07139488834608361,
+            0.016269027273672385,
+            0.1806950561965734,
+            0.014894274144600253
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "short",
+            43001
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.4846024513742939,
+          "reproduced_stop_peaks_deg": [
+            0.06978412674304975,
+            0.008199486149153307
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "short",
+            43011
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.48388103391012505,
+          "reproduced_stop_peaks_deg": [
+            0.07597342307020886,
+            0.02482330626607895
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "short",
+            43021
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.48184170720122405,
+          "reproduced_stop_peaks_deg": [
+            0.07053548848286913,
+            0.013153539326215295
+          ]
+        },
+        {
+          "case": [
+            90,
+            -1,
+            "short",
+            43031
+          ],
+          "both_contact_fraction": 1.0,
+          "release_seconds": [
+            0.0,
+            0.0
+          ],
+          "loaded_release_seconds": [
+            0.0,
+            0.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.48539493283791957,
+          "reproduced_stop_peaks_deg": [
+            0.07139488834608361,
+            0.016269027273672385
+          ]
+        }
+      ]
+    },
+    "r2": {
+      "cases": 120,
+      "both_contact_fraction_min": 0.7437885462555066,
+      "loaded_release_cases_by_hand": [
+        120,
+        120
+      ],
+      "min_loaded_release_seconds_by_hand": [
+        4.2,
+        4.65
+      ],
+      "both_below_02N_samples": 0,
+      "raw_metric_reproduction_max_error": 0.0,
+      "details": [
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56001,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.8062844185293165,
+          "release_seconds": [
+            16.95,
+            10.950000000000001
+          ],
+          "loaded_release_seconds": [
+            16.95,
+            4.9
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5273279865867161,
+          "reproduced_stop_peaks_deg": [
+            0.062292455043689125,
+            0.004806953275583309
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56001,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.8032892615285392,
+          "release_seconds": [
+            17.0,
+            11.350000000000001
+          ],
+          "loaded_release_seconds": [
+            17.0,
+            4.9
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.540841351167204,
+          "reproduced_stop_peaks_deg": [
+            0.0602603618736203,
+            0.0004408284071291472
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56011,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.8029812054439404,
+          "release_seconds": [
+            17.5,
+            11.05
+          ],
+          "loaded_release_seconds": [
+            17.5,
+            4.95
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5359238985745324,
+          "reproduced_stop_peaks_deg": [
+            0.07662653983716163,
+            0.005376430611866753
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56011,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.8019354838709677,
+          "release_seconds": [
+            17.35,
+            11.15
+          ],
+          "loaded_release_seconds": [
+            17.35,
+            4.8500000000000005
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5414527044041699,
+          "reproduced_stop_peaks_deg": [
+            0.07976983850504765,
+            0.0033145730605375744
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56021,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.8065456902138691,
+          "release_seconds": [
+            17.150000000000002,
+            10.75
+          ],
+          "loaded_release_seconds": [
+            17.150000000000002,
+            4.7
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5590436468024055,
+          "reproduced_stop_peaks_deg": [
+            0.07561292995665628,
+            0.0039039230854866097
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56021,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.8029032258064516,
+          "release_seconds": [
+            17.05,
+            11.15
+          ],
+          "loaded_release_seconds": [
+            17.05,
+            4.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5587907985924088,
+          "reproduced_stop_peaks_deg": [
+            0.074239027124497,
+            0.0006353142353579164
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56031,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.8040168448331714,
+          "release_seconds": [
+            17.3,
+            10.850000000000001
+          ],
+          "loaded_release_seconds": [
+            17.3,
+            4.8500000000000005
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5321781486535011,
+          "reproduced_stop_peaks_deg": [
+            0.07482835663328323,
+            0.004490347544591884
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56031,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.8025806451612904,
+          "release_seconds": [
+            17.2,
+            11.05
+          ],
+          "loaded_release_seconds": [
+            17.2,
+            4.65
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5307117981592311,
+          "reproduced_stop_peaks_deg": [
+            0.07798415910059481,
+            0.003627471599539972
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56041,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.8016207455429497,
+          "release_seconds": [
+            17.400000000000002,
+            10.75
+          ],
+          "loaded_release_seconds": [
+            17.400000000000002,
+            4.7
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5440918184522688,
+          "reproduced_stop_peaks_deg": [
+            0.080627861012722,
+            0.006674140153996477
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56041,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.8002581477896096,
+          "release_seconds": [
+            17.400000000000002,
+            11.4
+          ],
+          "loaded_release_seconds": [
+            17.400000000000002,
+            4.95
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5357761069316946,
+          "reproduced_stop_peaks_deg": [
+            0.07775909015932499,
+            0.0027926938201492005
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56051,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.8055105348460292,
+          "release_seconds": [
+            17.3,
+            10.8
+          ],
+          "loaded_release_seconds": [
+            17.3,
+            4.800000000000001
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5469679919818071,
+          "reproduced_stop_peaks_deg": [
+            0.06441231745758665,
+            0.003991123664010327
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56051,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.8054211035818006,
+          "release_seconds": [
+            17.3,
+            10.950000000000001
+          ],
+          "loaded_release_seconds": [
+            17.3,
+            4.800000000000001
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5538329160141533,
+          "reproduced_stop_peaks_deg": [
+            0.06602834022817305,
+            0.0033323970375534547
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56061,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.805249513933895,
+          "release_seconds": [
+            17.2,
+            10.700000000000001
+          ],
+          "loaded_release_seconds": [
+            17.2,
+            4.65
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.514109508407451,
+          "reproduced_stop_peaks_deg": [
+            0.059242915791996004,
+            0.007184843868267816
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56061,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.8035483870967742,
+          "release_seconds": [
+            17.1,
+            11.200000000000001
+          ],
+          "loaded_release_seconds": [
+            17.1,
+            4.8500000000000005
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5270255499353745,
+          "reproduced_stop_peaks_deg": [
+            0.06852537509150584,
+            0.0036921095075785034
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56071,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.8011013929381277,
+          "release_seconds": [
+            17.35,
+            11.05
+          ],
+          "loaded_release_seconds": [
+            17.35,
+            4.95
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5194219815249908,
+          "reproduced_stop_peaks_deg": [
+            0.08378559156431602,
+            0.008161613658327339
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56071,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.800386971944534,
+          "release_seconds": [
+            17.2,
+            11.55
+          ],
+          "loaded_release_seconds": [
+            17.2,
+            5.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5222868313947985,
+          "reproduced_stop_peaks_deg": [
+            0.08312781913269175,
+            0.0025403335784906305
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56081,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.803953337653921,
+          "release_seconds": [
+            17.1,
+            10.8
+          ],
+          "loaded_release_seconds": [
+            17.1,
+            4.800000000000001
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.547551551033354,
+          "reproduced_stop_peaks_deg": [
+            0.06447892219431675,
+            0.005495953168654047
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56081,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.8035483870967742,
+          "release_seconds": [
+            17.05,
+            11.100000000000001
+          ],
+          "loaded_release_seconds": [
+            17.05,
+            4.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5435717865512187,
+          "reproduced_stop_peaks_deg": [
+            0.05899972487279532,
+            0.001501030310233173
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56091,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.8022690437601296,
+          "release_seconds": [
+            17.2,
+            10.950000000000001
+          ],
+          "loaded_release_seconds": [
+            17.2,
+            4.800000000000001
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5586975490841738,
+          "reproduced_stop_peaks_deg": [
+            0.07713085282687943,
+            0.00343719690609057
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "long",
+            56091,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.8025806451612904,
+          "release_seconds": [
+            17.150000000000002,
+            11.100000000000001
+          ],
+          "loaded_release_seconds": [
+            17.150000000000002,
+            4.7
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5520202275146044,
+          "reproduced_stop_peaks_deg": [
+            0.07467982877138056,
+            0.00498276831317074
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56001,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.786564776968189,
+          "release_seconds": [
+            28.6,
+            28.650000000000002
+          ],
+          "loaded_release_seconds": [
+            22.25,
+            22.55
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5685773516808177,
+          "reproduced_stop_peaks_deg": [
+            0.0509920950784338,
+            0.09878780641653029,
+            0.044196696047979114,
+            0.03618836621419558
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56001,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7849672043963836,
+          "release_seconds": [
+            28.450000000000003,
+            28.900000000000002
+          ],
+          "loaded_release_seconds": [
+            22.3,
+            22.6
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6019763418243329,
+          "reproduced_stop_peaks_deg": [
+            0.05394386666704524,
+            0.07115915196229709,
+            0.04673354737865628,
+            0.05008578889638236
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56011,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7835051546391752,
+          "release_seconds": [
+            29.35,
+            28.35
+          ],
+          "loaded_release_seconds": [
+            22.900000000000002,
+            22.400000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6247463952976061,
+          "reproduced_stop_peaks_deg": [
+            0.052820567666190844,
+            0.09161661473171652,
+            0.04889099453126629,
+            0.009653151798482324
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56011,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7849290780141844,
+          "release_seconds": [
+            29.1,
+            28.6
+          ],
+          "loaded_release_seconds": [
+            22.75,
+            22.35
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6299701388978447,
+          "reproduced_stop_peaks_deg": [
+            0.057545480622608766,
+            0.0456939403118048,
+            0.0455407235206653,
+            0.02435676702819406
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56021,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7838606469960896,
+          "release_seconds": [
+            28.700000000000003,
+            28.8
+          ],
+          "loaded_release_seconds": [
+            22.450000000000003,
+            22.700000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6160049418467212,
+          "reproduced_stop_peaks_deg": [
+            0.05130695707518268,
+            0.06797910922958271,
+            0.039051685142887094,
+            0.017754810032449126
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56021,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7861702127659574,
+          "release_seconds": [
+            28.25,
+            28.6
+          ],
+          "loaded_release_seconds": [
+            22.150000000000002,
+            22.35
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6409711502315546,
+          "reproduced_stop_peaks_deg": [
+            0.06315466969023971,
+            0.034315739456806056,
+            0.04459823470995941,
+            0.01093995370962869
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56031,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.783899058112671,
+          "release_seconds": [
+            28.900000000000002,
+            28.450000000000003
+          ],
+          "loaded_release_seconds": [
+            22.55,
+            22.400000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6050795259702976,
+          "reproduced_stop_peaks_deg": [
+            0.0576744796679601,
+            0.10437037905199785,
+            0.04622823520773652,
+            0.034316985204003767
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56031,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7854609929078015,
+          "release_seconds": [
+            28.75,
+            28.85
+          ],
+          "loaded_release_seconds": [
+            22.5,
+            22.35
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6289307764813379,
+          "reproduced_stop_peaks_deg": [
+            0.05308343421301375,
+            0.05712191514065286,
+            0.03986549802806885,
+            0.03294526284770455
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56041,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7804444444444445,
+          "release_seconds": [
+            29.25,
+            28.6
+          ],
+          "loaded_release_seconds": [
+            22.75,
+            22.450000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6485226360188888,
+          "reproduced_stop_peaks_deg": [
+            0.0832703156969203,
+            0.09719892910545351,
+            0.041182297358036093,
+            0.007439605239705108
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56041,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7827629012236212,
+          "release_seconds": [
+            29.1,
+            29.1
+          ],
+          "loaded_release_seconds": [
+            22.700000000000003,
+            22.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6433721486543016,
+          "reproduced_stop_peaks_deg": [
+            0.08868004674160093,
+            0.024698439027496116,
+            0.03734755581242979,
+            0.008764764059445606
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56051,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7834666666666666,
+          "release_seconds": [
+            29.150000000000002,
+            28.5
+          ],
+          "loaded_release_seconds": [
+            22.650000000000002,
+            22.450000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6045336959894461,
+          "reproduced_stop_peaks_deg": [
+            0.045986304918558825,
+            0.08745791811373446,
+            0.0510581631379595,
+            0.012760023336418883
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56051,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7866643021812378,
+          "release_seconds": [
+            29.150000000000002,
+            28.150000000000002
+          ],
+          "loaded_release_seconds": [
+            22.6,
+            22.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6324683472809741,
+          "reproduced_stop_peaks_deg": [
+            0.04455755549634414,
+            0.049977283614866065,
+            0.0503734772850489,
+            0.017688001191972152
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56061,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7835051546391752,
+          "release_seconds": [
+            29.0,
+            28.05
+          ],
+          "loaded_release_seconds": [
+            22.650000000000002,
+            22.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5914653441207841,
+          "reproduced_stop_peaks_deg": [
+            0.07280374647861135,
+            0.1167044529499492,
+            0.04742033524109798,
+            0.03121869228446676
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56061,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7829787234042553,
+          "release_seconds": [
+            28.650000000000002,
+            28.8
+          ],
+          "loaded_release_seconds": [
+            22.3,
+            22.450000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6342354234299746,
+          "reproduced_stop_peaks_deg": [
+            0.0739742277514136,
+            0.021475180911665216,
+            0.04744412801044783,
+            0.01570296710065238
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56071,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7821219122089924,
+          "release_seconds": [
+            29.0,
+            28.75
+          ],
+          "loaded_release_seconds": [
+            22.6,
+            22.6
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6075635330047563,
+          "reproduced_stop_peaks_deg": [
+            0.05228684224332428,
+            0.0621977088217796,
+            0.04367775490967381,
+            0.01088537413843118
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56071,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7840808367310761,
+          "release_seconds": [
+            28.85,
+            29.1
+          ],
+          "loaded_release_seconds": [
+            22.450000000000003,
+            22.700000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6413860557780477,
+          "reproduced_stop_peaks_deg": [
+            0.05415088067510287,
+            0.013622493101763514,
+            0.03145790879137325,
+            0.02811969697280614
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56081,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7831496622822609,
+          "release_seconds": [
+            28.650000000000002,
+            28.55
+          ],
+          "loaded_release_seconds": [
+            22.3,
+            22.55
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5843655209570076,
+          "reproduced_stop_peaks_deg": [
+            0.08402416083001762,
+            0.09706905806320919,
+            0.044694273483692336,
+            0.01211258386821213
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56081,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7849290780141844,
+          "release_seconds": [
+            28.150000000000002,
+            28.85
+          ],
+          "loaded_release_seconds": [
+            22.0,
+            22.3
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6463590767614982,
+          "reproduced_stop_peaks_deg": [
+            0.0845220939644631,
+            0.03034705825755608,
+            0.024622697133063465,
+            0.10250957604389745
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56091,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7848888888888889,
+          "release_seconds": [
+            28.8,
+            28.650000000000002
+          ],
+          "loaded_release_seconds": [
+            22.5,
+            22.6
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6125663783010648,
+          "reproduced_stop_peaks_deg": [
+            0.04579168692851104,
+            0.07855880481247587,
+            0.031767617474222055,
+            0.02782517790269861
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "sequence",
+            56091,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7859929078014184,
+          "release_seconds": [
+            28.700000000000003,
+            28.700000000000003
+          ],
+          "loaded_release_seconds": [
+            22.450000000000003,
+            22.35
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6262780506926449,
+          "reproduced_stop_peaks_deg": [
+            0.06403921626157395,
+            0.042928042731348315,
+            0.04082866375394035,
+            0.018300291712770898
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56001,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7851799073744211,
+          "release_seconds": [
+            17.150000000000002,
+            11.0
+          ],
+          "loaded_release_seconds": [
+            17.150000000000002,
+            4.9
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5483332655361146,
+          "reproduced_stop_peaks_deg": [
+            0.0509920950784338,
+            0.09878780641653029
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56001,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7841191066997518,
+          "release_seconds": [
+            17.150000000000002,
+            11.200000000000001
+          ],
+          "loaded_release_seconds": [
+            17.150000000000002,
+            4.9
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5560086481339241,
+          "reproduced_stop_peaks_deg": [
+            0.05394386666704524,
+            0.07115915196229709
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56011,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7833214540270849,
+          "release_seconds": [
+            17.650000000000002,
+            10.9
+          ],
+          "loaded_release_seconds": [
+            17.650000000000002,
+            4.95
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.564589727944114,
+          "reproduced_stop_peaks_deg": [
+            0.052820567666190844,
+            0.09161661473171652
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56011,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7812056737588653,
+          "release_seconds": [
+            17.5,
+            11.100000000000001
+          ],
+          "loaded_release_seconds": [
+            17.5,
+            4.8500000000000005
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5565450192151071,
+          "reproduced_stop_peaks_deg": [
+            0.057545480622608766,
+            0.0456939403118048
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56021,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.785816108339273,
+          "release_seconds": [
+            17.35,
+            10.8
+          ],
+          "loaded_release_seconds": [
+            17.35,
+            4.7
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5768216202072939,
+          "reproduced_stop_peaks_deg": [
+            0.05130695707518268,
+            0.06797910922958271
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56021,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7836879432624113,
+          "release_seconds": [
+            17.150000000000002,
+            11.0
+          ],
+          "loaded_release_seconds": [
+            17.150000000000002,
+            4.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5756137837605838,
+          "reproduced_stop_peaks_deg": [
+            0.06315466969023971,
+            0.034315739456806056
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56031,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7823298895618097,
+          "release_seconds": [
+            17.55,
+            10.9
+          ],
+          "loaded_release_seconds": [
+            17.55,
+            4.8500000000000005
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5626109445470333,
+          "reproduced_stop_peaks_deg": [
+            0.0576744796679601,
+            0.10437037905199785
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56031,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7815602836879433,
+          "release_seconds": [
+            17.35,
+            11.15
+          ],
+          "loaded_release_seconds": [
+            17.35,
+            4.65
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5507935862161675,
+          "reproduced_stop_peaks_deg": [
+            0.05308343421301375,
+            0.05712191514065286
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56041,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7803921568627451,
+          "release_seconds": [
+            17.45,
+            10.850000000000001
+          ],
+          "loaded_release_seconds": [
+            17.45,
+            4.7
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5579778103357841,
+          "reproduced_stop_peaks_deg": [
+            0.0832703156969203,
+            0.09719892910545351
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56041,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7800638524299397,
+          "release_seconds": [
+            17.55,
+            11.3
+          ],
+          "loaded_release_seconds": [
+            17.55,
+            4.95
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5510961221844514,
+          "reproduced_stop_peaks_deg": [
+            0.08868004674160093,
+            0.024698439027496116
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56051,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7853832442067736,
+          "release_seconds": [
+            17.400000000000002,
+            10.850000000000001
+          ],
+          "loaded_release_seconds": [
+            17.400000000000002,
+            4.800000000000001
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5660128579067494,
+          "reproduced_stop_peaks_deg": [
+            0.045986304918558825,
+            0.08745791811373446
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56051,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7853848882582476,
+          "release_seconds": [
+            17.400000000000002,
+            10.950000000000001
+          ],
+          "loaded_release_seconds": [
+            17.400000000000002,
+            4.800000000000001
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5751675680108816,
+          "reproduced_stop_peaks_deg": [
+            0.04455755549634414,
+            0.049977283614866065
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56061,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7854597291518175,
+          "release_seconds": [
+            17.35,
+            10.700000000000001
+          ],
+          "loaded_release_seconds": [
+            17.35,
+            4.65
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5407474289535834,
+          "reproduced_stop_peaks_deg": [
+            0.07280374647861135,
+            0.1167044529499492
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56061,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7836879432624113,
+          "release_seconds": [
+            17.150000000000002,
+            11.200000000000001
+          ],
+          "loaded_release_seconds": [
+            17.150000000000002,
+            4.8500000000000005
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5329734931609776,
+          "reproduced_stop_peaks_deg": [
+            0.0739742277514136,
+            0.021475180911665216
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56071,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7809048806555041,
+          "release_seconds": [
+            17.45,
+            11.100000000000001
+          ],
+          "loaded_release_seconds": [
+            17.45,
+            4.95
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.531727872093353,
+          "reproduced_stop_peaks_deg": [
+            0.05228684224332428,
+            0.0621977088217796
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56071,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7805742644452321,
+          "release_seconds": [
+            17.3,
+            11.4
+          ],
+          "loaded_release_seconds": [
+            17.3,
+            5.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5331684707893065,
+          "reproduced_stop_peaks_deg": [
+            0.05415088067510287,
+            0.013622493101763514
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56081,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7836778332145403,
+          "release_seconds": [
+            17.150000000000002,
+            10.8
+          ],
+          "loaded_release_seconds": [
+            17.150000000000002,
+            4.800000000000001
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5636006120920365,
+          "reproduced_stop_peaks_deg": [
+            0.08402416083001762,
+            0.09706905806320919
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56081,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7829787234042553,
+          "release_seconds": [
+            17.0,
+            11.3
+          ],
+          "loaded_release_seconds": [
+            17.0,
+            4.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5642968629919977,
+          "reproduced_stop_peaks_deg": [
+            0.0845220939644631,
+            0.03034705825755608
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56091,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.782174688057041,
+          "release_seconds": [
+            17.400000000000002,
+            10.850000000000001
+          ],
+          "loaded_release_seconds": [
+            17.400000000000002,
+            4.800000000000001
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5799902729413612,
+          "reproduced_stop_peaks_deg": [
+            0.04579168692851104,
+            0.07855880481247587
+          ]
+        },
+        {
+          "case": [
+            180,
+            1,
+            "short",
+            56091,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7815602836879433,
+          "release_seconds": [
+            17.3,
+            11.05
+          ],
+          "loaded_release_seconds": [
+            17.3,
+            4.7
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5647522475133557,
+          "reproduced_stop_peaks_deg": [
+            0.06403921626157395,
+            0.042928042731348315
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56001,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7817485641352904,
+          "release_seconds": [
+            12.350000000000001,
+            19.450000000000003
+          ],
+          "loaded_release_seconds": [
+            4.3,
+            19.450000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6278372431945415,
+          "reproduced_stop_peaks_deg": [
+            0.05258411194184649,
+            0.0028225247589322103
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56001,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7897435897435897,
+          "release_seconds": [
+            11.100000000000001,
+            19.6
+          ],
+          "loaded_release_seconds": [
+            4.800000000000001,
+            19.6
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5838229364770687,
+          "reproduced_stop_peaks_deg": [
+            0.05463976038189366,
+            0.004060280907129663
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56011,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7799043062200957,
+          "release_seconds": [
+            12.950000000000001,
+            19.700000000000003
+          ],
+          "loaded_release_seconds": [
+            5.0,
+            19.700000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6154634000016544,
+          "reproduced_stop_peaks_deg": [
+            0.045280718638859824,
+            0.0072954183374828625
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56011,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7850048061518744,
+          "release_seconds": [
+            12.05,
+            19.75
+          ],
+          "loaded_release_seconds": [
+            5.75,
+            19.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5877783106046005,
+          "reproduced_stop_peaks_deg": [
+            0.046553102365089416,
+            0.08714389216080533
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56021,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7830940988835726,
+          "release_seconds": [
+            11.55,
+            19.75
+          ],
+          "loaded_release_seconds": [
+            4.25,
+            19.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5806325133455366,
+          "reproduced_stop_peaks_deg": [
+            0.13992209670839187,
+            0.0019852242218808274
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56021,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7885293175264338,
+          "release_seconds": [
+            10.950000000000001,
+            19.8
+          ],
+          "loaded_release_seconds": [
+            4.6000000000000005,
+            19.8
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5737610806265694,
+          "reproduced_stop_peaks_deg": [
+            0.14368454789693272,
+            0.0022723687825945056
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56031,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7830248883216337,
+          "release_seconds": [
+            12.200000000000001,
+            19.75
+          ],
+          "loaded_release_seconds": [
+            4.55,
+            19.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6001470318895243,
+          "reproduced_stop_peaks_deg": [
+            0.05695293515089091,
+            0.0029015634952542935
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56031,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7869272669016341,
+          "release_seconds": [
+            11.55,
+            19.650000000000002
+          ],
+          "loaded_release_seconds": [
+            5.2,
+            19.650000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5935710171210605,
+          "reproduced_stop_peaks_deg": [
+            0.05356116957143183,
+            0.03140856574250965
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56041,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7777423469387755,
+          "release_seconds": [
+            13.05,
+            19.8
+          ],
+          "loaded_release_seconds": [
+            5.0,
+            19.8
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6009192099010333,
+          "reproduced_stop_peaks_deg": [
+            0.05051312806466777,
+            0.002462355066500101
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56041,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7825112107623319,
+          "release_seconds": [
+            12.0,
+            19.85
+          ],
+          "loaded_release_seconds": [
+            5.5,
+            19.85
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6009248592587452,
+          "reproduced_stop_peaks_deg": [
+            0.05250630851348106,
+            0.006098939634339796
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56051,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7802933673469388,
+          "release_seconds": [
+            12.9,
+            19.5
+          ],
+          "loaded_release_seconds": [
+            5.050000000000001,
+            19.5
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.609998653534613,
+          "reproduced_stop_peaks_deg": [
+            0.13169607000935787,
+            0.0036067081983864216
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56051,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7850736707238949,
+          "release_seconds": [
+            12.05,
+            19.6
+          ],
+          "loaded_release_seconds": [
+            5.65,
+            19.6
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6103993213902832,
+          "reproduced_stop_peaks_deg": [
+            0.1453343266084771,
+            0.03471026241117943
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56061,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7808612440191387,
+          "release_seconds": [
+            12.75,
+            19.5
+          ],
+          "loaded_release_seconds": [
+            4.55,
+            19.5
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.639759885821892,
+          "reproduced_stop_peaks_deg": [
+            0.06762449370797692,
+            0.004793350505713397
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56061,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7878884972765139,
+          "release_seconds": [
+            11.5,
+            19.6
+          ],
+          "loaded_release_seconds": [
+            5.050000000000001,
+            19.6
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5930987888533114,
+          "reproduced_stop_peaks_deg": [
+            0.054523753331926376,
+            0.00824630812973925
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56071,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7827058072750479,
+          "release_seconds": [
+            12.450000000000001,
+            19.650000000000002
+          ],
+          "loaded_release_seconds": [
+            4.9,
+            19.650000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6070977058203957,
+          "reproduced_stop_peaks_deg": [
+            0.044304096694885865,
+            0.004278762564286672
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56071,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7849358974358974,
+          "release_seconds": [
+            11.950000000000001,
+            19.75
+          ],
+          "loaded_release_seconds": [
+            5.65,
+            19.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5954551301315071,
+          "reproduced_stop_peaks_deg": [
+            0.041485197079042156,
+            0.0045441022167462325
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56081,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7827751196172249,
+          "release_seconds": [
+            11.950000000000001,
+            19.6
+          ],
+          "loaded_release_seconds": [
+            4.2,
+            19.6
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6162910891864803,
+          "reproduced_stop_peaks_deg": [
+            0.08150178007508138,
+            0.018856831043421115
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56081,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7885293175264338,
+          "release_seconds": [
+            11.15,
+            19.700000000000003
+          ],
+          "loaded_release_seconds": [
+            4.75,
+            19.700000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5782666198988548,
+          "reproduced_stop_peaks_deg": [
+            0.08670315399246906,
+            0.007599283501705881
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56091,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7831632653061225,
+          "release_seconds": [
+            11.950000000000001,
+            19.55
+          ],
+          "loaded_release_seconds": [
+            4.3500000000000005,
+            19.55
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5901113605491364,
+          "reproduced_stop_peaks_deg": [
+            0.05589948207788341,
+            0.00295137050159415
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "long",
+            56091,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7894905479013137,
+          "release_seconds": [
+            10.950000000000001,
+            19.650000000000002
+          ],
+          "loaded_release_seconds": [
+            4.7,
+            19.650000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5882149399159466,
+          "reproduced_stop_peaks_deg": [
+            0.05593703572476555,
+            0.003652324850602535
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56001,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7479732111385267,
+          "release_seconds": [
+            27.75,
+            39.900000000000006
+          ],
+          "loaded_release_seconds": [
+            19.75,
+            24.900000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6406237265001781,
+          "reproduced_stop_peaks_deg": [
+            0.04061879823734327,
+            0.010825490944991323,
+            0.04772355932993001,
+            0.00787349852938852
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56001,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7531802120141343,
+          "release_seconds": [
+            26.6,
+            39.95
+          ],
+          "loaded_release_seconds": [
+            20.25,
+            25.1
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.634951875208807,
+          "reproduced_stop_peaks_deg": [
+            0.04043771229547021,
+            0.01062006998339449,
+            0.03202206999709123,
+            0.008808011856729003
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56011,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7459030837004406,
+          "release_seconds": [
+            28.1,
+            41.25
+          ],
+          "loaded_release_seconds": [
+            20.200000000000003,
+            25.150000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6267134364277066,
+          "reproduced_stop_peaks_deg": [
+            0.046970502897042604,
+            0.03243507618352186,
+            0.03614498565419321,
+            0.019841686802058923
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56011,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7472178060413355,
+          "release_seconds": [
+            27.25,
+            41.1
+          ],
+          "loaded_release_seconds": [
+            20.75,
+            25.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6281630427262505,
+          "reproduced_stop_peaks_deg": [
+            0.050429908614005224,
+            0.024205258909618572,
+            0.035647787530388074,
+            0.013055949736922041
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56021,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7510132158590308,
+          "release_seconds": [
+            26.5,
+            40.7
+          ],
+          "loaded_release_seconds": [
+            19.1,
+            24.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6211317187697947,
+          "reproduced_stop_peaks_deg": [
+            0.061235546847263844,
+            0.003946895967497812,
+            0.030674388189870894,
+            0.008641394482360506
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56021,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7528705175763999,
+          "release_seconds": [
+            25.950000000000003,
+            40.95
+          ],
+          "loaded_release_seconds": [
+            19.6,
+            25.05
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6141328185665996,
+          "reproduced_stop_peaks_deg": [
+            0.05365348929519751,
+            0.004170436859127869,
+            0.03804213544566746,
+            0.006555552904111577
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56031,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7477969686288333,
+          "release_seconds": [
+            27.200000000000003,
+            41.150000000000006
+          ],
+          "loaded_release_seconds": [
+            19.6,
+            24.950000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6453252503239767,
+          "reproduced_stop_peaks_deg": [
+            0.05030225755535922,
+            0.006742813316786282,
+            0.01899391412529385,
+            0.020510447764756835
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56031,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7482776894541601,
+          "release_seconds": [
+            27.150000000000002,
+            41.1
+          ],
+          "loaded_release_seconds": [
+            20.75,
+            24.900000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6334705790843737,
+          "reproduced_stop_peaks_deg": [
+            0.048874226846699,
+            0.02509999202553896,
+            0.019585322218088067,
+            0.008217029361488222
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56041,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7448907681465821,
+          "release_seconds": [
+            28.150000000000002,
+            41.1
+          ],
+          "loaded_release_seconds": [
+            20.25,
+            25.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6328789191987187,
+          "reproduced_stop_peaks_deg": [
+            0.045784776327743346,
+            0.015582681807289174,
+            0.01003445651774224,
+            0.01881125317027508
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56041,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7470858353938538,
+          "release_seconds": [
+            27.1,
+            41.400000000000006
+          ],
+          "loaded_release_seconds": [
+            20.650000000000002,
+            25.35
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6397410197604604,
+          "reproduced_stop_peaks_deg": [
+            0.045791872769720514,
+            0.030034151938469377,
+            0.024365930403265734,
+            0.01041545698631352
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56051,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7464763918252291,
+          "release_seconds": [
+            28.450000000000003,
+            40.6
+          ],
+          "loaded_release_seconds": [
+            20.55,
+            24.950000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6347226476639863,
+          "reproduced_stop_peaks_deg": [
+            0.04817729396148373,
+            0.0099636498863577,
+            0.016165292245546834,
+            0.009343702800305076
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56051,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7605086541858,
+          "release_seconds": [
+            27.650000000000002,
+            37.2
+          ],
+          "loaded_release_seconds": [
+            21.200000000000003,
+            24.8
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6490020242978017,
+          "reproduced_stop_peaks_deg": [
+            0.047789013148293306,
+            0.018559215386845622,
+            0.02624793374069703,
+            0.6057581644850611
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56061,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7450220264317181,
+          "release_seconds": [
+            28.55,
+            40.1
+          ],
+          "loaded_release_seconds": [
+            20.400000000000002,
+            25.05
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6454496285885536,
+          "reproduced_stop_peaks_deg": [
+            0.04388186829837437,
+            0.010470652981545581,
+            0.01926420379209671,
+            0.007240763136265297
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56061,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7528705175763999,
+          "release_seconds": [
+            26.900000000000002,
+            40.0
+          ],
+          "loaded_release_seconds": [
+            20.450000000000003,
+            25.200000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6421873722541893,
+          "reproduced_stop_peaks_deg": [
+            0.04347027390776952,
+            0.014467157017931841,
+            0.05067263308102044,
+            0.0065555035685297865
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56071,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7467395135706733,
+          "release_seconds": [
+            27.700000000000003,
+            41.2
+          ],
+          "loaded_release_seconds": [
+            20.0,
+            24.85
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6381745440575681,
+          "reproduced_stop_peaks_deg": [
+            0.0506083620793412,
+            0.011799675814430336,
+            0.018149961040481555,
+            0.016942293716824278
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56071,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7491166077738516,
+          "release_seconds": [
+            27.400000000000002,
+            41.400000000000006
+          ],
+          "loaded_release_seconds": [
+            21.0,
+            25.1
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.630666919321966,
+          "reproduced_stop_peaks_deg": [
+            0.05261377611302308,
+            0.01084295319808711,
+            0.03842224698092777,
+            0.031474620650693265
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56081,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7437885462555066,
+          "release_seconds": [
+            27.650000000000002,
+            40.85
+          ],
+          "loaded_release_seconds": [
+            19.85,
+            25.1
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6256649209976247,
+          "reproduced_stop_peaks_deg": [
+            0.05848495502801086,
+            0.013311402570984326,
+            0.0392716521830327,
+            0.002725450109990843
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56081,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7503974562798092,
+          "release_seconds": [
+            26.55,
+            40.150000000000006
+          ],
+          "loaded_release_seconds": [
+            20.25,
+            25.0
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6446197977412986,
+          "reproduced_stop_peaks_deg": [
+            0.06548126221082055,
+            0.018813189590102558,
+            0.028313834553421263,
+            0.010028094002716747
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56091,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7501761804087386,
+          "release_seconds": [
+            27.150000000000002,
+            40.550000000000004
+          ],
+          "loaded_release_seconds": [
+            19.6,
+            24.900000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6161798421824288,
+          "reproduced_stop_peaks_deg": [
+            0.04319397017808224,
+            0.011367978813960984,
+            0.044544399313043215,
+            0.007595743968757357
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "sequence",
+            56091,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7528705175763999,
+          "release_seconds": [
+            26.0,
+            40.650000000000006
+          ],
+          "loaded_release_seconds": [
+            19.700000000000003,
+            24.900000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6241362068973164,
+          "reproduced_stop_peaks_deg": [
+            0.043711000932273564,
+            0.006849574502896471,
+            0.03221748146184496,
+            0.00695163154110656
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56001,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7610371408549405,
+          "release_seconds": [
+            12.3,
+            19.450000000000003
+          ],
+          "loaded_release_seconds": [
+            4.3,
+            19.450000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6271593621686778,
+          "reproduced_stop_peaks_deg": [
+            0.04061879823734327,
+            0.010825490944991323
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56001,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.768661971830986,
+          "release_seconds": [
+            11.15,
+            19.6
+          ],
+          "loaded_release_seconds": [
+            4.800000000000001,
+            19.6
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5833230755767376,
+          "reproduced_stop_peaks_deg": [
+            0.04043771229547021,
+            0.01062006998339449
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56011,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7583187390542907,
+          "release_seconds": [
+            12.9,
+            19.75
+          ],
+          "loaded_release_seconds": [
+            5.0,
+            19.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6079871137301049,
+          "reproduced_stop_peaks_deg": [
+            0.046970502897042604,
+            0.03243507618352186
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56011,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.762055614220345,
+          "release_seconds": [
+            12.25,
+            19.8
+          ],
+          "loaded_release_seconds": [
+            5.75,
+            19.8
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5844617704733552,
+          "reproduced_stop_peaks_deg": [
+            0.050429908614005224,
+            0.024205258909618572
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56021,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7618213660245184,
+          "release_seconds": [
+            11.65,
+            19.650000000000002
+          ],
+          "loaded_release_seconds": [
+            4.25,
+            19.650000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.582838202568624,
+          "reproduced_stop_peaks_deg": [
+            0.061235546847263844,
+            0.003946895967497812
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56021,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7680394227384724,
+          "release_seconds": [
+            10.950000000000001,
+            19.75
+          ],
+          "loaded_release_seconds": [
+            4.6000000000000005,
+            19.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5748042260965658,
+          "reproduced_stop_peaks_deg": [
+            0.05365348929519751,
+            0.004170436859127869
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56031,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7620882971268396,
+          "release_seconds": [
+            12.15,
+            19.75
+          ],
+          "loaded_release_seconds": [
+            4.55,
+            19.75
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6023546830187985,
+          "reproduced_stop_peaks_deg": [
+            0.05030225755535922,
+            0.006742813316786282
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56031,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7655755015839493,
+          "release_seconds": [
+            11.600000000000001,
+            19.650000000000002
+          ],
+          "loaded_release_seconds": [
+            5.2,
+            19.650000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5995909479675743,
+          "reproduced_stop_peaks_deg": [
+            0.048874226846699,
+            0.02509998324859077
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56041,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7566526610644257,
+          "release_seconds": [
+            12.9,
+            19.8
+          ],
+          "loaded_release_seconds": [
+            5.0,
+            19.8
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6012840754784309,
+          "reproduced_stop_peaks_deg": [
+            0.045784776327743346,
+            0.015582681807289174
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56041,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7603800140745953,
+          "release_seconds": [
+            11.950000000000001,
+            19.900000000000002
+          ],
+          "loaded_release_seconds": [
+            5.5,
+            19.900000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6033617531837248,
+          "reproduced_stop_peaks_deg": [
+            0.045791872769720514,
+            0.030034151938469377
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56051,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7580532212885154,
+          "release_seconds": [
+            12.950000000000001,
+            19.55
+          ],
+          "loaded_release_seconds": [
+            5.050000000000001,
+            19.55
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6125385965093039,
+          "reproduced_stop_peaks_deg": [
+            0.04817729396148373,
+            0.0099636498863577
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56051,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7638986629134412,
+          "release_seconds": [
+            12.100000000000001,
+            19.6
+          ],
+          "loaded_release_seconds": [
+            5.65,
+            19.6
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6121221421356537,
+          "reproduced_stop_peaks_deg": [
+            0.047789013148293306,
+            0.018559215386845622
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56061,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7600700525394045,
+          "release_seconds": [
+            12.700000000000001,
+            19.5
+          ],
+          "loaded_release_seconds": [
+            4.55,
+            19.5
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6386202171233192,
+          "reproduced_stop_peaks_deg": [
+            0.04388186829837437,
+            0.010470652981545581
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56061,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.766983456529391,
+          "release_seconds": [
+            11.5,
+            19.650000000000002
+          ],
+          "loaded_release_seconds": [
+            5.050000000000001,
+            19.650000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5958556620988065,
+          "reproduced_stop_peaks_deg": [
+            0.04347027390776952,
+            0.014467157017931841
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56071,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7599859845830413,
+          "release_seconds": [
+            12.600000000000001,
+            19.650000000000002
+          ],
+          "loaded_release_seconds": [
+            4.9,
+            19.650000000000002
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.608021033171251,
+          "reproduced_stop_peaks_deg": [
+            0.0506083620793412,
+            0.011799675814430336
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56071,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7630281690140845,
+          "release_seconds": [
+            12.05,
+            19.85
+          ],
+          "loaded_release_seconds": [
+            5.65,
+            19.85
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6004871045709976,
+          "reproduced_stop_peaks_deg": [
+            0.05261377611302308,
+            0.01084295319808711
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56081,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7621716287215412,
+          "release_seconds": [
+            12.0,
+            19.55
+          ],
+          "loaded_release_seconds": [
+            4.2,
+            19.55
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.6160719477224611,
+          "reproduced_stop_peaks_deg": [
+            0.05848495502801086,
+            0.013311402570984326
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56081,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7680394227384724,
+          "release_seconds": [
+            11.05,
+            19.700000000000003
+          ],
+          "loaded_release_seconds": [
+            4.75,
+            19.700000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5786841493158457,
+          "reproduced_stop_peaks_deg": [
+            0.06548126221082055,
+            0.018813189590102558
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56091,
+            {
+              "phase_deg": 2.0
+            }
+          ],
+          "both_contact_fraction": 0.7619047619047619,
+          "release_seconds": [
+            11.9,
+            19.6
+          ],
+          "loaded_release_seconds": [
+            4.3500000000000005,
+            19.6
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5845058402425037,
+          "reproduced_stop_peaks_deg": [
+            0.04319397017808224,
+            0.011367978813960984
+          ]
+        },
+        {
+          "case": [
+            180,
+            -1,
+            "short",
+            56091,
+            {
+              "phase_deg": 0.0
+            }
+          ],
+          "both_contact_fraction": 0.7676874340021119,
+          "release_seconds": [
+            11.0,
+            19.700000000000003
+          ],
+          "loaded_release_seconds": [
+            4.7,
+            19.700000000000003
+          ],
+          "both_below_02N_samples": 0,
+          "reproduced_motion_rmse_deg": 0.5835331860354022,
+          "reproduced_stop_peaks_deg": [
+            0.043711000932273564,
+            0.006849574502896471
+          ]
+        }
+      ]
+    }
+  },
+  "passive_contact_diagnostic": {
+    "sample_hz": 20,
+    "released_hand_force_below_n": 0.2,
+    "other_hand_force_above_n": 1.0,
+    "abs_centering_torque_above_nm": 0.1,
+    "other_hand_opposing_centering_torque_above_nm": 0.05,
+    "acceptance_gate_changed": false,
+    "physics_or_policy_run": false
+  }
+}

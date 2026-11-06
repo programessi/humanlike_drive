@@ -1,0 +1,60 @@
+# Standalone manipulation: deterministic common motion + bounded contact RL.
+task:
+  policy_hz: 20
+  history_steps: 8
+  settle_seconds: 1.2
+  target_speed_deg: 20
+controller:
+  robot_hz: 50
+  angular_speed_deg: 20
+  phase_limit_deg: 40
+  phase_lead_deg: 8
+  arm_speed: 1.0
+  arm_acceleration: 4.0
+  hand_speed: 1.5
+  hand_acceleration: 8.0
+  joint_lead: 0.15
+  wheel_position_gain: 2.0
+  wheel_velocity_gain: 0.15
+  reference_acceleration_deg_s2: 80
+  common_residual_deg: 1
+  differential_residual_deg: 0.5
+  max_phase_difference_deg: 1
+  radial_residual_m: 0.002
+  axial_residual_m: 0.002
+  finger_residual_rad: 0.15
+  residual_filter_seconds: 0.1
+  residual_angular_rate_deg_s: 5
+ppo:
+  actor: [256, 256, 128]
+  critic: [512, 512, 256]
+  learning_rate: 0.0001
+  n_steps: 256
+  batch_size: 256
+  n_epochs: 10
+  gamma: 0.995
+  gae_lambda: 0.95
+  ent_coef: 0.002
+  log_std_init: -2.0
+stages:
+  grasp:
+    target_mode: hold
+    amplitude_deg: 0
+    episode_seconds: 30
+  reach10:
+    target_mode: step
+    amplitude_deg: 10
+    episode_seconds: 30
+  reach30:
+    target_mode: step
+    amplitude_deg: 30
+    episode_seconds: 60
+  track:
+    target_mode: mixed
+    amplitude_deg: 30
+    episode_seconds: 60
+  robust:
+    target_mode: mixed
+    amplitude_deg: 30
+    episode_seconds: 60
+    randomization_strength: 1

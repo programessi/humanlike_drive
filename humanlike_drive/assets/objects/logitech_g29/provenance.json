@@ -1,0 +1,125 @@
+{
+  "robot_source": "/home/nubot/unitree/unitree_ros/robots/h1_2_description/h1_2.xml",
+  "robot_sha256": "46af694a659384dfc7bfdd96145a3d4eb84a6a2aba703db40feb4048ae8ab7ba",
+  "hand_mimic_source": "/home/nubot/unitree/unitree_ros/robots/h1_2_description/h1_2.urdf",
+  "hand_urdf_sha256": "504b0cc9ea5311044876f4be4e3148fbc285aa1439e33b19d93c357a7468066c",
+  "hand_mimic_relations": [
+    {
+      "joint": "L_thumb_intermediate_joint",
+      "parent": "L_thumb_proximal_pitch_joint",
+      "multiplier": 1.6,
+      "offset": 0.0
+    },
+    {
+      "joint": "L_thumb_distal_joint",
+      "parent": "L_thumb_proximal_pitch_joint",
+      "multiplier": 2.4,
+      "offset": 0.0
+    },
+    {
+      "joint": "L_index_intermediate_joint",
+      "parent": "L_index_proximal_joint",
+      "multiplier": 1.0,
+      "offset": 0.0
+    },
+    {
+      "joint": "L_middle_intermediate_joint",
+      "parent": "L_middle_proximal_joint",
+      "multiplier": 1.0,
+      "offset": 0.0
+    },
+    {
+      "joint": "L_ring_intermediate_joint",
+      "parent": "L_ring_proximal_joint",
+      "multiplier": 1.0,
+      "offset": 0.0
+    },
+    {
+      "joint": "L_pinky_intermediate_joint",
+      "parent": "L_pinky_proximal_joint",
+      "multiplier": 1.0,
+      "offset": 0.0
+    },
+    {
+      "joint": "R_thumb_intermediate_joint",
+      "parent": "R_thumb_proximal_pitch_joint",
+      "multiplier": 1.6,
+      "offset": 0.0
+    },
+    {
+      "joint": "R_thumb_distal_joint",
+      "parent": "R_thumb_proximal_pitch_joint",
+      "multiplier": 2.4,
+      "offset": 0.0
+    },
+    {
+      "joint": "R_index_intermediate_joint",
+      "parent": "R_index_proximal_joint",
+      "multiplier": 1.0,
+      "offset": 0.0
+    },
+    {
+      "joint": "R_middle_intermediate_joint",
+      "parent": "R_middle_proximal_joint",
+      "multiplier": 1.0,
+      "offset": 0.0
+    },
+    {
+      "joint": "R_ring_intermediate_joint",
+      "parent": "R_ring_proximal_joint",
+      "multiplier": 1.0,
+      "offset": 0.0
+    },
+    {
+      "joint": "R_pinky_intermediate_joint",
+      "parent": "R_pinky_proximal_joint",
+      "multiplier": 1.0,
+      "offset": 0.0
+    }
+  ],
+  "g29_source": "/home/nubot/g29_wheel_urdf/urdf/g29_wheel_urdf.urdf",
+  "g29_urdf_sha256": "b401a07eb7e0e34babf1edd0d33ec30d349f1b07020ad789dabf4419bfb3a8f2",
+  "mesh_sha256": {
+    "Link1.STL": "64e6efb06acd41882098e6a9c3cfc4bd06cb642ad8abb28ad92235941797911e",
+    "base_link_wheel.STL": "1340d5c6e4203b0f0bcb0183d18222613eeec7f0cb05d2d9da4f08c441438098"
+  },
+  "base_rotation": "world yaw +90deg only; CAD support plane remains horizontal",
+  "robot_pose": "fixed seated pelvis at z=.83; hip pitch -90deg / knee +90deg baked into vendor transforms",
+  "base_position_m": [
+    0.64,
+    0.0,
+    0.9209999999999999
+  ],
+  "wheel_origin_world_m": [
+    0.5477810000000001,
+    2.047673142158146e-17,
+    1.03721
+  ],
+  "table_top_height_m": 0.94,
+  "cad_support_plane_local_z_m": 0.019,
+  "wheel_axis_world": [
+    0.9130578464837202,
+    2.19312807443492e-05,
+    -0.4078300730617232
+  ],
+  "shaft_inclination_deg": 24.06859608296197,
+  "collision_parts": {
+    "rim": 480,
+    "paddle": 27,
+    "inner": 63,
+    "hub": 36
+  },
+  "wheel_limits_deg": [
+    -450,
+    450
+  ],
+  "limitations": [
+    "URDF base_link.STL missing; installed base_link_wheel.STL used",
+    "original collision filenamse/bae_link.STL invalid; not imported",
+    "housing collision is conservative convex hull",
+    "robot self-collision response disabled for this fixed-seat inspection scene; external contacts active",
+    "cockpit is procedural; screens show static preview images, not a driving simulator feed",
+    "no old scene, checkpoint, grasp state or dataset loaded",
+    "damping, friction and actuator gains are provisional, not real calibration"
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "inputs": [
+    "outputs/regrasp_stage1/zero_A_matched_v1",
+    "outputs/regrasp_stage1/teacher_A_s7_v1_eval"
+  ],
+  "labels": [
+    "zero",
+    "teacher_A10_65k"
+  ],
+  "models": [
+    null,
+    "ef506040ab1687648120f54bd362033c613f4f15d05dcb681a879323eb5fc277"
+  ],
+  "records": [
+    {
+      "model": "zero",
+      "case": "hold",
+      "n": 3,
+      "rmse_mean_deg": 1.6155211189108913,
+      "rmse_std_deg": 0.06161841143900831,
+      "tail_rmse_mean_deg": 1.8407643927053126,
+      "peak_error_max_deg": 1.997890218131526,
+      "complete": 3,
+      "tracking_pass": 3,
+      "candidate_regrasp_events": 0
+    },
+    {
+      "model": "zero",
+      "case": "negative",
+      "n": 3,
+      "rmse_mean_deg": 10.685884495656092,
+      "rmse_std_deg": 0.05751240391162066,
+      "tail_rmse_mean_deg": 11.840202584524661,
+      "peak_error_max_deg": 11.997890218131525,
+      "complete": 3,
+      "tracking_pass": 0,
+      "candidate_regrasp_events": 0
+    },
+    {
+      "model": "zero",
+      "case": "positive",
+      "n": 3,
+      "rmse_mean_deg": 7.86398225535254,
+      "rmse_std_deg": 0.05926334519899435,
+      "tail_rmse_mean_deg": 8.160049858229131,
+      "peak_error_max_deg": 8.7057197548627,
+      "complete": 3,
+      "tracking_pass": 0,
+      "candidate_regrasp_events": 0
+    },
+    {
+      "model": "zero",
+      "case": "sequence",
+      "n": 3,
+      "rmse_mean_deg": 6.556078884775221,
+      "rmse_std_deg": 0.013873543480419397,
+      "tail_rmse_mean_deg": 4.831076063206549,
+      "peak_error_max_deg": 11.807129155048345,
+      "complete": 3,
+      "tracking_pass": 0,
+      "candidate_regrasp_events": 0
+    },
+    {
+      "model": "teacher_A10_65k",
+      "case": "hold",
+      "n": 3,
+      "rmse_mean_deg": 7.674491837862615,
+      "rmse_std_deg": 2.4402428018652116,
+      "tail_rmse_mean_deg": 10.856889318881974,
+      "peak_error_max_deg": 15.013345702393009,
+      "complete": 3,
+      "tracking_pass": 0,
+      "candidate_regrasp_events": 0
+    },
+    {
+      "model": "teacher_A10_65k",
+      "case": "negative",
+      "n": 3,
+      "rmse_mean_deg": 11.272949042954851,
+      "rmse_std_deg": 0.038005624093493,
+      "tail_rmse_mean_deg": 13.339973278642882,
+      "peak_error_max_deg": 14.419746954747986,
+      "complete": 3,
+      "tracking_pass": 0,
+      "candidate_regrasp_events": 0
+    },
+    {
+      "model": "teacher_A10_65k",
+      "case": "positive",
+      "n": 3,
+      "rmse_mean_deg": 6.536695494166206,
+      "rmse_std_deg": 3.486225172302714,
+      "tail_rmse_mean_deg": 6.605356968777304,
+      "peak_error_max_deg": 18.359674121844378,
+      "complete": 3,
+      "tracking_pass": 0,
+      "candidate_regrasp_events": 0
+    },
+    {
+      "model": "teacher_A10_65k",
+      "case": "sequence",
+      "n": 3,
+      "rmse_mean_deg": 13.493098732480638,
+      "rmse_std_deg": 1.687267735218314,
+      "tail_rmse_mean_deg": 15.134427109733052,
+      "peak_error_max_deg": 27.155393755985056,
+      "complete": 3,
+      "tracking_pass": 0,
+      "candidate_regrasp_events": 0
+    }
+  ],
+  "stage1_passed": false,
+  "hardware_ready": false
+}

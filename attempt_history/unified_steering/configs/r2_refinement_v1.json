@@ -1,0 +1,12 @@
+{
+  "parent": "runs/r2_incremental_hand_v1/passing_step_000049152.zip",
+  "requested_steps": 32768,
+  "learning_rate": 2.5e-06,
+  "only_learning_change": "learning_rate1e-5 ->2.5e-6; preserve all weights and optimizer states, hand alpha0.995, reward sigma4, task mixture unchanged",
+  "reason": "21/21 passed at49152 but no consecutive pass in131072; later return and physical gate regression. Max observed approxKL0.031 and recurrent value-loss spikes; smaller update size is a hypothesis, not proven causal diagnosis.",
+  "acceptance_seeds": [
+    1107,
+    1117,
+    1127
+  ]
+}

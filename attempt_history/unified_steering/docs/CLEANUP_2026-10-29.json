@@ -1,0 +1,2137 @@
+{
+  "prepared_utc": "2026-10-29T08:50:30.542101+00:00",
+  "before_allocated_bytes": 3760910336,
+  "fixture_files": [
+    {
+      "source": "runs/r22_separate_hand_lead_v2/best.zip",
+      "fixture": "tests/fixtures/legacy_invariants/models/r22_separate_hand_lead_v2/best.zip",
+      "sha256": "e6b8e84198713aeea8b1d89df70204097d4b044c7cd392e779223e4038617a1b",
+      "bytes": 5349417
+    },
+    {
+      "source": "runs/r22_separate_hand_lead_v2/config.json",
+      "fixture": "tests/fixtures/legacy_invariants/models/r22_separate_hand_lead_v2/config.json",
+      "sha256": "132c758b9e2a4bb7a8254ca94edf1908810e1145b89b430077b8d79b0437c8fa",
+      "bytes": 3203
+    },
+    {
+      "source": "runs/driving_r1_bc_v6/teacher.zip",
+      "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_bc_v6/teacher.zip",
+      "sha256": "c514dab345c5f2a4094f94747b822558036c7ed0ce27ff39572858a7172f3a74",
+      "bytes": 1817494
+    },
+    {
+      "source": "runs/driving_r1_bc_v6/config.json",
+      "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_bc_v6/config.json",
+      "sha256": "2f33ab12e65bcfc2fba4388a523b05eb43ba89bc74d7fd56d7e56bd13ca7560e",
+      "bytes": 2328
+    },
+    {
+      "source": "runs/driving_r1_norm_v20/teacher.zip",
+      "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_norm_v20/teacher.zip",
+      "sha256": "74b5cdd1f9efe0ada532aa033bd9a360e4253325c4092c87278a73c7ea17676b",
+      "bytes": 1821937
+    },
+    {
+      "source": "runs/driving_r1_norm_v20/config.json",
+      "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_norm_v20/config.json",
+      "sha256": "dc257a5f7ba60e051475b34094b6a49a6b2a501c648a465801595d3a5c6efe18",
+      "bytes": 2500
+    },
+    {
+      "source": "runs/driving_r1_memory_hand_v30/teacher.zip",
+      "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_memory_hand_v30/teacher.zip",
+      "sha256": "11df95abc009dc8f01f92ae619d1a6751b59ebaf016e86d475f776f2c6fc4070",
+      "bytes": 692123
+    },
+    {
+      "source": "runs/driving_r1_memory_hand_v30/config.json",
+      "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_memory_hand_v30/config.json",
+      "sha256": "85d9bd60d7a6c66396e9c066b74ffd9646a6290b9757d836b42c74322ec1e378",
+      "bytes": 3387
+    },
+    {
+      "source": "runs/driving_r1_pose_frozen_v41/teacher.zip",
+      "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_pose_v41/teacher.zip",
+      "sha256": "76e213958d876d7ec90ab911ee3fef562f17b91f762ad34803c07f1f2a18f673",
+      "bytes": 440877
+    },
+    {
+      "source": "runs/driving_r1_pose_frozen_v41/config.json",
+      "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_pose_v41/config.json",
+      "sha256": "b9fbafd3f045d803253a2e5036581253c1ebafae431371b8c76d8ecf71a0db07",
+      "bytes": 8568
+    },
+    {
+      "source": "runs/driving_r2_conditional_memory_v58/teacher.zip",
+      "fixture": "tests/fixtures/legacy_invariants/models/driving_r2_conditional_memory_v58/teacher.zip",
+      "sha256": "ae49a08fd02580bb0a7123e224e9ee70b4599abb63d03bcb1984d94a98fa3738",
+      "bytes": 2904969
+    },
+    {
+      "source": "runs/driving_r2_conditional_memory_v58/config.json",
+      "fixture": "tests/fixtures/legacy_invariants/models/driving_r2_conditional_memory_v58/config.json",
+      "sha256": "ffc3125348f2323471114f2c37e56e27364f3acbd40f357b6ba7f7fcfd3ee2b5",
+      "bytes": 3094
+    },
+    {
+      "source": "runs/driving_r1_handoff_labels_v14/labels/a30_d-1_short_s74101.npz",
+      "fixture": "tests/fixtures/legacy_invariants/data/hand_actions/a30_d-1_short_s74101.npz",
+      "sha256": "1d11483e08dd08bd5865b01f93074ccfba086a1740621ff918424cf1a01dd437",
+      "bytes": 461992
+    },
+    {
+      "source": "runs/driving_r2_ipsilateral_labels_v41/labels/a180_d+1_short_s48001.npz",
+      "fixture": "tests/fixtures/legacy_invariants/data/halfturn/a180_d+1_short_s48001.npz",
+      "sha256": "17574f7f68fd7705342aef5201d77856fd1311d28ece82a2b0f45537f1279437",
+      "bytes": 2540901
+    },
+    {
+      "source": "runs/driving_r2_ipsilateral_labels_v41/labels/a180_d-1_short_s48001.npz",
+      "fixture": "tests/fixtures/legacy_invariants/data/halfturn/a180_d-1_short_s48001.npz",
+      "sha256": "f5107c2249b50046d7ea634a8fb075192bc875bdf2d0250611bcafb7af6a5f2c",
+      "bytes": 2564780
+    },
+    {
+      "source": "runs/driving_r2_history_aligned_labels_v77/labels/a180_d+1_long_s48371.npz",
+      "fixture": "tests/fixtures/legacy_invariants/data/history/labels/a180_d+1_long_s48371.npz",
+      "sha256": "5b41e8d2c85fb14abacd2798f1e8353c007576864f2e4c4e2532571e016176d5",
+      "bytes": 2793570
+    },
+    {
+      "source": "runs/driving_r2_history_aligned_labels_v77/traces/a180_d+1_long_s48371.npz",
+      "fixture": "tests/fixtures/legacy_invariants/data/history/traces/a180_d+1_long_s48371.npz",
+      "sha256": "c939536fe2000be33f2ea5a4e90bee0416017d6825554ac16aa6e205387d691d",
+      "bytes": 928485
+    }
+  ],
+  "test_files_relocated": [
+    "tests/test_driving_policy.py",
+    "tests/test_driving_pose_policy.py",
+    "tests/test_driving_coordination_policy.py",
+    "tests/test_driving_conditional_memory.py",
+    "tests/test_driving_factor_transition.py",
+    "tests/test_structured_bootstrap.py",
+    "tests/test_driving_contact_history.py"
+  ],
+  "historical_archive": "docs/archive/EXPERIMENT_SUMMARIES_2026-10-29.jsonl.gz",
+  "archived_records": 604,
+  "preserved_hashes": {
+    "runs/driving_r2_frozen_v121/teacher.zip": "bc2699474b133f26135ae36b354865a6291b31d944d38361da7ef547aa58451b",
+    "runs/driving_r2_frozen_v121/config.json": "f884fa1f4af838be624ff2a13f4ae1d26b2dec9b969e7bdadcb929a9a96bab41",
+    "results/DRIVING_R0_R2_ACCEPTANCE_V121/videos/r1/demo_4x.mp4": "a98273296d9cd76607405984eaca01de0e779c755a0b4ff5005b446a85c0965e",
+    "results/DRIVING_R0_R2_ACCEPTANCE_V121/videos/r2/demo_4x.mp4": "af7c03a5ae9f79c5f6c403dda5a01ac4af6170309c2ba622918cebff98471294"
+  },
+  "pruned_utc": "2026-10-29T08:54:31.744907+00:00",
+  "deleted_paths": [
+    {
+      "path": "runs/driving_r1_bc_v14",
+      "logical_bytes": 1826310
+    },
+    {
+      "path": "runs/driving_r2_robust_coordination_v48",
+      "logical_bytes": 1828524
+    },
+    {
+      "path": "runs/driving_r2_basis_search_v106",
+      "logical_bytes": 5430970
+    },
+    {
+      "path": "runs/driving_r1_norm_v20",
+      "logical_bytes": 1836258
+    },
+    {
+      "path": "runs/driving_r2_conservative_clearance_v73",
+      "logical_bytes": 27336574
+    },
+    {
+      "path": "runs/driving_r2_history_pure_corrective_v79",
+      "logical_bytes": 1959072
+    },
+    {
+      "path": "runs/driving_r1_dagger_labels_v4",
+      "logical_bytes": 32805165
+    },
+    {
+      "path": "runs/driving_r2_acceptance_pipeline_v119.json",
+      "logical_bytes": 1904
+    },
+    {
+      "path": "runs/driving_r2_release_memory_v71",
+      "logical_bytes": 6105957
+    },
+    {
+      "path": "runs/driving_r2_pure_corrective_v70",
+      "logical_bytes": 365766
+    },
+    {
+      "path": "runs/driving_r1_dagger_labels_v3",
+      "logical_bytes": 31768329
+    },
+    {
+      "path": "runs/driving_r2_fixed_dagger_fit_v94",
+      "logical_bytes": 19270965
+    },
+    {
+      "path": "runs/driving_r2_fixed_dagger_pure_v95",
+      "logical_bytes": 3186562
+    },
+    {
+      "path": "runs/driving_r2_near_nominal_grasp_v53",
+      "logical_bytes": 9613165
+    },
+    {
+      "path": "runs/driving_r1_pose_v41",
+      "logical_bytes": 462353
+    },
+    {
+      "path": "runs/driving_r1_bc_v10",
+      "logical_bytes": 1835134
+    },
+    {
+      "path": "runs/driving_r2_path_basis_v98c",
+      "logical_bytes": 0
+    },
+    {
+      "path": "runs/driving_r1_dagger_labels_v2",
+      "logical_bytes": 26325288
+    },
+    {
+      "path": "runs/driving_r2_contact_history_v86",
+      "logical_bytes": 166
+    },
+    {
+      "path": "runs/driving_r2_path_basis_v98d",
+      "logical_bytes": 3571060
+    },
+    {
+      "path": "runs/driving_r2_contact_pure_v87",
+      "logical_bytes": 2503179
+    },
+    {
+      "path": "runs/driving_r2_basis_search_v109",
+      "logical_bytes": 5433798
+    },
+    {
+      "path": "runs/driving_r2_reversal_ready_v44",
+      "logical_bytes": 33903974
+    },
+    {
+      "path": "runs/r2_incremental_hand_v1",
+      "logical_bytes": 28799802
+    },
+    {
+      "path": "runs/driving_r2_history_pure_corrective_v80",
+      "logical_bytes": 1876107
+    },
+    {
+      "path": "runs/driving_r1_handoff_pipeline_index.json",
+      "logical_bytes": 477
+    },
+    {
+      "path": "runs/driving_r2_dagger_coordination_v51",
+      "logical_bytes": 1860794
+    },
+    {
+      "path": "runs/driving_r2_anchor_jet_basis_v101",
+      "logical_bytes": 5396262
+    },
+    {
+      "path": "runs/driving_r1_dagger_labels_v10",
+      "logical_bytes": 32632750
+    },
+    {
+      "path": "runs/driving_r2_factor_bounded_v91",
+      "logical_bytes": 19262750
+    },
+    {
+      "path": "runs/driving_r2_slow_ipsilateral_v49",
+      "logical_bytes": 3159092
+    },
+    {
+      "path": "runs/driving_r2_history_intent_v78",
+      "logical_bytes": 23420508
+    },
+    {
+      "path": "runs/driving_r2_history_mixed_corrective_v81",
+      "logical_bytes": 15631889
+    },
+    {
+      "path": "runs/driving_r1_memory_hand_v31",
+      "logical_bytes": 713627
+    },
+    {
+      "path": "runs/driving_r2_fixed_hand_anchor_v120",
+      "logical_bytes": 5887505
+    },
+    {
+      "path": "runs/driving_r1_dagger_labels_v6",
+      "logical_bytes": 32799836
+    },
+    {
+      "path": "runs/driving_r2_phase_leak_v115",
+      "logical_bytes": 5397470
+    },
+    {
+      "path": "runs/driving_r2_basis_search_v107",
+      "logical_bytes": 5433795
+    },
+    {
+      "path": "runs/driving_r1_bc_v17",
+      "logical_bytes": 1835528
+    },
+    {
+      "path": "runs/driving_r1_bc_v12",
+      "logical_bytes": 1841304
+    },
+    {
+      "path": "runs/driving_r2_path_basis_v98",
+      "logical_bytes": 0
+    },
+    {
+      "path": "runs/driving_r1_dagger_labels_v9",
+      "logical_bytes": 32599359
+    },
+    {
+      "path": "runs/driving_r2_history_feedback_v83",
+      "logical_bytes": 23455699
+    },
+    {
+      "path": "runs/driving_r2_sensory_jet_basis_v100",
+      "logical_bytes": 4444212
+    },
+    {
+      "path": "runs/driving_r2_phase_leak_v114",
+      "logical_bytes": 5397471
+    },
+    {
+      "path": "runs/driving_r2_conditional_corrective_v59",
+      "logical_bytes": 8401093
+    },
+    {
+      "path": "runs/driving_r1_recurrent_v22",
+      "logical_bytes": 1175413
+    },
+    {
+      "path": "runs/driving_r1_dagger_labels_v5",
+      "logical_bytes": 32809588
+    },
+    {
+      "path": "runs/driving_r2_local_kernel_v85",
+      "logical_bytes": 23183584
+    },
+    {
+      "path": "runs/driving_r1_dagger_labels_v12",
+      "logical_bytes": 32635395
+    },
+    {
+      "path": "runs/driving_r1_dagger_labels_v8",
+      "logical_bytes": 32623755
+    },
+    {
+      "path": "runs/r2_incremental_refinement_v1",
+      "logical_bytes": 27627600
+    },
+    {
+      "path": "runs/driving_r2_neural_anchor_v117",
+      "logical_bytes": 5485752
+    },
+    {
+      "path": "runs/r22_ppo_refine_resume_v3",
+      "logical_bytes": 17955824
+    },
+    {
+      "path": "runs/driving_r1_bc_v7",
+      "logical_bytes": 1825996
+    },
+    {
+      "path": "runs/driving_r2_contact_transition_v88",
+      "logical_bytes": 23657714
+    },
+    {
+      "path": "runs/driving_r1_pose_frozen_v41",
+      "logical_bytes": 696987
+    },
+    {
+      "path": "runs/driving_r2_history_aligned_labels_v77",
+      "logical_bytes": 55973337
+    },
+    {
+      "path": "runs/driving_r1_handoff_labels_v16",
+      "logical_bytes": 32617949
+    },
+    {
+      "path": "runs/driving_r2_unified_candidate_v119",
+      "logical_bytes": 5496621
+    },
+    {
+      "path": "runs/driving_r2_anchored_mixed_labels_v57",
+      "logical_bytes": 49884855
+    },
+    {
+      "path": "runs/r2_nominal_v1",
+      "logical_bytes": 16911388
+    },
+    {
+      "path": "runs/driving_r2_history_pure_corrective_v83",
+      "logical_bytes": 1641079
+    },
+    {
+      "path": "runs/driving_r1_local_hand_labels_v31",
+      "logical_bytes": 15247750
+    },
+    {
+      "path": "runs/driving_r2_feedback_memory_v66",
+      "logical_bytes": 5176203
+    },
+    {
+      "path": "runs/driving_r2_basis_dagger_v105",
+      "logical_bytes": 34187565
+    },
+    {
+      "path": "runs/driving_r1_bc_v19",
+      "logical_bytes": 1841721
+    },
+    {
+      "path": "runs/driving_r2_transition_prior_v75",
+      "logical_bytes": 6097970
+    },
+    {
+      "path": "runs/driving_r1_preload_labels_v7",
+      "logical_bytes": 32473084
+    },
+    {
+      "path": "runs/driving_r1_dagger_labels_v11",
+      "logical_bytes": 32631122
+    },
+    {
+      "path": "runs/driving_r2_mixed_intent_labels_v47",
+      "logical_bytes": 14598387
+    },
+    {
+      "path": "runs/driving_r1_bc_v13",
+      "logical_bytes": 1844413
+    },
+    {
+      "path": "runs/r2_sampling_refinement_v1",
+      "logical_bytes": 24417779
+    },
+    {
+      "path": "runs/driving_r2_phase_bound_v121",
+      "logical_bytes": 5892228
+    },
+    {
+      "path": "runs/driving_r2_wrist_phase_v50",
+      "logical_bytes": 18528915
+    },
+    {
+      "path": "runs/driving_r2_fixed_dagger_pure_v94",
+      "logical_bytes": 3922296
+    },
+    {
+      "path": "runs/driving_r2_fixed_dagger_fit_v93",
+      "logical_bytes": 19270067
+    },
+    {
+      "path": "runs/driving_r1_handoff_labels_v18",
+      "logical_bytes": 32660257
+    },
+    {
+      "path": "runs/driving_r1_bc_v7_frozen_encoder",
+      "logical_bytes": 1825995
+    },
+    {
+      "path": "runs/driving_r1_dagger_labels_v13",
+      "logical_bytes": 32627246
+    },
+    {
+      "path": "runs/driving_r2_restored_labels_v67",
+      "logical_bytes": 23743289
+    },
+    {
+      "path": "runs/driving_r2_acceptance_pipeline_v120.json",
+      "logical_bytes": 235
+    },
+    {
+      "path": "runs/driving_r2_local_kernel_pure_v85",
+      "logical_bytes": 2724690
+    },
+    {
+      "path": "runs/driving_r2_conditional_action_v61",
+      "logical_bytes": 2992364
+    },
+    {
+      "path": "runs/driving_r1_handoff_labels_v17",
+      "logical_bytes": 30759693
+    },
+    {
+      "path": "runs/driving_r2_ipsilateral_labels_v41",
+      "logical_bytes": 49658728
+    },
+    {
+      "path": "runs/driving_r2_fast_cycles_v54",
+      "logical_bytes": 23493505
+    },
+    {
+      "path": "runs/driving_r2_bounded_mixed_v96",
+      "logical_bytes": 7673075
+    },
+    {
+      "path": "runs/r2_sigma2_comparison_v1",
+      "logical_bytes": 33652609
+    },
+    {
+      "path": "runs/driving_r2_command_jet_basis_v99",
+      "logical_bytes": 3500203
+    },
+    {
+      "path": "runs/driving_r2_history_pure_corrective_v82",
+      "logical_bytes": 1602022
+    },
+    {
+      "path": "runs/driving_r1_pipeline_index.json",
+      "logical_bytes": 783
+    },
+    {
+      "path": "runs/driving_r1_bc_v4",
+      "logical_bytes": 1831086
+    },
+    {
+      "path": "runs/driving_r2_contact_pure_v88",
+      "logical_bytes": 2427793
+    },
+    {
+      "path": "runs/driving_r2_contact_history_v87",
+      "logical_bytes": 23658358
+    },
+    {
+      "path": "runs/driving_r2_neural_memory_v52",
+      "logical_bytes": 2273174
+    },
+    {
+      "path": "runs/driving_r2_multistate_basis_v103",
+      "logical_bytes": 28364881
+    },
+    {
+      "path": "runs/driving_r1_bc_v1",
+      "logical_bytes": 1820780
+    },
+    {
+      "path": "runs/driving_r1_preload_pipeline_index.json",
+      "logical_bytes": 947
+    },
+    {
+      "path": "runs/driving_r1_handoff_labels_v14",
+      "logical_bytes": 32495223
+    },
+    {
+      "path": "runs/r2_nominal_continuation_v2",
+      "logical_bytes": 17702087
+    },
+    {
+      "path": "runs/driving_r2_path_basis_v98b",
+      "logical_bytes": 0
+    },
+    {
+      "path": "runs/driving_r1_memory_v27",
+      "logical_bytes": 706507
+    },
+    {
+      "path": "runs/driving_r1_bc_v16",
+      "logical_bytes": 1832450
+    },
+    {
+      "path": "runs/r1_structured_v1",
+      "logical_bytes": 27614283
+    },
+    {
+      "path": "runs/driving_r2_rigid_jet_basis_v111",
+      "logical_bytes": 5471329
+    },
+    {
+      "path": "runs/r2_sequence_curriculum_v1",
+      "logical_bytes": 24435927
+    },
+    {
+      "path": "runs/driving_r2_restored_dagger_v76",
+      "logical_bytes": 6108977
+    },
+    {
+      "path": "runs/driving_r1_memory_v27_initialization_error",
+      "logical_bytes": 2781
+    },
+    {
+      "path": "runs/driving_r1_memory_labels_v29",
+      "logical_bytes": 33128253
+    },
+    {
+      "path": "runs/driving_r2_phase_leak_v113",
+      "logical_bytes": 5397471
+    },
+    {
+      "path": "runs/driving_r2_command_mixture_v110",
+      "logical_bytes": 5473621
+    },
+    {
+      "path": "runs/driving_r2_frozen_v119",
+      "logical_bytes": 5991314
+    },
+    {
+      "path": "runs/driving_r2_oracle_transition_audit_v97",
+      "logical_bytes": 2650927
+    },
+    {
+      "path": "runs/driving_r1_pose_v40",
+      "logical_bytes": 459897
+    },
+    {
+      "path": "runs/driving_r1_memory_pipeline_index.json",
+      "logical_bytes": 314
+    },
+    {
+      "path": "runs/driving_r2_compact_coordination_v45",
+      "logical_bytes": 1593504
+    },
+    {
+      "path": "runs/driving_r1_bc_v15",
+      "logical_bytes": 1829368
+    },
+    {
+      "path": "runs/driving_r1_memory_v28",
+      "logical_bytes": 708950
+    },
+    {
+      "path": "runs/driving_r2_fixed_dagger_ledger_v93.json",
+      "logical_bytes": 3168
+    },
+    {
+      "path": "runs/driving_r1_handoff_labels_v19",
+      "logical_bytes": 32679957
+    },
+    {
+      "path": "runs/driving_r1_memory_hand_v30",
+      "logical_bytes": 719190
+    },
+    {
+      "path": "runs/driving_r1_memory_labels_v27",
+      "logical_bytes": 33088091
+    },
+    {
+      "path": "runs/driving_r2_monitor",
+      "logical_bytes": 214582
+    },
+    {
+      "path": "runs/driving_r2_manifold_v55",
+      "logical_bytes": 2268389
+    },
+    {
+      "path": "runs/driving_r1_handoff_labels_v17_missing",
+      "logical_bytes": 1938458
+    },
+    {
+      "path": "runs/driving_r2_factor_pure_v90",
+      "logical_bytes": 1887414
+    },
+    {
+      "path": "runs/driving_r1_bc_v8",
+      "logical_bytes": 1828994
+    },
+    {
+      "path": "runs/r22_balanced_course_v2",
+      "logical_bytes": 25040612
+    },
+    {
+      "path": "runs/driving_r1_bc_v11",
+      "logical_bytes": 1838223
+    },
+    {
+      "path": "runs/driving_r2_history_mixed_corrective_v84",
+      "logical_bytes": 2319747
+    },
+    {
+      "path": "runs/r23_screened_bootstrap_v4",
+      "logical_bytes": 54604450
+    },
+    {
+      "path": "runs/driving_r2_anchored_manifold_v56",
+      "logical_bytes": 2262760
+    },
+    {
+      "path": "runs/driving_r1_ppo_v24",
+      "logical_bytes": 1826644
+    },
+    {
+      "path": "runs/r22_separate_hand_lead_v2",
+      "logical_bytes": 25040865
+    },
+    {
+      "path": "runs/driving_r2_oracle_intent_audit_v97",
+      "logical_bytes": 7519116
+    },
+    {
+      "path": "runs/driving_r1_ppo_v25",
+      "logical_bytes": 18264874
+    },
+    {
+      "path": "runs/driving_r1_norm_v21",
+      "logical_bytes": 1838347
+    },
+    {
+      "path": "runs/driving_r1_handoff_labels_v15",
+      "logical_bytes": 32642338
+    },
+    {
+      "path": "runs/driving_r2_basis_search_ledger_v106.json",
+      "logical_bytes": 3476
+    },
+    {
+      "path": "runs/driving_r2_alternate_basis_v116",
+      "logical_bytes": 5449752
+    },
+    {
+      "path": "runs/driving_r2_initial_phase_audit_v89",
+      "logical_bytes": 27719121
+    },
+    {
+      "path": "runs/driving_r2_low_load_restore_v69",
+      "logical_bytes": 24643383
+    },
+    {
+      "path": "runs/driving_r1_bc_v3",
+      "logical_bytes": 1828101
+    },
+    {
+      "path": "runs/driving_r1_bc_v5",
+      "logical_bytes": 1834111
+    },
+    {
+      "path": "runs/driving_r2_kernel_memory_v64",
+      "logical_bytes": 2758051
+    },
+    {
+      "path": "runs/driving_r1_labels_v1",
+      "logical_bytes": 26836821
+    },
+    {
+      "path": "runs/driving_r2_history_dagger_v80",
+      "logical_bytes": 23420003
+    },
+    {
+      "path": "runs/driving_r2_conditional_memory_v58",
+      "logical_bytes": 2989945
+    },
+    {
+      "path": "runs/driving_r2_basis_search_v108",
+      "logical_bytes": 5433796
+    },
+    {
+      "path": "runs/driving_r2_history_anchored_v82",
+      "logical_bytes": 23424158
+    },
+    {
+      "path": "runs/driving_r1_memory_labels_v28",
+      "logical_bytes": 33100159
+    },
+    {
+      "path": "runs/driving_r2_basis_corrective_v102",
+      "logical_bytes": 22137786
+    },
+    {
+      "path": "runs/r22_ppo_refine_v3",
+      "logical_bytes": 18566674
+    },
+    {
+      "path": "runs/driving_r2_factor_pure_v91",
+      "logical_bytes": 1819770
+    },
+    {
+      "path": "runs/driving_r1_bc_v18",
+      "logical_bytes": 1838598
+    },
+    {
+      "path": "runs/r22_demonstration_bootstrap_v3",
+      "logical_bytes": 81772652
+    },
+    {
+      "path": "runs/driving_r1_bc_v2",
+      "logical_bytes": 1825066
+    },
+    {
+      "path": "runs/driving_r1_memory_v26",
+      "logical_bytes": 707763
+    },
+    {
+      "path": "runs/driving_r2_factor_transition_v90",
+      "logical_bytes": 19267972
+    },
+    {
+      "path": "runs/r2_nominal_continuation_v1",
+      "logical_bytes": 5732
+    },
+    {
+      "path": "runs/driving_r2_phase_leak_ledger_v113.json",
+      "logical_bytes": 2246
+    },
+    {
+      "path": "runs/r2_frozen_v4",
+      "logical_bytes": 1822059
+    },
+    {
+      "path": "runs/driving_r2_basis_resync_corrective_v104",
+      "logical_bytes": 22154508
+    },
+    {
+      "path": "runs/r22_demonstration_bootstrap_v3_interrupted",
+      "logical_bytes": 6107910
+    },
+    {
+      "path": "runs/driving_r1_bc_v6",
+      "logical_bytes": 1837140
+    },
+    {
+      "path": "runs/driving_r1_memory_v29",
+      "logical_bytes": 17652
+    },
+    {
+      "path": "runs/driving_r2_factor_dagger_v92",
+      "logical_bytes": 19269702
+    },
+    {
+      "path": "runs/driving_r2_pure_corrective_v74",
+      "logical_bytes": 1795328
+    },
+    {
+      "path": "runs/driving_r2_fixed_dagger_pure_v93",
+      "logical_bytes": 3383601
+    },
+    {
+      "path": "runs/driving_r2_axis_anchor_v118",
+      "logical_bytes": 5474179
+    },
+    {
+      "path": "runs/driving_r1_bc_v9",
+      "logical_bytes": 1832048
+    },
+    {
+      "path": "runs/driving_r2_available_transfer_v46",
+      "logical_bytes": 39732533
+    },
+    {
+      "path": "runs/driving_r2_load_share_v42",
+      "logical_bytes": 26940811
+    },
+    {
+      "path": "runs/driving_r2_coordination_v43",
+      "logical_bytes": 1804929
+    },
+    {
+      "path": "outputs/r2_repair_full_tests_v2.log",
+      "logical_bytes": 6796
+    },
+    {
+      "path": "outputs/r22_demonstration_bootstrap_v3.log",
+      "logical_bytes": 376715
+    },
+    {
+      "path": "outputs/r21_hand_lead_tests_v2.log",
+      "logical_bytes": 637
+    },
+    {
+      "path": "outputs/r2_action_audit_v1",
+      "logical_bytes": 3910
+    },
+    {
+      "path": "outputs/structured_full_tests_v5.log",
+      "logical_bytes": 5793
+    },
+    {
+      "path": "outputs/r2_sequence_tests_v1.log",
+      "logical_bytes": 1353
+    },
+    {
+      "path": "outputs/r22_ppo_refine_v3.log",
+      "logical_bytes": 204604
+    },
+    {
+      "path": "outputs/driving_r0_failure_details_v1.log",
+      "logical_bytes": 4982
+    },
+    {
+      "path": "outputs/r23_screened_development_v3.log",
+      "logical_bytes": 192402
+    },
+    {
+      "path": "outputs/r22_demonstrator_probe_v3.log",
+      "logical_bytes": 1663
+    },
+    {
+      "path": "outputs/driving_r0_roll_v2.log",
+      "logical_bytes": 12818
+    },
+    {
+      "path": "outputs/r2_leaky_preflight_r2_v1",
+      "logical_bytes": 142664
+    },
+    {
+      "path": "outputs/r0_regrasp_reproduction_v1",
+      "logical_bytes": 6090495
+    },
+    {
+      "path": "outputs/r2_monitor_tests_v1.log",
+      "logical_bytes": 4798
+    },
+    {
+      "path": "outputs/structured_full_tests_v3.log",
+      "logical_bytes": 5319
+    },
+    {
+      "path": "outputs/r21_hand_lead_v2.log",
+      "logical_bytes": 8425
+    },
+    {
+      "path": "outputs/r2_acceptance_orchestrator_v4.log",
+      "logical_bytes": 975
+    },
+    {
+      "path": "outputs/r20_evaluation_tests_v2.log",
+      "logical_bytes": 325
+    },
+    {
+      "path": "outputs/s00_fixture_v1",
+      "logical_bytes": 37894
+    },
+    {
+      "path": "outputs/r2_sampling_refinement_v1.log",
+      "logical_bytes": 266549
+    },
+    {
+      "path": "outputs/driving_r0_confirmation_v1.log",
+      "logical_bytes": 27335
+    },
+    {
+      "path": "outputs/driving_r0_roll_v3.log",
+      "logical_bytes": 7034
+    },
+    {
+      "path": "outputs/r2_nominal_continuation_v2.log",
+      "logical_bytes": 127506
+    },
+    {
+      "path": "outputs/r1_structured_v1.log",
+      "logical_bytes": 54615
+    },
+    {
+      "path": "outputs/r2_exploration_audit_v2.log",
+      "logical_bytes": 1741
+    },
+    {
+      "path": "outputs/r2_exploration_audit_v2",
+      "logical_bytes": 6233
+    },
+    {
+      "path": "outputs/r2_full_tests_v4.log",
+      "logical_bytes": 7521
+    },
+    {
+      "path": "outputs/tensorboard_structured.log",
+      "logical_bytes": 274
+    },
+    {
+      "path": "outputs/r22_bootstrap_monitor_v3.log",
+      "logical_bytes": 0
+    },
+    {
+      "path": "outputs/r1_execution_audit_v1",
+      "logical_bytes": 37618
+    },
+    {
+      "path": "outputs/r2_action_audit_v1.log",
+      "logical_bytes": 1422
+    },
+    {
+      "path": "outputs/s00_support_full_v1",
+      "logical_bytes": 2607429
+    },
+    {
+      "path": "outputs/r24_nominal_acceptance_v4.log",
+      "logical_bytes": 96917
+    },
+    {
+      "path": "outputs/r2_leaky_tests_v1.log",
+      "logical_bytes": 878
+    },
+    {
+      "path": "outputs/driving_r0_geometry_v1.log",
+      "logical_bytes": 12722
+    },
+    {
+      "path": "outputs/r2_incremental_hand_v1.log",
+      "logical_bytes": 163995
+    },
+    {
+      "path": "outputs/r2_hand_alpha_0.995_v1",
+      "logical_bytes": 102712
+    },
+    {
+      "path": "outputs/r2_full_tests_v4_interrupted.log",
+      "logical_bytes": 1213
+    },
+    {
+      "path": "outputs/driving_full_tests_v119.log",
+      "logical_bytes": 788
+    },
+    {
+      "path": "outputs/r22_ppo_refine_resume_v3.log",
+      "logical_bytes": 152555
+    },
+    {
+      "path": "outputs/r2_initial_teacher_probe_v1",
+      "logical_bytes": 67498
+    },
+    {
+      "path": "outputs/r22_train_help_v2.txt",
+      "logical_bytes": 1391
+    },
+    {
+      "path": "outputs/r2_hand_leak_ablation_v1.log",
+      "logical_bytes": 29292
+    },
+    {
+      "path": "outputs/driving_r0_checks_v1.log",
+      "logical_bytes": 1314
+    },
+    {
+      "path": "outputs/r22_structured_tests_v2.log",
+      "logical_bytes": 1981
+    },
+    {
+      "path": "outputs/r22_demonstrator_feasibility_v3_resume.log",
+      "logical_bytes": 91504
+    },
+    {
+      "path": "outputs/structured_full_tests_v2.log",
+      "logical_bytes": 5215
+    },
+    {
+      "path": "outputs/r22_demonstrator_feasibility_v3_interrupted.log",
+      "logical_bytes": 16413
+    },
+    {
+      "path": "outputs/r0_structured_tests_v1.log",
+      "logical_bytes": 4878
+    },
+    {
+      "path": "outputs/r22_demonstration_bootstrap_v3_interrupted.log",
+      "logical_bytes": 53265
+    },
+    {
+      "path": "outputs/r2_leaky_preflight_v1.log",
+      "logical_bytes": 29418
+    },
+    {
+      "path": "outputs/r23_screened_bootstrap_v4.log",
+      "logical_bytes": 422582
+    },
+    {
+      "path": "outputs/r0_strict_teacher_probe_v1",
+      "logical_bytes": 34377
+    },
+    {
+      "path": "outputs/r21_intervention_tests_v2.log",
+      "logical_bytes": 499
+    },
+    {
+      "path": "outputs/driving_r0_roll_v1.log",
+      "logical_bytes": 12796
+    },
+    {
+      "path": "outputs/r24_screened_acceptance_v4.log",
+      "logical_bytes": 240468
+    },
+    {
+      "path": "outputs/s00_support_hold_v1",
+      "logical_bytes": 248387
+    },
+    {
+      "path": "outputs/r2_initial_teacher_probe_v1.log",
+      "logical_bytes": 7297
+    },
+    {
+      "path": "outputs/r2_parking_screen_v1.log",
+      "logical_bytes": 10577
+    },
+    {
+      "path": "outputs/r2_incremental_refinement_v1.log",
+      "logical_bytes": 64782
+    },
+    {
+      "path": "outputs/r2_monitor_tests_v2.log",
+      "logical_bytes": 774
+    },
+    {
+      "path": "outputs/r22_demonstrator_tuning_v3.json",
+      "logical_bytes": 7120
+    },
+    {
+      "path": "outputs/r2_leaky_preflight_r1_v1",
+      "logical_bytes": 142783
+    },
+    {
+      "path": "outputs/s00_feedback_pilot_config.yaml",
+      "logical_bytes": 1273
+    },
+    {
+      "path": "outputs/r2_repair_full_tests_v3.log",
+      "logical_bytes": 7074
+    },
+    {
+      "path": "outputs/r22_demonstrator_feasibility_v3.log",
+      "logical_bytes": 34545
+    },
+    {
+      "path": "outputs/s00_centering_hold_v1",
+      "logical_bytes": 56392
+    },
+    {
+      "path": "outputs/r20_checkpoint_comparison_v2.log",
+      "logical_bytes": 154220
+    },
+    {
+      "path": "outputs/r2_parking_screen_v1",
+      "logical_bytes": 25441
+    },
+    {
+      "path": "outputs/s00_support_jitter_v1",
+      "logical_bytes": 737418
+    },
+    {
+      "path": "outputs/r21_sigma2_interventions_v2.log",
+      "logical_bytes": 14054
+    },
+    {
+      "path": "outputs/s00_support_feedback_pilot_v1",
+      "logical_bytes": 542464
+    },
+    {
+      "path": "outputs/r2_hand_alpha_1.0_v1",
+      "logical_bytes": 102792
+    },
+    {
+      "path": "outputs/tensorboard_r2_night.log",
+      "logical_bytes": 138
+    },
+    {
+      "path": "outputs/r22_demonstrator_tuning_v3.log",
+      "logical_bytes": 5849
+    },
+    {
+      "path": "outputs/driving_r0_v1.log",
+      "logical_bytes": 64033
+    },
+    {
+      "path": "outputs/r2_sigma2_comparison_v1.log",
+      "logical_bytes": 132150
+    },
+    {
+      "path": "outputs/r2_nominal_v1.log",
+      "logical_bytes": 61363
+    },
+    {
+      "path": "outputs/r2_sequence_curriculum_v1.log",
+      "logical_bytes": 267233
+    },
+    {
+      "path": "outputs/r2_incremental_tests_v1.log",
+      "logical_bytes": 878
+    },
+    {
+      "path": "outputs/r22_balanced_course_v2.log",
+      "logical_bytes": 306551
+    },
+    {
+      "path": "outputs/r2_sampling_tests_v1.log",
+      "logical_bytes": 1110
+    },
+    {
+      "path": "outputs/s00_support_feedback_v1",
+      "logical_bytes": 2691546
+    },
+    {
+      "path": "outputs/r23_bootstrap_monitor_v4.log",
+      "logical_bytes": 0
+    },
+    {
+      "path": "outputs/m1_environment_v2",
+      "logical_bytes": 755670
+    },
+    {
+      "path": "outputs/r2_structured_tests_v1.log",
+      "logical_bytes": 536
+    },
+    {
+      "path": "outputs/r2_nominal_continuation_v1.log",
+      "logical_bytes": 31077
+    },
+    {
+      "path": "outputs/structured_full_tests_v4.log",
+      "logical_bytes": 5550
+    },
+    {
+      "path": "outputs/s00_centering_free_v1",
+      "logical_bytes": 95957
+    },
+    {
+      "path": "outputs/driving_r0_roll_confirmation_v3.log",
+      "logical_bytes": 9913
+    },
+    {
+      "path": "outputs/r22_hand_interface_tests_v2.log",
+      "logical_bytes": 2494
+    },
+    {
+      "path": "outputs/r22_motion_audit_v3.log",
+      "logical_bytes": 59267
+    },
+    {
+      "path": "outputs/r22_separate_hand_lead_v2.log",
+      "logical_bytes": 306428
+    },
+    {
+      "path": "outputs/r21_sequence_interventions_v2.log",
+      "logical_bytes": 14069
+    },
+    {
+      "path": "outputs/r2_precision_tests_v1.log",
+      "logical_bytes": 996
+    },
+    {
+      "path": "outputs/driving_r0_geometry_roll_v1.log",
+      "logical_bytes": 8811
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v7_frozen_encoder",
+      "logical_bytes": 1648740
+    },
+    {
+      "path": "results/driving_r2_phase_bound_sentinel_v121",
+      "logical_bytes": 9410872
+    },
+    {
+      "path": "results/driving_r1_range_retention_sentinel_v110",
+      "logical_bytes": 4590649
+    },
+    {
+      "path": "results/driving_r2_anchor_jet_sentinel_v101",
+      "logical_bytes": 5565058
+    },
+    {
+      "path": "results/driving_r2_frame_physical_v13",
+      "logical_bytes": 16862151
+    },
+    {
+      "path": "results/r22_paired_comparison_v2",
+      "logical_bytes": 385445
+    },
+    {
+      "path": "results/driving_r2_consumed550_stress_v121/source_snapshot",
+      "logical_bytes": 234683
+    },
+    {
+      "path": "results/driving_r2_consumed550_stress_v121/traces",
+      "logical_bytes": 188097823
+    },
+    {
+      "path": "results/driving_r2_consumed550_stress_v121/assessment_scope.json",
+      "logical_bytes": 440
+    },
+    {
+      "path": "results/driving_r2_basis_search_v106",
+      "logical_bytes": 4706008
+    },
+    {
+      "path": "results/R2_ACCEPTANCE_V4",
+      "logical_bytes": 472511
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v24",
+      "logical_bytes": 1436839
+    },
+    {
+      "path": "results/driving_r2_conditional_action_sentinel_v61",
+      "logical_bytes": 575476
+    },
+    {
+      "path": "results/driving_r2_halfturn_physical_v21",
+      "logical_bytes": 2352594
+    },
+    {
+      "path": "results/driving_r0_v1",
+      "logical_bytes": 4260011
+    },
+    {
+      "path": "results/driving_r2_sensory_jet_sentinel_v100",
+      "logical_bytes": 7162852
+    },
+    {
+      "path": "results/driving_r1_pose_retention_v41",
+      "logical_bytes": 579599
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v25_retry",
+      "logical_bytes": 18789352
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v5",
+      "logical_bytes": 1774305
+    },
+    {
+      "path": "results/r24_screened_acceptance_v4/baseline",
+      "logical_bytes": 934892
+    },
+    {
+      "path": "results/r24_screened_acceptance_v4/README.md",
+      "logical_bytes": 651
+    },
+    {
+      "path": "results/r24_screened_acceptance_v4/near_negative",
+      "logical_bytes": 278879
+    },
+    {
+      "path": "results/r24_screened_acceptance_v4/protocol.json",
+      "logical_bytes": 2181
+    },
+    {
+      "path": "results/r24_screened_acceptance_v4/nominal",
+      "logical_bytes": 401828
+    },
+    {
+      "path": "results/r24_screened_acceptance_v4/tilt_positive",
+      "logical_bytes": 277671
+    },
+    {
+      "path": "results/driving_r2_reserve4_physical_v2",
+      "logical_bytes": 5431895
+    },
+    {
+      "path": "results/driving_r1_memory_hand_development_v30",
+      "logical_bytes": 15882155
+    },
+    {
+      "path": "results/driving_r2_development_b_v119",
+      "logical_bytes": 56910282
+    },
+    {
+      "path": "results/r22_demonstrator_feasibility_v3",
+      "logical_bytes": 161601
+    },
+    {
+      "path": "results/driving_r2_old240_retention_v121/traces",
+      "logical_bytes": 2513944
+    },
+    {
+      "path": "results/M1_ENVIRONMENT.md",
+      "logical_bytes": 5770
+    },
+    {
+      "path": "results/driving_r1_handoff_warm_v6",
+      "logical_bytes": 2135693
+    },
+    {
+      "path": "results/driving_r2_basis_search_v109",
+      "logical_bytes": 4842568
+    },
+    {
+      "path": "results/driving_r1_pose_sentinel_v41",
+      "logical_bytes": 2473056
+    },
+    {
+      "path": "results/r2_incremental_hand_v1",
+      "logical_bytes": 122870
+    },
+    {
+      "path": "results/driving_r1_handoff_warm_v10",
+      "logical_bytes": 1970732
+    },
+    {
+      "path": "results/driving_r1_exact72_retention_v121/source_snapshot",
+      "logical_bytes": 234683
+    },
+    {
+      "path": "results/driving_r1_exact72_retention_v121/traces",
+      "logical_bytes": 42756471
+    },
+    {
+      "path": "results/s00_fixture_v1",
+      "logical_bytes": 11439
+    },
+    {
+      "path": "results/driving_r2_command_jet_sentinel_v99",
+      "logical_bytes": 5826539
+    },
+    {
+      "path": "results/driving_r2_manifold_sentinel_v55",
+      "logical_bytes": 291199
+    },
+    {
+      "path": "results/driving_r2_physical_v3",
+      "logical_bytes": 6596397
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v35",
+      "logical_bytes": 2136626
+    },
+    {
+      "path": "results/S00_CENTERING.md",
+      "logical_bytes": 2303
+    },
+    {
+      "path": "results/r21_sequence_interventions_v2",
+      "logical_bytes": 3172325
+    },
+    {
+      "path": "results/driving_r1_norm_sentinel_v20",
+      "logical_bytes": 1965211
+    },
+    {
+      "path": "results/driving_r2_restored_network_sentinel_v76",
+      "logical_bytes": 652787
+    },
+    {
+      "path": "results/driving_r1_memory_hand_development_v31",
+      "logical_bytes": 5111407
+    },
+    {
+      "path": "results/s00_support_v1",
+      "logical_bytes": 484599
+    },
+    {
+      "path": "results/driving_r2_development_b_v121/source_snapshot",
+      "logical_bytes": 234683
+    },
+    {
+      "path": "results/driving_r2_development_b_v121/traces",
+      "logical_bytes": 56410805
+    },
+    {
+      "path": "results/driving_r2_phase_leak_v115",
+      "logical_bytes": 3447456
+    },
+    {
+      "path": "results/driving_r2_basis_search_v107",
+      "logical_bytes": 4841583
+    },
+    {
+      "path": "results/r23_screened_development_v3",
+      "logical_bytes": 1877369
+    },
+    {
+      "path": "results/driving_r1_recurrent_sentinel_v22_retry",
+      "logical_bytes": 1921407
+    },
+    {
+      "path": "results/driving_r2_development_a_v121/source_snapshot",
+      "logical_bytes": 234683
+    },
+    {
+      "path": "results/driving_r2_development_a_v121/traces",
+      "logical_bytes": 56356722
+    },
+    {
+      "path": "results/driving_r2_phase_leak_v114",
+      "logical_bytes": 4369747
+    },
+    {
+      "path": "results/driving_r1_pose_development_v40",
+      "logical_bytes": 16057463
+    },
+    {
+      "path": "results/driving_r2_handoff_physical_v16",
+      "logical_bytes": 1663813
+    },
+    {
+      "path": "results/driving_r2_path_basis_sentinel_v98",
+      "logical_bytes": 2537232
+    },
+    {
+      "path": "results/driving_r2_conditional_memory_sentinel_v58",
+      "logical_bytes": 582564
+    },
+    {
+      "path": "results/driving_r2_return_restore_v62",
+      "logical_bytes": 3201976
+    },
+    {
+      "path": "results/driving_r2_physical_v1",
+      "logical_bytes": 4002738
+    },
+    {
+      "path": "results/driving_r1_safer_sentinel_v6",
+      "logical_bytes": 2107989
+    },
+    {
+      "path": "results/legacy_network_parameter_counts.json",
+      "logical_bytes": 340
+    },
+    {
+      "path": "results/r2_incremental_refinement_v1",
+      "logical_bytes": 97513
+    },
+    {
+      "path": "results/driving_r1_memory_development_v28",
+      "logical_bytes": 14302192
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v26",
+      "logical_bytes": 12525391
+    },
+    {
+      "path": "results/driving_unified_sentinel_v119",
+      "logical_bytes": 12380958
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v1",
+      "logical_bytes": 593969
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v22",
+      "logical_bytes": 2947757
+    },
+    {
+      "path": "results/driving_r1_handoff_physical_v3",
+      "logical_bytes": 3242308
+    },
+    {
+      "path": "results/README.md",
+      "logical_bytes": 7574
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v39",
+      "logical_bytes": 4268986
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v25",
+      "logical_bytes": 1880884
+    },
+    {
+      "path": "results/driving_r0_confirmation_v1",
+      "logical_bytes": 1705754
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v10",
+      "logical_bytes": 2003452
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v33",
+      "logical_bytes": 2612353
+    },
+    {
+      "path": "results/driving_r2_local_physical_v10",
+      "logical_bytes": 11670679
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v23",
+      "logical_bytes": 4240399
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v34",
+      "logical_bytes": 3394495
+    },
+    {
+      "path": "results/driving_r2_nullspace_physical_v14",
+      "logical_bytes": 8462788
+    },
+    {
+      "path": "results/r2_nominal_v1",
+      "logical_bytes": 86576
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v40",
+      "logical_bytes": 2856036
+    },
+    {
+      "path": "results/driving_r1_ppo_v25_step16",
+      "logical_bytes": 772098
+    },
+    {
+      "path": "results/driving_r2_physical_v9",
+      "logical_bytes": 9267736
+    },
+    {
+      "path": "results/driving_r2_physical_v7",
+      "logical_bytes": 12836960
+    },
+    {
+      "path": "results/driving_r1_safer_sentinel_v7",
+      "logical_bytes": 2149626
+    },
+    {
+      "path": "results/driving_r2_transfer_physical_v12",
+      "logical_bytes": 13928031
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v28",
+      "logical_bytes": 4094354
+    },
+    {
+      "path": "results/R0_R2_PROGRESS.md",
+      "logical_bytes": 7517
+    },
+    {
+      "path": "results/r22_demonstrator_feasibility_v3_interrupted",
+      "logical_bytes": 22141
+    },
+    {
+      "path": "results/driving_r2_independent_v119",
+      "logical_bytes": 42110108
+    },
+    {
+      "path": "results/driving_r1_grip_route_sweep_v1",
+      "logical_bytes": 12857239
+    },
+    {
+      "path": "results/driving_r2_axis_anchor_sentinel_v118",
+      "logical_bytes": 7162212
+    },
+    {
+      "path": "results/driving_r1_pose_acceptance_v41",
+      "logical_bytes": 31992037
+    },
+    {
+      "path": "results/driving_r0_roll_v1",
+      "logical_bytes": 1049870
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v19",
+      "logical_bytes": 2402568
+    },
+    {
+      "path": "results/r2_sampling_refinement_v1",
+      "logical_bytes": 97454
+    },
+    {
+      "path": "results/driving_r2_handoff_physical_v20",
+      "logical_bytes": 2382413
+    },
+    {
+      "path": "results/driving_geometry_margin_v1",
+      "logical_bytes": 27632
+    },
+    {
+      "path": "results/LEGACY_PPO_COMPARISON.md",
+      "logical_bytes": 4582
+    },
+    {
+      "path": "results/driving_r2_old240_retention_v119",
+      "logical_bytes": 3431382
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v7",
+      "logical_bytes": 2155719
+    },
+    {
+      "path": "results/driving_r1_pose_sentinel_v40",
+      "logical_bytes": 2476486
+    },
+    {
+      "path": "results/driving_r2_slow_physical_v37_2",
+      "logical_bytes": 1643321
+    },
+    {
+      "path": "results/driving_r2_anchored_manifold_sentinel_v56",
+      "logical_bytes": 510671
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v13",
+      "logical_bytes": 2062159
+    },
+    {
+      "path": "results/r21_sigma2_interventions_v2",
+      "logical_bytes": 3179237
+    },
+    {
+      "path": "results/driving_r2_physical_v6",
+      "logical_bytes": 8441399
+    },
+    {
+      "path": "results/driving_r2_physical_v2",
+      "logical_bytes": 3499845
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v8",
+      "logical_bytes": 1552886
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v18",
+      "logical_bytes": 2416070
+    },
+    {
+      "path": "results/driving_r2_qp_capture_v72",
+      "logical_bytes": 1193317
+    },
+    {
+      "path": "results/DRIVING_R2_COMPONENT_AUDIT_V97/runner_snapshot.py",
+      "logical_bytes": 2283
+    },
+    {
+      "path": "results/driving_r2_release_memory_sentinel_v71",
+      "logical_bytes": 1169968
+    },
+    {
+      "path": "results/DRIVING_R1_ACCEPTANCE_V41",
+      "logical_bytes": 142495
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v17",
+      "logical_bytes": 1991539
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v30",
+      "logical_bytes": 2165894
+    },
+    {
+      "path": "results/driving_r2_rigid_jet_sentinel_v111",
+      "logical_bytes": 6706423
+    },
+    {
+      "path": "results/r2_sigma2_comparison_v1",
+      "logical_bytes": 260779
+    },
+    {
+      "path": "results/driving_r2_basis_dagger_sentinel_v105",
+      "logical_bytes": 6052022
+    },
+    {
+      "path": "results/driving_r0_roll_v3",
+      "logical_bytes": 532117
+    },
+    {
+      "path": "results/driving_r2_handoff_physical_v17",
+      "logical_bytes": 1669424
+    },
+    {
+      "path": "results/driving_r1_ppo_v25_final",
+      "logical_bytes": 869482
+    },
+    {
+      "path": "results/r22_motion_audit_v3",
+      "logical_bytes": 22990370
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v11",
+      "logical_bytes": 2193370
+    },
+    {
+      "path": "results/driving_r1_reserve6_physical_v2",
+      "logical_bytes": 3240102
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v38",
+      "logical_bytes": 2008012
+    },
+    {
+      "path": "results/driving_r1_development_v6",
+      "logical_bytes": 12414436
+    },
+    {
+      "path": "results/S00_SUPPORT.md",
+      "logical_bytes": 3969
+    },
+    {
+      "path": "results/driving_r2_return_separation_v63",
+      "logical_bytes": 6119813
+    },
+    {
+      "path": "results/driving_r2_neural_anchor_sentinel_v117",
+      "logical_bytes": 7183838
+    },
+    {
+      "path": "results/driving_r1_safer_sentinel_v7_frozen_encoder",
+      "logical_bytes": 1938794
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v15",
+      "logical_bytes": 1985870
+    },
+    {
+      "path": "results/driving_r2_handoff_physical_v19",
+      "logical_bytes": 2005760
+    },
+    {
+      "path": "results/r2_support_preparation_v1",
+      "logical_bytes": 5490
+    },
+    {
+      "path": "results/r0_regrasp_migration_v1",
+      "logical_bytes": 17984
+    },
+    {
+      "path": "results/driving_r1_ppo_v25_step32",
+      "logical_bytes": 746999
+    },
+    {
+      "path": "results/driving_r2_multistate_sentinel_v103",
+      "logical_bytes": 6364974
+    },
+    {
+      "path": "results/driving_r1_memory_sentinel_v28",
+      "logical_bytes": 2479099
+    },
+    {
+      "path": "results/r21_hand_lead_v2",
+      "logical_bytes": 1969261
+    },
+    {
+      "path": "results/driving_r2_slow_physical_v37_3",
+      "logical_bytes": 1094351
+    },
+    {
+      "path": "results/r2_nominal_continuation_v2",
+      "logical_bytes": 111049
+    },
+    {
+      "path": "results/r24_nominal_acceptance_v4/baseline",
+      "logical_bytes": 398472
+    },
+    {
+      "path": "results/r24_nominal_acceptance_v4/README.md",
+      "logical_bytes": 531
+    },
+    {
+      "path": "results/r24_nominal_acceptance_v4/protocol.json",
+      "logical_bytes": 2180
+    },
+    {
+      "path": "results/r24_nominal_acceptance_v4/nominal",
+      "logical_bytes": 401804
+    },
+    {
+      "path": "results/driving_r2_feedback_memory_sentinel_v66",
+      "logical_bytes": 623538
+    },
+    {
+      "path": "results/driving_r2_handoff_physical_v15",
+      "logical_bytes": 2423718
+    },
+    {
+      "path": "results/driving_r1_ppo_v25_step64",
+      "logical_bytes": 779615
+    },
+    {
+      "path": "results/driving_r2_fixed_hand_anchor_sentinel_v120",
+      "logical_bytes": 9407080
+    },
+    {
+      "path": "results/r1_structured_v1",
+      "logical_bytes": 123213
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v36",
+      "logical_bytes": 1995616
+    },
+    {
+      "path": "results/r2_sequence_curriculum_v1",
+      "logical_bytes": 275568
+    },
+    {
+      "path": "results/driving_r1_memory_hand_sentinel_v30",
+      "logical_bytes": 2450121
+    },
+    {
+      "path": "results/driving_r1_memory_sentinel_v27",
+      "logical_bytes": 2244894
+    },
+    {
+      "path": "results/driving_r2_phase_leak_v113",
+      "logical_bytes": 4372909
+    },
+    {
+      "path": "results/driving_r2_transition_prior_sentinel_v75",
+      "logical_bytes": 524352
+    },
+    {
+      "path": "results/driving_r2_physical_v8",
+      "logical_bytes": 10272317
+    },
+    {
+      "path": "results/s00_centering_hold_v1",
+      "logical_bytes": 13201
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v14",
+      "logical_bytes": 1289706
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v2",
+      "logical_bytes": 1493248
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v32",
+      "logical_bytes": 3877773
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v12",
+      "logical_bytes": 2122994
+    },
+    {
+      "path": "results/driving_r0_roll_confirmation_v3",
+      "logical_bytes": 989838
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v16",
+      "logical_bytes": 2131949
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v6",
+      "logical_bytes": 2373125
+    },
+    {
+      "path": "results/driving_r2_independent_v121/source_snapshot",
+      "logical_bytes": 234683
+    },
+    {
+      "path": "results/driving_r2_independent_v121/traces",
+      "logical_bytes": 188063881
+    },
+    {
+      "path": "results/r22_balanced_course_v2",
+      "logical_bytes": 107263
+    },
+    {
+      "path": "results/driving_r1_margin_physical_v2",
+      "logical_bytes": 6578896
+    },
+    {
+      "path": "results/driving_r1_memory_sentinel_v26",
+      "logical_bytes": 2157490
+    },
+    {
+      "path": "results/r23_screened_bootstrap_v4",
+      "logical_bytes": 6448
+    },
+    {
+      "path": "results/driving_r2_thumb_first_v68",
+      "logical_bytes": 3503378
+    },
+    {
+      "path": "results/driving_r2_coordination_sentinel_v43",
+      "logical_bytes": 1016985
+    },
+    {
+      "path": "results/r22_separate_hand_lead_v2",
+      "logical_bytes": 119142
+    },
+    {
+      "path": "results/driving_r0_roll_v2",
+      "logical_bytes": 1044475
+    },
+    {
+      "path": "results/driving_r1_development_v19",
+      "logical_bytes": 13919312
+    },
+    {
+      "path": "results/driving_r2_reserve6_physical_v2",
+      "logical_bytes": 5368567
+    },
+    {
+      "path": "results/driving_r2_alternate_basis_v116",
+      "logical_bytes": 3783123
+    },
+    {
+      "path": "results/driving_r1_memory_hand_development_v30_guardfix",
+      "logical_bytes": 15945429
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v29",
+      "logical_bytes": 1854248
+    },
+    {
+      "path": "results/driving_r2_dagger_sentinel_v51",
+      "logical_bytes": 537588
+    },
+    {
+      "path": "results/driving_r2_compact_sentinel_v45",
+      "logical_bytes": 1049065
+    },
+    {
+      "path": "results/driving_r2_rollcap_physical_v11",
+      "logical_bytes": 16745129
+    },
+    {
+      "path": "results/driving_r1_pose_development_v41",
+      "logical_bytes": 16028090
+    },
+    {
+      "path": "results/driving_r2_neural_memory_sentinel_v52",
+      "logical_bytes": 453300
+    },
+    {
+      "path": "results/legacy_ppo_comparison_sources.json",
+      "logical_bytes": 1674
+    },
+    {
+      "path": "results/driving_r0_geometry_v1",
+      "logical_bytes": 46464
+    },
+    {
+      "path": "results/driving_r0_geometry_roll_v1/source_snapshot.py",
+      "logical_bytes": 5905
+    },
+    {
+      "path": "results/driving_r2_basis_search_v108",
+      "logical_bytes": 4841723
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v27",
+      "logical_bytes": 5457868
+    },
+    {
+      "path": "results/m1_environment_v2",
+      "logical_bytes": 139489
+    },
+    {
+      "path": "results/driving_r2_development_a_v119",
+      "logical_bytes": 56902412
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v9",
+      "logical_bytes": 1858055
+    },
+    {
+      "path": "results/s00_centering_free_v1",
+      "logical_bytes": 9953
+    },
+    {
+      "path": "results/driving_r2_physical_v5",
+      "logical_bytes": 6072053
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v4",
+      "logical_bytes": 1775531
+    },
+    {
+      "path": "results/driving_r1_exact72_retention_v119",
+      "logical_bytes": 43267518
+    },
+    {
+      "path": "results/r22_demonstration_bootstrap_v3",
+      "logical_bytes": 89173
+    },
+    {
+      "path": "results/r2_left_right_audit_v1",
+      "logical_bytes": 369763
+    },
+    {
+      "path": "results/driving_r2_physical_v4",
+      "logical_bytes": 5604977
+    },
+    {
+      "path": "results/driving_r1_bc_sentinel_v3",
+      "logical_bytes": 2024749
+    },
+    {
+      "path": "results/S00_FIXTURE.md",
+      "logical_bytes": 2256
+    },
+    {
+      "path": "results/driving_r1_reserve4_physical_v2",
+      "logical_bytes": 3239761
+    },
+    {
+      "path": "results/driving_r1_recurrent_sentinel_v22",
+      "logical_bytes": 44525
+    },
+    {
+      "path": "results/driving_r2_early_restore_v65",
+      "logical_bytes": 4820897
+    },
+    {
+      "path": "results/driving_r2_kernel_memory_sentinel_v64",
+      "logical_bytes": 504315
+    },
+    {
+      "path": "results/r20_checkpoint_comparison_v2",
+      "logical_bytes": 1212825
+    },
+    {
+      "path": "results/driving_r1_norm_sentinel_v21",
+      "logical_bytes": 1767484
+    },
+    {
+      "path": "results/driving_r2_handoff_physical_v18",
+      "logical_bytes": 1737848
+    },
+    {
+      "path": "results/driving_r2_robust_sentinel_v48",
+      "logical_bytes": 1171038
+    },
+    {
+      "path": "results/driving_r2_shuffle_physical_v31",
+      "logical_bytes": 2271824
+    },
+    {
+      "path": "src/unified_steering/__pycache__",
+      "logical_bytes": 190878
+    },
+    {
+      "path": "src/unified_steering/structured/__pycache__",
+      "logical_bytes": 312020
+    },
+    {
+      "path": "src/unified_steering/structured/legacy/__pycache__",
+      "logical_bytes": 14384
+    },
+    {
+      "path": "src/unified_steering/structured/legacy/regrasp/__pycache__",
+      "logical_bytes": 30045
+    },
+    {
+      "path": "src/unified_steering/structured/legacy/common/__pycache__",
+      "logical_bytes": 47151
+    },
+    {
+      "path": "src/unified_steering/structured/legacy/exploration/__pycache__",
+      "logical_bytes": 20287
+    },
+    {
+      "path": "scripts/__pycache__",
+      "logical_bytes": 17920
+    },
+    {
+      "path": "tests/__pycache__",
+      "logical_bytes": 139389
+    }
+  ],
+  "after_allocated_bytes": 53387264,
+  "raw_trajectory_scope": "Full intermediate and final suite NPZ removed; two video rollouts retain full matching raw traces.",
+  "audit_status": "Acceptance-time audit retained as historical evidence; full624 raw-trace audit cannot be rerun after cleanup.",
+  "post_cleanup_verification": {
+    "model_sha256": "bc2699474b133f26135ae36b354865a6291b31d944d38361da7ef547aa58451b",
+    "frozen_manifest_files_verified": 77,
+    "fixture_files_verified": 17,
+    "independent_load_and_24_action_checks": [
+      {
+        "command_range_deg": [
+          -90,
+          90
+        ],
+        "action_dim": 24,
+        "finite": true
+      },
+      {
+        "command_range_deg": [
+          -180,
+          180
+        ],
+        "action_dim": 24,
+        "finite": true
+      }
+    ],
+    "engineering_tests_passed": 126,
+    "test_log": "outputs/cleanup_tests_2026-10-29.log",
+    "videos_preserved": 2,
+    "formal_weight_dirs": [
+      "driving_r2_frozen_v121"
+    ]
+  },
+  "reclaimed_allocated_bytes": 3707523072
+}

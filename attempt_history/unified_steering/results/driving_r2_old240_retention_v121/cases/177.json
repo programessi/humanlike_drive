@@ -1,0 +1,37 @@
+{
+  "record": {
+    "case": "hold",
+    "seed": 1317,
+    "seconds": 10.0,
+    "amplitude_deg": 5.0,
+    "support": "right",
+    "complete": true,
+    "rmse_deg": 0.11958779763879457,
+    "peak_error_deg": 0.4498362246000478,
+    "tail_peak_deg": 0.015477452341774549,
+    "min_arm_margin_deg": 18.666674398658802,
+    "collision_peak_n": 0.0,
+    "free_hand_peak_force_n": 0.0,
+    "signed_progress_fraction": null,
+    "termination_reason": "",
+    "passed": true,
+    "qp_failures": 0,
+    "collision_qp_failures": 0,
+    "collision_constraints": 9441,
+    "workspace_clips": 0,
+    "peak_qp_position_error_mm": 0.7693398268822421,
+    "reset_options": {
+      "parking_profile": "axial_near",
+      "phase_deg": -5.0,
+      "free_opening_delta_rad": -0.02
+    },
+    "preparation": {
+      "wheel_angle": -0.11406801863562036,
+      "left_force": 0.0,
+      "right_force": 13.71637045394853
+    },
+    "group": "screened",
+    "hard_failure": false
+  },
+  "baseline": null
+}

@@ -1,0 +1,29 @@
+# Feature integration only: 1024 new interactions, not an M3 skill-training experiment.
+design: configs/stage_a.yaml
+environment_config: configs/m1.yaml
+seed: 7
+device: cpu
+torch_threads: 1
+total_steps: 1024
+checkpoint_every_updates: 1
+environment_overrides:
+  initial_support: both
+  episode_seconds: 15.0
+  reference:
+    mode: roundtrip
+    amplitude_deg: 5.0
+    speed_deg_s: 5.0
+tasks:
+  hold_fraction: 0.25
+  amplitude_deg: 5.0
+ppo:
+  num_envs: 4
+  rollout_steps: 128
+  recurrent_sequence_steps: 64
+  minibatch_steps: 256
+  update_epochs: 4
+  entropy_coefficient: 0.001
+monitoring:
+  evaluation_every_steps: 512
+  retain_step_checkpoints: true
+  diagnostics: false

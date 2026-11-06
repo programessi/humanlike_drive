@@ -1,0 +1,12 @@
+{
+  "experiment": "R2.1-hand-only-target-lead-authority",
+  "development_seeds": [1007, 1107, 1117],
+  "model": "runs/r2_sigma2_comparison_v1/qualified_development.zip",
+  "diagnostic_interventions": ["none", "hand_lead_0p15", "hand_lead_0p233"],
+  "hand_lead_rad": [0.08726646259971647, 0.15, 0.233],
+  "arm_lead_rad": 0.08726646259971647,
+  "task": "right support, negative-start10deg sequence,22seconds",
+  "hypothesis": "Shared5deg target lead may restrict useful finger motor position error. With Kp1.5, proportional term at5deg is about0.131Nm before damping and bias; actuator force cap remains0.35Nm.",
+  "controls": "Frozen policy and identical preparation; lead override begins only at execution. No changes to arm limits, gains, actuator force caps, action mean/std, reward, load or reference.",
+  "claim_boundary": "Diagnostic only; do not count hand-lead overrides as a trained repair or silently change main execution."
+}

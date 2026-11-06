@@ -1,0 +1,40 @@
+{
+  "interface": "structured-wrist-teacher-v2-relative-strict",
+  "requires": "R1 independent acceptance passed",
+  "parking": "screened",
+  "screening": "outputs/r2_parking_screen_v1/summary.json",
+  "support_probabilities": {
+    "both": 0.25,
+    "left": 0.375,
+    "right": 0.375
+  },
+  "conditions": {
+    "nominal": {},
+    "near_negative": {
+      "parking_profile": "axial_near",
+      "phase_deg": -5,
+      "free_opening_delta_rad": -0.02
+    },
+    "tilt_positive": {
+      "parking_profile": "tilt_plus",
+      "phase_deg": 5,
+      "free_opening_delta_rad": 0.02
+    }
+  },
+  "condition_probabilities": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "reference_protocol": "r1_r2_v1.json",
+  "initial_block_steps": 131072,
+  "evaluate_every": 16384,
+  "gates": "all seven cases for each support/condition; 2 development passes then 3 held-out seeds",
+  "scope": "finite screened resets plus closure and settling jitter; no continuous-volume robustness claim",
+  "independent_seeds": [
+    1307,
+    1317,
+    1327
+  ],
+  "note": "Expanded-reset final acceptance uses fresh seeds, separate from nominal single-support acceptance."
+}

@@ -1,0 +1,153 @@
+{
+  "interface": "driving-v1-v4-executor",
+  "speed_deg_s": 5.0,
+  "acceleration_deg_s2": 40.0,
+  "tangent_geometry": "results/driving_r0_geometry_roll_v1/summary.json",
+  "phase_lead_deg": 30.0,
+  "demonstrator": {
+    "angle_gain": 6.0,
+    "preview_seconds": 0.15,
+    "position_gain": 3.0,
+    "orientation_gain": 3.0,
+    "hand_gain": 0.1
+  },
+  "criteria": "complete; motionRMSE<=1deg; every stop final3s physics peak<=1deg; overall>=95%, each direction>=90%; any physical/QP hard failure rejects candidate",
+  "template": "short=3s endpoint and zero holds;long=10s holds;sequence=two opposite complete roundtrips with3s holds",
+  "independence": "training410xx;development420xx;independent430xx reserved; R0 diagnostics400xx consumed",
+  "physical_scene": "original +/-450deg; all physical gates and v4 execution unchanged",
+  "experiment": "driving-R1-DAgger-v4",
+  "cases": [
+    [
+      30,
+      -1,
+      "short",
+      54000
+    ],
+    [
+      30,
+      -1,
+      "long",
+      54001
+    ],
+    [
+      30,
+      -1,
+      "sequence",
+      54002
+    ],
+    [
+      30,
+      1,
+      "short",
+      54003
+    ],
+    [
+      30,
+      1,
+      "long",
+      54004
+    ],
+    [
+      30,
+      1,
+      "sequence",
+      54005
+    ],
+    [
+      60,
+      -1,
+      "short",
+      54006
+    ],
+    [
+      60,
+      -1,
+      "long",
+      54007
+    ],
+    [
+      60,
+      -1,
+      "sequence",
+      54008
+    ],
+    [
+      60,
+      1,
+      "short",
+      54009
+    ],
+    [
+      60,
+      1,
+      "long",
+      54010
+    ],
+    [
+      60,
+      1,
+      "sequence",
+      54011
+    ],
+    [
+      90,
+      -1,
+      "short",
+      54012
+    ],
+    [
+      90,
+      -1,
+      "long",
+      54013
+    ],
+    [
+      90,
+      -1,
+      "sequence",
+      54014
+    ],
+    [
+      90,
+      1,
+      "short",
+      54015
+    ],
+    [
+      90,
+      1,
+      "long",
+      54016
+    ],
+    [
+      90,
+      1,
+      "sequence",
+      54017
+    ],
+    [
+      45,
+      -1,
+      "short",
+      54018
+    ],
+    [
+      45,
+      -1,
+      "long",
+      54019
+    ],
+    [
+      45,
+      1,
+      "short",
+      54020
+    ],
+    [
+      45,
+      1,
+      "long",
+      54021
+    ]
+  ]
+}

@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.env
+.env.*
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Keep data documentation, provenance, splits and calibration versioned.
+/data/**
+!/data/**/
+!/data/**/README.md
+!/data/**/.gitkeep
+!/data/manifests/**
+!/data/splits/**
+!/data/calibration/**
+
+# Raw run artifacts are local; curated conclusions belong in results/.
+/outputs/**
+!/outputs/README.md

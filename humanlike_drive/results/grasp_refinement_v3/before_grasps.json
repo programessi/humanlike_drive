@@ -1,0 +1,1598 @@
+{
+  "nine_three": {
+    "label": "9 / 3 \u00b7 palm, four fingers and light thumb contact",
+    "angles": [
+      0.0,
+      0.0
+    ],
+    "active": [
+      true,
+      true
+    ],
+    "grip_pose": {
+      "position_m": [
+        -0.013245609522591344,
+        0.13233057395795067,
+        -0.0026677187767941875
+      ],
+      "rotation_matrix": [
+        [
+          0.8453902156348196,
+          -0.1695450200733082,
+          -0.5065272642980395
+        ],
+        [
+          0.24088423764737907,
+          0.9673961764320808,
+          0.07822673377836882
+        ],
+        [
+          0.47674958559180225,
+          -0.18814654924534852,
+          0.8586679851054844
+        ]
+      ]
+    },
+    "hand_drives": [
+      0.5,
+      0.23,
+      0.8700668108579016,
+      0.9857891116881708,
+      1.1238544181958683,
+      0.95
+    ],
+    "approach_seconds": 1.0,
+    "qpos": [
+      -0.4591401544851418,
+      -0.054352969765026155,
+      -0.24364170131047622,
+      0.19774976677430806,
+      -0.10162578577066782,
+      0.11765336274725391,
+      0.6673991768051768,
+      0.4823956002463565,
+      0.17547873454591686,
+      0.28052502228226367,
+      0.42108030148980513,
+      0.6799120399606785,
+      0.6791818548837142,
+      0.8736929542808637,
+      0.8731696624093745,
+      0.7089676670256326,
+      0.7079961883131997,
+      0.8168833927226047,
+      0.8162450502415513,
+      -0.4590783285435632,
+      0.054230567188652885,
+      0.2434947429851149,
+      0.19801592432290313,
+      0.10178918409328047,
+      0.11782301466234364,
+      -0.6673745688206849,
+      0.49715542392525663,
+      0.16161315106071572,
+      0.25828912508256524,
+      0.38776680280449183,
+      0.6750962640600474,
+      0.6743539563682527,
+      0.8775064322092759,
+      0.8769927033646073,
+      0.7087705938467446,
+      0.70779390990015,
+      0.8190666434777779,
+      0.818430461120229,
+      0.0014539526710159673
+    ],
+    "ctrl": [
+      -0.4610416287432042,
+      -0.0713235303648417,
+      -0.2657706625645865,
+      0.19171787664488218,
+      -0.10435275023852383,
+      0.11129397491110828,
+      0.6428304494397442,
+      -0.4610449206243007,
+      0.07131230603759842,
+      0.2657540252203412,
+      0.1917288028758762,
+      0.10438097643827066,
+      0.11127907961017032,
+      -0.6427770141394968,
+      0.5,
+      0.23,
+      0.8700668108579016,
+      0.9857891116881708,
+      1.1238544181958683,
+      0.95,
+      0.5,
+      0.23,
+      0.8700668108579016,
+      0.9857891116881708,
+      1.1238544181958683,
+      0.95
+    ],
+    "ik": [
+      {
+        "side": "left",
+        "active": true,
+        "position_error_mm": 0.5664798650125057,
+        "rotation_error_deg": 0.4276548182356104,
+        "joint_margin_deg": 17.685858945092683
+      },
+      {
+        "side": "right",
+        "active": true,
+        "position_error_mm": 0.5664490895418828,
+        "rotation_error_deg": 0.42762993806527394,
+        "joint_margin_deg": 17.686502051671596
+      }
+    ],
+    "settling": {
+      "preparation_seconds": 6.0,
+      "approach_seconds": 1.0,
+      "setup_fixture_removed_at_seconds": 2.5,
+      "wheel_angle_deg": 0.08330535166098799,
+      "initial_penetration_mm": 0.0,
+      "preparation_max_penetration_mm": 0.3866768273109954,
+      "wheel_contacts": {
+        "left": 13,
+        "right": 12
+      },
+      "contact_fingers": {
+        "left": [
+          "index",
+          "middle",
+          "pinky",
+          "ring",
+          "thumb"
+        ],
+        "right": [
+          "index",
+          "middle",
+          "pinky",
+          "ring",
+          "thumb"
+        ]
+      },
+      "max_wheel_penetration_mm": 0.01998346360170794,
+      "max_joint_speed_rad_s": 0.007397299471883887,
+      "loaded_contact_distribution": {
+        "left": {
+          "loaded_links": [
+            "L_index_intermediate_geom_1",
+            "L_middle_intermediate_geom_1",
+            "L_pinky_intermediate_geom_1",
+            "L_ring_intermediate_geom_1",
+            "L_thumb_distal_geom_1",
+            "left_wrist_yaw_link_geom_2"
+          ],
+          "proximal_fingers": [],
+          "distal_fingers": [
+            "index",
+            "middle",
+            "pinky",
+            "ring"
+          ],
+          "palm_contact": true,
+          "thumb_contact": true,
+          "palm_rim_contact": true,
+          "thumb_rim_contact": true,
+          "points": [
+            {
+              "link": "left_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_018",
+              "position_world_m": [
+                0.518184217121,
+                0.12996810101932046,
+                1.003944041534841
+              ],
+              "normal_force_N": 2.1865551901302283,
+              "distance_mm": 0.09513505486049548
+            },
+            {
+              "link": "left_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_019",
+              "position_world_m": [
+                0.5181842309434569,
+                0.12996811495934185,
+                1.003944139660471
+              ],
+              "normal_force_N": 2.186040848734753,
+              "distance_mm": 0.09513657102555347
+            },
+            {
+              "link": "left_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_020",
+              "position_world_m": [
+                0.5181820202974252,
+                0.12996692254111344,
+                1.0039438191494794
+              ],
+              "normal_force_N": 2.1213632575812524,
+              "distance_mm": 0.09533042256602928
+            },
+            {
+              "link": "L_thumb_distal_geom_1",
+              "wheel_geom": "collision_rim_0_032",
+              "position_world_m": [
+                0.5522956951828534,
+                0.10414315692999263,
+                1.101287835149427
+              ],
+              "normal_force_N": 0.41157023539666093,
+              "distance_mm": 0.07624160584013151
+            },
+            {
+              "link": "L_thumb_distal_geom_1",
+              "wheel_geom": "collision_rim_0_033",
+              "position_world_m": [
+                0.5523005616372667,
+                0.10415811167933693,
+                1.1013004551468226
+              ],
+              "normal_force_N": 0.40754667878654327,
+              "distance_mm": 0.0764917632880818
+            },
+            {
+              "link": "L_index_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_028",
+              "position_world_m": [
+                0.5664524148035738,
+                0.12407066100233505,
+                1.0624605783579568
+              ],
+              "normal_force_N": 5.05531198734612,
+              "distance_mm": -0.01998346360170794
+            },
+            {
+              "link": "L_middle_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_025",
+              "position_world_m": [
+                0.5585889549566943,
+                0.12213457685570756,
+                1.0417367348160456
+              ],
+              "normal_force_N": 2.018369804759618,
+              "distance_mm": 0.050523745686997294
+            },
+            {
+              "link": "L_middle_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_026",
+              "position_world_m": [
+                0.5586914505229233,
+                0.12210662007870932,
+                1.041966135595678
+              ],
+              "normal_force_N": 2.014114552257954,
+              "distance_mm": 0.050627976150406914
+            },
+            {
+              "link": "L_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_011",
+              "position_world_m": [
+                0.5788400552594312,
+                0.09905209500287288,
+                1.0240591560955323
+              ],
+              "normal_force_N": 1.104765949830889,
+              "distance_mm": 0.07337208183853354
+            },
+            {
+              "link": "L_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_012",
+              "position_world_m": [
+                0.5788406803680648,
+                0.09905102903185281,
+                1.0240586447671844
+              ],
+              "normal_force_N": 1.1044007656891632,
+              "distance_mm": 0.07337647050490745
+            },
+            {
+              "link": "L_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_013",
+              "position_world_m": [
+                0.5788402295175232,
+                0.09905189317447002,
+                1.0240592029498452
+              ],
+              "normal_force_N": 1.1004091141985854,
+              "distance_mm": 0.0734755288572076
+            },
+            {
+              "link": "L_pinky_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_011",
+              "position_world_m": [
+                0.5698606621393286,
+                0.09766173633578229,
+                1.0037674753282135
+              ],
+              "normal_force_N": 1.1578272679552088,
+              "distance_mm": 0.07349994412976524
+            },
+            {
+              "link": "L_pinky_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_012",
+              "position_world_m": [
+                0.569860311914357,
+                0.09766180920558112,
+                1.0037670395506233
+              ],
+              "normal_force_N": 1.1580347645225693,
+              "distance_mm": 0.07349514760868897
+            }
+          ],
+          "rim_normal_span_deg": 181.9076267440088,
+          "scope": "loaded contacts >0.05 N; normal span is a geometric distribution measure, not force closure proof"
+        },
+        "right": {
+          "loaded_links": [
+            "R_index_intermediate_geom_1",
+            "R_middle_intermediate_geom_1",
+            "R_pinky_intermediate_geom_1",
+            "R_ring_intermediate_geom_1",
+            "R_thumb_distal_geom_1",
+            "right_wrist_yaw_link_geom_2"
+          ],
+          "proximal_fingers": [],
+          "distal_fingers": [
+            "index",
+            "middle",
+            "pinky",
+            "ring"
+          ],
+          "palm_contact": true,
+          "thumb_contact": true,
+          "palm_rim_contact": true,
+          "thumb_rim_contact": true,
+          "points": [
+            {
+              "link": "right_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_075",
+              "position_world_m": [
+                0.5218145007520902,
+                -0.13254381487467648,
+                1.0120581126032353
+              ],
+              "normal_force_N": 1.2672172430432862,
+              "distance_mm": 0.09814569969558075
+            },
+            {
+              "link": "right_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_076",
+              "position_world_m": [
+                0.5213638954723826,
+                -0.1322341453835973,
+                1.0110470511671954
+              ],
+              "normal_force_N": 2.8559983647597527,
+              "distance_mm": 0.09333254578558438
+            },
+            {
+              "link": "right_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_077",
+              "position_world_m": [
+                0.5213638951645201,
+                -0.13223414517966378,
+                1.0110470513190322
+              ],
+              "normal_force_N": 2.8559684077548964,
+              "distance_mm": 0.09333263561215803
+            },
+            {
+              "link": "R_thumb_distal_geom_1",
+              "wheel_geom": "collision_rim_0_064",
+              "position_world_m": [
+                0.5536113979021429,
+                -0.0969782443732849,
+                1.0994386220952381
+              ],
+              "normal_force_N": 0.7760203085400931,
+              "distance_mm": 0.055345064460975486
+            },
+            {
+              "link": "R_index_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_068",
+              "position_world_m": [
+                0.5663757730957097,
+                -0.12429746828156714,
+                1.062244198316778
+              ],
+              "normal_force_N": 3.796973462965183,
+              "distance_mm": 0.00875814544529009
+            },
+            {
+              "link": "R_index_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_069",
+              "position_world_m": [
+                0.5668348179534519,
+                -0.12327226349347609,
+                1.0623733796614654
+              ],
+              "normal_force_N": 1.3241145247034916,
+              "distance_mm": 0.06790111750174185
+            },
+            {
+              "link": "R_middle_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_071",
+              "position_world_m": [
+                0.5584648034177582,
+                -0.12234902161529998,
+                1.0415050558523986
+              ],
+              "normal_force_N": 4.045339206399344,
+              "distance_mm": 0.002072082384061368
+            },
+            {
+              "link": "R_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_034",
+              "position_world_m": [
+                0.5787240896835019,
+                -0.09927390145556654,
+                1.0236285522495019
+              ],
+              "normal_force_N": 1.102827817864102,
+              "distance_mm": 0.0734091934243182
+            },
+            {
+              "link": "R_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_035",
+              "position_world_m": [
+                0.5787237722476399,
+                -0.09927382782676802,
+                1.0236275761781317
+              ],
+              "normal_force_N": 1.1023957696541884,
+              "distance_mm": 0.07341974842255496
+            },
+            {
+              "link": "R_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_036",
+              "position_world_m": [
+                0.5787224781837759,
+                -0.09927302239203373,
+                1.0236226245617672
+              ],
+              "normal_force_N": 1.0991687927720977,
+              "distance_mm": 0.07349557908917796
+            },
+            {
+              "link": "R_pinky_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_036",
+              "position_world_m": [
+                0.5698348139763931,
+                -0.09775491246987493,
+                1.0038881647393798
+              ],
+              "normal_force_N": 1.1319539618853738,
+              "distance_mm": 0.07408415352895756
+            },
+            {
+              "link": "R_pinky_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_038",
+              "position_world_m": [
+                0.569834495754801,
+                -0.0977551212615308,
+                1.0038880232302643
+              ],
+              "normal_force_N": 1.1396828579426603,
+              "distance_mm": 0.07390781167570853
+            }
+          ],
+          "rim_normal_span_deg": 208.35531634422514,
+          "scope": "loaded contacts >0.05 N; normal span is a geometric distribution measure, not force closure proof"
+        }
+      },
+      "max_mimic_error_deg": 0.05595986805804891
+    }
+  },
+  "ten_two": {
+    "label": "10 / 2 \u00b7 enveloping contact",
+    "angles": [
+      30.0,
+      -30.0
+    ],
+    "active": [
+      true,
+      true
+    ],
+    "wrist_tilt_deg": -40,
+    "grip_pose": {
+      "position_m": [
+        -0.010245609522591344,
+        0.13233057395795067,
+        -0.0026677187767941875
+      ],
+      "rotation_matrix": [
+        [
+          0.8192804922750947,
+          -0.1594658349471972,
+          -0.5507722963821556
+        ],
+        [
+          0.24088423764737904,
+          0.9673961764320806,
+          0.0782267337783688
+        ],
+        [
+          0.5203405221876541,
+          -0.1967620016903266,
+          0.830981621734377
+        ]
+      ]
+    },
+    "hand_drives": [
+      0.5,
+      0.23,
+      0.8700668108579016,
+      0.9857891116881708,
+      1.1238544181958683,
+      0.95
+    ],
+    "approach_seconds": 1.0,
+    "qpos": [
+      -0.5702030285015977,
+      0.07675929876576171,
+      -0.237508431030321,
+      0.1261355399834346,
+      0.20134374160335053,
+      0.3080310962777778,
+      0.28367074460028174,
+      0.48957718606531603,
+      0.1969656866829552,
+      0.3149943028531405,
+      0.4726795570625442,
+      0.6720074243998525,
+      0.6712277479353445,
+      0.8736410535528163,
+      0.8730961150928638,
+      0.7695784530355609,
+      0.768659479947699,
+      0.8873476139907553,
+      0.8871460297465955,
+      -0.5695617861064112,
+      -0.07716270361151899,
+      0.23737067721395813,
+      0.1263558208087033,
+      -0.2017048347080814,
+      0.3086520259833453,
+      -0.28365845840255477,
+      0.4978711657403094,
+      0.17612170133667457,
+      0.28155878896567926,
+      0.4226146238860944,
+      0.6702796132013941,
+      0.6695009479078874,
+      0.8792654503945913,
+      0.8787396338586079,
+      0.7619012218305997,
+      0.7609841454205759,
+      0.8755268562914214,
+      0.875173700875094,
+      0.0036539844256859104
+    ],
+    "ctrl": [
+      -0.5630560497521023,
+      0.061434177554941016,
+      -0.2594871426909015,
+      0.12616569721028317,
+      0.19039724483516393,
+      0.30248659308856246,
+      0.2563640032568032,
+      -0.5630619831080914,
+      -0.06144384109844218,
+      0.2594692528360598,
+      0.1261937557341839,
+      -0.19037081187562296,
+      0.3024395977588373,
+      -0.25632411078720013,
+      0.5,
+      0.23,
+      0.8700668108579016,
+      0.9857891116881708,
+      1.1238544181958683,
+      0.95,
+      0.5,
+      0.23,
+      0.8700668108579016,
+      0.9857891116881708,
+      1.1238544181958683,
+      0.95
+    ],
+    "ik": [
+      {
+        "side": "left",
+        "active": true,
+        "position_error_mm": 0.538204005101782,
+        "rotation_error_deg": 0.32303953818108583,
+        "joint_margin_deg": 9.16809288153485
+      },
+      {
+        "side": "right",
+        "active": true,
+        "position_error_mm": 0.5381803274903005,
+        "rotation_error_deg": 0.32300216223151107,
+        "joint_margin_deg": 9.170785515584928
+      }
+    ],
+    "settling": {
+      "preparation_seconds": 6.0,
+      "approach_seconds": 1.0,
+      "setup_fixture_removed_at_seconds": 2.5,
+      "wheel_angle_deg": 0.20935788599833666,
+      "initial_penetration_mm": 0.0,
+      "preparation_max_penetration_mm": 0.2927367771425559,
+      "wheel_contacts": {
+        "left": 11,
+        "right": 9
+      },
+      "contact_fingers": {
+        "left": [
+          "index",
+          "middle",
+          "pinky",
+          "ring",
+          "thumb"
+        ],
+        "right": [
+          "index",
+          "middle",
+          "pinky",
+          "ring",
+          "thumb"
+        ]
+      },
+      "max_wheel_penetration_mm": 0.01814276880058182,
+      "max_joint_speed_rad_s": 0.006998681532503513,
+      "loaded_contact_distribution": {
+        "left": {
+          "loaded_links": [
+            "L_index_intermediate_geom_1",
+            "L_middle_intermediate_geom_1",
+            "L_pinky_intermediate_geom_1",
+            "L_ring_intermediate_geom_1",
+            "L_thumb_distal_geom_1",
+            "left_wrist_yaw_link_geom_2"
+          ],
+          "proximal_fingers": [],
+          "distal_fingers": [
+            "index",
+            "middle",
+            "pinky",
+            "ring"
+          ],
+          "palm_contact": true,
+          "thumb_contact": true,
+          "palm_rim_contact": true,
+          "thumb_rim_contact": true,
+          "points": [
+            {
+              "link": "left_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_026",
+              "position_world_m": [
+                0.5470198609410278,
+                0.13221155371006515,
+                1.0683393909199252
+              ],
+              "normal_force_N": 2.134320515553259,
+              "distance_mm": 0.09537062360938317
+            },
+            {
+              "link": "left_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_027",
+              "position_world_m": [
+                0.5470198549115095,
+                0.13221158389010174,
+                1.0683393086806479
+              ],
+              "normal_force_N": 2.1340422668891748,
+              "distance_mm": 0.09537145534904291
+            },
+            {
+              "link": "left_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_028",
+              "position_world_m": [
+                0.5478870639688429,
+                0.13166323920525844,
+                1.070443438555471
+              ],
+              "normal_force_N": 1.296247319408597,
+              "distance_mm": 0.09786636069741578
+            },
+            {
+              "link": "L_thumb_distal_geom_1",
+              "wheel_geom": "collision_rim_0_039",
+              "position_world_m": [
+                0.5695280316824386,
+                0.06316428291092993,
+                1.1398789366710964
+              ],
+              "normal_force_N": 0.43459133650967846,
+              "distance_mm": 0.07511841343833507
+            },
+            {
+              "link": "L_thumb_distal_geom_1",
+              "wheel_geom": "collision_rim_0_040",
+              "position_world_m": [
+                0.5696555689257385,
+                0.06328567655926158,
+                1.140146925641318
+              ],
+              "normal_force_N": 0.09211400651442783,
+              "distance_mm": 0.09452043973890434
+            },
+            {
+              "link": "L_index_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_036",
+              "position_world_m": [
+                0.5908086294123133,
+                0.08857962515875104,
+                1.116935691695909
+              ],
+              "normal_force_N": 3.030343220578804,
+              "distance_mm": 0.02733162674329104
+            },
+            {
+              "link": "L_index_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_037",
+              "position_world_m": [
+                0.5909273924708385,
+                0.08832025017277724,
+                1.1171692491902192
+              ],
+              "normal_force_N": 1.8316169839810625,
+              "distance_mm": 0.05507245356661269
+            },
+            {
+              "link": "L_middle_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_033",
+              "position_world_m": [
+                0.5835280269167449,
+                0.09911004525434025,
+                1.0975795056084383
+              ],
+              "normal_force_N": 2.3931122720989926,
+              "distance_mm": 0.04150793609278655
+            },
+            {
+              "link": "L_middle_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_034",
+              "position_world_m": [
+                0.583445241485694,
+                0.09864673479122707,
+                1.097404585607313
+              ],
+              "normal_force_N": 1.492285504998668,
+              "distance_mm": 0.06327249886162685
+            },
+            {
+              "link": "L_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_016",
+              "position_world_m": [
+                0.5963464210509843,
+                0.08027264583135355,
+                1.0683530120342026
+              ],
+              "normal_force_N": 3.59628171898913,
+              "distance_mm": 0.014325941806087174
+            },
+            {
+              "link": "L_pinky_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_014",
+              "position_world_m": [
+                0.5892742530826616,
+                0.09224800084996736,
+                1.0495316362587186
+              ],
+              "normal_force_N": 2.6743824057787466,
+              "distance_mm": 0.03912492910019864
+            }
+          ],
+          "rim_normal_span_deg": 179.73140728760478,
+          "scope": "loaded contacts >0.05 N; normal span is a geometric distribution measure, not force closure proof"
+        },
+        "right": {
+          "loaded_links": [
+            "R_index_intermediate_geom_1",
+            "R_middle_intermediate_geom_1",
+            "R_pinky_intermediate_geom_1",
+            "R_ring_intermediate_geom_1",
+            "R_thumb_distal_geom_1",
+            "right_wrist_yaw_link_geom_2"
+          ],
+          "proximal_fingers": [],
+          "distal_fingers": [
+            "index",
+            "middle",
+            "pinky",
+            "ring"
+          ],
+          "palm_contact": true,
+          "thumb_contact": true,
+          "palm_rim_contact": true,
+          "thumb_rim_contact": true,
+          "points": [
+            {
+              "link": "right_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_068",
+              "position_world_m": [
+                0.5464046075521134,
+                -0.13272363018399297,
+                1.067110197160961
+              ],
+              "normal_force_N": 2.239657198539844,
+              "distance_mm": 0.09503649857960257
+            },
+            {
+              "link": "right_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_069",
+              "position_world_m": [
+                0.5464053778755531,
+                -0.13272375332471653,
+                1.067110492273726
+              ],
+              "normal_force_N": 2.260309669579522,
+              "distance_mm": 0.09497396035508171
+            },
+            {
+              "link": "right_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_070",
+              "position_world_m": [
+                0.54640425929028,
+                -0.1327235487013485,
+                1.0671101284651514
+              ],
+              "normal_force_N": 2.219370265649451,
+              "distance_mm": 0.09509791351073062
+            },
+            {
+              "link": "R_thumb_distal_geom_1",
+              "wheel_geom": "collision_rim_0_056",
+              "position_world_m": [
+                0.5692889858879981,
+                -0.05727695404746771,
+                1.136079948197842
+              ],
+              "normal_force_N": 0.6084210700174133,
+              "distance_mm": 0.06495119878744983
+            },
+            {
+              "link": "R_index_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_060",
+              "position_world_m": [
+                0.5905485859168629,
+                -0.08931485573637624,
+                1.1163949432514348
+              ],
+              "normal_force_N": 4.971780049944149,
+              "distance_mm": -0.01814276880058182
+            },
+            {
+              "link": "R_middle_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_062",
+              "position_world_m": [
+                0.5832759761942845,
+                -0.09958430740339931,
+                1.096990857438835
+              ],
+              "normal_force_N": 1.813826860515867,
+              "distance_mm": 0.05548499553479797
+            },
+            {
+              "link": "R_middle_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_063",
+              "position_world_m": [
+                0.5832923545650939,
+                -0.09967913875432886,
+                1.097026527570411
+              ],
+              "normal_force_N": 1.8874219022209522,
+              "distance_mm": 0.05368684577032202
+            },
+            {
+              "link": "R_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_032",
+              "position_world_m": [
+                0.5968421212896546,
+                -0.08097721380379641,
+                1.0685719845309518
+              ],
+              "normal_force_N": 3.6271162730410578,
+              "distance_mm": 0.01359700596971734
+            },
+            {
+              "link": "R_pinky_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_034",
+              "position_world_m": [
+                0.589843007239258,
+                -0.09267084725088046,
+                1.0502296284168393
+              ],
+              "normal_force_N": 2.231139305893553,
+              "distance_mm": 0.04909081573169391
+            }
+          ],
+          "rim_normal_span_deg": 204.3274815853053,
+          "scope": "loaded contacts >0.05 N; normal span is a geometric distribution measure, not force closure proof"
+        }
+      },
+      "max_mimic_error_deg": 0.05265327942059354
+    }
+  },
+  "left_support": {
+    "label": "Left enveloping support / right hand clear",
+    "angles": [
+      0.0,
+      0.0
+    ],
+    "active": [
+      true,
+      false
+    ],
+    "grip_pose": {
+      "position_m": [
+        -0.013245609522591344,
+        0.13233057395795067,
+        -0.0026677187767941875
+      ],
+      "rotation_matrix": [
+        [
+          0.8453902156348196,
+          -0.1695450200733082,
+          -0.5065272642980395
+        ],
+        [
+          0.24088423764737907,
+          0.9673961764320808,
+          0.07822673377836882
+        ],
+        [
+          0.47674958559180225,
+          -0.18814654924534852,
+          0.8586679851054844
+        ]
+      ]
+    },
+    "hand_drives": [
+      0.5,
+      0.23,
+      0.8700668108579016,
+      0.9857891116881708,
+      1.1238544181958683,
+      0.95
+    ],
+    "approach_seconds": 1.0,
+    "qpos": [
+      -0.4542025783065204,
+      -0.05622357979127622,
+      -0.24579489007937205,
+      0.2006469564110385,
+      -0.10437530763207264,
+      0.12088875703053466,
+      0.6671282924757004,
+      0.4813783267397143,
+      0.16518917293233384,
+      0.26402527804523895,
+      0.396383937367502,
+      0.6891942566311524,
+      0.6885169534709343,
+      0.8842706449759787,
+      0.8836939428541387,
+      0.7123778998781453,
+      0.7113996274281347,
+      0.8242203099634036,
+      0.8235997484266383,
+      0.1067662220201394,
+      -0.19785518266128513,
+      -0.22573144626838038,
+      0.17256162816448758,
+      0.25241070380874675,
+      -0.3256791038975754,
+      0.29406197875778184,
+      0.051599122663984025,
+      0.022657922019787557,
+      0.03625844367612328,
+      0.054381498443379916,
+      0.10004314469508359,
+      0.10004337210146379,
+      0.10003770534314535,
+      0.10003792394826973,
+      0.10001692324016213,
+      0.10001701112034753,
+      0.10000211503575848,
+      0.10000212637963464,
+      -0.062460371351443715
+    ],
+    "ctrl": [
+      -0.4610416287432042,
+      -0.0713235303648417,
+      -0.2657706625645865,
+      0.19171787664488218,
+      -0.10435275023852383,
+      0.11129397491110828,
+      0.6428304494397442,
+      0.10676622202013959,
+      -0.19785518266128474,
+      -0.22573144626838076,
+      0.1725616281644872,
+      0.2524107038087476,
+      -0.32567910389757626,
+      0.29406197875778267,
+      0.5,
+      0.23,
+      0.8700668108579016,
+      0.9857891116881708,
+      1.1238544181958683,
+      0.95,
+      0.05,
+      0.02,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "ik": [
+      {
+        "side": "left",
+        "active": true,
+        "position_error_mm": 0.5664798650125057,
+        "rotation_error_deg": 0.4276548182356104,
+        "joint_margin_deg": 17.685858945092683
+      },
+      {
+        "side": "right",
+        "active": false,
+        "position_error_mm": 1.202927025058296,
+        "rotation_error_deg": 0.13437424121518218,
+        "joint_margin_deg": 7.8392598958668165
+      }
+    ],
+    "settling": {
+      "preparation_seconds": 6.0,
+      "approach_seconds": 1.0,
+      "setup_fixture_removed_at_seconds": 2.5,
+      "wheel_angle_deg": -3.5787156652575627,
+      "initial_penetration_mm": 0.0,
+      "preparation_max_penetration_mm": 0.29542817861733317,
+      "wheel_contacts": {
+        "left": 14,
+        "right": 0
+      },
+      "contact_fingers": {
+        "left": [
+          "index",
+          "middle",
+          "pinky",
+          "ring",
+          "thumb"
+        ],
+        "right": []
+      },
+      "max_wheel_penetration_mm": 0.028632696899269568,
+      "max_joint_speed_rad_s": 0.004187977208149066,
+      "loaded_contact_distribution": {
+        "left": {
+          "loaded_links": [
+            "L_index_intermediate_geom_1",
+            "L_middle_intermediate_geom_1",
+            "L_middle_proximal_geom_1",
+            "L_pinky_intermediate_geom_1",
+            "L_ring_intermediate_geom_1",
+            "L_thumb_distal_geom_1",
+            "left_wrist_yaw_link_geom_2"
+          ],
+          "proximal_fingers": [
+            "middle"
+          ],
+          "distal_fingers": [
+            "index",
+            "middle",
+            "pinky",
+            "ring"
+          ],
+          "palm_contact": true,
+          "thumb_contact": true,
+          "palm_rim_contact": true,
+          "thumb_rim_contact": true,
+          "points": [
+            {
+              "link": "left_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_020",
+              "position_world_m": [
+                0.5195010314417412,
+                0.13070922757453993,
+                1.0068903671307017
+              ],
+              "normal_force_N": 2.7934164163790385,
+              "distance_mm": 0.09303698773598003
+            },
+            {
+              "link": "left_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_021",
+              "position_world_m": [
+                0.5195010596701,
+                0.1307092378723569,
+                1.0068902959998862
+              ],
+              "normal_force_N": 2.7924592983503884,
+              "distance_mm": 0.09303936358890057
+            },
+            {
+              "link": "L_thumb_distal_geom_1",
+              "wheel_geom": "collision_rim_0_032",
+              "position_world_m": [
+                0.5515121921391285,
+                0.10230603884562461,
+                1.0988557321593029
+              ],
+              "normal_force_N": 0.17518554211359916,
+              "distance_mm": 0.0896265574828479
+            },
+            {
+              "link": "L_thumb_distal_geom_1",
+              "wheel_geom": "collision_rim_0_033",
+              "position_world_m": [
+                0.5516185970149561,
+                0.10211072147673239,
+                1.0991326496265463
+              ],
+              "normal_force_N": 0.5626536046287453,
+              "distance_mm": 0.06767617632463785
+            },
+            {
+              "link": "L_thumb_distal_geom_1",
+              "wheel_geom": "collision_rim_0_034",
+              "position_world_m": [
+                0.5516263143561301,
+                0.10211163038166882,
+                1.0991312856071693
+              ],
+              "normal_force_N": 0.29188532958342267,
+              "distance_mm": 0.08337732044842702
+            },
+            {
+              "link": "L_index_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_028",
+              "position_world_m": [
+                0.5641567465955768,
+                0.12522691299566194,
+                1.0573316778133597
+              ],
+              "normal_force_N": 5.441091877362023,
+              "distance_mm": -0.028632696899269568
+            },
+            {
+              "link": "L_middle_proximal_geom_1",
+              "wheel_geom": "collision_rim_0_025",
+              "position_world_m": [
+                0.5495907858279947,
+                0.13415561268780762,
+                1.0365761519461034
+              ],
+              "normal_force_N": 0.053383137132210295,
+              "distance_mm": 0.0999883699354371
+            },
+            {
+              "link": "L_middle_proximal_geom_1",
+              "wheel_geom": "collision_rim_0_026",
+              "position_world_m": [
+                0.5495911918270605,
+                0.13415547210101914,
+                1.0365765328701282
+              ],
+              "normal_force_N": 0.053385245023881846,
+              "distance_mm": 0.09998834027957569
+            },
+            {
+              "link": "L_middle_intermediate_geom_1",
+              "wheel_geom": "collision_inner_1_013",
+              "position_world_m": [
+                0.5596860937868906,
+                0.08676747272657379,
+                1.0384039544673378
+              ],
+              "normal_force_N": 1.4535843141170917,
+              "distance_mm": 0.06425282361478853
+            },
+            {
+              "link": "L_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_011",
+              "position_world_m": [
+                0.5762618968633617,
+                0.09888965331084842,
+                1.018283452802447
+              ],
+              "normal_force_N": 1.090536308255143,
+              "distance_mm": 0.0737530921766133
+            },
+            {
+              "link": "L_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_012",
+              "position_world_m": [
+                0.5763260129752918,
+                0.09887634541723275,
+                1.0184388808245326
+              ],
+              "normal_force_N": 1.1975315113072371,
+              "distance_mm": 0.07113675007402777
+            },
+            {
+              "link": "L_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_013",
+              "position_world_m": [
+                0.5763258268865937,
+                0.09887659640652122,
+                1.018438784148815
+              ],
+              "normal_force_N": 1.1980518820690331,
+              "distance_mm": 0.07112419935406891
+            },
+            {
+              "link": "L_pinky_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_011",
+              "position_world_m": [
+                0.5678676574481755,
+                0.09634929646060181,
+                0.9992890067321778
+              ],
+              "normal_force_N": 1.1422463773471718,
+              "distance_mm": 0.07387739672742966
+            },
+            {
+              "link": "L_pinky_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_012",
+              "position_world_m": [
+                0.5678665085577239,
+                0.0963492819433971,
+                0.9992872897811852
+              ],
+              "normal_force_N": 1.1407026734898134,
+              "distance_mm": 0.07391264487748335
+            }
+          ],
+          "rim_normal_span_deg": 167.9889683392805,
+          "scope": "loaded contacts >0.05 N; normal span is a geometric distribution measure, not force closure proof"
+        },
+        "right": {
+          "loaded_links": [],
+          "proximal_fingers": [],
+          "distal_fingers": [],
+          "palm_contact": false,
+          "thumb_contact": false,
+          "palm_rim_contact": false,
+          "thumb_rim_contact": false,
+          "points": [],
+          "rim_normal_span_deg": 0.0,
+          "scope": "loaded contacts >0.05 N; normal span is a geometric distribution measure, not force closure proof"
+        }
+      },
+      "max_mimic_error_deg": 0.056050882599529415
+    }
+  },
+  "right_support": {
+    "label": "Right enveloping support / left hand clear",
+    "angles": [
+      0.0,
+      0.0
+    ],
+    "active": [
+      false,
+      true
+    ],
+    "grip_pose": {
+      "position_m": [
+        -0.013245609522591344,
+        0.13233057395795067,
+        -0.0026677187767941875
+      ],
+      "rotation_matrix": [
+        [
+          0.8453902156348196,
+          -0.1695450200733082,
+          -0.5065272642980395
+        ],
+        [
+          0.24088423764737907,
+          0.9673961764320808,
+          0.07822673377836882
+        ],
+        [
+          0.47674958559180225,
+          -0.18814654924534852,
+          0.8586679851054844
+        ]
+      ]
+    },
+    "hand_drives": [
+      0.5,
+      0.23,
+      0.8700668108579016,
+      0.9857891116881708,
+      1.1238544181958683,
+      0.95
+    ],
+    "approach_seconds": 1.0,
+    "qpos": [
+      0.10677226940958426,
+      0.1978551950788546,
+      0.22570011853517077,
+      0.1725506306907305,
+      -0.2523849949173402,
+      -0.3256882135534785,
+      -0.2939847542642968,
+      0.05106473495597419,
+      0.022767410902087934,
+      0.036433895552167854,
+      0.05464437266762402,
+      0.10004041444635911,
+      0.10004062005497164,
+      0.1000377571077435,
+      0.10003797604325868,
+      0.10001697520292598,
+      0.1000170633941629,
+      0.10000214561486304,
+      0.1000021571398339,
+      -0.45471923240627127,
+      0.055797295721123095,
+      0.24492032535685476,
+      0.2023974468396473,
+      0.10619854214540775,
+      0.12262771679724271,
+      -0.6665664892842765,
+      0.5019401313265351,
+      0.15550671182718537,
+      0.24849901924845108,
+      0.3731123682038585,
+      0.6973371593074845,
+      0.6966782787555329,
+      0.9082836952809713,
+      0.9082845813743414,
+      0.7181769316262342,
+      0.7171912914109869,
+      0.8337223961067579,
+      0.8331283448244384,
+      0.061178701506932234
+    ],
+    "ctrl": [
+      0.10677226940958445,
+      0.197855195078855,
+      0.22570011853517116,
+      0.17255063069073012,
+      -0.252384994917341,
+      -0.3256882135534793,
+      -0.2939847542642977,
+      -0.4610449206243007,
+      0.07131230603759842,
+      0.2657540252203412,
+      0.1917288028758762,
+      0.10438097643827066,
+      0.11127907961017032,
+      -0.6427770141394968,
+      0.05,
+      0.02,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.5,
+      0.23,
+      0.8700668108579016,
+      0.9857891116881708,
+      1.1238544181958683,
+      0.95
+    ],
+    "ik": [
+      {
+        "side": "left",
+        "active": false,
+        "position_error_mm": 1.2029310528509403,
+        "rotation_error_deg": 0.1343766696457226,
+        "joint_margin_deg": 7.838737951030755
+      },
+      {
+        "side": "right",
+        "active": true,
+        "position_error_mm": 0.5664490895418828,
+        "rotation_error_deg": 0.42762993806527394,
+        "joint_margin_deg": 17.686502051671596
+      }
+    ],
+    "settling": {
+      "preparation_seconds": 6.0,
+      "approach_seconds": 1.0,
+      "setup_fixture_removed_at_seconds": 2.5,
+      "wheel_angle_deg": 3.5052813924378667,
+      "initial_penetration_mm": 0.0,
+      "preparation_max_penetration_mm": 0.3842987032005018,
+      "wheel_contacts": {
+        "left": 0,
+        "right": 12
+      },
+      "contact_fingers": {
+        "left": [],
+        "right": [
+          "index",
+          "middle",
+          "pinky",
+          "ring",
+          "thumb"
+        ]
+      },
+      "max_wheel_penetration_mm": 0.0,
+      "max_joint_speed_rad_s": 0.009095230656880351,
+      "loaded_contact_distribution": {
+        "left": {
+          "loaded_links": [],
+          "proximal_fingers": [],
+          "distal_fingers": [],
+          "palm_contact": false,
+          "thumb_contact": false,
+          "palm_rim_contact": false,
+          "thumb_rim_contact": false,
+          "points": [],
+          "rim_normal_span_deg": 0.0,
+          "scope": "loaded contacts >0.05 N; normal span is a geometric distribution measure, not force closure proof"
+        },
+        "right": {
+          "loaded_links": [
+            "R_index_intermediate_geom_1",
+            "R_middle_proximal_geom_1",
+            "R_pinky_intermediate_geom_1",
+            "R_ring_intermediate_geom_1",
+            "R_thumb_distal_geom_1",
+            "right_wrist_yaw_link_geom_2"
+          ],
+          "proximal_fingers": [
+            "middle"
+          ],
+          "distal_fingers": [
+            "index",
+            "pinky",
+            "ring"
+          ],
+          "palm_contact": true,
+          "thumb_contact": true,
+          "palm_rim_contact": true,
+          "thumb_rim_contact": true,
+          "points": [
+            {
+              "link": "right_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_075",
+              "position_world_m": [
+                0.518610323293035,
+                -0.13030410963585903,
+                1.004892362929993
+              ],
+              "normal_force_N": 0.6398177815506009,
+              "distance_mm": 0.09888793195646425
+            },
+            {
+              "link": "right_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_076",
+              "position_world_m": [
+                0.5186133887521926,
+                -0.13030572130912513,
+                1.0048922506017046
+              ],
+              "normal_force_N": 0.7502419738913435,
+              "distance_mm": 0.0985585753799556
+            },
+            {
+              "link": "right_wrist_yaw_link_geom_2",
+              "wheel_geom": "collision_rim_0_077",
+              "position_world_m": [
+                0.5186134600736133,
+                -0.13030574655133453,
+                1.0048920468805327
+              ],
+              "normal_force_N": 0.7503379375485534,
+              "distance_mm": 0.09855827580734247
+            },
+            {
+              "link": "R_thumb_distal_geom_1",
+              "wheel_geom": "collision_rim_0_063",
+              "position_world_m": [
+                0.5529578595811373,
+                -0.09677517601375149,
+                1.0975277955727905
+              ],
+              "normal_force_N": 0.9690015511215715,
+              "distance_mm": 0.0440788293116923
+            },
+            {
+              "link": "R_index_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_068",
+              "position_world_m": [
+                0.5638327959703664,
+                -0.12564158686668447,
+                1.0565192105212025
+              ],
+              "normal_force_N": 2.6383159940640217,
+              "distance_mm": 0.036100152182678175
+            },
+            {
+              "link": "R_index_intermediate_geom_1",
+              "wheel_geom": "collision_rim_0_069",
+              "position_world_m": [
+                0.5643588725155814,
+                -0.12441850569468191,
+                1.056678089990374
+              ],
+              "normal_force_N": 2.5348756514916486,
+              "distance_mm": 0.03873948617859762
+            },
+            {
+              "link": "R_middle_proximal_geom_1",
+              "wheel_geom": "collision_rim_0_071",
+              "position_world_m": [
+                0.5491037164396713,
+                -0.13434500738315025,
+                1.0355044851365638
+              ],
+              "normal_force_N": 5.6627026168184855,
+              "distance_mm": 0.04036535731614353
+            },
+            {
+              "link": "R_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_034",
+              "position_world_m": [
+                0.5763023119460579,
+                -0.09910577212697327,
+                1.018201854500055
+              ],
+              "normal_force_N": 1.169884642268546,
+              "distance_mm": 0.07185413074129489
+            },
+            {
+              "link": "R_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_035",
+              "position_world_m": [
+                0.5763039820069896,
+                -0.0991043608752043,
+                1.0182040310692997
+              ],
+              "normal_force_N": 1.1724884842337628,
+              "distance_mm": 0.07179137946808922
+            },
+            {
+              "link": "R_ring_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_036",
+              "position_world_m": [
+                0.5763029868725281,
+                -0.09910512202350324,
+                1.018202637657791
+              ],
+              "normal_force_N": 1.1716661001686561,
+              "distance_mm": 0.07181103879842511
+            },
+            {
+              "link": "R_pinky_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_036",
+              "position_world_m": [
+                0.567384838887933,
+                -0.09624537904605177,
+                0.9984096084881963
+              ],
+              "normal_force_N": 1.0561306569270208,
+              "distance_mm": 0.07591049017818997
+            },
+            {
+              "link": "R_pinky_intermediate_geom_1",
+              "wheel_geom": "collision_inner_2_038",
+              "position_world_m": [
+                0.567364360459401,
+                -0.09623278070835342,
+                0.998366829118193
+              ],
+              "normal_force_N": 1.0648319774075943,
+              "distance_mm": 0.07570930726882212
+            }
+          ],
+          "rim_normal_span_deg": 195.4736468559742,
+          "scope": "loaded contacts >0.05 N; normal span is a geometric distribution measure, not force closure proof"
+        }
+      },
+      "max_mimic_error_deg": 0.05647302445203483
+    }
+  }
+}

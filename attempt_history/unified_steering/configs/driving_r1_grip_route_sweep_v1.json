@@ -1,0 +1,102 @@
+{
+  "interface": "driving-v1-v4-executor",
+  "speed_deg_s": 5.0,
+  "acceleration_deg_s2": 40.0,
+  "tangent_geometry": "results/driving_r0_geometry_roll_v1/summary.json",
+  "phase_lead_deg": 30.0,
+  "demonstrator": {
+    "angle_gain": 6.0,
+    "preview_seconds": 0.15,
+    "position_gain": 3.0,
+    "orientation_gain": 3.0,
+    "hand_gain": 0.1
+  },
+  "criteria": "complete; motionRMSE<=1deg; every stop final3s physics peak<=1deg; overall>=95%, each direction>=90%; any physical/QP hard failure rejects candidate",
+  "template": "short=3s endpoint and zero holds;long=10s holds;sequence=two opposite complete roundtrips with3s holds",
+  "independence": "training410xx;development420xx;independent430xx reserved; R0 diagnostics400xx consumed",
+  "physical_scene": "original +/-450deg; all physical gates and v4 execution unchanged",
+  "experiment": "driving-R1-grip-route-physical-sweep-v1",
+  "cases": [
+    [
+      90,
+      -1,
+      "short",
+      44801,
+      {
+        "grip_preload_rad": 0.05,
+        "roll_gain": 1.0
+      }
+    ],
+    [
+      90,
+      1,
+      "short",
+      44802,
+      {
+        "grip_preload_rad": 0.05,
+        "roll_gain": 1.0
+      }
+    ],
+    [
+      90,
+      -1,
+      "short",
+      44803,
+      {
+        "grip_preload_rad": 0.05,
+        "roll_gain": 1.15
+      }
+    ],
+    [
+      90,
+      1,
+      "short",
+      44804,
+      {
+        "grip_preload_rad": 0.05,
+        "roll_gain": 1.15
+      }
+    ],
+    [
+      90,
+      -1,
+      "short",
+      44805,
+      {
+        "grip_preload_rad": 0.15,
+        "roll_gain": 1.0
+      }
+    ],
+    [
+      90,
+      1,
+      "short",
+      44806,
+      {
+        "grip_preload_rad": 0.15,
+        "roll_gain": 1.0
+      }
+    ],
+    [
+      90,
+      -1,
+      "short",
+      44807,
+      {
+        "grip_preload_rad": 0.15,
+        "roll_gain": 1.15
+      }
+    ],
+    [
+      90,
+      1,
+      "short",
+      44808,
+      {
+        "grip_preload_rad": 0.15,
+        "roll_gain": 1.15
+      }
+    ]
+  ],
+  "scope": "Expert-only diagnostic search: small physical grip preload and palm-roll changes; actual actuator caps and physical safety gates unchanged. Different diagnostic reset seeds, not paired causal ablation."
+}

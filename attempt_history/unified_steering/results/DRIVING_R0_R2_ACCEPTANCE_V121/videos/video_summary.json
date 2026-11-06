@@ -1,0 +1,49 @@
+[
+  {
+    "stage": "r1",
+    "video": "r1/demo_4x.mp4",
+    "duration_seconds": 37.05,
+    "bytes": 2999842,
+    "sha256": "a98273296d9cd76607405984eaca01de0e779c755a0b4ff5005b446a85c0965e",
+    "playback_speed": 4,
+    "original_trace_max_absolute_difference": {
+      "time": 0.0,
+      "angle_deg": 0.0,
+      "target_deg": 0.0,
+      "forces_n": 0.0,
+      "torques_nm": 0.0,
+      "active_q": 0.0
+    },
+    "accepted_case": [
+      90,
+      -1,
+      "sequence",
+      43001
+    ]
+  },
+  {
+    "stage": "r2",
+    "video": "r2/demo_4x.mp4",
+    "duration_seconds": 70.8,
+    "bytes": 6454990,
+    "sha256": "af7c03a5ae9f79c5f6c403dda5a01ac4af6170309c2ba622918cebff98471294",
+    "playback_speed": 4,
+    "original_trace_max_absolute_difference": {
+      "time": 0.0,
+      "angle_deg": 0.0,
+      "target_deg": 0.0,
+      "forces_n": 0.0,
+      "torques_nm": 0.0,
+      "active_q": 0.0
+    },
+    "accepted_case": [
+      180,
+      -1,
+      "sequence",
+      56051,
+      {
+        "phase_deg": 0.0
+      }
+    ]
+  }
+]

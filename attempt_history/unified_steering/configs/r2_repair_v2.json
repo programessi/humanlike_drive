@@ -1,0 +1,24 @@
+{
+  "protocol": "r2-v2-both-sequence-signs",
+  "stages": ["R2.0", "R2.1", "R2.2", "R2.3", "R2.4"],
+  "development_seeds": [1007, 1107, 1117],
+  "fresh_nominal_seeds": [1207, 1217, 1227],
+  "fresh_expanded_seeds": [1307, 1317, 1327],
+  "supports": ["both", "left", "right"],
+  "include_reverse_sequence": true,
+  "nominal_cases": 72,
+  "precision_target_deg": 1,
+  "extra_qualification_margin_deg": null,
+  "historical_protocol": "configs/r1_r2_v1.json (unchanged)",
+  "models": {
+    "sigma2": "runs/r2_sigma2_comparison_v1/qualified_development.zip",
+    "sequence_final": "runs/r2_sequence_curriculum_v1/final.zip"
+  },
+  "diagnostic_interventions": ["none", "radial_zero", "axial_zero", "hand_initial", "radial_zero_hand_initial"],
+  "diagnostic_support": "right",
+  "diagnostic_case": "sequence_negative",
+  "diagnostic_start_seconds": 0,
+  "claim_boundary": "Action/target overrides are diagnostic only. No overridden policy can qualify as the unified learned policy.",
+  "training": "Decide a single-factor change only after frozen comparison and interventions; first repair budget candidate65536 steps.",
+  "progression": "Separate full execution/support stability, hard constraints and continuous precision. Mild precision misses remain reported; persistent support loss blocks R3. No unseen seed is used for diagnosis."
+}

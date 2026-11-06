@@ -1,0 +1,87 @@
+{
+  "case": [
+    180,
+    1,
+    "sequence",
+    55021,
+    {
+      "phase_deg": 2.0
+    }
+  ],
+  "amplitude_deg": 180,
+  "direction": 1,
+  "template": "sequence",
+  "seed": 55021,
+  "complete": true,
+  "passed": true,
+  "hard_failure": false,
+  "termination_reason": "",
+  "planned_seconds": 281.3,
+  "actual_seconds": 281.3000000000297,
+  "samples": 5626,
+  "full_rmse_deg": 0.5879227155643504,
+  "prefix_rmse_deg": 0.5879227155643504,
+  "motion_rmse_deg": 0.6014420763033171,
+  "segment_rmse_deg": [
+    0.5767190860856883,
+    0.6340129638151802,
+    0.48857908723842125,
+    0.6878255711482967
+  ],
+  "stop_peaks_deg": [
+    0.06773292753267839,
+    0.10953878958499416,
+    0.040206522059500115,
+    0.01915426437137126
+  ],
+  "peak_error_deg": 3.1824861207190356,
+  "min_arm_margin_deg": 2.272586752771072,
+  "collision_peak_n": 0.0,
+  "qp_failures": 0,
+  "initial_wheel_deg": 3.2114900910837525,
+  "qp_diagnostic": {
+    "reason": "optimal",
+    "iterations": 2,
+    "primal_residual": 0.0,
+    "dual_residual": 1.3552527156068805e-20
+  },
+  "joint_violations_at_end": [],
+  "expert_events": null,
+  "timeline": {
+    "seconds": 281.3,
+    "hold_seconds": 3.0,
+    "segments": [
+      {
+        "start": 0.5,
+        "end": 66.79569121584359,
+        "hold_end": 69.79569121584359,
+        "initial": 0.05605107598458407,
+        "target": 3.141592653589793
+      },
+      {
+        "start": 69.79569121584359,
+        "end": 137.2956912158436,
+        "hold_end": 140.2956912158436,
+        "initial": 3.141592653589793,
+        "target": 0.0
+      },
+      {
+        "start": 140.2956912158436,
+        "end": 207.7956912158436,
+        "hold_end": 210.7956912158436,
+        "initial": 0.0,
+        "target": -3.141592653589793
+      },
+      {
+        "start": 210.7956912158436,
+        "end": 278.2956912158436,
+        "hold_end": 281.2956912158436,
+        "initial": -3.141592653589793,
+        "target": 0.0
+      }
+    ]
+  },
+  "expert_probability": null,
+  "learned_evaluation": true,
+  "wall_seconds": 133.51365823400556
+}

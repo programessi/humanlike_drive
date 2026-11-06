@@ -1,0 +1,38 @@
+# Candidate architecture/PPO settings. Run configs/m2_smoke.yaml for validated engineering settings.
+interface_version: unified-steering-v1
+policy_hz: 20
+wheel_load:
+  center_angle_deg: 0.0
+  centering_stiffness_nm_per_rad: 0.3
+  centering_torque_limit_nm: 1.0
+  viscous_damping_nm_s_per_rad: 0.15
+  coulomb_friction_nm: 0.03
+actor:
+  observation_dim: 152
+  state_encoder: [140, 256, 128]
+  gru_hidden: 128
+  reference_encoder: [12, 64, 64]
+  action_head: [192, 256, 128, 26]
+  initial_arm_std: 0.35
+  initial_hand_std: 0.50
+critic:
+  layers: [172, 512, 256, 128, 1]
+ppo:
+  num_envs: 64
+  rollout_steps: 128
+  recurrent_sequence_steps: 64
+  minibatch_steps: 2048
+  update_epochs: 4
+  actor_learning_rate: 0.0001
+  critic_learning_rate: 0.0003
+  gamma: 0.995
+  gae_lambda: 0.97
+  clip_range: 0.2
+  target_kl: 0.015
+  max_grad_norm: 1.0
+curriculum:
+  first_tasks: [hold, small_rotation, stop, reverse]
+  amplitude_deg: [5, 15]
+  reference_speed_deg_s: [5, 10]
+  prior_task_fraction: 0.25
+  training_seeds: [7, 17, 27]

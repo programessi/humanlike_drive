@@ -1,0 +1,38 @@
+{
+  "before": {
+    "left": {
+      "joint_angles_deg": {
+        "roll": 18.54131775493907,
+        "pitch": 3.04029139920827,
+        "yaw": 35.1761401266346
+      },
+      "forearm_hand_angle_deg": 35.290400847515116
+    },
+    "right": {
+      "joint_angles_deg": {
+        "roll": -18.546430897216,
+        "pitch": 3.0167364413605857,
+        "yaw": -35.19834245736657
+      },
+      "forearm_hand_angle_deg": 35.3107501277852
+    }
+  },
+  "after": {
+    "left": {
+      "joint_angles_deg": {
+        "roll": -0.10029791029065775,
+        "pitch": -7.519114048303765,
+        "yaw": 5.288795196302084
+      },
+      "forearm_hand_angle_deg": 9.184093812760718
+    },
+    "right": {
+      "joint_angles_deg": {
+        "roll": 0.1983842241334067,
+        "pitch": -7.698110662769506,
+        "yaw": -5.330115465693252
+      },
+      "forearm_hand_angle_deg": 9.354131807312681
+    }
+  }
+}

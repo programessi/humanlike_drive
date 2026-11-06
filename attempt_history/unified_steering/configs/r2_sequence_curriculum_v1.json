@@ -1,0 +1,21 @@
+{
+  "parent": "runs/r2_sigma2_comparison_v1/qualified_development.zip",
+  "parent_sha256": "5c20fb62ada8b797915ebf4d1686fb6391dc7685ef9dccf39028945718b9177a",
+  "requested_steps": 65536,
+  "learning_rate": 0.0000025,
+  "angle_sigma_deg": 2,
+  "hand_mode": "leaky",
+  "hand_alpha": 0.995,
+  "mode_order": ["hold", "step", "sine", "sequence"],
+  "mode_probabilities": [0.15, 0.15, 0.05, 0.65],
+  "support_probabilities_both_left_right": [0.25, 0.375, 0.375],
+  "amplitudes_deg": [5, 10],
+  "only_learning_change_relative_to_sigma2_parent": "Training task-mode mixture; preserve mean actor, critic, optimizer and all exploration stds; no wrist-std override",
+  "development_seeds": [1007, 1107, 1117],
+  "development_qualification_rmse_deg": 0.9,
+  "formal_acceptance_rmse_deg": 1,
+  "independent_seeds": [1207, 1217, 1227],
+  "expanded_reset_independent_seeds": [1307, 1317, 1327],
+  "stop_rule": "One bounded 65536-step trial; no automatic extension or reset expansion without nominal qualification and acceptance.",
+  "hypothesis": "Systematic sequence lag may reflect sparse sequence training coverage. The right-support 10deg specified-sign sequence has expected episode share 0.0234375 before and 0.0609375 after. These are distribution expectations, not measured episode counts."
+}

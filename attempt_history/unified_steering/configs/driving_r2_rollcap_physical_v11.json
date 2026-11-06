@@ -1,0 +1,201 @@
+{
+  "interface": "driving-v3-grip-command-handoff",
+  "speed_deg_s": 5.0,
+  "acceleration_deg_s2": 40.0,
+  "tangent_geometry": "results/driving_r0_geometry_roll_v1/summary.json",
+  "phase_lead_deg": 30.0,
+  "demonstrator": {
+    "angle_gain": 6.0,
+    "preview_seconds": 0.15,
+    "position_gain": 3.0,
+    "orientation_gain": 3.0,
+    "hand_gain": 0.1
+  },
+  "criteria": "complete; motionRMSE<=1deg; every stop final3s physics peak<=1deg; overall>=95%, each direction>=90%; any physical/QP hard failure rejects candidate",
+  "template": "short=3s endpoint and zero holds;long=10s holds;sequence=two opposite complete roundtrips with3s holds",
+  "independence": "training410xx;development420xx;independent430xx reserved; R0 diagnostics400xx consumed",
+  "physical_scene": "original +/-450deg; all physical gates and v4 execution unchanged",
+  "experiment": "driving-R2-upper-rollcap-physical-v11",
+  "cases": [
+    [
+      180,
+      -1,
+      "short",
+      45901,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 28,
+          "upper_axial_offset_m": 0.0,
+          "upper_thumb_pitch_rad": 0.0
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      45902,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 28,
+          "upper_axial_offset_m": 0.0,
+          "upper_thumb_pitch_rad": 0.0
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      45903,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 40,
+          "upper_axial_offset_m": 0.0,
+          "upper_thumb_pitch_rad": 0.0
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      45904,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 40,
+          "upper_axial_offset_m": 0.0,
+          "upper_thumb_pitch_rad": 0.0
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      45905,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 28,
+          "upper_axial_offset_m": 0.01,
+          "upper_thumb_pitch_rad": 0.1
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      45906,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 28,
+          "upper_axial_offset_m": 0.01,
+          "upper_thumb_pitch_rad": 0.1
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      45907,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 40,
+          "upper_axial_offset_m": 0.01,
+          "upper_thumb_pitch_rad": 0.1
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      45908,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 40,
+          "upper_axial_offset_m": 0.01,
+          "upper_thumb_pitch_rad": 0.1
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      45909,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 28,
+          "upper_axial_offset_m": -0.01,
+          "upper_thumb_pitch_rad": 0.1
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      45910,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 28,
+          "upper_axial_offset_m": -0.01,
+          "upper_thumb_pitch_rad": 0.1
+        }
+      }
+    ],
+    [
+      180,
+      -1,
+      "short",
+      45911,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 28,
+          "upper_axial_offset_m": 0.0,
+          "upper_thumb_pitch_rad": 0.2
+        }
+      }
+    ],
+    [
+      180,
+      1,
+      "short",
+      45912,
+      {
+        "expert_parameters": {
+          "upper_closure_rad": 0.3,
+          "upper_roll_cap_deg": 28,
+          "upper_axial_offset_m": 0.0,
+          "upper_thumb_pitch_rad": 0.2
+        }
+      }
+    ]
+  ],
+  "expert_type": "halfturn",
+  "halfturn_parameters": {
+    "release_start_deg": 30.0,
+    "release_end_deg": 50.0,
+    "park_phase_deg": 100.0,
+    "withdrawal_m": 0.07
+  },
+  "scope": "Expert-only cap on late tangent-roll reversal identified at150\u2013180deg, optional small axial grasp offset/thumb flexion. Original model and hard gates retained.",
+  "correction": "Release before withdrawal; park phase lies beyond the release band plus phase lead. Earlier candidates could stall the rim while the lower hand was still closed.",
+  "arm_command_margin_deg": 4,
+  "guard_elbows_against_wheel": true,
+  "retain_preparation_hand_command": true
+}

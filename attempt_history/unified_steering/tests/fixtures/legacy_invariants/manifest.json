@@ -1,0 +1,104 @@
+[
+  {
+    "source": "runs/r22_separate_hand_lead_v2/best.zip",
+    "fixture": "tests/fixtures/legacy_invariants/models/r22_separate_hand_lead_v2/best.zip",
+    "sha256": "e6b8e84198713aeea8b1d89df70204097d4b044c7cd392e779223e4038617a1b",
+    "bytes": 5349417
+  },
+  {
+    "source": "runs/r22_separate_hand_lead_v2/config.json",
+    "fixture": "tests/fixtures/legacy_invariants/models/r22_separate_hand_lead_v2/config.json",
+    "sha256": "132c758b9e2a4bb7a8254ca94edf1908810e1145b89b430077b8d79b0437c8fa",
+    "bytes": 3203
+  },
+  {
+    "source": "runs/driving_r1_bc_v6/teacher.zip",
+    "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_bc_v6/teacher.zip",
+    "sha256": "c514dab345c5f2a4094f94747b822558036c7ed0ce27ff39572858a7172f3a74",
+    "bytes": 1817494
+  },
+  {
+    "source": "runs/driving_r1_bc_v6/config.json",
+    "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_bc_v6/config.json",
+    "sha256": "2f33ab12e65bcfc2fba4388a523b05eb43ba89bc74d7fd56d7e56bd13ca7560e",
+    "bytes": 2328
+  },
+  {
+    "source": "runs/driving_r1_norm_v20/teacher.zip",
+    "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_norm_v20/teacher.zip",
+    "sha256": "74b5cdd1f9efe0ada532aa033bd9a360e4253325c4092c87278a73c7ea17676b",
+    "bytes": 1821937
+  },
+  {
+    "source": "runs/driving_r1_norm_v20/config.json",
+    "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_norm_v20/config.json",
+    "sha256": "dc257a5f7ba60e051475b34094b6a49a6b2a501c648a465801595d3a5c6efe18",
+    "bytes": 2500
+  },
+  {
+    "source": "runs/driving_r1_memory_hand_v30/teacher.zip",
+    "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_memory_hand_v30/teacher.zip",
+    "sha256": "11df95abc009dc8f01f92ae619d1a6751b59ebaf016e86d475f776f2c6fc4070",
+    "bytes": 692123
+  },
+  {
+    "source": "runs/driving_r1_memory_hand_v30/config.json",
+    "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_memory_hand_v30/config.json",
+    "sha256": "85d9bd60d7a6c66396e9c066b74ffd9646a6290b9757d836b42c74322ec1e378",
+    "bytes": 3387
+  },
+  {
+    "source": "runs/driving_r1_pose_frozen_v41/teacher.zip",
+    "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_pose_v41/teacher.zip",
+    "sha256": "76e213958d876d7ec90ab911ee3fef562f17b91f762ad34803c07f1f2a18f673",
+    "bytes": 440877
+  },
+  {
+    "source": "runs/driving_r1_pose_frozen_v41/config.json",
+    "fixture": "tests/fixtures/legacy_invariants/models/driving_r1_pose_v41/config.json",
+    "sha256": "b9fbafd3f045d803253a2e5036581253c1ebafae431371b8c76d8ecf71a0db07",
+    "bytes": 8568
+  },
+  {
+    "source": "runs/driving_r2_conditional_memory_v58/teacher.zip",
+    "fixture": "tests/fixtures/legacy_invariants/models/driving_r2_conditional_memory_v58/teacher.zip",
+    "sha256": "ae49a08fd02580bb0a7123e224e9ee70b4599abb63d03bcb1984d94a98fa3738",
+    "bytes": 2904969
+  },
+  {
+    "source": "runs/driving_r2_conditional_memory_v58/config.json",
+    "fixture": "tests/fixtures/legacy_invariants/models/driving_r2_conditional_memory_v58/config.json",
+    "sha256": "ffc3125348f2323471114f2c37e56e27364f3acbd40f357b6ba7f7fcfd3ee2b5",
+    "bytes": 3094
+  },
+  {
+    "source": "runs/driving_r1_handoff_labels_v14/labels/a30_d-1_short_s74101.npz",
+    "fixture": "tests/fixtures/legacy_invariants/data/hand_actions/a30_d-1_short_s74101.npz",
+    "sha256": "1d11483e08dd08bd5865b01f93074ccfba086a1740621ff918424cf1a01dd437",
+    "bytes": 461992
+  },
+  {
+    "source": "runs/driving_r2_ipsilateral_labels_v41/labels/a180_d+1_short_s48001.npz",
+    "fixture": "tests/fixtures/legacy_invariants/data/halfturn/a180_d+1_short_s48001.npz",
+    "sha256": "17574f7f68fd7705342aef5201d77856fd1311d28ece82a2b0f45537f1279437",
+    "bytes": 2540901
+  },
+  {
+    "source": "runs/driving_r2_ipsilateral_labels_v41/labels/a180_d-1_short_s48001.npz",
+    "fixture": "tests/fixtures/legacy_invariants/data/halfturn/a180_d-1_short_s48001.npz",
+    "sha256": "f5107c2249b50046d7ea634a8fb075192bc875bdf2d0250611bcafb7af6a5f2c",
+    "bytes": 2564780
+  },
+  {
+    "source": "runs/driving_r2_history_aligned_labels_v77/labels/a180_d+1_long_s48371.npz",
+    "fixture": "tests/fixtures/legacy_invariants/data/history/labels/a180_d+1_long_s48371.npz",
+    "sha256": "5b41e8d2c85fb14abacd2798f1e8353c007576864f2e4c4e2532571e016176d5",
+    "bytes": 2793570
+  },
+  {
+    "source": "runs/driving_r2_history_aligned_labels_v77/traces/a180_d+1_long_s48371.npz",
+    "fixture": "tests/fixtures/legacy_invariants/data/history/traces/a180_d+1_long_s48371.npz",
+    "sha256": "c939536fe2000be33f2ea5a4e90bee0416017d6825554ac16aa6e205387d691d",
+    "bytes": 928485
+  }
+]

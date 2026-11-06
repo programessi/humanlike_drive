@@ -1,0 +1,37 @@
+interface: wheel-centralized-gru-stage1-v1
+task:
+  policy_hz: 20
+  episode_seconds: 15
+  amplitude_deg: 3
+  target_mode: mixed
+  target_speed_deg: 5
+  target_acceleration_deg_s2: 40
+  randomization_strength: 0.15
+  closure_jitter_rad: 0.04
+  settle_jitter_seconds: 0.12
+controller:
+  robot_hz: 50
+  wrist_linear_speed: 0.04
+  wrist_angular_speed_deg: 25
+  wrist_workspace_m: 0.06
+  wrist_orientation_workspace_deg: 40
+  wrist_position_lead_m: 0.012
+  wrist_orientation_lead_deg: 10
+network:
+  encoder: [256, 128]
+  gru_hidden: 128
+  critic: [512, 256, 128]
+ppo:
+  learning_rate: 0.0001
+  rollout_steps: 256
+  sequence_steps: 64
+  sequences_per_batch: 4
+  epochs: 4
+  gamma: 0.995
+  gae_lambda: 0.95
+  clip_range: 0.2
+  entropy_coef: 0.001
+  value_coef: 0.5
+  max_grad_norm: 0.5
+  target_kl: 0.03
+  log_std_init: -2.5

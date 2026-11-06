@@ -1,0 +1,33 @@
+{
+  "record": {
+    "case": "hold",
+    "seed": 1207,
+    "seconds": 3.0,
+    "amplitude_deg": 5.0,
+    "support": "left",
+    "complete": true,
+    "rmse_deg": 0.2492856881461529,
+    "peak_error_deg": 0.5048183392199465,
+    "tail_peak_deg": 0.5048183392199465,
+    "min_arm_margin_deg": 18.58860012662353,
+    "collision_peak_n": 0.0,
+    "free_hand_peak_force_n": 0.0,
+    "signed_progress_fraction": null,
+    "termination_reason": "",
+    "passed": true,
+    "qp_failures": 0,
+    "collision_qp_failures": 0,
+    "collision_constraints": 2690,
+    "workspace_clips": 0,
+    "peak_qp_position_error_mm": 0.8771462605398913,
+    "reset_options": {},
+    "preparation": {
+      "wheel_angle": 0.10068443985153722,
+      "left_force": 12.894356139016073,
+      "right_force": 0.0
+    },
+    "group": "nominal",
+    "hard_failure": false
+  },
+  "baseline": null
+}

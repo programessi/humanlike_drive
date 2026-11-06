@@ -1,0 +1,15 @@
+{
+  "experiment": "R2.2-motion-audit-v3",
+  "date": "2026-10-28",
+  "models": {
+    "parent": "runs/r2_sigma2_comparison_v1/qualified_development.zip",
+    "course_final": "runs/r22_balanced_course_v2/final.zip",
+    "hand_lead_best": "runs/r22_separate_hand_lead_v2/best.zip"
+  },
+  "development_seeds": [1007, 1107, 1117],
+  "supports": ["both", "left", "right"],
+  "cases": ["sequence", "sequence_negative"],
+  "seconds": 22,
+  "motion_threshold_deg_s": 0.1,
+  "scope": "Read-only instrumentation; retain checkpoint execution settings. Compare against existing full traces. No new held-out seeds or policy changes."
+}

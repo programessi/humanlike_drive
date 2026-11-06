@@ -1,0 +1,84 @@
+{
+  "case": [
+    90,
+    -1,
+    "sequence",
+    43001
+  ],
+  "amplitude_deg": 90,
+  "direction": -1,
+  "template": "sequence",
+  "seed": 43001,
+  "complete": true,
+  "passed": true,
+  "hard_failure": false,
+  "termination_reason": "",
+  "planned_seconds": 148.1,
+  "actual_seconds": 148.09999999999943,
+  "samples": 2962,
+  "full_rmse_deg": 0.4657741006648752,
+  "prefix_rmse_deg": 0.4657741006648752,
+  "motion_rmse_deg": 0.4863075542037269,
+  "segment_rmse_deg": [
+    0.4361194800849549,
+    0.5293451866934213,
+    0.44311171058891824,
+    0.529131427744328
+  ],
+  "stop_peaks_deg": [
+    0.06978412674304975,
+    0.008199486149153307,
+    0.19614080191078823,
+    0.008081748389341796
+  ],
+  "peak_error_deg": 2.13470257346681,
+  "min_arm_margin_deg": 3.2496758547889217,
+  "collision_peak_n": 0.0,
+  "qp_failures": 0,
+  "initial_wheel_deg": 1.471150228789594,
+  "qp_diagnostic": {
+    "reason": "optimal",
+    "iterations": 2,
+    "primal_residual": 0.0,
+    "dual_residual": 6.776263578034403e-21
+  },
+  "joint_violations_at_end": [],
+  "expert_events": null,
+  "timeline": {
+    "seconds": 148.1,
+    "hold_seconds": 3.0,
+    "segments": [
+      {
+        "start": 0.5,
+        "end": 34.8016813357961,
+        "hold_end": 37.8016813357961,
+        "initial": 0.025676415283846288,
+        "target": -1.5707963267948966
+      },
+      {
+        "start": 37.8016813357961,
+        "end": 71.5516813357961,
+        "hold_end": 74.5516813357961,
+        "initial": -1.5707963267948966,
+        "target": 0.0
+      },
+      {
+        "start": 74.5516813357961,
+        "end": 108.3016813357961,
+        "hold_end": 111.3016813357961,
+        "initial": 0.0,
+        "target": 1.5707963267948966
+      },
+      {
+        "start": 111.3016813357961,
+        "end": 145.0516813357961,
+        "hold_end": 148.0516813357961,
+        "initial": 1.5707963267948966,
+        "target": 0.0
+      }
+    ]
+  },
+  "expert_probability": null,
+  "learned_evaluation": true,
+  "wall_seconds": 77.50269027802278
+}

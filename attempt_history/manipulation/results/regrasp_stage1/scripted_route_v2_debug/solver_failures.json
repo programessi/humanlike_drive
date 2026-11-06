@@ -1,0 +1,74 @@
+[
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  },
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  },
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  },
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  },
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  },
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  },
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  },
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  },
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  },
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  },
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  },
+  {
+    "kind": "SLSQP",
+    "status": 9,
+    "message": "Iteration limit reached",
+    "iterations": 30
+  }
+]

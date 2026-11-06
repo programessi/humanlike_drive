@@ -1,0 +1,26 @@
+{
+  "experiment": "R2.2-demonstration-bootstrap-v3",
+  "date": "2026-10-28",
+  "parent": "runs/r22_separate_hand_lead_v2/best.zip",
+  "interface": "structured-wrist-teacher-v4-separate-hand-lead",
+  "hand_joint_lead_rad": 0.15,
+  "demonstrator": {"angle_gain": 6.0, "preview_seconds": 0.15, "position_gain": 3.0, "orientation_gain": 3.0, "hand_gain": 1.0},
+  "seed": 17,
+  "training_seed_start": 20000,
+  "episode_seconds": 22,
+  "parking": "nominal",
+  "rounds": [
+    {"episodes": 64, "expert_probability": 1.0, "epochs": 30},
+    {"episodes": 32, "expert_probability": 0.5, "epochs": 25},
+    {"episodes": 32, "expert_probability": 0.0, "epochs": 25},
+    {"episodes": 32, "expert_probability": 0.0, "epochs": 25},
+    {"episodes": 32, "expert_probability": 0.0, "epochs": 25}
+  ],
+  "bc_learning_rate": 0.0001,
+  "bc_batch_size": 512,
+  "development_seeds": [1007, 1107, 1117],
+  "include_reverse_sequence": true,
+  "qualification_rmse_deg": 1.0,
+  "stop": "At most192 episodes/84480 interaction steps, or two consecutive strict72-case development passes. Every label is from an explicit scripted expert; deployment/evaluation uses the learned network alone with all24 actions. No new held-out evaluation until candidate freeze.",
+  "scope": "Pragmatic demonstration-assisted repair, not pure PPO or autonomous discovery of the R2 motions; autonomous handover remains futureR3. Critic unchanged during BC, optimizer moments reset before later PPO."
+}

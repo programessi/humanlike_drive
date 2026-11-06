@@ -1,0 +1,792 @@
+                                          Toward Autonomous Driving by Musculoskeletal Humanoids: A Study
+                                                of Developed Hardware and Learning-Based Software
+                                             Kento Kawaharazuka1 , Kei Tsuzuki1 , Yuya Koga1 , Yusuke Omura1 , Tasuku Makabe1 , Koki Shinjo1
+                                           Moritaka Onitsuka1 , Yuya Nagamatsu1 , Yuki Asano1 , Kei Okada1 , Koji Kawasaki2 , and Masayuki Inaba1
+
+                                           Abstract— This paper summarizes an autonomous driving
+                                        project by musculoskeletal humanoids. The musculoskeletal hu-
+                                        manoid, which mimics the human body in detail, has redundant
+                                        sensors and a flexible body structure. These characteristics are
+arXiv:2406.05573v1 [cs.RO] 8 Jun 2024
+
+
+
+
+                                        suitable for motions with complex environmental contact, and
+                                        the robot is expected to sit down on the car seat, step on
+                                        the acceleration and brake pedals, and operate the steering
+                                        wheel by both arms. We reconsider the developed hardware
+                                        and software of the musculoskeletal humanoid Musashi in the
+                                        context of autonomous driving. The respective components of
+                                                                                                                         Fig. 1.   Autonomous driving by musculoskeletal humanoids
+                                        autonomous driving are conducted using the benefits of the
+                                        hardware and software. Finally, Musashi succeeded in the pedal
+                                        and steering wheel operations with recognition.                             can sit down on the car seat easily without a special jig and
+                                                                                                                    operate the steering wheel flexibly by both arms. Also, this
+                                                               I. INTRODUCTION                                      robot can be used as a more realistic crash test dummy [10]
+                                                                                                                    because of the human-like body structure and actuation.
+                                           As a means of safe and comfortable transportation, various
+                                                                                                                       In this study, we introduce our project of autonomous
+                                        researches in autonomous driving are in progress [1], [2].
+                                                                                                                    driving by musculoskeletal humanoids (Fig. 1). Especially,
+                                        Some companies have achieved a certain level of autonomous
+                                                                                                                    we describe the characteristics of the hardware and learning-
+                                        driving, e.g. headway vehicle following and autonomous
+                                                                                                                    based software to move the flexible body. We reconsider the
+                                        parking. These cars are equipped with powerful cameras,
+                                                                                                                    developed hardware [9], [11]–[13] and software [14]–[16]
+                                        LiDARs, GPS, and processors for accurate and safe control.
+                                                                                                                    in the context of autonomous driving. Also, we develop the
+                                           On the other hand, starting with the autonomous driving
+                                                                                                                    respective components of autonomous driving and conduct
+                                        task at DARPA Robotics Challenge (DRC) [3], there are
+                                                                                                                    experiments integrating them using the hardware and soft-
+                                        researches on autonomous driving by humanoid robots [4],
+                                                                                                                    ware characteristics.
+                                        [5]. Humanoid robots are equipped with various sensors
+                                                                                                                       This paper is organized as follows. In Section II, we
+                                        for visual, acoustic, and force information. By using these
+                                                                                                                    will explain the characteristics of the developed hardware
+                                        sensors, the robot can get into the car and drive instead
+                                                                                                                    and their applications to autonomous driving. In Section
+                                        of humans. Also, unlike ordinary autonomous driving, the
+                                                                                                                    III, we will explain the overview of the learning-based
+                                        humanoid robot is expected to do other various tasks, e.g.
+                                                                                                                    software and their application to autonomous driving. In
+                                        carrying heavy baggage, assisting the old, doing housework,
+                                                                                                                    Section IV, we will integrate the hardware and software, and
+                                        and aiding with disaster response. However, because the
+                                                                                                                    conduct experiments of the pedal and handle operations with
+                                        humanoid robot lacks the flexibility of the body and deviates
+                                                                                                                    recognition. In Section V, we will discuss the issues of each
+                                        from the human body proportion, in DRC, a steering wheel
+                                                                                                                    experiment and future directions, and finally conclude this
+                                        was operated by one arm and a special jig was required to
+                                                                                                                    project in Section VI.
+                                        sit down on the seat.
+                                           Although various kinds of humanoid robots exist, one that                     II. Hardware of the Musculoskeletal Humanoid
+                                        imitates the human actuation system is the musculoskeletal
+                                                                                                                    A. Design Process
+                                        humanoid [6]–[9]. The musculoskeletal humanoid is actuated
+                                        not by motors arranged at each axis but by pneumatic                           The important points for a robot to drive a car made
+                                        actuators or muscle actuators with motors that imitate human                for humans are considered to be (1) body proportion, (2)
+                                        muscles. The body is flexible compared with the ordinary                    body flexibility, and (3) redundant sensors and learning
+                                        axis-driven humanoid due to the muscle elasticity and under-                system using them. In this paper, (1) we first determine
+                                        actuation, and so it is suitable for motions with complex envi-             the arrangement of joints and the length of each bone to
+                                        ronmental contact. Therefore, the musculoskeletal humanoid                  fit the proportion and joint structure of humans, and attach
+                                                                                                                    muscle modules to the bones. In addition, (2) a nonlinear
+                                          1 The authors are with the Department of Mechano-Informatics, Graduate
+                                                                                                                    elastic unit is attached to the end of each muscle, and the
+                                        School of Information Science and Technology, The University of Tokyo, 7-   robot can fit into the complex environment with the unit
+                                        3-1 Hongo, Bunkyo-ku, Tokyo, 113-8656, Japan. kawaharazuka@jsk.t.u-
+                                        tokyo.ac.jp                                                                 and the original flexibility of muscle wire. Finally, (3) we
+                                          2   The author is associated with TOYOTA MOTOR CORPORATION.               design a structure including not only the muscle module
+                                    Musculoskeletal Structure                                       Modularized Components
+             Musashi
+                                                                                                    Simplified human    Joint module grouping
+                                                                                                    DOF configuration
+                                            Tension measurement unit
+                                           Muscle wire (Dyneema)
+                                                                                  Muscle module
+                                     Muscle relay
+                                     unit                                Nonlinear elastic unit
+
+                                           Generic bone frame                                                           Rearrangeable parts
+                                                                     Joint module
+                                                              (a)
+                                                                                                                           2× center parts      3× axis parts
+                                                                         Collarbone
+                                                                                                                                    (c)
+                                      Scapula                            Sensor-driver integrated
+                                                                         muscle module
+                                                                                                                                            Versatility of
+                                                          Humerus                                                           Cover
+                                                                                                                                            muscle arrangement
+                                                              10x
+                                                                                                                            Motor
+                                      Muscle                                                                                driver
+                                      attachment                                                                            Motor
+                                                                         Bone frame
+                                                                                                                          Thermal
+                                                                                                                           sensor
+                                                                         Joint module                                      Tension
+                                      Joint attachment                                                                   Measurement
+                                                                                                      Pulley
+                                                                                                                             Unit
+                                                                                                                                (d)
+
+                                                                          Miniature                 Grommet-NEU
+                                             Forearm                      bone-muscle module
+
+                                                                    4x
+                                                Hand                                                Muscle Wire Grommet
+                                                              (b)                                                               (e)
+
+
+   Head, Hand, and Foot
+                                                    Finger with variable stiffness                      Toe                      Heel
+       Pan axis                                            Tight          Loose                                Robot
+       Tilt axis                                                                                       Shell                   Loadcell
+
+    Camera
+                                                                                                               Core           Core
+
+                                                                                        Loadcell
+
+                      (f)                                                       (g)                                                   (h)
+
+
+Fig. 2. The overview of the developed musculoskeletal humanoid Musashi. (a) shows the basic musculoskeletal structure. (b) shows the modularized
+structure of the left arm of Musashi combining various modules, (c) shows the rearrangeable concept of joint modules. (d) shows the detailed structure of
+muscle module (left figure) and the versatility of muscle arrangement (right figure). (e) shows the nonlinear elastic unit. (f) shows the movable eye unit.
+(g) shows the flexible musculoskeletal hand with machined springs. (h) shows the foot with six-axis core-shell structural force sensors.
+
+that can measure muscle length, muscle tension, and muscle                               resistant synthetic fiber Dyneema comes out as a muscle from
+temperature, but also a flexible hand with contact sensors,                              the tension measurement unit of the muscle module and is
+movable eyes with high resolution cameras, and loot with 6-                              folded back by the muscle relay unit. The nonlinear elastic
+axis force sensors that can measure force around their entire                            unit is attached to the end of the muscle, and a soft foam
+surface, as redundant sensors. In the next section, we will                              and spring covers the muscle. Muscles are antagonistically
+describe in detail the design of muscle modules and nonlinear                            arranged around the joint. We describe muscles mainly
+elastic units that form (2), and joint modules, eyes, hands and                          conducting the current task as agonist muscles and the others
+foot that form (3).                                                                      as antagonist muscles.
+                                                                                            (b) is the structure of the left arm of Musashi constructed
+B. Hardware Details                                                                      by the modules of (c) – (e) explained subsequently. The body
+  We show the hardware overview of the developed mus-                                    structure is easily constructed by the modules, muscle attach-
+culoskeletal humanoid Musashi [9] in Fig. 2. Currently,                                  ments connecting bones and muscles, and joint attachments
+Musashi has 74 muscles and 39 joints excluding the hand.                                 connecting bones and joints.
+  (a) shows the basic musculoskeletal structure of Musashi.                                 (c) shows the detailed structure of the joint module.
+The joint module connects the generic bone frames, and                                   We can express all the basic human joints by rearranging
+muscle modules are attached to the frame. The abrasion-                                  two center parts and three axis parts. Potentiometer, IMU,
+and a circuit integrating sensor data are packaged in the                                                                            Low stiffness High stiffness
+
+joint module. We can change the body structure easily by
+transforming this joint module.
+   (d) is the detailed structure of the muscle module. We
+use two kinds of muscle modules depending on the body
+part. One of them is a sensor-driver integrated muscle                 1                      2                                      Tension: 150 N Tension: 250 N
+
+module [17], which can drastically improve reliability and                              (a)                                                 (b)
+maintainability by packaging a motor, motor driver, thermal                57.9          with
+sensor, tension measurement unit, etc. into one module. The                                                                                         Detected
+                                                                      22              movable
+                                                                                          eye
+muscle is actuated by winding a muscle wire with a pulley.                                                      Side mirror
+The other is a miniature bone-muscle module [18]. Although
+the basic concept is the same with [17], the module is used
+not only as a muscle but also as a bone frame, and dissipates
+                                                                                  (c)                                          (d)
+heat to metal by packaging two smaller actuators into one
+module and filling the space between the two actuators by
+metal. We can get muscle tension, length, and temperature
+as sensor data. Also, as shown in the right figure of (d), we
+can realize various muscle routes by rearranging the tension                      1                                    2
+measurement unit.                                                                                               (e)
+   (e) shows the nonlinear elastic unit (NEU). The previous
+NEUs are constructed by metal and springs, and the structure
+is not appropriate for environmental contact. Therefore, we
+realize the nonlinear elasticity using the compression of rub-
+ber, by covering the grommet rubber with Dyneema. Because                         1                                        2
+the NEU is constructed with only rubber and Dyneema, the                                                         (f)
+structure itself is flexible, and it is suitable for environmental                 Low stiffness                                          High stiffness
+contact.
+   (f) is the head of Musashi with the movable eye unit [11].
+The unit includes three joints: a pan joint in each eye and
+a tilt joint. We use DFK-AFUJ003 (ImagingSource, Inc.) as
+                                                                       1                          2                    1                             2
+the eyes, and we can change the image resolution, focus,
+                                                                                                                (g)
+exposure, etc. Although we considered using Lidars/Radars,
+we decided consistently to mimic the structure of human                       1                             2                         3
+beings in detail.
+   (g) is the hand of Musashi with machined springs [12].
+The hand does not break even if hit by a hammer because
+of the high flexibility. Muscles are antagonistically arranged
+                                                                              1                             2                         3
+at proximal phalanges of each finger, and the finger stiffness                                    Foot is
+                                                                                                  caught
+can be changed by pulling the muscles and compressing the
+springs. Nine loadcells are arranged at each fingertip and the
+palm of each hand, and contact force can be measured from
+them.                                                                                                           (h)
+
+   (h) is the foot of Musashi with six-axis core-shell force
+sensors [13]. The core-shell structure is arranged at the toe        Fig. 3. The realization of respective components of autonomous driving
+and heel, and multiple loadcells are arranged between the            using the characteristics of the developed hardware. (a) shows a steering
+core and shell. This structure can measure all the force             wheel operation with both arms. (b) shows a variable stiffness control using
+                                                                     the nonlinear elastic units. (c) shows the field of view of the movable eye
+applied to the entire shell surface, and so the force to the         unit. (d) shows the human detection experiment in the side mirror using the
+instep of the foot can be measured.                                  high resolution camera. (e) shows an experiment pulling a handbrake. (f)
+                                                                     shows an experiment rotating a key. (g) shows an experiment operating a
+C. Application of the Hardware to Autonomous Driving                 blinker lever by changing the stiffness of fingers. (h) shows a recovering
+                                                                     experiment from slipping during brake pedal operation using the developed
+   We explain the use of the developed nonlinear elastic unit,       foot.
+head, hand, and foot of Musashi in terms of autonomous
+driving, in Fig. 3 (presented in multimedia material).               could not be seen in DRC. Also, as shown in (b), the robot
+   By using nonlinear elastic units, the robot can not only          can change impact response by changing the body stiffness.
+make the body flexible but can also change the stiffness             When dropping a 5 kg ball to the robot from 1 m height,
+freely. As shown in (a), the flexible body structure makes it        the maximum muscle tension is 150 N with low stiffness,
+possible to operate a steering wheel with both arms, which           and 250 N with high stiffness. This resembles the increase
+                               (a) Intersensory Network                     (c) Reflex Module
+                                             𝒉𝑠𝑡𝑎𝑡𝑖𝑐                                                        𝒍𝑟𝑒𝑓′ Safety Reflex                  𝒍𝑟𝑒𝑓′′   Actual Robot
+                                                                𝒍𝑟𝑒𝑓 , 𝜽𝑟𝑒𝑓 Muscle Relaxation Control
+                𝜽𝑟𝑒𝑓 , 𝒇𝑟𝑒𝑓                                                                                         𝒍𝑟𝑒𝑓′′ = 𝒍𝑟𝑒𝑓′ + 𝛥𝒍𝑠𝑎𝑓𝑒
+                                       𝜽                                         𝒍𝑟𝑒𝑓′ = 𝒍𝑟𝑒𝑓 + 𝛥𝒍𝑟𝑒𝑙𝑎𝑥
+                                                          𝒍
+
+
+
+
+                                               …
+                                           …
+                                       𝒇
+                                                                                                                                                   𝒇, 𝒄
+                                              1000
+              Action                                                                                                              Joint
+   Task                                    OR                                              𝜽𝑒𝑠𝑡 , 𝒇                               Angle
+              Selection
+                               (b) Dynamic Task Control Network                                                                   Estimator        𝒍, 𝒇
+                                                    𝒉𝑑𝑦𝑛𝑎𝑚𝑖𝑐𝑠
+                                  𝒔′𝑡𝑎𝑠𝑘,𝑡                                               Data Collection Server
+                     𝑟𝑒𝑓                                           𝒔𝑡𝑎𝑠𝑘,[𝑡+1,𝑡+𝑁]
+                    𝒔𝑡𝑎𝑠𝑘
+
+
+
+
+                                                        …
+                                𝒖[𝑡,𝑡+𝑁−1]
+
+
+                                                   …
+                                             …                                        (d) Recognition Module
+                                                   80 50 20
+                                                                                                                  Sound Recognition
+                  𝒔′𝑡𝑎𝑠𝑘   = {𝒔𝑡𝑎𝑠𝑘 , 𝜽𝑒𝑠𝑡 , 𝜽ሶ 𝑒𝑠𝑡 , 𝒍, 𝒍}ሶ                                                                  𝒉𝑠𝑜𝑢𝑛𝑑
+             𝒔𝑠𝑜𝑢𝑛𝑑                                                                                                                                 𝑺
+                                                                                       Visual Recognition                 𝑺             𝒔𝑠𝑜𝑢𝑛𝑑
+                                                                                       ・Yolo v3
+
+
+
+
+                                                                                                                                  …
+                                                                                                                              …
+             𝒔𝑣𝑖𝑠𝑖𝑜𝑛
+                                                                                       ・OpenPose, etc.                            50                𝑰
+
+
+Fig. 4. The overview of the developed software with four modules: intersensory network module (static module), dynamic task control network module
+(dynamic module), reflex module, and recognition module.
+
+of human arm stiffness during a car crash, and the use of                                 B. Software Details
+Musashi as a crash test dummy is anticipated.                                                We show the overview of the learning-based software
+   By using the head with the movable eye unit, the robot                                 system in Fig. 4. We describe the current muscle length as
+can recognize objects with a wide field of view as shown in                               l, the current muscle tension as f , the current joint angle as
+(c). Also, the robot can recognize a human in a side mirror                               θ, the current muscle temperature as c, the muscle Jacobian
+using the high resolution camera, as shown in (d).                                        as G, the current image as I, the current sound as S, the
+   By using the flexible hand with machined springs, the                                  task state as stask , the current state obtained from vision as
+robot can adapt the grasp shape to various situations inside                              svision , and the current state obtained from sound as s sound .
+the car, such as pulling a handbrake (e) and rotating a key (f).                          Also, {l, θ, f , stask }re f is the control command of each state,
+Also, by using the variable stiffness mechanism of fingers, as                            and θ est is the estimated joint angle.
+shown in (g), the robot can operate a blinker lever correctly                                The basic components of this system are (a) intersensory
+with high stiffness.                                                                      network module (static module), (b) dynamic task control
+   By using the foot which can measure the force applied to                               network module (dynamic module), (c) reflex module, and
+its entire surface, the robot can recover the foot position by                            (d) recognition module.
+sensing the force to its instep when slipping during a brake                                 The static module (a) acquires the function h static below
+pedal operation, as shown in (h).                                                         [14].
+                                                                                                                          l = h static (θ, f )                           (1)
+      III. Software of the Musculoskeletal Humanoid                                       This represents the static relationship among θ, l, and f .
+                                                                                          When θ re f and f re f are given depending on the task, by
+A. Design Process                                                                         inputting them into Eq. 1, lre f to send to the robot is
+                                                                                          calculated. This function is expressed by a neural network,
+   In order to handle the flexible body and redundant sensors,                            and is initialized by man-made data. Then, we update the
+we consider that (1) a learning-based motion generation, (2)                              network online by using the actual robot sensor information
+a learning-based recognition, and (3) a fast reflex control                               (θ, f , l). At every movement, the network is updated, and
+are necessary. (1) can be divided into two types of motion                                the robot becomes able to realize θ re f , f re f accurately. In
+generators, for static behavior and dynamic behavior. In                                  this study, θ can be obtained from the joint module, but the
+the former, the dimension of state space is relatively small                              ordinary musculoskeletal humanoid does not have joint angle
+and online learning is effective. In the latter, the dimension                            sensors due to complex joints such as the ball or scapula
+is relatively large and only offline learning can be used                                 joints. In that case, θ must be obtained from a motion capture
+currently. In addition, we also develop (2) learning-based                                or vision sensor. Also, by using this network h static , not only
+recognition methods using eyes and ear sensors, because                                   control but also estimation of joint angles θ est are enabled
+visual and sound recognition is significant in performing the                             by using Extended Kalman Filter (EKF) and the change in
+driving task. Since it is difficult to operate learning-based                             muscle length and tension.
+controls at high frequency, a safety mechanism should be                                     The dynamic module (b) acquires the function hdynamic
+implemented in a lower layer as (3) reflex control. In this                               below [15],
+study, we use a simple conditional branching based on the
+recognition results for motion planning.                                                                  stask,[t+1,t+N] = hdynamics (s′task,t , u[t,t+N−1] )           (2)
+where {stask , u}[t1 ,t2 ] is a vector vertically arranging {stask , u}      state, we sort muscles by x in descending order, and grad-
+from t1 to t2 time steps, s′task,t is the initial task state                 ually decrease ∆lrelax starting with necessary muscles. This
+({stask , θ est , θ̇ est , l, l̇} in this study), u is the control command   reflex can inhibit unnecessary muscle tension of antagonist
+(θ re f or lre f in this study), and N is the number of time steps           muscles due to the model error. Also, for example, when
+to expand this state equation. This function is equivalent to a              resting the arms on the table, the body and environment are
+network representing a dynamic transition of the task state by               constrained, and so not only antagonist muscle tension but
+a control command sequence. This network can be trained by                   also agonist muscle tension can be reduced, because the joint
+gathering data of observed task state transition when sending                angle does not change even when relaxing agonist muscles.
+random control commands. When realizing a certain task                       Thus, the robot becomes able to rest its body and move
+state sre   f
+         task , we execute the equations below after setting the
+                                                                             continuously for a longer time. Safety reflex is a simple
+initial u,                                                                   control that elongates muscle length in order not to break
+         pred
+                                                                             motors due to high muscle tension and temperature. We add
+        stask,seq = hdynamic (s′task,t , uinit
+                                          seq )                       (3)    ∆l sa f e calculated as below to the target muscle length,
+                           pred
+                L=   MSE(stask,seq , sre f
+                                      task,seq )   + αEad j (uinit
+                                                              seq )   (4)       ∆lre f
+                                                                                  sa f e =K f max(f − f     , 0) + Kc max(c − clim , 0)
+                                                                                                        lim
+                                                                                                                                                              (9)
+                g=   dL/duinit                                        (5)
+                          seq                                                  ∆l sa f e ←∆l sa f e + max(∆l   min
+                                                                                                                     , min(∆l   max
+                                                                                                                                      , ∆lre f
+                                                                                                                                                   − ∆l sa f e ))
+                                  g                                                                                                       sa f e
+             seq ← u seq − β
+            uinit   init
+                                                                      (6)                                                                                     (10)
+                                 |g|
+                                                                             where {f , c}lim is a threshold of muscle tension or temper-
+where uinit
+          seq is the sequence of the initial value of control com-
+          pred                                                               ature to begin the reflex, K{ f,c} is a gain, ∆lre f
+                                                                                                                             sa f e is an ideal
+mand, stask,seq   is the predicted sequence of stask in [t+1, t+N]
+                                                 re f                        elongation value, and ∆l{min,max} is a minimum or maximum
+calculated from s′task,t and uinit    seq , and stask,seq is a vector        change of ∆l sa f e at one time step. By elongating the muscle
+arranging N number of sre         f
+                               task . Also, MSE is mean squared              length considering muscle tension and temperature, we can
+error, Ead j is MSE of the values at adjacent time steps, α is               inhibit the burnout of motors.
+a weight constant, and β is an update rate. We calculate the                    (d) is the recognition module, and it is divided into object
+loss between the predicted and target stask , add the loss to                and sound recognition. In this study, we use Yolo v3 [20]
+smoothen the target control command sequence, and update                     for object recognition. The labels mainly used in this study
+the control command sequence by backpropagation [19]. By                     is “car,” “person,” and “traffic light.” Also, regarding sound
+repeating this procedure, uinit seq is updated to accurately realize         recognition, the sound is converted into a mel spectrum, and
+  re f
+stask , and the task is executed by sending uinit     t  to the actual       the network h sound is trained to output sound class from the
+robot. While (a) is the network regarding static motions, (b)                spectrum. In this study, this module recognizes only noise
+is the network regarding dynamic motions, and its learning                   or car horn.
+is difficult due to more variables. So, the robot is moved
+mainly by (a), but (b) is constructed offline and used when                  C. Application of the Software to Autonomous Driving
+conducting tasks in which dynamic and accurate motions are                      We show the use of each software component for au-
+required.                                                                    tonomous driving in Fig. 5 (presented in multimedia ma-
+    (c) is the reflex module which is executed at high fre-                  terial).
+quency. Muscle Relaxation Control (MRC) [16] is a control                       The static module can be applied to various motions,
+elongating muscles from antagonist muscles to agonist mus-                   and especially, is useful for steering wheel operation. In
+cles while keeping the current joint angle. First, we calculate              (a), we show an experiment to operate the steering wheel
+the necessary muscle tension x achieving the necessary joint                 during online learning of the static module. The graphs of
+torque τ nec by solving quadratic programming.                               (a) show the transition of the steering wheel angle and 10
+                                                                             muscle tensions of the shoulder and elbow of Musashi. At
+   minimize          xT W1 x + (GT x + τ nec )T W2 (GT x + τ nec )           every operation, the angle gradually increases, and muscle
+        x
+                                                                      (7)    tension gradually decreases. Thus, the relationship among f ,
+   subject to                           x ≥ f min                     (8)    θ, and l is correctly updated using the actual robot sensor
+                                                                             information.
+where W1 , W2 are weight matrices, and f min is the minimum                     The dynamic module is useful for dynamic motions. The
+muscle tension. We sort muscles by x in ascending order,                     pedal operation is a good example because a fast motion
+and gradually elongate them in order starting with unneces-                  adaptation is necessary. In (b), we trained the dynamic mod-
+sary antagonist muscles with smaller tension. In detail, we                  ule using the data of random pedal operation for one minute
+gradually increase the muscle relaxation value ∆lrelax , and                 and conducted pedal operation with the trained network. This
+add it to the muscle length to send to the actual robot. When                experiment was conducted indoors and the rear wheels were
+the muscle tension becomes smaller than f min , the muscle                   on free rollers for safety. The car velocity was obtained
+to elongate is changed to the next muscle, and this control                  through CAN-USB of the car. We describe the car velocity
+stops when the current joint angle is changed more than a                    as vcar and the joint angle of right ankle pitch as θankle , and
+threshold. This procedure works in a static state. At a moving               set θankle as u. We set vre f
+                                                                                                       car = 5[km/h], and conducted the
+                                            0.6
+                                                                              Transition of Steering Wheel Angle
+                                            0.4                                                                                 Online learning
+
+
+
+
+                      Angle [rad]
+                                            0.2
+                                              0
+                                           -0.2
+                                           -0.4
+                                           -0.6
+                                           -0.8
+                  1
+                                                                    0                   100                                       200        300                    400
+                                                                                                                                     Time [sec]
+                                           300                                          Transition of Muscle Tension                                                                         (a)                                     (b)
+                      Muscle tension [N]
+
+
+                                                                                                                                        Online learning
+                                                                                                                                                                                                                                                In Musashi
+                                           200
+                                                                                                                                                                                                                                    PC1 for motor control
+                                           100                                                                                                                                 Logic power                      Servo power
+                                                                                                                                                                               supply                           supply
+               2                             0
+                                                                    0                  100                                       200                  300           400                                                             PC2 for image/sound
+                                                                    #1       #2        #3 #4                                    #5 #6            #7     #8     #9    #10       PC for                            Wi-Fi router
+                                                                                                 (a)                                                                           recognition                                                         In COMS
+
+                                                                                                                                                                                                                   Battery           PC3 for recognition
+                                                                                                                                                      𝑟𝑒𝑓
+                                                                         Transition of Car Velocity (𝑣𝑐𝑎𝑟 = 5 km/h)
+                                                                    12
+                                                                                                                                           𝑟𝑒𝑓                           PID                                                                      Outside
+                                                                    10                   Within ±20% of 𝑣𝑐𝑎𝑟                                                                                                                           PC4 for motion
+                                                                     8                   (22.9 [sec])                                                                                                                                    generation
+                                                                     6
+                                              Car velocity [km/h]
+
+
+
+
+                                                                     4                                                                                                                               (c)                                     (d)
+                                                                     2
+                              1
+                                                                     0
+                                                                         0                                                 10                20                     30
+                                                                    12                                                                                                         Fig. 6. Experimental setup of autonomous driving by the musculoskeletal
+                                                                                                                                     𝑟𝑒𝑓
+                                                                    10            Within ±20% of 𝑣𝑐𝑎𝑟                                                                          humanoid Musashi: (a) pedal operation configuration, (b) experimental
+                                                                     8            (0.9 [sec])                                                                                  environment, (c) experimental configuration in COMS, and (d) configuration
+                                                                                                                                 Proposed                   Current state
+                                                                     6                                                                                                         of PCs.
+                                                                                                                                                            Target state
+                              2                                      4
+                                                                     2
+                                                                     0                                                                                                         when further increasing the gain in our experiment. Thus, by
+                                                                         0                                                 10 Time [sec] 20                                    acquiring the state equation between task state and control
+                                                                                                 (b)                                                                           command, fast tracking is enabled.
+                                                                                                                                                                                  The reflex module is useful for motions with long rest
+                                                                                                                               : muscle tension
+                                                                                                                                                                               time. For example, as shown in (c), during the steering
+                                                                                                                                       without MRC              with MRC
+                                                                                                400                                                                            wheel operation, the robot does not always operate the wheel.
+                                                                                   || ||2 [N]
+
+
+
+
+                                                                                                                                                                               In this case, Muscle Relaxation Control (MRC) gradually
+                                                                                                200
+                                                                                                                                                                               makes antagonist muscles elongate and makes internal force
+                                                                                                  0                                                                            decrease. Also, because the steering wheel and the hands
+              1                                                          2                                                 0           50        100                     150   are constrained, the current joint angle does not change
+                                                                                                                                         Time [sec]
+                                                                                                 (c)                                                                           largely even when elongating agonist muscles. We show the
+                                                                                                                                                                               transition of L2 norm of 10 muscle tensions of the elbow and
+                                                                                                                                                                     640000    shoulder in the left arm of Musashi ||f ||2 , with and without
+                                                                                                 Detected Frequency [Hz]
+
+
+
+
+                                                                                                                           8000
+                                                                                                                                                                               MRC. The muscle tension is reduced in a static state with
+                                                                                                                                                                               MRC compared to without MRC. This module can inhibit
+                                                                                                                           0                                                   the increase of muscle temperature, and long-time operation
+                                                                                                                                                                          0
+                                                                                                                                                                               is enabled.
+                                                                                                                                           Time [sec]
+                                                                                                                                                                                  The recognition module is mainly used as visual recog-
+                                                                                                 (d)                                                                           nition of “person” and “traffic light,” and sound recognition
+                                                                                                                                                                               of the car horn. The left figure of (d) shows the recognition
+                                                                                                                                                                               result at a crossing, and the traffic lights and a human are
+Fig. 5. Respective components of autonomous driving using the developed                                                                                                        recognized well. Also, the right figure of (d) shows the sound
+software. (a) shows a steering wheel operation experiment using the online
+learning of static module. (b) shows a pedal operation experiment using the
+                                                                                                                                                                               spectrum of a car horn, and the car horn is recognized well.
+trained dynamic module. (c) shows a steering wheel operation experiment
+with and without muscle relaxation control. (d) shows visual recognition of                                                                                                                                IV. Experiments
+traffic lights and a human, and sound recognition of a car horn.
+                                                                                                                                                                               A. Experimental Setup
+manually tuned PID control (PID) and the proposed control                                                                                                                        The car used in this study is a B.COM Delivery of
+with the dynamic module (Proposed). When comparing PID                                                                                                                         extremely small EV COMS (Chotto Odekake Machimade
+and Proposed, the error between vcar and vre  f
+                                            car falls within                                                                                                                   Suisui) series. For safety, its motor torque is limited to 5
+20% starting from 22.9 sec and 0.9 sec, respectively. Since                                                                                                                    Nm, and an emergency stop button is equipped. In the pedal
+the dynamic relationship between the joint angle of ankle-                                                                                                                     operation, as shown in (a) of Fig. 6, acceleration and brake
+pitch and car velocity is complex, this was the limit of                                                                                                                       pedal is operated by the right and left foot, respectively.
+PID by manual tuning and the car velocity vibrated largely                                                                                                                     The experiment is conducted in the Kashiwa Campus at
+                                                                 t=20 [sec]                            t=54 [sec]                                    t=58 [sec]
+                                    Brake
+
+
+                       Acceleration Pedal Operation using                                       1                                                2                          3
+                         Dynamic Task Control Network
+                                                                t=77 [sec]                             t=80 [sec]                                    t=100 [sec]
+
+                                 Car horn or
+                               human detected              No
+                                   Yes                                                          4                                                5                          6
+                                      (a)                                                                                 (b)
+
+                           4                                                                                                         7000                                 400000
+    Car velocity [km/h]
+
+
+
+
+                                    curret velocity
+
+
+
+
+                                                                                                                                Frequency [Hz]
+                           3        target velocity
+                           2
+                           1
+                           0
+                               0                      50        100
+                         0.2                                                                                                             0                                      0
+   Joint angle [rad]
+
+
+
+
+                        0.15
+                         0.1
+                                                                              Detected
+
+
+
+
+                                                                                                                                 Detected
+                        0.05
+                           0
+                       -0.05
+                        -0.1
+                               0                   50           100                      0      50                  100                      0                 50         100
+                                                 Time [sec]                                  Time [sec]                                                      Time [sec]
+                                                (c)                                              (d)                                                               (e)
+
+Fig. 7. Pedal operation experiment with recognition. (a) shows the experimental motion flow. (b) shows the experimental appearance. (c) shows the current
+and target car velocity (upper graph) and the joint angle of the right ankle pitch for the acceleration pedal (lower graph). (d) shows the visual recognition
+result. (e) shows the sound spectrum and its recognition result.
+
+the University of Tokyo, as shown in (b). As shown in (c),                                      that the car velocity became 0. The big problem here is the
+COMS is equipped with a battery, logic power supply, servo                                      poor tracking of the target car velocity as shown in (c). This
+power supply, Wi-Fi router, and PC for recognition module                                       is because of the difference between the environment that
+in the trunk. COMS is an electric vehicle, and all the electric                                 the network is trained in and the experimental environment.
+power for the robot can be obtained from COMS in the                                            When t = [0, 60] [sec], the car velocity decreased because
+future. As shown in (d), PCs (Intel NUC, Intel, Inc.) for                                       the road friction was high, and when t = [90, 110] [sec],
+motor control and image/sound are in the head of Musashi,                                       the car velocity increased because the road was downhill.
+the recognition is executed on the PC (ZOTAC VR GO,                                             This was not a problem in the experiment on the free roller,
+ZOTAC, Inc.) in COMS, and the other processes are executed                                      but the difference of the actual environment was difficult
+on PC4 outside.                                                                                 to handle. Because the learning-based controls depend on
+                                                                                                the data used for training, we must continue to conduct
+B. Pedal Operation with Recognition
+                                                                                                experiments outside, obtain data, and solve this problem.
+   We conducted an experiment integrating the pedal op-
+eration and recognition (Fig. 7, presented in multimedia                                        C. Handle Operation with Recognition
+material). We show the experimental motion flow in (a) of                                          We conducted the steering wheel operation with recog-
+Fig. 7. First, the robot operates the acceleration pedal using                                  nition (Fig. 8, presented in multimedia material). We show
+the trained dynamic module, steps on the brake pedal if it                                      the motion flow in (a) of Fig. 8. The robot steps on the
+recognizes a human, restarts the acceleration pedal operation,                                  brake pedal when the traffic light is red, releases the brake
+and steps on the brake pedal again if it recognizes a car                                       pedal when the traffic light turns blue, and turns right at
+horn. The motion sequence is shown in (b) of Fig. 7, and                                        the crossing by the steering wheel operation with the static
+we can see that it succeeded. (c) shows the transition of car                                   module. In this experiment, because turning at a curve is
+velocity (upper graph) and joint angle of the right ankle pitch                                 difficult when the car velocity is fast, we use creep velocity
+(lower graph). (d) shows the recognition result of a human.                                     just by releasing the brake pedal. Also, the steering wheel
+The robot recognizes a human when its bounding box is                                           is turned to the right first and then is turned to the left by a
+larger than a certain threshold and its center coordinate is                                    human command. (b) shows the overview of this experiment,
+around the center of the image. (e) shows the recognition                                       and we can see that the car began to move when the traffic
+result of a car horn. When a human (c) or car horn (d) was                                      light turned blue and the car could turn right at the crossing
+detected, the brake pedal was stepped on, and we can see                                        by 90 deg. (c) shows the sequence of the steering wheel
+                                                             t=0 [sec]              t=21 [sec]                           t=66 [sec]                                        t=110 [sec]
+                               Brake
+
+
+                                                No                             1                                   2                                                 3                          4
+                         Traffic light: Blue
+                                                                                                                       (b)
+                                   Yes
+                           Acceleration
+
+
+                  Steering Wheel Operation
+                                                                               1                                   2                                                  3                         4
+                                 (a)                                                                                   (c)
+                   0.5                                                                                  Blue
+                                                                                                          1                                                          0.5
+
+
+
+
+                                                                                                                                                Joint Angle [rad]
+                     0                                                                                                                                               0.4
+    Angle [rad]
+
+
+
+
+                  -0.5
+
+
+
+
+                                                                                             Detected
+                                                                                                                                                                     0.3
+                    -1
+                                                                                                          0
+                                                                                                        None                                                         0.2
+                  -1.5
+                                                                                                                                                                     0.1
+                    -2
+                  -2.5                                                                                                                                                 0
+                    -3                                                                                   -1
+                                                                                                        Red                                                         -0.1
+                          0            20      40        60        80    100       120                         0              10          20                               0          10        20
+                                                      Time [sec]                                                             Time [sec]                                            Time [sec]
+                                                     (d)                                                                                       (e)
+
+Fig. 8. Steering wheel operation with recognition. (a) shows the experimental motion flow. (b) shows the experimental appearance. (c) shows the sequence
+of steering wheel operation. (d) shows the transition of the steering wheel angle. (e) shows the traffic light recognition result and the joint angle of the left
+ankle pitch for brake pedal operation.
+
+operation. The sequence is rotating the steering wheel by                                    However, online learning becomes difficult with additional
+both arms as much as possible, releasing the left hand,                                      network input, and an efficient learning system with only a
+returning the left hand to the original position, releasing the                              few data is desired.
+right hand, returning the right hand to the original position,                                  Second, the robot adjusts only the acceleration pedal, and
+and rotating again. The transition of the steering angle is                                  cannot adjust the brake pedal. When driving more slowly
+shown in (d). The robot could turn the steering wheel by                                     than creep velocity, the robot must adjust the car velocity by
+about 180 deg in 70 sec. The left figure of (e) shows the                                    stepping on the brake pedal. Also, in this study, although not
+recognition result of the traffic light. The light is cropped by                             required at the slow car velocity, the robot needs to acquire
+object detection module, and the blue or red of the traffic                                  how to smoothly step on the brake pedal as the car velocity
+light is recognized from the ratio of red and blue pixels. The                               becomes fast.
+module could recognize the moment when the light turns                                          Third, the car velocity is currently obtained from COMS
+from blue to red. At the same time, as shown in the right                                    software, but it should be obtained using image information,
+figure of (e), the left ankle pitch joint moved to release the                               IMU, etc. Since the car velocity obtained from visual odom-
+brake pedal, and the car began to move. The problem of this                                  etry is too noisy for pedal operation now, especially at low
+experiment is the slowness of the steering wheel operation.                                  speed, we need to develop a new estimation algorithm.
+Currently, turning at the crossing takes about two minutes,
+and we must make the motions faster and smoother.                                            B. Steering Wheel Operation
+                                                                                                Although Musashi succeeded in the steering wheel oper-
+               V. Limitations and Future Works
+                                                                                             ation with both arms for the first time, there remain some
+A. Pedal Operation                                                                           issues.
+   The pedal operation is one of the tasks with various                                         First, in this study, the robot operated the steering wheel
+remaining issues. In this study, we assumed a flat and smooth                                not by grasping it but by pressing the hand to it. Releasing
+road and developed a method to achieve the target car                                        and holding the steering wheel were difficult because the fin-
+velocity quickly by representing the state equation between                                  gers sometimes were caught by the wheel or the robot could
+the car velocity and joint angle of the ankle pitch. However,                                not accurately grasp the intended part. The first problem
+there are three issues.                                                                      is prominent because the complex finger structure is often
+   First, in the actual driving environment, the road is not                                 caught somewhere in the car, and the robot cannot restore
+smooth; the ground rises at a crossing, and the road is                                      itself. The hand structure with smooth skin or a glove may be
+sometimes uphill or downhill. In those cases, the state                                      able to solve this problem. Also, the robot needs to identify
+equation trained at a flat road is different from that of                                    the direction its hand was caught from sensors and restore
+the actual environment, and the robot cannot adjust the car                                  itself.
+velocity well. To solve this problem, we need to conduct                                        Second, in this study, the robot operated the steering
+online learning or add the image of road condition and                                       wheel by push-pull steering method, and it is not the usual
+                                                            ′
+IMU information in the body to the initial task state stask .                                human motion of the cross arm steering. In the cross arm
+steering, the arms move while interfering with each other,           Furthermore, in order to be able to drive not only a single
+and the inverse kinematics must be solved in a wide range.        car but also various cars, we have to consider what needs
+We experienced that large internal force among the arms           to be learned immediately when a car is changed. It is
+sometimes emerges and parts of the hands were caught by           necessary to learn not only the current intersensory network
+each other. Also, we found that the robot must have the           and dynamic task control network but also the position of
+scapula joint to solve the inverse kinematics in a wider range.   key, side brake, etc. in the future.
+                                                                     Finally, this is the first example of a robot sitting on a car
+C. Recognition                                                    and driving a car with both arms without a jig, but some
+   We used the general object detection method for the visual     metric is needed to compare its performance in the future.
+recognition module, and the recognition of the road line and      As for performance, we can think of an index of how long it
+distance to objects are not conducted. Especially, the latter     takes to complete a certain course. However, there are many
+is due to the structure of the developed eye unit. While the      difficult problems such as what kind of course to make and
+movable eye unit can enlarge the field of view by moving          how neatly the course should be driven. As for safety, it
+the eyes, the external parameter changes by this movement         is more difficult to establish an index. Although a long-term
+and estimation of the depth map by stereo vision is difficult.    endurance test is possible, we have not yet reached the stage.
+Currently, we are developing a learning-based method to
+estimate the object distance from the convergence angle,                                    VI. CONCLUSION
+binocular parallax, etc. Also, our experiments are conducted
+                                                                     In this study, we focused on autonomous driving by the
+only at day time. At night time, although we, humans, can
+                                                                  musculoskeletal humanoid Musashi using the characteristics
+recognize traffic lights and pedestrians through the cameras,
+                                                                  of its hardware and software. By making use of the flexibility,
+Musashi, that is, YOLOv3, cannot. We used the pretrained
+                                                                  variable stiffness structure, and several sensors, we succeeded
+model of YOLOv3, but the model does not use time-series
+                                                                  in the steering wheel operation with both arms and human
+transition of image and is not trained by using the dataset
+                                                                  recognition in the side mirror. Also, we proposed a learning-
+at the night time. Therefore, we need to train another model
+                                                                  based system handling the flexible body with difficult model-
+using video and dataset at the night time.
+                                                                  ing and succeeded in the pedal and steering wheel operations
+   Although acoustic information is rarely used for au-
+                                                                  with recognition. For autonomous driving by humanoids in
+tonomous driving, we applied it to the recognition of the
+                                                                  the future, we would like to develop the next hardware and
+car horn. In the future, we need to develop a system for the
+                                                                  software using the obtained knowledge.
+robot to understand the current situation by integrating the
+visual and sound information, to recognize the anomaly of
+                                                                                                 References
+the engine, and to talk with humans.
+   The recognition of the failure of the hardware components       [1] J. Levinson, J. Askeland, J. Becker, J. Dolson, D. Held, S. Kammel,
+will also become important. In musculoskeletal humanoids,              J. Z. Kolter, D. Langer, O. Pink, V. Pratt, M. Sokolsky, G. Stanek,
+                                                                       D. Stavens, A. Teichman, M. Werling, and S. Thrun, “Towards fully
+the failure is mainly in the muscle, which can be broken               autonomous driving: Systems and algorithms,” in Proceedings of the
+when strong force is applied continuously or when the                  2011 IEEE Intelligent Vehicles Symposium (IV), 2011, pp. 163–168.
+wire is frayed by friction. By using an Autoencoder-type           [2] M. R. Endsley, “Autonomous Driving Systems: A Preliminary Natu-
+                                                                       ralistic Study of the Tesla Model S,” Journal of Cognitive Engineering
+network, we can detect anomalies, and even if the muscle               and Decision Making, vol. 11, no. 3, pp. 225–238, 2017.
+is ruptured, by continuing online learning, we can obtain          [3] “DARPA          Robotics      Challenge,”        http://archive.darpa.mil/
+the intersensory network in the broken state as in [14].               roboticschallenge/, Accessed: 2021-06-30.
+                                                                   [4] C. Rasmussen, K. Sohn, Q. Wang, and P. Oh, “Perception and
+However, the actual task of autonomous driving requires                control strategies for driving utility vehicles with a humanoid robot,”
+quicker adaptation and operation in dangerous situations, and          in Proceedings of the 2014 IEEE/RSJ International Conference on
+the detection of anomalies in hardware components and their            Intelligent Robots and Systems, 2014, pp. 973–980.
+                                                                   [5] A. Paolillo, P. Gergondet, A. Cherubini, M. Vendittelli, and A. Khed-
+handling should be considered more deeply for safety.                  dar, “Autonomous car driving by a humanoid robot,” Journal of Field
+                                                                       Robotics, vol. 35, no. 2, pp. 169–186, 2018.
+D. Future Works                                                    [6] H. G. Marques, M. Jäntsh, S. Wittmeier, O. Holland, C. Alessandro,
+   The content we handled in this study is only a part of              A. Diamond, M. Lungarella, and R. Knight, “ECCE1: the first of a
+                                                                       series of anthropomimetic musculoskeletal upper torsos,” in Proceed-
+the entire system for autonomous driving. The robot must               ings of the 2010 IEEE-RAS International Conference on Humanoid
+get into the car, localize the self-position with SLAM, and            Robots, 2010, pp. 391–396.
+conduct a driving motion planning. Also, the respective            [7] Y. Nakanishi, S. Ohta, T. Shirai, Y. Asano, T. Kozuki, Y. Kake-
+                                                                       hashi, H. Mizoguchi, T. Kurotobi, Y. Motegi, K. Sasabuchi,
+components of rotating a key, pulling a handbrake, looking             J. Urata, K. Okada, I. Mizuuchi, and M. Inaba, “Design Approach
+around, acceleration pedal operation, and steering wheel op-           of Biologically-Inspired Musculoskeletal Humanoids,” International
+eration must be integrated into one system. For this purpose,          Journal of Advanced Robotic Systems, vol. 10, no. 4, pp. 216–228,
+                                                                       2013.
+we need a method that handles the flexible body more               [8] Y. Asano, T. Kozuki, S. Ookubo, M. Kawamura, S. Nakashima,
+accurately, manages the muscle temperature, and recognizes             T. Katayama, Y. Iori, H. Toshinori, K. Kawaharazuka, S. Makino,
+the situation more accurately. Also, we need to improve the            Y. Kakiuchi, K. Okada, and M. Inaba, “Human Mimetic Musculoskele-
+                                                                       tal Humanoid Kengoro toward Real World Physically Interactive Ac-
+hardware for the scapula with wide range motion and the                tions,” in Proceedings of the 2016 IEEE-RAS International Conference
+body shape with smooth human-like skin.                                on Humanoid Robots, 2016, pp. 876–883.
+ [9] K. Kawaharazuka, S. Makino, K. Tsuzuki, M. Onitsuka, Y. Nagamatsu,            K. Okada, K. Kawasaki, and M. Inaba, “Long-time Self-body Image
+     K. Shinjo, T. Makabe, Y. Asano, K. Okada, K. Kawasaki, and                    Acquisition and its Application to the Control of Musculoskeletal
+     M. Inaba, “Component Modularized Design of Musculoskeletal Hu-                Structures,” IEEE Robotics and Automation Letters, vol. 4, no. 3, pp.
+     manoid Platform Musashi to Investigate Learning Control Systems,”             2965–2972, 2019.
+     in Proceedings of the 2019 IEEE/RSJ International Conference on        [15]   K. Kawaharazuka, K. Tsuzuki, S. Makino, M. Onitsuka, K. Shinjo,
+     Intelligent Robots and Systems, 2019, pp. 7294–7301.                          Y. Asano, K. Okada, K. Kawasaki, and M. Inaba, “Task-specific Self-
+[10] E. Haug, H. Choi, S. Robin, and M. Beaugonin, “Human Models                   body Controller Acquisition by Musculoskeletal Humanoids: Appli-
+     for Crash and Impact Simulation,” in Computational Models for the             cation to Pedal Control in Autonomous Driving,” in Proceedings of
+     Human Body, ser. Handbook of Numerical Analysis. Elsevier, 2004,              the 2019 IEEE/RSJ International Conference on Intelligent Robots and
+     vol. 12, pp. 231–452.                                                         Systems, 2019, pp. 813–818.
+[11] T. Makabe, K. Kawaharazuka, K. Tsuzuki, K. Wada, S. Makino,            [16]   K. Kawaharazuka, K. Tsuzuki, M. Onitsuka, Y. Koga, Y. Omura,
+     M. Kawamura, A. Fujii, M. Onitsuka, Y. Asano, K. Okada,                       Y. Asano, K. Okada, K. Kawasaki, and M. Inaba, “Reflex-based
+     K. Kawasaki, and M. Inaba, “Development of Movable Binocular                  Motion Strategy of Musculoskeletal Humanoids under Environmental
+     High-Resolution Eye-Camera Unit for Humanoid and the Evaluation               Contact Using Muscle Relaxation Control,” in Proceedings of the 2019
+     of Looking Around Fixation Control and Object Recognition,” in                IEEE-RAS International Conference on Humanoid Robots, 2019, pp.
+     Proceedings of the 2018 IEEE-RAS International Conference on                  114–119.
+     Humanoid Robots, 2018, pp. 840–845.                                    [17]   Y. Asano, T. Kozuki, S. Ookubo, K. Kawasaki, T. Shirai, K. Kimura,
+[12] S. Makino, K. Kawaharazuka, M. Kawamura, A. Fujii, T. Makabe,                 K. Okada, and M. Inaba, “A Sensor-driver Integrated Muscle Module
+     M. Onitsuka, Y. Asano, K. Okada, K. Kawasaki, and M. Inaba, “Five-            with High-tension Measurability and Flexibility for Tendon-driven
+     Fingered Hand with Wide Range of Thumb Using Combination of                   Robots,” in Proceedings of the 2015 IEEE/RSJ International Confer-
+     Machined Springs and Variable Stiffness Joints,” in Proceedings of            ence on Intelligent Robots and Systems, 2015, pp. 5960–5965.
+     the 2018 IEEE/RSJ International Conference on Intelligent Robots and   [18]   K. Kawaharazuka, S. Makino, M. Kawamura, Y. Asano, Y. Kaki-
+     Systems, 2018, pp. 4562–4567.                                                 uchi, K. Okada, and M. Inaba, “Human Mimetic Forearm Design
+[13] K. Shinjo, K. Kawaharazuka, Y. Asano, S. Nakashima, S. Makino,                with Radioulnar Joint using Miniature Bone-muscle Modules and its
+     M. Onitsuka, K. Tsuzuki, K. Okada, K. Kawasaki, and M. Inaba,                 Applications,” in Proceedings of the 2017 IEEE/RSJ International
+     “Foot with a Core-shell Structural Six-axis Force Sensor for Pedal            Conference on Intelligent Robots and Systems, 2017, pp. 4956–4962.
+     Depressing and Recovering from Foot Slipping during Pedal Pushing      [19]   D. E. Rumelhart, G. E. Hinton, and R. J. Williams, “Learning repre-
+     Toward Autonomous Driving by Humanoids,” in Proceedings of the                sentations by back-propagating errors,” nature, vol. 323, no. 6088, pp.
+     2019 IEEE/RSJ International Conference on Intelligent Robots and              533–536, 1986.
+     Systems, 2019, pp. 3049–3054.                                          [20]   J. Redmon and A. Farhadi, “YOLOv3: An Incremental Improvement,”
+[14] K. Kawaharazuka, K. Tsuzuki, S. Makino, M. Onitsuka, Y. Asano,                arXiv preprint arXiv:1804.02767, 2018.
+

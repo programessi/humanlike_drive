@@ -1,0 +1,28 @@
+{
+  "kind": "offline_prepared_both_hand_state",
+  "scene_sha256": "6254e8ce711eb7534eac93746886ed599e8806a025a9286b3e93e61e393b1233",
+  "preparation": "S00 finite capped joint PD with centering; no wheel jig",
+  "initial_metrics": {
+    "wheel_angle_deg": 1.3521475192067844,
+    "wheel_drift_deg": 0.0,
+    "wheel_speed_deg_s": -0.16977386517870285,
+    "centering_torque_state_nm": -0.007079709567545913,
+    "viscous_torque_state_nm": 0.0004444669396807974,
+    "disturbance_torque_applied_nm": 0.0,
+    "centering_torque_applied_nm": -0.00708148734617146,
+    "total_external_wheel_torque_applied_nm": -0.00708148734617146,
+    "min_arm_margin_deg": 20.33483078459436,
+    "left_contact_force_norm_sum_n": 15.053481571788842,
+    "right_contact_force_norm_sum_n": 14.149843752187353,
+    "non_hand_collision_peak_n": 0.0,
+    "finite": true,
+    "actuator_force_limits_respected": true
+  },
+  "states": [
+    {
+      "file": "both_00.initial.npz",
+      "sha256": "43305585559f27fb6ad86e5c0ce6a9e4afbd93ecf436edce7db32b1746251da4",
+      "support": "both"
+    }
+  ]
+}

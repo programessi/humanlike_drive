@@ -1,0 +1,14 @@
+{
+  "task": "baseline",
+  "cross_project_import_guard_passed": true,
+  "qpos_exactly_equal": true,
+  "actions_exactly_equal": true,
+  "steps": 20,
+  "scene_regeneration_identical": true,
+  "package_root": "/home/nubot/humanlike_drive/baseline",
+  "checkpoint_loaded": true,
+  "visual_dataset_loaded": true,
+  "tests_passed": 15,
+  "test_log": "results/isolation_tests.log",
+  "carla_api_import_passed": true
+}

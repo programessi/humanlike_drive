@@ -1,0 +1,133 @@
+{
+  "version": 5,
+  "description": "Rim-only support, avoiding rear metal paddles and spokes. Left hand target in the wheel frame at 9/3; reflect for the right and rotate for upper-rim grasps. Six independent hand drives retain matching H1-2 URDF mimic constraints.",
+  "active_grasp": {
+    "grip_pose": {
+      "position_m": [
+        -0.019147328692320893,
+        0.14962512504104075,
+        -0.008776255846199578
+      ],
+      "rotation_matrix": [
+        [
+          0.7674326219081217,
+          -0.39879571030778144,
+          -0.5020051317181319
+        ],
+        [
+          0.4629017162498879,
+          0.8864027398670699,
+          0.0034905370735395197
+        ],
+        [
+          0.4435867129706831,
+          -0.235057789056788,
+          0.8648575974572931
+        ]
+      ]
+    },
+    "hand_drives": [
+      0.41050503758223916,
+      0.20563817743595506,
+      0.7134111273373944,
+      0.8532220589633774,
+      1.0957733198714101,
+      1.2726747289932514
+    ],
+    "approach_seconds": 1.0,
+    "arm_posture": {
+      "wrist_yaw_target_deg": 35.0,
+      "left_elbow_preference_m": [
+        0.15,
+        0.14,
+        0.98
+      ]
+    }
+  },
+  "labels": {
+    "nine_three": "9 / 3 \u00b7 aligned forearm and hand, four fingers on rim; paddles clear",
+    "ten_two": "10 / 2 \u00b7 enveloping contact",
+    "left_support": "Left enveloping support / right hand clear",
+    "right_support": "Right enveloping support / left hand clear"
+  },
+  "presets": {
+    "ten_two": {
+      "grip_pose": {
+        "position_m": [
+          -0.018147328692320892,
+          0.14962512504104075,
+          -0.008776255846199578
+        ],
+        "rotation_matrix": [
+          [
+            0.7674326219081217,
+            -0.39879571030778144,
+            -0.5020051317181319
+          ],
+          [
+            0.4629017162498879,
+            0.8864027398670699,
+            0.0034905370735395197
+          ],
+          [
+            0.4435867129706831,
+            -0.235057789056788,
+            0.8648575974572931
+          ]
+        ]
+      },
+      "arm_posture": {
+        "wrist_yaw_target_deg": 25.0,
+        "left_elbow_preference_m": [
+          0.15,
+          0.14,
+          0.98
+        ]
+      }
+    },
+    "nine_three": {
+      "grip_pose": {
+        "position_m": [
+          0.006198177437093055,
+          0.169327282010849,
+          0.0017868663779709497
+        ],
+        "rotation_matrix": [
+          [
+            0.8123237482860209,
+            0.029420803140701394,
+            -0.5824642000270112
+          ],
+          [
+            0.2331195302625974,
+            0.8990899725170846,
+            0.37053003377509713
+          ],
+          [
+            0.5345890127758854,
+            -0.43677412659380915,
+            0.7234935727133448
+          ]
+        ]
+      },
+      "hand_drives": [
+        0.9356200900651764,
+        0.3017700926988885,
+        0.8643297076528627,
+        0.9073233094250889,
+        1.0961276259439652,
+        1.2915384311611644
+      ],
+      "arm_posture": {
+        "wrist_yaw_target_deg": 5.0,
+        "left_elbow_preference_m": [
+          0.15,
+          0.16,
+          0.98
+        ],
+        "maximum_abs_yaw_deg": 10.0,
+        "maximum_forearm_hand_angle_deg": 15.0
+      }
+    }
+  }
+}

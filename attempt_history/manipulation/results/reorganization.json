@@ -1,0 +1,1480 @@
+{
+  "date": "2026-10-05",
+  "moves": [
+    {
+      "old": "humanlike_drive/dexsteer_v2/curriculum.py",
+      "new": "humanlike_drive/manipulation/curriculum.py"
+    },
+    {
+      "old": "humanlike_drive/dexsteer_v2/observations.py",
+      "new": "humanlike_drive/manipulation/observations.py"
+    },
+    {
+      "old": "humanlike_drive/dexsteer_v2/scene.py",
+      "new": "humanlike_drive/manipulation/scene.py"
+    },
+    {
+      "old": "humanlike_drive/dexsteer_v2/config.py",
+      "new": "humanlike_drive/manipulation/config.py"
+    },
+    {
+      "old": "humanlike_drive/dexsteer_v2/__init__.py",
+      "new": "humanlike_drive/manipulation/__init__.py"
+    },
+    {
+      "old": "humanlike_drive/dexsteer_v2/evaluate.py",
+      "new": "humanlike_drive/manipulation/evaluate.py"
+    },
+    {
+      "old": "humanlike_drive/dexsteer_v2/artifacts.py",
+      "new": "humanlike_drive/manipulation/artifacts.py"
+    },
+    {
+      "old": "humanlike_drive/dexsteer_v2/train.py",
+      "new": "humanlike_drive/manipulation/train.py"
+    },
+    {
+      "old": "humanlike_drive/dexsteer_v2/env.py",
+      "new": "humanlike_drive/manipulation/env.py"
+    },
+    {
+      "old": "humanlike_drive/dexsteer_v2/controller.py",
+      "new": "humanlike_drive/manipulation/controller.py"
+    },
+    {
+      "old": "humanlike_drive/navigation.py",
+      "new": "humanlike_drive/baseline/navigation.py"
+    },
+    {
+      "old": "humanlike_drive/vision.py",
+      "new": "humanlike_drive/baseline/vision.py"
+    },
+    {
+      "old": "humanlike_drive/report.py",
+      "new": "humanlike_drive/baseline/report.py"
+    },
+    {
+      "old": "humanlike_drive/scene.py",
+      "new": "humanlike_drive/baseline/scene.py"
+    },
+    {
+      "old": "humanlike_drive/evaluate.py",
+      "new": "humanlike_drive/baseline/evaluate.py"
+    },
+    {
+      "old": "humanlike_drive/benchmark.py",
+      "new": "humanlike_drive/baseline/benchmark.py"
+    },
+    {
+      "old": "humanlike_drive/carla_bridge.py",
+      "new": "humanlike_drive/baseline/carla_bridge.py"
+    },
+    {
+      "old": "humanlike_drive/train.py",
+      "new": "humanlike_drive/baseline/train.py"
+    },
+    {
+      "old": "humanlike_drive/env.py",
+      "new": "humanlike_drive/baseline/env.py"
+    },
+    {
+      "old": "humanlike_drive/controller.py",
+      "new": "humanlike_drive/baseline/controller.py"
+    },
+    {
+      "old": "humanlike_drive/preview.py",
+      "new": "humanlike_drive/baseline/preview.py"
+    },
+    {
+      "old": "assets/cockpit.xml",
+      "new": "baseline/assets/cockpit.xml"
+    },
+    {
+      "old": "assets/cockpit.ik.npz",
+      "new": "baseline/assets/cockpit.ik.npz"
+    },
+    {
+      "old": "assets/cockpit_dexsteer_v2.xml",
+      "new": "manipulation/assets/wheel.xml"
+    },
+    {
+      "old": "configs/training.yaml",
+      "new": "baseline/configs/training.yaml"
+    },
+    {
+      "old": "configs/vision.yaml",
+      "new": "baseline/configs/vision.yaml"
+    },
+    {
+      "old": "configs/dexsteer_v2.yaml",
+      "new": "manipulation/configs/task.yaml"
+    },
+    {
+      "old": "experiments/dexsteer_v2",
+      "new": "manipulation/results/pilot"
+    },
+    {
+      "old": "baseline/carla_drive_clockwise",
+      "new": "baseline/results/carla_drive_clockwise"
+    },
+    {
+      "old": "baseline/servo_replay",
+      "new": "baseline/results/servo_replay"
+    },
+    {
+      "old": "baseline/isolated_tests_20261004",
+      "new": "baseline/results/isolated_tests_20261004"
+    },
+    {
+      "old": "DEXSTEER_V2.md",
+      "new": "manipulation/docs/METHOD.md"
+    },
+    {
+      "old": "RESULTS.md",
+      "new": "baseline/docs/RESULTS_HISTORY.md"
+    },
+    {
+      "old": "PROJECT_PLAN.md",
+      "new": "baseline/docs/PROJECT_PLAN.md"
+    },
+    {
+      "old": "WORKSPACE_MAP.md",
+      "new": "docs/WORKSPACE_MAP.md"
+    },
+    {
+      "old": "runs/vision",
+      "new": "baseline/runs/vision"
+    },
+    {
+      "old": "runs/ppo_track.log",
+      "new": "baseline/runs/ppo_track.log"
+    },
+    {
+      "old": "runs/ppo_robust.log",
+      "new": "baseline/runs/ppo_robust.log"
+    },
+    {
+      "old": "runs/vision_pilot",
+      "new": "baseline/runs/vision_pilot"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s17.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s17.log"
+    },
+    {
+      "old": "runs/ppo_track",
+      "new": "baseline/runs/ppo_track"
+    },
+    {
+      "old": "runs/vision_nav",
+      "new": "baseline/runs/vision_nav"
+    },
+    {
+      "old": "runs/dexsteer_grasp_s7.log",
+      "new": "baseline/runs/dexsteer_grasp_s7.log"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s7_recovered.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s7_recovered.log"
+    },
+    {
+      "old": "runs/vision_xy_pilot",
+      "new": "baseline/runs/vision_xy_pilot"
+    },
+    {
+      "old": "runs/ppo_hold_pilot",
+      "new": "baseline/runs/ppo_hold_pilot"
+    },
+    {
+      "old": "runs/ppo_robust",
+      "new": "baseline/runs/ppo_robust"
+    },
+    {
+      "old": "runs/dexsteer_v1_reach10_coupled_s7.log",
+      "new": "baseline/runs/dexsteer_v1_reach10_coupled_s7.log"
+    },
+    {
+      "old": "runs/dexsteer_v2",
+      "new": "manipulation/runs/dexsteer_v2"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s17_recovered.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s17_recovered.log"
+    },
+    {
+      "old": "runs/vision_xy",
+      "new": "baseline/runs/vision_xy"
+    },
+    {
+      "old": "runs/vision_route_pilot",
+      "new": "baseline/runs/vision_route_pilot"
+    },
+    {
+      "old": "runs/vision_routes",
+      "new": "baseline/runs/vision_routes"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s27.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s27.log"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s7.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s7.log"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s27_recovered.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s27_recovered.log"
+    },
+    {
+      "old": "manipulation/runs/dexsteer_v2/grasp_s7_pilot",
+      "new": "manipulation/runs/grasp_s7_pilot"
+    },
+    {
+      "old": "manipulation/runs/dexsteer_v2/implicit_grasp_s7_pilot",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot"
+    },
+    {
+      "old": "manipulation/runs/dexsteer_v2/implicit_reach10_s7_pilot",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot"
+    },
+    {
+      "old": "manipulation/runs/dexsteer_v2/implicit_hands_grasp_s7_pilot",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot"
+    },
+    {
+      "old": "manipulation/runs/dexsteer_v2/implicit_hands_reach10_s7_pilot",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot"
+    },
+    {
+      "old": "outputs/carla_vision_robot_360range",
+      "new": "baseline/outputs/carla_vision_robot_360range"
+    },
+    {
+      "old": "outputs/carla_teacher_robot_audit.log",
+      "new": "baseline/outputs/carla_teacher_robot_audit.log"
+    },
+    {
+      "old": "outputs/carla_vision_robot_guarded.log",
+      "new": "baseline/outputs/carla_vision_robot_guarded.log"
+    },
+    {
+      "old": "outputs/vision_nav_training.log",
+      "new": "baseline/outputs/vision_nav_training.log"
+    },
+    {
+      "old": "outputs/carla_vision_robot_lane3.log",
+      "new": "baseline/outputs/carla_vision_robot_lane3.log"
+    },
+    {
+      "old": "outputs/carla_vision_xy_robot_pilot.log",
+      "new": "baseline/outputs/carla_vision_xy_robot_pilot.log"
+    },
+    {
+      "old": "outputs/integral_control.log",
+      "new": "baseline/outputs/integral_control.log"
+    },
+    {
+      "old": "outputs/display_interface_test.png",
+      "new": "baseline/outputs/display_interface_test.png"
+    },
+    {
+      "old": "outputs/carla_vision_xy_robot_pilot",
+      "new": "baseline/outputs/carla_vision_xy_robot_pilot"
+    },
+    {
+      "old": "outputs/carla_drive_clockwise.log",
+      "new": "baseline/outputs/carla_drive_clockwise.log"
+    },
+    {
+      "old": "outputs/carla_vision_robot",
+      "new": "baseline/outputs/carla_vision_robot"
+    },
+    {
+      "old": "outputs/cockpit_hands.png",
+      "new": "baseline/outputs/cockpit_hands.png"
+    },
+    {
+      "old": "outputs/collection_xy.log",
+      "new": "baseline/outputs/collection_xy.log"
+    },
+    {
+      "old": "outputs/carla_vision_direct_arc",
+      "new": "baseline/outputs/carla_vision_direct_arc"
+    },
+    {
+      "old": "outputs/carla_api_download.log",
+      "new": "baseline/outputs/carla_api_download.log"
+    },
+    {
+      "old": "outputs/cockpit_hands_end.png",
+      "new": "baseline/outputs/cockpit_hands_end.png"
+    },
+    {
+      "old": "outputs/carla_vision_robot_360range.log",
+      "new": "baseline/outputs/carla_vision_robot_360range.log"
+    },
+    {
+      "old": "outputs/carla_vision_robot_lane3",
+      "new": "baseline/outputs/carla_vision_robot_lane3"
+    },
+    {
+      "old": "outputs/carla_download.log",
+      "new": "baseline/outputs/carla_download.log"
+    },
+    {
+      "old": "outputs/collection_route_ccw.log",
+      "new": "baseline/outputs/collection_route_ccw.log"
+    },
+    {
+      "old": "outputs/collection_route.log",
+      "new": "baseline/outputs/collection_route.log"
+    },
+    {
+      "old": "outputs/imagenet_download.log",
+      "new": "baseline/outputs/imagenet_download.log"
+    },
+    {
+      "old": "outputs/carla_teacher_180range",
+      "new": "baseline/outputs/carla_teacher_180range"
+    },
+    {
+      "old": "outputs/carla_vision_robot_120s.log",
+      "new": "baseline/outputs/carla_vision_robot_120s.log"
+    },
+    {
+      "old": "outputs/ppo_pilot_sine",
+      "new": "baseline/outputs/ppo_pilot_sine"
+    },
+    {
+      "old": "outputs/test_results.log",
+      "new": "baseline/outputs/test_results.log"
+    },
+    {
+      "old": "outputs/no_contact",
+      "new": "baseline/outputs/no_contact"
+    },
+    {
+      "old": "outputs/ppo_robust_sine45_random",
+      "new": "baseline/outputs/ppo_robust_sine45_random"
+    },
+    {
+      "old": "outputs/carla_vision_xy_direct_pilot",
+      "new": "baseline/outputs/carla_vision_xy_direct_pilot"
+    },
+    {
+      "old": "outputs/cockpit_overview.png",
+      "new": "baseline/outputs/cockpit_overview.png"
+    },
+    {
+      "old": "outputs/cockpit",
+      "new": "baseline/outputs/cockpit"
+    },
+    {
+      "old": "outputs/carla_teacher_robot_120s.log",
+      "new": "baseline/outputs/carla_teacher_robot_120s.log"
+    },
+    {
+      "old": "outputs/carla_teacher_robot_120s",
+      "new": "baseline/outputs/carla_teacher_robot_120s"
+    },
+    {
+      "old": "outputs/carla_drive_clockwise",
+      "new": "baseline/outputs/carla_drive_clockwise"
+    },
+    {
+      "old": "outputs/vision_pilot.log",
+      "new": "baseline/outputs/vision_pilot.log"
+    },
+    {
+      "old": "outputs/baseline_sine30",
+      "new": "baseline/outputs/baseline_sine30"
+    },
+    {
+      "old": "outputs/carla_vision_robot.log",
+      "new": "baseline/outputs/carla_vision_robot.log"
+    },
+    {
+      "old": "outputs/baseline_isolated_20261004_smoke",
+      "new": "baseline/outputs/baseline_isolated_20261004_smoke"
+    },
+    {
+      "old": "outputs/ppo_track_sine30",
+      "new": "baseline/outputs/ppo_track_sine30"
+    },
+    {
+      "old": "outputs/servo_replay",
+      "new": "baseline/outputs/servo_replay"
+    },
+    {
+      "old": "outputs/dexsteer_v2",
+      "new": "manipulation/outputs/dexsteer_v2"
+    },
+    {
+      "old": "outputs/carla_vision_xy_direct_pilot.log",
+      "new": "baseline/outputs/carla_vision_xy_direct_pilot.log"
+    },
+    {
+      "old": "outputs/carla_vision_nav_robot_pilot.log",
+      "new": "baseline/outputs/carla_vision_nav_robot_pilot.log"
+    },
+    {
+      "old": "outputs/carla_vision_nav_robot_pilot",
+      "new": "baseline/outputs/carla_vision_nav_robot_pilot"
+    },
+    {
+      "old": "outputs/carla_collection.log",
+      "new": "baseline/outputs/carla_collection.log"
+    },
+    {
+      "old": "outputs/benchmark45.log",
+      "new": "baseline/outputs/benchmark45.log"
+    },
+    {
+      "old": "outputs/vision_route_pilot.log",
+      "new": "baseline/outputs/vision_route_pilot.log"
+    },
+    {
+      "old": "outputs/vision_training.log",
+      "new": "baseline/outputs/vision_training.log"
+    },
+    {
+      "old": "outputs/carla_vision_robot_adaptive",
+      "new": "baseline/outputs/carla_vision_robot_adaptive"
+    },
+    {
+      "old": "outputs/vision_xy_pilot.log",
+      "new": "baseline/outputs/vision_xy_pilot.log"
+    },
+    {
+      "old": "outputs/carla_teacher_robot_audit",
+      "new": "baseline/outputs/carla_teacher_robot_audit"
+    },
+    {
+      "old": "outputs/carla_teacher_robot",
+      "new": "baseline/outputs/carla_teacher_robot"
+    },
+    {
+      "old": "outputs/carla_vision_robot_120s",
+      "new": "baseline/outputs/carla_vision_robot_120s"
+    },
+    {
+      "old": "outputs/wheel_trace_replay.log",
+      "new": "baseline/outputs/wheel_trace_replay.log"
+    },
+    {
+      "old": "outputs/carla_vision_direct_arc.log",
+      "new": "baseline/outputs/carla_vision_direct_arc.log"
+    },
+    {
+      "old": "outputs/ppo_track_sequence",
+      "new": "baseline/outputs/ppo_track_sequence"
+    },
+    {
+      "old": "outputs/vision_xy_training.log",
+      "new": "baseline/outputs/vision_xy_training.log"
+    },
+    {
+      "old": "outputs/carla_control_probe.json",
+      "new": "baseline/outputs/carla_control_probe.json"
+    },
+    {
+      "old": "outputs/carla_vision_robot_guarded",
+      "new": "baseline/outputs/carla_vision_robot_guarded"
+    },
+    {
+      "old": "outputs/carla_vision_xy_robot_final",
+      "new": "baseline/outputs/carla_vision_xy_robot_final"
+    },
+    {
+      "old": "outputs/carla_teacher_robot.log",
+      "new": "baseline/outputs/carla_teacher_robot.log"
+    },
+    {
+      "old": "outputs/carla_teacher_180range.log",
+      "new": "baseline/outputs/carla_teacher_180range.log"
+    },
+    {
+      "old": "outputs/carla_release.json",
+      "new": "baseline/outputs/carla_release.json"
+    },
+    {
+      "old": "outputs/ppo_robust_sine30",
+      "new": "baseline/outputs/ppo_robust_sine30"
+    },
+    {
+      "old": "outputs/carla_vision_xy_robot_final.log",
+      "new": "baseline/outputs/carla_vision_xy_robot_final.log"
+    },
+    {
+      "old": "outputs/carla_vision_direct.log",
+      "new": "baseline/outputs/carla_vision_direct.log"
+    },
+    {
+      "old": "outputs/carla_server.log",
+      "new": "baseline/outputs/carla_server.log"
+    },
+    {
+      "old": "outputs/wheel_trace_replay.json",
+      "new": "baseline/outputs/wheel_trace_replay.json"
+    },
+    {
+      "old": "outputs/carla_vision_direct",
+      "new": "baseline/outputs/carla_vision_direct"
+    },
+    {
+      "old": "outputs/baseline_isolated_20261004",
+      "new": "baseline/outputs/baseline_isolated_20261004"
+    },
+    {
+      "old": "outputs/carla_vision_robot_adaptive.log",
+      "new": "baseline/outputs/carla_vision_robot_adaptive.log"
+    },
+    {
+      "old": "outputs/baseline_sine",
+      "new": "baseline/outputs/baseline_sine"
+    },
+    {
+      "old": "outputs/integral_control.json",
+      "new": "baseline/outputs/integral_control.json"
+    },
+    {
+      "old": "outputs/vision_routes_training.log",
+      "new": "baseline/outputs/vision_routes_training.log"
+    },
+    {
+      "old": "outputs/benchmark45",
+      "new": "baseline/outputs/benchmark45"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_nominal_sine_f0.1_120s",
+      "new": "manipulation/outputs/implicit_nominal_sine_f0.1_120s"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_reach10_s7_sine10_600s",
+      "new": "manipulation/outputs/implicit_reach10_s7_sine10_600s"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_full_sequence_demo",
+      "new": "manipulation/outputs/implicit_full_sequence_demo"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/validation",
+      "new": "manipulation/outputs/validation"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/hands_reach10_evaluation.log",
+      "new": "manipulation/outputs/hands_reach10_evaluation.log"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_full_sequence_f0.02_120s",
+      "new": "manipulation/outputs/implicit_full_sequence_f0.02_120s"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/test_results_implicit.log",
+      "new": "manipulation/outputs/test_results_implicit.log"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/validation_physics500hz",
+      "new": "manipulation/outputs/validation_physics500hz"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_reach10_s7_disturbed120",
+      "new": "manipulation/outputs/implicit_reach10_s7_disturbed120"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_grasp_s7_pilot_eval",
+      "new": "manipulation/outputs/implicit_grasp_s7_pilot_eval"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_nominal_sequence_f0.02_120s",
+      "new": "manipulation/outputs/implicit_nominal_sequence_f0.02_120s"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/validation_pregrasp",
+      "new": "manipulation/outputs/validation_pregrasp"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/grasp_s7_disturbed120_pair.json",
+      "new": "manipulation/outputs/grasp_s7_disturbed120_pair.json"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_full_sine_f0.1_120s",
+      "new": "manipulation/outputs/implicit_full_sine_f0.1_120s"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/reversal_pair.log",
+      "new": "manipulation/outputs/reversal_pair.log"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/reach10_long_pilot.json",
+      "new": "manipulation/outputs/reach10_long_pilot.json"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_hands_reach10_s7_disturbed120",
+      "new": "manipulation/outputs/implicit_hands_reach10_s7_disturbed120"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_nominal_pilot",
+      "new": "manipulation/outputs/implicit_nominal_pilot"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_hands_reach10_s7_pilot_eval",
+      "new": "manipulation/outputs/implicit_hands_reach10_s7_pilot_eval"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_reach10_s7_pilot_eval",
+      "new": "manipulation/outputs/implicit_reach10_s7_pilot_eval"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/nominal_pilot",
+      "new": "manipulation/outputs/nominal_pilot"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_hands_sine_f0.1_120s",
+      "new": "manipulation/outputs/implicit_hands_sine_f0.1_120s"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_grasp_s7_sine10_600s",
+      "new": "manipulation/outputs/implicit_grasp_s7_sine10_600s"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_nominal_sine10_600s",
+      "new": "manipulation/outputs/implicit_nominal_sine10_600s"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/initial_grasp_contacts",
+      "new": "manipulation/outputs/initial_grasp_contacts"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_hands_reach10_s7_sine10_600s",
+      "new": "manipulation/outputs/implicit_hands_reach10_s7_sine10_600s"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/grasp_s7_disturbed120_nominal",
+      "new": "manipulation/outputs/grasp_s7_disturbed120_nominal"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/grasp_s7_disturbed120_policy",
+      "new": "manipulation/outputs/grasp_s7_disturbed120_policy"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_hands_grasp_s7_pilot_eval",
+      "new": "manipulation/outputs/implicit_hands_grasp_s7_pilot_eval"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/implicit_hands_sequence_f0.02_120s",
+      "new": "manipulation/outputs/implicit_hands_sequence_f0.02_120s"
+    },
+    {
+      "old": "manipulation/outputs/dexsteer_v2/jitter_diagnosis.json",
+      "new": "manipulation/outputs/jitter_diagnosis.json"
+    },
+    {
+      "old": "data",
+      "new": "baseline/data"
+    },
+    {
+      "old": "weights",
+      "new": "baseline/weights"
+    },
+    {
+      "old": "vendor",
+      "new": "third_party/vendor"
+    },
+    {
+      "old": "downloads",
+      "new": "third_party/downloads"
+    },
+    {
+      "old": "scripts/analyze_baseline_steering.py",
+      "new": "baseline/scripts/analyze_baseline_steering.py"
+    },
+    {
+      "old": "scripts/download_carla.py",
+      "new": "baseline/scripts/download_carla.py"
+    },
+    {
+      "old": "scripts/with_carla.sh",
+      "new": "baseline/scripts/with_carla.sh"
+    },
+    {
+      "old": "scripts/summarize_dexsteer_v2.py",
+      "new": "manipulation/scripts/summarize_results.py"
+    },
+    {
+      "old": "scripts/validate_dexsteer_v2.py",
+      "new": "manipulation/scripts/validate_physics.py"
+    },
+    {
+      "old": "scripts/start_carla.sh",
+      "new": "baseline/scripts/start_carla.sh"
+    },
+    {
+      "old": "scripts/inspect_initial_grasp_contacts.py",
+      "new": "manipulation/scripts/inspect_initial_grasp.py"
+    },
+    {
+      "old": "scripts/demo.sh",
+      "new": "baseline/scripts/demo.sh"
+    },
+    {
+      "old": "scripts/benchmark_baseline_steering.py",
+      "new": "baseline/scripts/benchmark_baseline_steering.py"
+    },
+    {
+      "old": "tests/test_dexsteer_v2.py",
+      "new": "manipulation/tests/test_task.py"
+    },
+    {
+      "old": "tests/test_navigation.py",
+      "new": "baseline/tests/test_navigation.py"
+    },
+    {
+      "old": "tests/test_physics.py",
+      "new": "baseline/tests/test_physics.py"
+    },
+    {
+      "old": "tests/test_vision.py",
+      "new": "baseline/tests/test_vision.py"
+    }
+  ],
+  "deleted": [
+    {
+      "path": "runs/dexsteer",
+      "files": 79,
+      "bytes": 621700952,
+      "reason": "Removed wrist-velocity PPO experiment at user request"
+    },
+    {
+      "path": "outputs/dexsteer",
+      "files": 90,
+      "bytes": 11607677,
+      "reason": "Removed wrist-velocity PPO experiment at user request"
+    },
+    {
+      "path": "experiments/dexsteer_v1",
+      "files": 3,
+      "bytes": 326670,
+      "reason": "Removed wrist-velocity PPO experiment at user request"
+    },
+    {
+      "path": "assets/cockpit_dexsteer.xml",
+      "files": 1,
+      "bytes": 69607,
+      "reason": "Removed wrist-velocity PPO experiment at user request"
+    },
+    {
+      "path": "configs/dexsteer.yaml",
+      "files": 1,
+      "bytes": 1445,
+      "reason": "Removed wrist-velocity PPO experiment at user request"
+    },
+    {
+      "path": "DEXSTEER.md",
+      "files": 1,
+      "bytes": 8026,
+      "reason": "Removed wrist-velocity PPO experiment at user request"
+    },
+    {
+      "path": "scripts/summarize_dexsteer_v1.py",
+      "files": 1,
+      "bytes": 6819,
+      "reason": "Removed wrist-velocity PPO experiment at user request"
+    },
+    {
+      "path": "tests/test_dexsteer.py",
+      "files": 1,
+      "bytes": 7023,
+      "reason": "Removed wrist-velocity PPO experiment at user request"
+    },
+    {
+      "path": "humanlike_drive/dexsteer",
+      "files": 30,
+      "bytes": 164693,
+      "reason": "Removed wrist-velocity PPO experiment at user request"
+    },
+    {
+      "path": "humanlike_drive/dexsteer_v2",
+      "files": 20,
+      "bytes": 63189,
+      "reason": "Removed wrist-velocity PPO experiment at user request"
+    }
+  ],
+  "preserved_artifacts": [
+    {
+      "old": "assets/cockpit.xml",
+      "new": "baseline/assets/cockpit.xml",
+      "sha256": "6e99c9134fd8d77cf4684ba9784b750aec527fde4ef7362fcc48e8de4661155e"
+    },
+    {
+      "old": "assets/cockpit.ik.npz",
+      "new": "baseline/assets/cockpit.ik.npz",
+      "sha256": "23579a1df3dc8decbf05cce2b495490a30289575460ed94637cfa8b1c9d5cb05"
+    },
+    {
+      "old": "assets/cockpit_dexsteer_v2.xml",
+      "new": "manipulation/assets/wheel.xml",
+      "sha256": "d92535b92ec540b018f764921f5ccd2a39ccaaa9f3fce2e7ec7543d1dbaef9be"
+    },
+    {
+      "old": "runs/vision/last.pt",
+      "new": "baseline/runs/vision/last.pt",
+      "sha256": "e80eb929f50be5d21ac5f5ee4379895cbe46a762799542a5584ff10bf4814991"
+    },
+    {
+      "old": "runs/vision/history.json",
+      "new": "baseline/runs/vision/history.json",
+      "sha256": "6da5475586a745e660f2919d14f7d30f570251faa9b99a026d3ec8b8511791a6"
+    },
+    {
+      "old": "runs/vision/config.json",
+      "new": "baseline/runs/vision/config.json",
+      "sha256": "ab56b7e48deab4b2bddf01af7eff2ad2cee9d4a14ef3e3629e7d32047f672157"
+    },
+    {
+      "old": "runs/vision/best.pt",
+      "new": "baseline/runs/vision/best.pt",
+      "sha256": "531398cb61a558cddc5d89e930599106c4c0313c02e2aa471ecb287266edb79e"
+    },
+    {
+      "old": "runs/ppo_track.log",
+      "new": "baseline/runs/ppo_track.log",
+      "sha256": "d47ef5df8980141f508d8885927be7c440b4d7c77be7f99886b06a4b0e489af9"
+    },
+    {
+      "old": "runs/ppo_robust.log",
+      "new": "baseline/runs/ppo_robust.log",
+      "sha256": "d99a3b30e21be9db0825624e3b98751fddccb416c0225a042d325ff9bb90729b"
+    },
+    {
+      "old": "runs/vision_pilot/last.pt",
+      "new": "baseline/runs/vision_pilot/last.pt",
+      "sha256": "c3f71e8585f6037b0248d1bb30188232e011a10cc40f5a4821c26eca47f7b8c9"
+    },
+    {
+      "old": "runs/vision_pilot/history.json",
+      "new": "baseline/runs/vision_pilot/history.json",
+      "sha256": "2d8db1ae03c733f8e13230cad1c90ff8ce60af8704c57963e26821e6fbb40e6b"
+    },
+    {
+      "old": "runs/vision_pilot/best.pt",
+      "new": "baseline/runs/vision_pilot/best.pt",
+      "sha256": "dc4f73724471caa0cc7284708b1f3b5d60106bacd7b48ff8021529e2b0de889a"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s17.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s17.log",
+      "sha256": "555a1d8425c476d60b2bf2ae1d280fe27dd13e87889e0e6ecb8030ef9e5b7b35"
+    },
+    {
+      "old": "runs/ppo_track/final_model.zip",
+      "new": "baseline/runs/ppo_track/final_model.zip",
+      "sha256": "238f49d912af5c6a2116e58354311ee1372ab3b42b97bf72dc13b180a82e2ffd"
+    },
+    {
+      "old": "runs/ppo_track/config.json",
+      "new": "baseline/runs/ppo_track/config.json",
+      "sha256": "f53eceef5117c2bbcc3299ec6b91eaf39d8ab85ee1e5bfb80dd64a0ef3aade0a"
+    },
+    {
+      "old": "runs/ppo_track/checkpoints/ppo_114688_steps.zip",
+      "new": "baseline/runs/ppo_track/checkpoints/ppo_114688_steps.zip",
+      "sha256": "72de1ce3794d102f756ddb344702599d6e5ac23a56de9edc2788417dced9b07e"
+    },
+    {
+      "old": "runs/ppo_track/checkpoints/ppo_278528_steps.zip",
+      "new": "baseline/runs/ppo_track/checkpoints/ppo_278528_steps.zip",
+      "sha256": "345d59b3bd216ee6b54ca434508cf54d8d5db8bd4bf4d2d6a9bc118d93c202b8"
+    },
+    {
+      "old": "runs/ppo_track/checkpoints/ppo_180224_steps.zip",
+      "new": "baseline/runs/ppo_track/checkpoints/ppo_180224_steps.zip",
+      "sha256": "d340966972e73be47681c5a7fa17728963d5e02838902651457d43168cf1af1e"
+    },
+    {
+      "old": "runs/ppo_track/checkpoints/ppo_212992_steps.zip",
+      "new": "baseline/runs/ppo_track/checkpoints/ppo_212992_steps.zip",
+      "sha256": "1b52973999e0b3ac4c449e486092a309173a06117e31247519267e3b8a16df95"
+    },
+    {
+      "old": "runs/ppo_track/checkpoints/ppo_49152_steps.zip",
+      "new": "baseline/runs/ppo_track/checkpoints/ppo_49152_steps.zip",
+      "sha256": "34b5948eb0f8b68b34efd7b779677f59c966974046333602bbddf2fcc31dd205"
+    },
+    {
+      "old": "runs/ppo_track/checkpoints/ppo_81920_steps.zip",
+      "new": "baseline/runs/ppo_track/checkpoints/ppo_81920_steps.zip",
+      "sha256": "3ba0c37727436ece41af8ee81022244112f2b8dfb91636da2013cc29962fb9de"
+    },
+    {
+      "old": "runs/ppo_track/checkpoints/ppo_245760_steps.zip",
+      "new": "baseline/runs/ppo_track/checkpoints/ppo_245760_steps.zip",
+      "sha256": "9be2e6b93b786801d74220f223e2da08e6bed64a78c28c1659b13b0ba9c6fee5"
+    },
+    {
+      "old": "runs/ppo_track/checkpoints/ppo_147456_steps.zip",
+      "new": "baseline/runs/ppo_track/checkpoints/ppo_147456_steps.zip",
+      "sha256": "76a8e6dddb50e27bdce7eb71b4bba587777c2cfd4c9f0837e0f58102f1370286"
+    },
+    {
+      "old": "runs/ppo_track/evaluations/evaluations.npz",
+      "new": "baseline/runs/ppo_track/evaluations/evaluations.npz",
+      "sha256": "9955b20acab686d2dce9f53d4646354b946428157b3129c6d6161ff36dd5af00"
+    },
+    {
+      "old": "runs/ppo_track/best/best_model.zip",
+      "new": "baseline/runs/ppo_track/best/best_model.zip",
+      "sha256": "33fc3da108bfed55917d86b248a4c12a45fdf787dd269e6cb72019a88f5c53b5"
+    },
+    {
+      "old": "runs/vision_nav/last.pt",
+      "new": "baseline/runs/vision_nav/last.pt",
+      "sha256": "4b986129c14911968f6fae12e53b13ecffc30ec7b762385a8958824b5ec3f1a7"
+    },
+    {
+      "old": "runs/vision_nav/history.json",
+      "new": "baseline/runs/vision_nav/history.json",
+      "sha256": "be3988dba43a3d849448003353e1c0dce60181bd26cac12794d3747d05f746bb"
+    },
+    {
+      "old": "runs/vision_nav/config.json",
+      "new": "baseline/runs/vision_nav/config.json",
+      "sha256": "3e7155338cc953f333988d524e360ca48829e59536a5741a05c1e113755b4726"
+    },
+    {
+      "old": "runs/vision_nav/eval_snapshot.pt",
+      "new": "baseline/runs/vision_nav/eval_snapshot.pt",
+      "sha256": "59e98fb5908644facf053aebaac9005dd84c45e7965e125175be5b6a3d4b19d4"
+    },
+    {
+      "old": "runs/vision_nav/best.pt",
+      "new": "baseline/runs/vision_nav/best.pt",
+      "sha256": "6a98fb2de10ca18c608714d24a43aaef841719d572a7d720713646e13fbe46da"
+    },
+    {
+      "old": "runs/dexsteer_grasp_s7.log",
+      "new": "baseline/runs/dexsteer_grasp_s7.log",
+      "sha256": "e7b770d6fc4eb4712070751e712f503edf4b15f6c1c524aa5acff9717385e879"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s7_recovered.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s7_recovered.log",
+      "sha256": "79b3e6727a10c61ddbdf172c9dc4859813a8e821f6e21e9341aa44b6a01a34ac"
+    },
+    {
+      "old": "runs/vision_xy_pilot/last.pt",
+      "new": "baseline/runs/vision_xy_pilot/last.pt",
+      "sha256": "1d8efd4ccbe06aecf15854e111cb62cd7e0615677c314283436b7c4236537013"
+    },
+    {
+      "old": "runs/vision_xy_pilot/history.json",
+      "new": "baseline/runs/vision_xy_pilot/history.json",
+      "sha256": "c5bbbb268ec2baa19f758fa3ad14fee6ad1cf3d58457725a064dd7c42832e7b8"
+    },
+    {
+      "old": "runs/vision_xy_pilot/config.json",
+      "new": "baseline/runs/vision_xy_pilot/config.json",
+      "sha256": "4b27098a59206ef8696ba9e02c8c61901f6e15d0cb06c0298c2d04555ec4a257"
+    },
+    {
+      "old": "runs/vision_xy_pilot/best.pt",
+      "new": "baseline/runs/vision_xy_pilot/best.pt",
+      "sha256": "270fa6b3e864364a83af718931aabf6fa639cf78b26c52246b4594bb4e8e0ebf"
+    },
+    {
+      "old": "runs/ppo_hold_pilot/final_model.zip",
+      "new": "baseline/runs/ppo_hold_pilot/final_model.zip",
+      "sha256": "f9ca877082576c4d8e67144e193f155de1ebfb4fb67b4b2cd9d0c77d05df4367"
+    },
+    {
+      "old": "runs/ppo_hold_pilot/config.json",
+      "new": "baseline/runs/ppo_hold_pilot/config.json",
+      "sha256": "90812250bf1bea349e5e466c8ae7f5b65cb4ab3570cf7bfd97a9e965db0e1eaf"
+    },
+    {
+      "old": "runs/ppo_hold_pilot/checkpoints/ppo_8192_steps.zip",
+      "new": "baseline/runs/ppo_hold_pilot/checkpoints/ppo_8192_steps.zip",
+      "sha256": "b90db6f3119cf95c0559625c5a9499b4b81856815ccc3f2eb8a691cf36e6fa92"
+    },
+    {
+      "old": "runs/ppo_hold_pilot/checkpoints/ppo_16384_steps.zip",
+      "new": "baseline/runs/ppo_hold_pilot/checkpoints/ppo_16384_steps.zip",
+      "sha256": "a1c74b918ac526f2470453de740a1f9d2fa651f969c2726b30eb872a7a612efb"
+    },
+    {
+      "old": "runs/ppo_hold_pilot/evaluations/evaluations.npz",
+      "new": "baseline/runs/ppo_hold_pilot/evaluations/evaluations.npz",
+      "sha256": "3fe3dc9b3474b5b79d5a90fa4c94a59d96a5a7391b1b2ecc72ed8c26ceb6c3b1"
+    },
+    {
+      "old": "runs/ppo_hold_pilot/tensorboard/ppo_1/events.out.tfevents.1791018161.fys-pc.3.0",
+      "new": "baseline/runs/ppo_hold_pilot/tensorboard/ppo_1/events.out.tfevents.1791018161.fys-pc.3.0",
+      "sha256": "a608f25d1f7a48e481f29f5d53d0d1cf2be250ff1c792eda4dfc18ceacb77e16"
+    },
+    {
+      "old": "runs/ppo_hold_pilot/tensorboard/ppo_1/events.out.tfevents.1791019491.fys-pc.3.0",
+      "new": "baseline/runs/ppo_hold_pilot/tensorboard/ppo_1/events.out.tfevents.1791019491.fys-pc.3.0",
+      "sha256": "54be13e1ebabd48d19bcfd24b27ac5c899bd516c24a2350c64663c05e226fbcd"
+    },
+    {
+      "old": "runs/ppo_hold_pilot/tensorboard/ppo_1/events.out.tfevents.1791017951.fys-pc.2.0",
+      "new": "baseline/runs/ppo_hold_pilot/tensorboard/ppo_1/events.out.tfevents.1791017951.fys-pc.2.0",
+      "sha256": "58cd34c4fbcbccb699e3d65a1e2dfe440393413b12c8b7ab3a118fd496e06cb3"
+    },
+    {
+      "old": "runs/ppo_hold_pilot/best/best_model.zip",
+      "new": "baseline/runs/ppo_hold_pilot/best/best_model.zip",
+      "sha256": "005a57491391a7f40ef8a7238cae5eeb43fd4a69500f348f3196fe400209435f"
+    },
+    {
+      "old": "runs/ppo_robust/final_model.zip",
+      "new": "baseline/runs/ppo_robust/final_model.zip",
+      "sha256": "9591e87b896d24ae42817e41c072bd5fec2a19c87e3fddc996cf22b6a01bee55"
+    },
+    {
+      "old": "runs/ppo_robust/config.json",
+      "new": "baseline/runs/ppo_robust/config.json",
+      "sha256": "a99eabc5e4cd49d409b67df27f03d4947788fdce97d223256477409f16be7171"
+    },
+    {
+      "old": "runs/ppo_robust/checkpoints/ppo_606208_steps.zip",
+      "new": "baseline/runs/ppo_robust/checkpoints/ppo_606208_steps.zip",
+      "sha256": "9955ff0572019390011630c85cffdf6df5c7667cc858b23a6a9c2a4ea71432a5"
+    },
+    {
+      "old": "runs/ppo_robust/checkpoints/ppo_671744_steps.zip",
+      "new": "baseline/runs/ppo_robust/checkpoints/ppo_671744_steps.zip",
+      "sha256": "dd06efe607709ebfc99d1d9fb8920c902079fa4884d17c752ef4f24b6c86bdf7"
+    },
+    {
+      "old": "runs/ppo_robust/checkpoints/ppo_475136_steps.zip",
+      "new": "baseline/runs/ppo_robust/checkpoints/ppo_475136_steps.zip",
+      "sha256": "5d257a7cf9994c3943a8a12df9dc411125530e72fffcf56b311602b12aa2492d"
+    },
+    {
+      "old": "runs/ppo_robust/checkpoints/ppo_409600_steps.zip",
+      "new": "baseline/runs/ppo_robust/checkpoints/ppo_409600_steps.zip",
+      "sha256": "b32967543798b50e793a8a6408979d0e2650dc9510c366a575f498dae473a79f"
+    },
+    {
+      "old": "runs/ppo_robust/checkpoints/ppo_344064_steps.zip",
+      "new": "baseline/runs/ppo_robust/checkpoints/ppo_344064_steps.zip",
+      "sha256": "9717d77290a77af945b654e29dc30200c642342494d24f3b2788508cb20b7005"
+    },
+    {
+      "old": "runs/ppo_robust/checkpoints/ppo_737280_steps.zip",
+      "new": "baseline/runs/ppo_robust/checkpoints/ppo_737280_steps.zip",
+      "sha256": "04abf48bea7001f74a4f1586520aedbc5b26fb5a5343ecba46e25a384ce4ba3f"
+    },
+    {
+      "old": "runs/ppo_robust/checkpoints/ppo_540672_steps.zip",
+      "new": "baseline/runs/ppo_robust/checkpoints/ppo_540672_steps.zip",
+      "sha256": "5c18d6e460e7a40654727179dc536fa5791e4e5874da0d674b2af3b3bff17307"
+    },
+    {
+      "old": "runs/ppo_robust/checkpoints/ppo_802816_steps.zip",
+      "new": "baseline/runs/ppo_robust/checkpoints/ppo_802816_steps.zip",
+      "sha256": "366c1259f139ec10f2f498e65c8129eb8c31cab027a107f44e3ade99fc4e6c79"
+    },
+    {
+      "old": "runs/ppo_robust/evaluations/evaluations.npz",
+      "new": "baseline/runs/ppo_robust/evaluations/evaluations.npz",
+      "sha256": "227822a60754c231de87da311a3b8b9db1289cdd3e2285911c033ccd480efea4"
+    },
+    {
+      "old": "runs/ppo_robust/best/best_model.zip",
+      "new": "baseline/runs/ppo_robust/best/best_model.zip",
+      "sha256": "dca704e540579cb1dc5f7e3b3ef70acda838c3c6f47c9de4955cd2a5681b210d"
+    },
+    {
+      "old": "runs/dexsteer_v1_reach10_coupled_s7.log",
+      "new": "baseline/runs/dexsteer_v1_reach10_coupled_s7.log",
+      "sha256": "66f5f7e1a04a7ed99ea0364e09ad2cd2cf645ee78186be7a2077890188cd15f2"
+    },
+    {
+      "old": "runs/dexsteer_v2/grasp_s7_pilot/final_model.zip",
+      "new": "manipulation/runs/grasp_s7_pilot/final_model.zip",
+      "sha256": "dbcfa19547e1df9a0b0d5e4addae0b2ba3271573266a41fb7be54a2e629bcfd0"
+    },
+    {
+      "old": "runs/dexsteer_v2/grasp_s7_pilot/actor.pt",
+      "new": "manipulation/runs/grasp_s7_pilot/actor.pt",
+      "sha256": "3ff0e435c76e776ae878844ffe2a5010a608caf47e413a1176050939b0d9029c"
+    },
+    {
+      "old": "runs/dexsteer_v2/grasp_s7_pilot/config.json",
+      "new": "manipulation/runs/grasp_s7_pilot/config.json",
+      "sha256": "290fae1fe71b90d701ac861b4c74846acb9c08dbceac7d4c15c49d95911ec1ba"
+    },
+    {
+      "old": "runs/dexsteer_v2/grasp_s7_pilot/checkpoints/ppo_24576_steps.zip",
+      "new": "manipulation/runs/grasp_s7_pilot/checkpoints/ppo_24576_steps.zip",
+      "sha256": "8e8ae2fcb8694fcea520ef5e83e1e0526cdd5ea2984fe6cf3f57cdc83a2cc37f"
+    },
+    {
+      "old": "runs/dexsteer_v2/grasp_s7_pilot/checkpoints/ppo_8192_steps.zip",
+      "new": "manipulation/runs/grasp_s7_pilot/checkpoints/ppo_8192_steps.zip",
+      "sha256": "227aea7bf217c4a86ebd4e9544fc058bd2a2bcaafff5ecbf756c7287b60db425"
+    },
+    {
+      "old": "runs/dexsteer_v2/grasp_s7_pilot/checkpoints/ppo_16384_steps.zip",
+      "new": "manipulation/runs/grasp_s7_pilot/checkpoints/ppo_16384_steps.zip",
+      "sha256": "3ac33aae8daf10a4db045fbc46f70e224a9c38f4ef524926e4dc15d21e53a764"
+    },
+    {
+      "old": "runs/dexsteer_v2/grasp_s7_pilot/checkpoints/ppo_32768_steps.zip",
+      "new": "manipulation/runs/grasp_s7_pilot/checkpoints/ppo_32768_steps.zip",
+      "sha256": "1f1b4de91984aa416b14b8456d32e634c179e98ab57c14e6d85f266f88bf66cb"
+    },
+    {
+      "old": "runs/dexsteer_v2/grasp_s7_pilot/evaluations/evaluations.npz",
+      "new": "manipulation/runs/grasp_s7_pilot/evaluations/evaluations.npz",
+      "sha256": "98ab720800d8bdf5a0295765cab15575f704c5e9430d0ddb0627cd063b9e04ee"
+    },
+    {
+      "old": "runs/dexsteer_v2/grasp_s7_pilot/tensorboard/PPO_1/events.out.tfevents.1791107612.fys-pc.3.0",
+      "new": "manipulation/runs/grasp_s7_pilot/tensorboard/PPO_1/events.out.tfevents.1791107612.fys-pc.3.0",
+      "sha256": "2149901b00f77ff3c3c54457119245fefd04756786ad17ead6c70464fefa5a9a"
+    },
+    {
+      "old": "runs/dexsteer_v2/grasp_s7_pilot/best/actor.pt",
+      "new": "manipulation/runs/grasp_s7_pilot/best/actor.pt",
+      "sha256": "8521b2ed376a7b3ef376ed96227eafd61359c1a2b04a6fd424bbf35627733224"
+    },
+    {
+      "old": "runs/dexsteer_v2/grasp_s7_pilot/best/best_model.zip",
+      "new": "manipulation/runs/grasp_s7_pilot/best/best_model.zip",
+      "sha256": "c54bad376421dfdea5e9e30991b2db66f54464cc93e9d546927463309df2c6d2"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/final_model.zip",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/final_model.zip",
+      "sha256": "eefa69260d6177c75a09b476e40fd47af6a34acd81c7e2452e239fb56209324c"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/actor.pt",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/actor.pt",
+      "sha256": "f27dcbe95a66d59e4e6b15317029d6a6dabc49d73fa5e9b9f10768cad1de12a6"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/config.json",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/config.json",
+      "sha256": "e55a6499038ddf824668d5f3284046511fffc72d88fb7315522b2fe2d116c066"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/training.log",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/training.log",
+      "sha256": "1306ed2be3c6b060a539b7ad65efda2bc8b31c906fab1a7a635636ccd640c5fb"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/checkpoints/ppo_24576_steps.zip",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/checkpoints/ppo_24576_steps.zip",
+      "sha256": "2de66f68fd25da4974d6092ab9b42d34fd8a65cb4fc28a36cc992ad670687802"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/checkpoints/ppo_8192_steps.zip",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/checkpoints/ppo_8192_steps.zip",
+      "sha256": "0a48b440a1d229df418bd561e88aaf7d77ad301601afc16649394f24e8e08365"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/checkpoints/ppo_16384_steps.zip",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/checkpoints/ppo_16384_steps.zip",
+      "sha256": "0b43c6bedb68ffb61904c3b49c3430494aa6271394e463caa617cb4ab002818d"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/checkpoints/ppo_32768_steps.zip",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/checkpoints/ppo_32768_steps.zip",
+      "sha256": "643f6d7af37f00e011ebcb3b886130e52980c7690e28c58b5ee3dbad2311e5b6"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/evaluations/evaluations.npz",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/evaluations/evaluations.npz",
+      "sha256": "babd60d313ff418455a0ed4d85b96a782764618967bee88778740d008310dc12"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/tensorboard/PPO_1/events.out.tfevents.1791108340.fys-pc.3.0",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/tensorboard/PPO_1/events.out.tfevents.1791108340.fys-pc.3.0",
+      "sha256": "568f268e1fa0a10a041cf6b07b4f9648c515f510ffaa9b1121c979497e1723e8"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/best/actor.pt",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/best/actor.pt",
+      "sha256": "5c007b64a2efa3ca012ce1571f3d814d2eefea0a6e6a8e4de0759ace7acfbbed"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_grasp_s7_pilot/best/best_model.zip",
+      "new": "manipulation/runs/implicit_grasp_s7_pilot/best/best_model.zip",
+      "sha256": "10219c3b7c6c8867443fdda98aa638ef1a97413dac923fdbc69649c1ac5e533f"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/final_model.zip",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/final_model.zip",
+      "sha256": "8bda597b09fc69d18bf2b1ab499dd1331c76a312880a94688e4825b9a15e75dc"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/actor.pt",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/actor.pt",
+      "sha256": "cb903dfa799b8b716ce50e5bcd18aa3159375027897a06169a975f311b9ee193"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/config.json",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/config.json",
+      "sha256": "538200db3c6dfa0b8df09e2aaa4cc2fe0cd2105ca967e930ffd93e9622baa31e"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/training.log",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/training.log",
+      "sha256": "6f72f3ac3ce4636008c7bbfe8542dfe5b38947b597d289a0b6e50ea6bbb9a8d6"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/checkpoints/ppo_24576_steps.zip",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/checkpoints/ppo_24576_steps.zip",
+      "sha256": "298cd6ecd6e4653299579add4b8bf6c7e8a12658fa3c97101200bdeb526ed961"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/checkpoints/ppo_16384_steps.zip",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/checkpoints/ppo_16384_steps.zip",
+      "sha256": "beb2e9c5efb801907e1b582fe9ae41f60716f11b9f5d1c327b8c8221bbf492c3"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/checkpoints/ppo_40960_steps.zip",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/checkpoints/ppo_40960_steps.zip",
+      "sha256": "65f29155ee28bc698295568d5935d784ce219f35ded946bdbef58ad74e0a795f"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/checkpoints/ppo_32768_steps.zip",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/checkpoints/ppo_32768_steps.zip",
+      "sha256": "8fb2886953f5729119c9aebb7b5e880de214dcf5484078b7f6a6b449fdf117a4"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/evaluations/evaluations.npz",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/evaluations/evaluations.npz",
+      "sha256": "62fedf757eb4099d266c24dd77659dfc0cba92ba22d94029f476d4c69ea50b79"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/tensorboard/PPO_0/events.out.tfevents.1791109169.fys-pc.3.0",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/tensorboard/PPO_0/events.out.tfevents.1791109169.fys-pc.3.0",
+      "sha256": "a8316449cf5a942050b41702d7bc0e5b86c41a7e32c80e65199aff99046ad681"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/best/actor.pt",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/best/actor.pt",
+      "sha256": "2de868ca088deb9032530fb8418d5738b6f2e774d77afbc721dfe5a446ea6e4b"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_reach10_s7_pilot/best/best_model.zip",
+      "new": "manipulation/runs/implicit_reach10_s7_pilot/best/best_model.zip",
+      "sha256": "f30ee5a6f8df9ef13c94c66c216e2ccba8fcdce15bca207a3bac8eaf8c06e30b"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/final_model.zip",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/final_model.zip",
+      "sha256": "db0bde71f9a981f4fbae294585d9e2f72afc06572e70a94c0192823f418f0dc6"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/actor.pt",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/actor.pt",
+      "sha256": "72057bfb167601c52add37e3e477507d5a0081a796ba4bfe0eeee3c7cfba66e0"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/config.json",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/config.json",
+      "sha256": "cb4aebafa437494478e0692edb3c13040ba4c93e09994a7324261761782ec61b"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/training.log",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/training.log",
+      "sha256": "00047b0424ff7999aa0002a9d04bc76d54df7824333ca6aca27e22e4ed0a8fcf"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/checkpoints/ppo_24576_steps.zip",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/checkpoints/ppo_24576_steps.zip",
+      "sha256": "efbb7796330f93371f7a95df848ba0be92cbf749dcbf432ca20d4adc1a2ef58c"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/checkpoints/ppo_8192_steps.zip",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/checkpoints/ppo_8192_steps.zip",
+      "sha256": "0b2c33ddfc8df35c77de08c25914a963388c4c3a72398e35ef8b9d40a81b3a47"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/checkpoints/ppo_16384_steps.zip",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/checkpoints/ppo_16384_steps.zip",
+      "sha256": "921fb4a11cd675f5b5151c5a7ef075c315009f9171bd44e3dd86e7d526b5edb6"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/checkpoints/ppo_32768_steps.zip",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/checkpoints/ppo_32768_steps.zip",
+      "sha256": "acda81bec30f4cc86369e07ae7ffdc0b36f1c0a7c20b9c7bdcb3a8eb059c4992"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/evaluations/evaluations.npz",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/evaluations/evaluations.npz",
+      "sha256": "558a61b3a697ca14f37239db1e86e7ff18917471dc21a651e2fae4a1b8764fca"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/tensorboard/PPO_1/events.out.tfevents.1791109871.fys-pc.3.0",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/tensorboard/PPO_1/events.out.tfevents.1791109871.fys-pc.3.0",
+      "sha256": "a06bd1bf3bc56e085d5f4c32d7e8d78bf6c5d6830029ba4750f624ec7c83ab90"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/best/actor.pt",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/best/actor.pt",
+      "sha256": "fa6f630f4dd425bb37f438c26bef0ecc63942184659877a8b510746e27d15369"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_grasp_s7_pilot/best/best_model.zip",
+      "new": "manipulation/runs/implicit_hands_grasp_s7_pilot/best/best_model.zip",
+      "sha256": "7d8cffa11bb5ae76aa384ceffeb40ac5af81e0f038de0de805072efe58d092b2"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/final_model.zip",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/final_model.zip",
+      "sha256": "1494b54a8a6969371ea073f6074f38a0c6aff1dee2b27dfe5b8bd206edee75ad"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/actor.pt",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/actor.pt",
+      "sha256": "a46bc89238f8fb4fc77c3760d26233c87c81e74589f95377d7555e3c39bf9b0f"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/config.json",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/config.json",
+      "sha256": "ef818faa61281caf42383650641f16e61909b46d8404222a9a5458a6deb8d639"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/training.log",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/training.log",
+      "sha256": "874d99722a75745a1389591b52b9721d6bca58d5aaaa1395e27259c68870e7cb"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/checkpoints/ppo_24576_steps.zip",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/checkpoints/ppo_24576_steps.zip",
+      "sha256": "c4b49b44baa393a149547f31ebb275d66763dc9238dd7af9387355987ead63f7"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/checkpoints/ppo_16384_steps.zip",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/checkpoints/ppo_16384_steps.zip",
+      "sha256": "bc076307d0fc4249fb67807a214d472b294a26c54f63e7bca716bd1930e1c05d"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/checkpoints/ppo_40960_steps.zip",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/checkpoints/ppo_40960_steps.zip",
+      "sha256": "02082e6290acdc42a62b32fab7ff592ebee40de6327f67e8e4ea01e592ecf44e"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/checkpoints/ppo_32768_steps.zip",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/checkpoints/ppo_32768_steps.zip",
+      "sha256": "d629b7f45f53470a68d9d71699feb9baf187b21742d399ee27587103029c234e"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/evaluations/evaluations.npz",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/evaluations/evaluations.npz",
+      "sha256": "bc327a40c544e3c9f8863df3326c8ec10701dddffe81da8acdaad4282ad6bff2"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/tensorboard/PPO_0/events.out.tfevents.1791112476.fys-pc.3.0",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/tensorboard/PPO_0/events.out.tfevents.1791112476.fys-pc.3.0",
+      "sha256": "d641a216d2c04014ba8e2f1b06092539949910a6022e088119e60781bb391609"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/best/actor.pt",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/best/actor.pt",
+      "sha256": "ec51eb270935e6bc9679b663181be2cc454c932e20da331552040f0adf487beb"
+    },
+    {
+      "old": "runs/dexsteer_v2/implicit_hands_reach10_s7_pilot/best/best_model.zip",
+      "new": "manipulation/runs/implicit_hands_reach10_s7_pilot/best/best_model.zip",
+      "sha256": "eda262dd72c485ee4d4de5bf431b26db2cfc60652df0ff5b7860fe110d7079d0"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s17_recovered.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s17_recovered.log",
+      "sha256": "e58b69df233a13141348bef570f945e24f9437ae5d95d33c014f2ba17638eea7"
+    },
+    {
+      "old": "runs/vision_xy/last.pt",
+      "new": "baseline/runs/vision_xy/last.pt",
+      "sha256": "eda1fedf328c1f66cffa9a1382e1d160898a5f1cb6a8f152a754d663cfcbe869"
+    },
+    {
+      "old": "runs/vision_xy/history.json",
+      "new": "baseline/runs/vision_xy/history.json",
+      "sha256": "2cd231ba00dd6be0f086c5b73b86e52b0b8b86fa69fcb7064eaacd2744080e62"
+    },
+    {
+      "old": "runs/vision_xy/config.json",
+      "new": "baseline/runs/vision_xy/config.json",
+      "sha256": "e1027a0f46b4d3f7c058438b338322918c78cd74f1d815eaa896d6f49f1c0727"
+    },
+    {
+      "old": "runs/vision_xy/eval_snapshot.pt",
+      "new": "baseline/runs/vision_xy/eval_snapshot.pt",
+      "sha256": "320710ac6f743590417545bdfdaabb58c4daba80063df37f1bfe1c02e65de5d8"
+    },
+    {
+      "old": "runs/vision_xy/best.pt",
+      "new": "baseline/runs/vision_xy/best.pt",
+      "sha256": "0696b5f9927c6e7b3bc404d73b15eebbf835e617fd14415443aed420faee278c"
+    },
+    {
+      "old": "runs/vision_route_pilot/last.pt",
+      "new": "baseline/runs/vision_route_pilot/last.pt",
+      "sha256": "d4f4cbd618121a9a25c5c10c0e30f522be7f1de3e80f65f72342dd4549ad0486"
+    },
+    {
+      "old": "runs/vision_route_pilot/history.json",
+      "new": "baseline/runs/vision_route_pilot/history.json",
+      "sha256": "46d110cee60b1d1d30ee7ea9e9a636b8641c2960b1838baf851637ef8e16ce9b"
+    },
+    {
+      "old": "runs/vision_route_pilot/config.json",
+      "new": "baseline/runs/vision_route_pilot/config.json",
+      "sha256": "a9e15e2f5512a434185e5e43b627889a55a39d0f6e28fae4b7fd892f11a0a632"
+    },
+    {
+      "old": "runs/vision_route_pilot/best.pt",
+      "new": "baseline/runs/vision_route_pilot/best.pt",
+      "sha256": "c50427b9170094a663f3430b146c6174a1656f05b1ef761b846904e873904a54"
+    },
+    {
+      "old": "runs/vision_routes/last.pt",
+      "new": "baseline/runs/vision_routes/last.pt",
+      "sha256": "7a09462f69b24a715fa7a2e6341a7416c80526b273471db367df58b8fcfbbd4c"
+    },
+    {
+      "old": "runs/vision_routes/history.json",
+      "new": "baseline/runs/vision_routes/history.json",
+      "sha256": "e08138e144f2149650e1109fea5f7ade45614643bdbb6f27f248842a067634a7"
+    },
+    {
+      "old": "runs/vision_routes/config.json",
+      "new": "baseline/runs/vision_routes/config.json",
+      "sha256": "e8e58efea03375c5d7de9419fbf716549c3588eabe654617b804b59d85eecbe8"
+    },
+    {
+      "old": "runs/vision_routes/best.pt",
+      "new": "baseline/runs/vision_routes/best.pt",
+      "sha256": "f7bb8f16b5a3dccd39ae0c5dffb0fbcdbec425dd5e5b66bf95d10f1c5ee76b27"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s27.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s27.log",
+      "sha256": "71abf0350f98c925a8b3e0bc60c794e232b9bfb10cab05b6e4fbd12417d9e7ad"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s7.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s7.log",
+      "sha256": "ff8163404aeaeeb52e5b00edb34b6876f47bf9a0af01ba94b4f46c24a6ef896e"
+    },
+    {
+      "old": "runs/dexsteer_v1_grasp_s27_recovered.log",
+      "new": "baseline/runs/dexsteer_v1_grasp_s27_recovered.log",
+      "sha256": "f8a5c19f03b77883adda3faed98c71d3e28f779e5893ed43e8a389d17c2e47b2"
+    },
+    {
+      "old": "weights/resnet18-f37072fd.pth",
+      "new": "baseline/weights/resnet18-f37072fd.pth",
+      "sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "nine_three": {
+    "left": {
+      "wrist_angles_before_deg": {
+        "roll": 0.490815269186435,
+        "pitch": 5.97989238310785,
+        "yaw": 50.44116707937321
+      },
+      "wrist_angles_after_deg": {
+        "roll": 18.54131775493907,
+        "pitch": 3.04029139920827,
+        "yaw": 35.1761401266346
+      },
+      "settled_grip_position_change_mm": 0.3485356678501727,
+      "settled_grip_rotation_change_deg": 0.6637917672538554
+    },
+    "right": {
+      "wrist_angles_before_deg": {
+        "roll": -0.5072234009622805,
+        "pitch": 5.961827523190097,
+        "yaw": -50.46312359848528
+      },
+      "wrist_angles_after_deg": {
+        "roll": -18.546430897216,
+        "pitch": 3.0167364413605857,
+        "yaw": -35.19834245736657
+      },
+      "settled_grip_position_change_mm": 0.36244681504830917,
+      "settled_grip_rotation_change_deg": 0.6640477215667056
+    }
+  },
+  "ten_two": {
+    "left": {
+      "wrist_angles_before_deg": {
+        "roll": 17.48469629091245,
+        "pitch": 20.479597847139015,
+        "yaw": 28.90901422724414
+      },
+      "wrist_angles_after_deg": {
+        "roll": 22.933688883135265,
+        "pitch": 19.246251549848232,
+        "yaw": 24.97576778362544
+      },
+      "settled_grip_position_change_mm": 0.6296242270723115,
+      "settled_grip_rotation_change_deg": 0.48714833184789924
+    },
+    "right": {
+      "wrist_angles_before_deg": {
+        "roll": -17.496954546548668,
+        "pitch": 20.470909301193622,
+        "yaw": -28.922156646814134
+      },
+      "wrist_angles_after_deg": {
+        "roll": -22.938920433120327,
+        "pitch": 19.23188665147605,
+        "yaw": -24.990573238444412
+      },
+      "settled_grip_position_change_mm": 0.697542781071949,
+      "settled_grip_rotation_change_deg": 0.48108452950739
+    }
+  },
+  "left_support": {
+    "left": {
+      "wrist_angles_before_deg": {
+        "roll": 0.49251040824496356,
+        "pitch": 5.978335976687737,
+        "yaw": 50.442110077912524
+      },
+      "wrist_angles_after_deg": {
+        "roll": 18.538759491801713,
+        "pitch": 3.0407829701993068,
+        "yaw": 35.17701553016853
+      },
+      "settled_grip_position_change_mm": 0.3542087808652689,
+      "settled_grip_rotation_change_deg": 0.664733992297155
+    }
+  },
+  "right_support": {
+    "right": {
+      "wrist_angles_before_deg": {
+        "roll": -0.5092187971662512,
+        "pitch": 5.95860073296434,
+        "yaw": -50.46366011635815
+      },
+      "wrist_angles_after_deg": {
+        "roll": -18.544705185934273,
+        "pitch": 3.0202095763585315,
+        "yaw": -35.19803270119839
+      },
+      "settled_grip_position_change_mm": 0.35905095261594966,
+      "settled_grip_rotation_change_deg": 0.6645104847127787
+    }
+  }
+}

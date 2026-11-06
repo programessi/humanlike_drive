@@ -1,0 +1,14 @@
+{
+  "parent": "runs/r2_incremental_hand_v1/passing_step_000049152.zip",
+  "control": "runs/r2_incremental_refinement_v1",
+  "learning_rate": 2.5e-06,
+  "requested_steps": 65536,
+  "paired_budget_steps": 32768,
+  "only_learning_change": "angle reward Gaussian width4deg ->2deg; retain unchanged continuous penalty and all other weights, interface, task sampling and seed",
+  "evaluation": "same gates; do not compare raw return across reward definitions",
+  "acceptance_seeds": [
+    1107,
+    1117,
+    1127
+  ]
+}

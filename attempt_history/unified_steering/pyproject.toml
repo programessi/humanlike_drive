@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unified-steering"
+version = "0.1.0"
+description = "Unified dual-arm dual-hand steering trajectory tracking research"
+requires-python = ">=3.10"
+dependencies = ["mujoco>=3.3,<4", "gymnasium>=1.2,<2", "numpy>=1.24", "scipy>=1.10", "PyYAML>=6", "torch>=2.2"]
+
+[project.optional-dependencies]
+reports = ["matplotlib>=3.7"]
+monitoring = ["tensorboard>=2.15", "matplotlib>=3.7"]
+teacher = ["stable-baselines3>=2.6,<3", "tensorboard>=2.15"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

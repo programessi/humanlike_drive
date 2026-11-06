@@ -1,0 +1,316 @@
+{
+  "interface": "driving-v1-v4-executor",
+  "speed_deg_s": 5.0,
+  "acceleration_deg_s2": 40.0,
+  "tangent_geometry": "results/driving_r0_geometry_roll_v1/summary.json",
+  "phase_lead_deg": 30.0,
+  "demonstrator": {
+    "angle_gain": 6.0,
+    "preview_seconds": 0.15,
+    "position_gain": 3.0,
+    "orientation_gain": 3.0,
+    "hand_gain": 0.1
+  },
+  "criteria": "complete; motionRMSE<=1deg; every stop final3s physics peak<=1deg; overall>=95%, each direction>=90%; any physical/QP hard failure rejects candidate",
+  "template": "short=3s endpoint and zero holds;long=10s holds;sequence=two opposite complete roundtrips with3s holds",
+  "independence": "training410xx;development420xx;independent430xx reserved; R0 diagnostics400xx consumed",
+  "physical_scene": "original +/-450deg; all physical gates and v4 execution unchanged",
+  "experiment": "driving-R1-collection-v1",
+  "cases": [
+    [
+      30,
+      -1,
+      "short",
+      41001
+    ],
+    [
+      30,
+      -1,
+      "long",
+      41002
+    ],
+    [
+      30,
+      -1,
+      "sequence",
+      41003
+    ],
+    [
+      30,
+      1,
+      "short",
+      41004
+    ],
+    [
+      30,
+      1,
+      "long",
+      41005
+    ],
+    [
+      30,
+      1,
+      "sequence",
+      41006
+    ],
+    [
+      60,
+      -1,
+      "short",
+      41007
+    ],
+    [
+      60,
+      -1,
+      "long",
+      41008
+    ],
+    [
+      60,
+      -1,
+      "sequence",
+      41009
+    ],
+    [
+      60,
+      1,
+      "short",
+      41010
+    ],
+    [
+      60,
+      1,
+      "long",
+      41011
+    ],
+    [
+      60,
+      1,
+      "sequence",
+      41012
+    ],
+    [
+      90,
+      -1,
+      "short",
+      41013
+    ],
+    [
+      90,
+      -1,
+      "long",
+      41014
+    ],
+    [
+      90,
+      -1,
+      "sequence",
+      41015
+    ],
+    [
+      90,
+      1,
+      "short",
+      41016
+    ],
+    [
+      90,
+      1,
+      "long",
+      41017
+    ],
+    [
+      90,
+      1,
+      "sequence",
+      41018
+    ],
+    [
+      45,
+      -1,
+      "short",
+      41101
+    ],
+    [
+      45,
+      -1,
+      "long",
+      41102
+    ],
+    [
+      45,
+      1,
+      "short",
+      41103
+    ],
+    [
+      45,
+      1,
+      "long",
+      41104
+    ]
+  ],
+  "seed": 124,
+  "steps": 131072,
+  "actor_lr": 3e-06,
+  "wrist_std": 0.01,
+  "bc_coef": 20.0,
+  "critic_epochs": 40,
+  "retention_dataset": "runs/r23_screened_bootstrap_v4/dataset.npz",
+  "training_seed_start": 150001,
+  "task": {
+    "amplitude_deg": 90.0,
+    "target_mode": "mixed",
+    "episode_seconds": 200.0,
+    "frequency": 0.02,
+    "policy_hz": 20,
+    "history_steps": 1,
+    "settle_seconds": 1.2,
+    "target_speed_deg": 5.0,
+    "randomization_strength": 0.0,
+    "no_contact": false,
+    "controller": {
+      "robot_hz": 50,
+      "angular_speed_deg": 20.0,
+      "linear_speed": 0.01,
+      "offset_limit": 0.005,
+      "phase_limit_deg": 40.0,
+      "phase_lead_deg": 8.0,
+      "arm_speed": 1.0,
+      "arm_acceleration": 4.0,
+      "hand_speed": 1.5,
+      "hand_acceleration": 8.0,
+      "joint_lead": 0.15,
+      "joint_margin": 0.005,
+      "position_gain": 12.0,
+      "orientation_weight": 0.12,
+      "damping": 0.003,
+      "posture_weight": 0.01,
+      "initial_palm_pitch_deg": 0.0,
+      "max_phase_difference_deg": 2.0,
+      "wrist_linear_speed": 0.05,
+      "wrist_angular_speed_deg": 40.0,
+      "wrist_workspace_m": 0.36,
+      "wrist_orientation_workspace_deg": 170.0,
+      "wrist_position_lead_m": 0.012,
+      "wrist_orientation_lead_deg": 10.0,
+      "action_filter_seconds": 0.1,
+      "collision_margin_m": 0.012,
+      "collision_activation_m": 0.035,
+      "radial_min_m": 0.085,
+      "radial_max_m": 0.28,
+      "axial_min_m": -0.14,
+      "axial_max_m": 0.1,
+      "guard_max_iterations": 150
+    },
+    "target_acceleration_deg_s2": 40.0,
+    "closure_jitter_rad": 0.025,
+    "settle_jitter_seconds": 0.08,
+    "curriculum": "A",
+    "shaping_weight": 0.0,
+    "max_wheel_deg": 200.0,
+    "prior_task_fraction": 0.25,
+    "free_gap_m": 0.12,
+    "strict_safety": true,
+    "centering_stiffness": 0.3,
+    "relative_reference": true,
+    "angle_reward_sigma_deg": 2.0,
+    "hand_action_mode": "leaky",
+    "hand_delta_rad": 0.03,
+    "hand_leak_alpha": 0.995,
+    "hand_joint_lead_rad": 0.15,
+    "reference_envelope_deg": 185.0
+  },
+  "training_cases": [
+    [
+      30,
+      -1,
+      "short"
+    ],
+    [
+      30,
+      -1,
+      "long"
+    ],
+    [
+      30,
+      -1,
+      "sequence"
+    ],
+    [
+      30,
+      1,
+      "short"
+    ],
+    [
+      30,
+      1,
+      "long"
+    ],
+    [
+      30,
+      1,
+      "sequence"
+    ],
+    [
+      60,
+      -1,
+      "short"
+    ],
+    [
+      60,
+      -1,
+      "long"
+    ],
+    [
+      60,
+      -1,
+      "sequence"
+    ],
+    [
+      60,
+      1,
+      "short"
+    ],
+    [
+      60,
+      1,
+      "long"
+    ],
+    [
+      60,
+      1,
+      "sequence"
+    ],
+    [
+      90,
+      -1,
+      "short"
+    ],
+    [
+      90,
+      -1,
+      "long"
+    ],
+    [
+      90,
+      -1,
+      "sequence"
+    ],
+    [
+      90,
+      1,
+      "short"
+    ],
+    [
+      90,
+      1,
+      "long"
+    ],
+    [
+      90,
+      1,
+      "sequence"
+    ]
+  ]
+}

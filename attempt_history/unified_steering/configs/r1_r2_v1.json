@@ -1,0 +1,167 @@
+{
+  "version": "r1-r2-v1",
+  "interface": "structured-wrist-teacher-v2-relative-strict",
+  "task": {
+    "amplitude_deg": 10.0,
+    "target_mode": "mixed",
+    "episode_seconds": 20.0,
+    "frequency": 0.02,
+    "policy_hz": 20,
+    "history_steps": 1,
+    "settle_seconds": 1.2,
+    "target_speed_deg": 5.0,
+    "randomization_strength": 0.0,
+    "no_contact": false,
+    "controller": {
+      "robot_hz": 50,
+      "angular_speed_deg": 20.0,
+      "linear_speed": 0.01,
+      "offset_limit": 0.005,
+      "phase_limit_deg": 40.0,
+      "phase_lead_deg": 8.0,
+      "arm_speed": 1.0,
+      "arm_acceleration": 4.0,
+      "hand_speed": 1.5,
+      "hand_acceleration": 8.0,
+      "joint_lead": 0.15,
+      "joint_margin": 0.005,
+      "position_gain": 12.0,
+      "orientation_weight": 0.12,
+      "damping": 0.003,
+      "posture_weight": 0.01,
+      "initial_palm_pitch_deg": 0.0,
+      "max_phase_difference_deg": 2.0,
+      "wrist_linear_speed": 0.05,
+      "wrist_angular_speed_deg": 40.0,
+      "wrist_workspace_m": 0.36,
+      "wrist_orientation_workspace_deg": 170.0,
+      "wrist_position_lead_m": 0.012,
+      "wrist_orientation_lead_deg": 10.0,
+      "action_filter_seconds": 0.1,
+      "collision_margin_m": 0.012,
+      "collision_activation_m": 0.035,
+      "radial_min_m": 0.085,
+      "radial_max_m": 0.28,
+      "axial_min_m": -0.14,
+      "axial_max_m": 0.1,
+      "guard_max_iterations": 150
+    },
+    "target_acceleration_deg_s2": 40.0,
+    "closure_jitter_rad": 0.025,
+    "settle_jitter_seconds": 0.08,
+    "curriculum": "A",
+    "shaping_weight": 0.0,
+    "max_wheel_deg": 110.0,
+    "prior_task_fraction": 0.25,
+    "free_gap_m": 0.12,
+    "strict_safety": true,
+    "centering_stiffness": 0.3,
+    "relative_reference": true
+  },
+  "cases": [
+    [
+      "hold",
+      3,
+      5
+    ],
+    [
+      "hold",
+      10,
+      5
+    ],
+    [
+      "positive",
+      8,
+      5
+    ],
+    [
+      "negative",
+      8,
+      5
+    ],
+    [
+      "positive",
+      10,
+      10
+    ],
+    [
+      "negative",
+      10,
+      10
+    ],
+    [
+      "sequence",
+      22,
+      10
+    ]
+  ],
+  "development_seeds": [
+    1007
+  ],
+  "acceptance_seeds": [
+    1107,
+    1117,
+    1127
+  ],
+  "trajectory": {
+    "reference": "preparation-end measured angle plus timed quintic reference",
+    "speed_deg_s": 5,
+    "acceleration_deg_s2": 40,
+    "start_delay_s": 0.5,
+    "endpoint_dwell_s": 1,
+    "final_hold_s": 3.5
+  },
+  "gates": {
+    "motion_rmse_deg": 1,
+    "tail_3s_peak_deg": 1,
+    "hold_peak_deg": 1,
+    "min_signed_progress_fraction": 0.5,
+    "min_fixed_baseline_improvement": 0.3,
+    "min_arm_margin_deg": 2,
+    "max_unallowed_collision_n": 1,
+    "max_native_penetration_rad": 0.02,
+    "max_free_hand_force_n": 0.2
+  },
+  "ppo": {
+    "envs": 4,
+    "n_steps": 256,
+    "batch_size": 256,
+    "n_epochs": 4,
+    "gamma": 0.995,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "entropy_coefficient": 0.001,
+    "learning_rate": 1e-05,
+    "learning_rate_schedule": "constant; old final rate, adaptive KL not carried over",
+    "budget": 131072,
+    "evaluate_every": 16384,
+    "reward_scale": 0.05
+  },
+  "training_distribution": {
+    "amplitudes_deg": [
+      5,
+      10
+    ],
+    "amplitude_probabilities": [
+      0.5,
+      0.5
+    ],
+    "modes": [
+      "hold",
+      "step",
+      "sine",
+      "sequence"
+    ],
+    "mode_probabilities": [
+      0.25,
+      0.4,
+      0.1,
+      0.25
+    ],
+    "episode_seconds": 22,
+    "randomization_strength": 0,
+    "orientation_shaping": 0
+  },
+  "selection": "complete cases and hold <=1deg, minimize worst motion category mean RMSE; qualification requires all cases pass twice consecutively then held-out acceptance",
+  "r2": "both/left/right reset mixture .25/.375/.375; nominal free pose first; feasible pose expansion requires separately frozen addendum before full R2 claim"
+}

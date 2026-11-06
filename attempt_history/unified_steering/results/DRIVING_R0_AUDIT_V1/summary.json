@@ -1,0 +1,218 @@
+{
+  "stage": "new-driving-R0",
+  "training_performed": false,
+  "model_unchanged": true,
+  "scene_unchanged": true,
+  "frozen_model_sha256": "337dc9a0eec97029d4eaa2c9c1cb317294c3868c5216f20193074ca40d5dab20",
+  "dynamic_rollouts": 76,
+  "passive_failure_replays": 4,
+  "static_angle_mode_points": 52,
+  "baseline_90_passed": 6,
+  "baseline_90_total": 6,
+  "r1_nominal_roundtrip_physical_entry": true,
+  "new_R1_learned_passed": false,
+  "new_R2_180_verified": false,
+  "wheel540_supported": false,
+  "policy30_passed": 6,
+  "policy30_total": 6,
+  "policy30_worst_rmse_deg": 0.4009715284431585,
+  "baseline90_worst_rmse_deg": 0.44413351648871957,
+  "baseline90_worst_hold_peak_deg": 0.14120725942954343,
+  "baseline90_min_arm_margin_deg": 2.0121394675137494,
+  "baseline90_collision_peak_n": 0.0,
+  "baseline90_qp_failures": 0,
+  "engineering_checks_passed": 11,
+  "seed_scope": "40001/40011/40021, diagnostic only; not independent acceptance",
+  "raw_reports": [
+    "driving_r0_v1",
+    "driving_r0_confirmation_v1",
+    "driving_r0_roll_v1",
+    "driving_r0_roll_v2",
+    "driving_r0_roll_v3",
+    "driving_r0_roll_confirmation_v3"
+  ],
+  "metadata": {
+    "model": "runs/r2_frozen_v4/teacher.zip",
+    "model_sha256": "337dc9a0eec97029d4eaa2c9c1cb317294c3868c5216f20193074ca40d5dab20",
+    "scene": "/home/nubot/humanlike_drive/unified_steering/assets/regrasp_stage1/wheel.xml",
+    "scene_sha256": "6254e8ce711eb7534eac93746886ed599e8806a025a9286b3e93e61e393b1233",
+    "wheel_range_deg": [
+      -449.99999805340553,
+      449.99999805340553
+    ],
+    "model_limit_540_compatible": false,
+    "task_angle_limit_deg": 110.0,
+    "config_amplitude_limit_deg": 100,
+    "strict_substep_wheel_limit_deg": 440,
+    "observations": {
+      "actor_dim": 152,
+      "privileged_dim": 54,
+      "latent_dim": 16,
+      "action_dim": 24,
+      "wheel_angle_index": 120,
+      "wheel_speed_index": 121,
+      "preview_indices": [
+        122,
+        128
+      ],
+      "reference_speed_index": 128,
+      "wheel_angle_encoding": "accumulated radians; not wrapped or clipped",
+      "preview_encoding": "(future command - measured wheel)/10deg; not clipped",
+      "support_role_label": false
+    },
+    "positive_wheel_direction": "clockwise as seen by driver; left hand rises, right hand falls",
+    "left_turn_direction": -1,
+    "right_turn_direction": 1,
+    "reset_records": [
+      {
+        "support": "both",
+        "clock_hours": [
+          9.00611046807916,
+          2.9986929464629473
+        ],
+        "grip_local_m": [
+          [
+            0.002660661098408675,
+            0.17019520592991624,
+            0.000544530119196926
+          ],
+          [
+            0.0028937995679166385,
+            -0.17017734925254252,
+            0.00011646456835922468
+          ]
+        ],
+        "initial_wheel_deg": 1.5488631481780606,
+        "force_n": [
+          14.656309903166674,
+          13.540556480774343
+        ],
+        "arm_margin_deg": 20.33177753397851,
+        "actor_dim": 152,
+        "privileged_dim": 54
+      },
+      {
+        "support": "left",
+        "clock_hours": [
+          9.06025208295235,
+          3.0000006181930416
+        ],
+        "grip_local_m": [
+          [
+            0.002908727862978661,
+            0.1700761872300912,
+            0.005367330182410619
+          ],
+          [
+            -0.12199992974348917,
+            -0.1630000054724431,
+            -5.2760676260119584e-08
+          ]
+        ],
+        "initial_wheel_deg": 5.744535470662395,
+        "force_n": [
+          12.72293784337401,
+          0.0
+        ],
+        "arm_margin_deg": 18.621048645619602,
+        "actor_dim": 152,
+        "privileged_dim": 54
+      },
+      {
+        "support": "right",
+        "clock_hours": [
+          8.999999381327223,
+          2.9500881853327314
+        ],
+        "grip_local_m": [
+          [
+            -0.12199992974598979,
+            0.16300000546781238,
+            -5.2801620083686164e-08
+          ],
+          [
+            0.003294981134517469,
+            -0.16990825668299112,
+            0.00444135361505411
+          ]
+        ],
+        "initial_wheel_deg": -1.9355406130549724,
+        "force_n": [
+          0.0,
+          12.48001734779728
+        ],
+        "arm_margin_deg": 18.62105023120359,
+        "actor_dim": 152,
+        "privileged_dim": 54
+      }
+    ],
+    "task": {
+      "amplitude_deg": 10.0,
+      "target_mode": "mixed",
+      "episode_seconds": 100.0,
+      "frequency": 0.02,
+      "policy_hz": 20,
+      "history_steps": 1,
+      "settle_seconds": 1.1624703168150798,
+      "target_speed_deg": 5.0,
+      "randomization_strength": 0.0,
+      "no_contact": false,
+      "controller": {
+        "robot_hz": 50,
+        "angular_speed_deg": 20.0,
+        "linear_speed": 0.01,
+        "offset_limit": 0.005,
+        "phase_limit_deg": 40.0,
+        "phase_lead_deg": 8.0,
+        "arm_speed": 1.0,
+        "arm_acceleration": 4.0,
+        "hand_speed": 1.5,
+        "hand_acceleration": 8.0,
+        "joint_lead": 0.08726646259971647,
+        "joint_margin": 0.005,
+        "position_gain": 12.0,
+        "orientation_weight": 0.12,
+        "damping": 0.003,
+        "posture_weight": 0.01,
+        "initial_palm_pitch_deg": 0.0,
+        "max_phase_difference_deg": 2.0,
+        "wrist_linear_speed": 0.05,
+        "wrist_angular_speed_deg": 40.0,
+        "wrist_workspace_m": 0.36,
+        "wrist_orientation_workspace_deg": 170.0,
+        "wrist_position_lead_m": 0.012,
+        "wrist_orientation_lead_deg": 10.0,
+        "action_filter_seconds": 0.1,
+        "collision_margin_m": 0.012,
+        "collision_activation_m": 0.035,
+        "radial_min_m": 0.085,
+        "radial_max_m": 0.28,
+        "axial_min_m": -0.14,
+        "axial_max_m": 0.1,
+        "guard_max_iterations": 150
+      },
+      "target_acceleration_deg_s2": 40.0,
+      "closure_jitter_rad": 0.025,
+      "settle_jitter_seconds": 0.08,
+      "curriculum": "A",
+      "shaping_weight": 0.0,
+      "max_wheel_deg": 110.0,
+      "prior_task_fraction": 0.25,
+      "free_gap_m": 0.12,
+      "strict_safety": true,
+      "centering_stiffness": 0.3,
+      "relative_reference": true,
+      "angle_reward_sigma_deg": 2.0,
+      "hand_action_mode": "leaky",
+      "hand_delta_rad": 0.03,
+      "hand_leak_alpha": 0.995,
+      "hand_joint_lead_rad": 0.15
+    },
+    "limitations": [
+      "Current task limit110 and amplitude validation100 do not support180/540.",
+      "Existing prepared wheel angle may drift from calibrated zero; no physical reset correction applied.",
+      "Static IK and explicit controller are diagnostic evidence, not learned-policy acceptance."
+    ]
+  },
+  "next_step": "R1.1 small-budget imitation feasibility and closed-loop development; no direct high-noise PPO resume"
+}

@@ -1,0 +1,16 @@
+slow
+fixed {'rmse_deg': 0.06464901797426924, 'max_abs_error_deg': 1.4591110052931902, 'max_grasp_drift_deg': 4.225429379142344, 'peak_contact_force_N': 4.041789824077738, 'tracking_pass': True}
+hands {'rmse_deg': 0.06639173763205725, 'max_abs_error_deg': 1.4591110052931902, 'max_grasp_drift_deg': 4.158104220556862, 'peak_contact_force_N': 4.990455591599256, 'tracking_pass': True}
+full {'rmse_deg': 0.06292908436030104, 'max_abs_error_deg': 1.4586016115229894, 'max_grasp_drift_deg': 3.7849354361657253, 'peak_contact_force_N': 4.485175382724687, 'tracking_pass': True}
+perturbed
+fixed {'rmse_deg': 0.1173786350953176, 'max_abs_error_deg': 2.094991977154352, 'max_grasp_drift_deg': 4.628824733608123, 'peak_contact_force_N': 3.750726465712969, 'tracking_pass': True}
+hands {'rmse_deg': 0.12655282409062257, 'max_abs_error_deg': 2.0950187555742197, 'max_grasp_drift_deg': 5.604857952035118, 'peak_contact_force_N': 4.632649845931522, 'tracking_pass': True}
+full {'rmse_deg': 0.10361184644826298, 'max_abs_error_deg': 2.094495135767817, 'max_grasp_drift_deg': 2.9890577799164664, 'peak_contact_force_N': 4.5077825772906985, 'tracking_pass': True}
+sequence
+fixed {'rmse_deg': 1.4191997920590789, 'max_abs_error_deg': 6.390831416843923, 'max_grasp_drift_deg': 3.8211312652373564, 'peak_contact_force_N': 4.124312927290187, 'tracking_pass': False}
+hands {'rmse_deg': 1.4175485754062653, 'max_abs_error_deg': 6.381897970570207, 'max_grasp_drift_deg': 3.5465250299610953, 'peak_contact_force_N': 4.977468772820622, 'tracking_pass': False}
+full {'rmse_deg': 1.4191032685884692, 'max_abs_error_deg': 6.381327465945836, 'max_grasp_drift_deg': 3.333316056945826, 'peak_contact_force_N': 4.663891037025756, 'tracking_pass': False}
+fast
+fixed {'rmse_deg': 0.32554233701879204, 'max_abs_error_deg': 1.2078348541674968, 'max_grasp_drift_deg': 3.8494845770250903, 'peak_contact_force_N': 4.074980710070457, 'tracking_pass': True}
+hands {'rmse_deg': 0.32548717225826934, 'max_abs_error_deg': 1.2078348541674968, 'max_grasp_drift_deg': 3.668480101567955, 'peak_contact_force_N': 5.050386055438954, 'tracking_pass': True}
+full {'rmse_deg': 0.3269975859532521, 'max_abs_error_deg': 1.207325460397296, 'max_grasp_drift_deg': 3.3343703386965804, 'peak_contact_force_N': 4.555573097699489, 'tracking_pass': True}

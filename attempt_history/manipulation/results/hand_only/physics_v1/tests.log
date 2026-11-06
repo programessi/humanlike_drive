@@ -1,0 +1,45 @@
+test_full_hand_range_and_no_critic_or_mimic_leak (test_exploration.CentralizedExplorationTests) ... ok
+test_gru_reset_and_export_parity (test_exploration.CentralizedExplorationTests) ... ok
+test_gym_contract_and_command_previews (test_exploration.CentralizedExplorationTests) ... /home/nubot/anaconda3/envs/mujoco/lib/python3.10/site-packages/gymnasium/utils/env_checker.py:311: UserWarning: [33mWARN: A Box observation space minimum value is -infinity. This is probably too low.[0m
+  logger.warn(
+/home/nubot/anaconda3/envs/mujoco/lib/python3.10/site-packages/gymnasium/utils/env_checker.py:315: UserWarning: [33mWARN: A Box observation space maximum value is infinity. This is probably too high.[0m
+  logger.warn(
+ok
+test_no_angle_servo_and_no_controller_physics_writes (test_exploration.CentralizedExplorationTests) ... ok
+test_physical_preparation_varies_reproducibly (test_exploration.CentralizedExplorationTests) ... ok
+test_timeouts_bootstrap_without_cross_episode_gae (test_exploration.CentralizedExplorationTests) ... ok
+test_actor_does_not_depend_on_contact_readouts_or_dependent_finger_positions (test_hand_only.HandOnlyTests) ... ok
+test_scene_has_only_two_free_hands_passive_wheel_and_twelve_drives (test_hand_only.HandOnlyTests) ... ok
+test_total_virtual_wrist_wrench_is_bounded_including_gravity_compensation (test_hand_only.HandOnlyTests) ... ok
+test_wrist_commands_do_not_write_physical_state_and_do_not_move_passive_wheel_without_contact (test_hand_only.HandOnlyTests) ... ok
+test_actor_cannot_read_contacts_torque_or_passive_joints (test_regrasp.RegraspTests) ... ok
+test_advanced_preparation_hold_and_previous_course_envelopes (test_regrasp.RegraspTests) ... ok
+test_command_integrator_state_is_observable (test_regrasp.RegraspTests) ... ok
+test_excessive_policy_kl_reduces_learning_rate_with_bounds (test_regrasp.RegraspTests) ... ok
+test_interfinger_collisions_restored (test_regrasp.RegraspTests) ... ok
+test_long_course_keeps_commanding_after_first_cycle (test_regrasp.RegraspTests) ... ok
+test_no_contact_and_zero_command_cannot_steer (test_regrasp.RegraspTests) ... ok
+test_recovery_reward_cannot_be_farmed_by_closing_static_hand (test_regrasp.RegraspTests) ... ok
+test_static_contact_and_open_close_do_not_count_as_regrasp (test_regrasp.RegraspTests) ... ok
+test_student_interface_and_torchscript_reset_parity (test_regrasp.RegraspTests) ... ok
+test_teacher_export_matches_frozen_policy (test_regrasp.RegraspTests) ... ok
+test_time_reference_is_independent_of_actual_progress (test_regrasp.RegraspTests) ... ok
+test_actor_isolation_export_and_separately_trainable_hand_ablation (test_task.ContactResidualTests) ... ok
+test_constant_offsets_do_not_accumulate_and_do_not_write_physics (test_task.ContactResidualTests) ... ok
+test_gym_contract_and_goal_reference_fields (test_task.ContactResidualTests) ... /home/nubot/anaconda3/envs/mujoco/lib/python3.10/site-packages/gymnasium/utils/env_checker.py:311: UserWarning: [33mWARN: A Box observation space minimum value is -infinity. This is probably too low.[0m
+  logger.warn(
+/home/nubot/anaconda3/envs/mujoco/lib/python3.10/site-packages/gymnasium/utils/env_checker.py:315: UserWarning: [33mWARN: A Box observation space maximum value is infinity. This is probably too high.[0m
+  logger.warn(
+ok
+test_implicit_motor_law_preserves_total_pd_force_limits (test_task.ContactResidualTests) ... ok
+test_incomplete_suites_cannot_pass_acceptance (test_task.ContactResidualTests) ... ok
+test_kinematic_continuity_uses_current_scene (test_task.ContactResidualTests) ... ok
+test_preserved_checkpoint_loads_without_deleted_module (test_task.ContactResidualTests) ... ok
+test_training_lock_rejects_overlap_and_releases_after_failure (test_task.ContactResidualTests) ... ok
+test_velocity_checkpoint_is_rejected_even_with_same_action_dimension (test_task.ContactResidualTests) ... ok
+test_zero_policy_turns_arms_but_cannot_turn_disconnected_wheel (test_task.ContactResidualTests) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 17.521s
+
+OK

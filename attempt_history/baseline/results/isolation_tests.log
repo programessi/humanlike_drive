@@ -1,0 +1,24 @@
+test_categorical_turns_and_local_route_progress (test_navigation.NavigationTests) ... ok
+test_future_points_follow_one_route_at_continuous_distances (test_navigation.NavigationTests) ... ok
+test_left_and_right_circular_routes (test_navigation.NavigationTests) ... ok
+test_gym_reset_and_step_contract (test_physics.PhysicsTests) ... /home/nubot/anaconda3/envs/mujoco/lib/python3.10/site-packages/gymnasium/utils/env_checker.py:311: UserWarning: [33mWARN: A Box observation space minimum value is -infinity. This is probably too low.[0m
+  logger.warn(
+/home/nubot/anaconda3/envs/mujoco/lib/python3.10/site-packages/gymnasium/utils/env_checker.py:315: UserWarning: [33mWARN: A Box observation space maximum value is infinity. This is probably too high.[0m
+  logger.warn(
+ok
+test_hands_can_move_the_passive_wheel (test_physics.PhysicsTests) ... ok
+test_integral_feedback_tracks_a_hold_without_direct_wheel_control (test_physics.PhysicsTests) ... ok
+test_model_has_fixed_torso_and_no_wheel_motor (test_physics.PhysicsTests) ... ok
+test_no_contact_wheel_stays_stationary (test_physics.PhysicsTests) ... ok
+test_forward_and_backprop (test_vision.VisionTests) ... ok
+test_guard_falls_back_outside_trained_motion (test_vision.VisionTests) ... ok
+test_navigation_branch_receives_selected_command_gradients (test_vision.VisionTests) ... ok
+test_path_to_steer (test_vision.VisionTests) ... ok
+test_road_arc_labels_recover_a_circular_path (test_vision.VisionTests) ... ok
+test_spatial_xy_policy_checkpoint_and_gradients (test_vision.VisionTests) ... ok
+test_speed_reduces_for_turn_and_actuator_lag (test_vision.VisionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 5.306s
+
+OK

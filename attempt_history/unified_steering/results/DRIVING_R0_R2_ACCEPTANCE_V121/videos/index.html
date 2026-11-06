@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R0–R2 冻结策略视频展示</title>
+<style>body{margin:0;background:#0f1621;color:#e2eaf3;font:16px/1.7 system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:28px 22px}h1{font-size:28px;line-height:1.4}h2{font-size:21px}p{color:#b7c6d9}section{margin:28px 0;padding:22px;background:#182332;border:1px solid #2c3c50;border-radius:14px}video{display:block;width:100%;border-radius:9px;background:#000}a{color:#79ddbb}.note{font-size:14px}code{overflow-wrap:anywhere}footer{color:#9bb0c8;margin:26px 0}</style>
+<main><h1>R0–R2：冻结策略 v121 真实仿真视频</h1>
+<p>同一份24维结构化策略权重，双臂与双手共同执行。两路视角展示完整往返，画面同步显示目标角、实际角、接触力、回正力矩和实际臂余量。</p>
+<p>视频为 <strong>4倍速</strong>，真实参考峰值速度为5°/s。播放器速度设为0.25×即可按真实仿真时间观看。</p>
+<section><h2>R1：0 → −90° → 0 → +90° → 0</h2>
+<p>双手跟踪、停止保持与受控回正。来源：已验收72例回归中的seed 43001。</p>
+<video controls preload="metadata" poster="r1/frame_0001.jpg" src="r1/demo_4x.mp4"></video>
+<p class="note"><a href="r1/demo_4x.mp4" download>下载MP4</a> · <a href="r1/video_metadata.json">录制指标与原轨迹一致性</a></p></section>
+<section><h2>R2：0 → −180° → 0 → +180° → 0</h2>
+<p>提前释放、接管与受控回正。选取独立120例中运动RMSE最差的完整连续序列：seed 56051、名义初态，RMSE 0.649°，停止末段峰值0.606°。</p>
+<video controls preload="metadata" poster="r2/frame_0001.jpg" src="r2/demo_4x.mp4"></video>
+<p class="note"><a href="r2/demo_4x.mp4" download>下载MP4</a> · <a href="r2/video_metadata.json">录制指标与原轨迹一致性</a></p></section>
+<p class="note">当前结果采用示范辅助结构化统一策略＋IK/QP执行层，180°采用提前接管风格；360°/540°、原上方手持续握至180°的风格及任意在线改令尚未验证。视频展示真实仿真，不表示实机实验。</p>
+<footer><a href="../README.md">验收报告</a> · <a href="../../../scripts/record_driving_video.py">录制脚本</a></footer></main></html>

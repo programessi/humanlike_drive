@@ -1,0 +1,705 @@
+[
+  {
+    "folder": "01_旋转与换握/DIPS",
+    "title": "Diffusion-Informed Probabilistic Contact Search for Multi-Finger Manipulation",
+    "url": "https://arxiv.org/abs/2410.00841",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/01_旋转与换握/DIPS/paper.pdf",
+        "sha256": "81061ba52a0e5ddcca7210167927a4882fc9593bba6c77c4097f14cd3b5af60d"
+      }
+    ]
+  },
+  {
+    "folder": "01_旋转与换握/DexMani",
+    "title": "DexMani: Human-Derived Manipulability Guidance for Dexterous Rotation",
+    "url": "https://arxiv.org/abs/2608.00554",
+    "authors_from_pdf_metadata": [
+      "Xiaoyang Chen",
+      "Shengcheng Luo",
+      "Haoran Guo",
+      "Jiaming Jiang",
+      "Wanlin Li",
+      "Ziyuan Jiao",
+      "Chenxi Xiao"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/01_旋转与换握/DexMani/paper.pdf",
+        "sha256": "05b6927f875156ffd9f71f5c32ba7ead9d6d59c8f135746c7c7f67e0a17fdd1f"
+      }
+    ]
+  },
+  {
+    "folder": "01_旋转与换握/DexScrew",
+    "title": "Learning Dexterous Manipulation Skills from Imperfect Simulations",
+    "url": "https://arxiv.org/abs/2512.02011",
+    "authors_from_pdf_metadata": [
+      "Elvis Hsieh",
+      "Wen-Han Hsieh",
+      "Yen-Jen Wang",
+      "Toru Lin",
+      "Jitendra Malik",
+      "Koushil Sreenath",
+      "Haozhi Qi"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/01_旋转与换握/DexScrew/paper.pdf",
+        "sha256": "28d21aec9c21e8695df0248a28c745bec941ed8d2694b4fb90cc125bdb3d522c"
+      }
+    ]
+  },
+  {
+    "folder": "01_旋转与换握/DexterityGen",
+    "title": "DexterityGen: Foundation Controller for Unprecedented Dexterity",
+    "url": "https://arxiv.org/abs/2502.04307",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/01_旋转与换握/DexterityGen/paper.pdf",
+        "sha256": "5c5cb5ec46234555d7ffd2b3fe9ce522663b06edb84f29ddf892fc70cc7b2e8f"
+      }
+    ]
+  },
+  {
+    "folder": "01_旋转与换握/HORA",
+    "title": "In-Hand Object Rotation via Rapid Motor Adaptation",
+    "url": "https://arxiv.org/abs/2210.04887",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/01_旋转与换握/HORA/paper.pdf",
+        "sha256": "d18d851fd7836d6195abd8e102caccd70dae5c54d206013f8aabf510c3133066"
+      }
+    ]
+  },
+  {
+    "folder": "01_旋转与换握/Proprioceptive_Transformer",
+    "title": "Learning Robust Dexterous In-Hand Manipulation from Joint Sensors with Proprioceptive Transformer",
+    "url": "https://arxiv.org/abs/2605.21330",
+    "authors_from_pdf_metadata": [
+      "Senlan Yao",
+      "Chenyu Yang",
+      "Jaehoon Kim",
+      "Aristotelis Sympetheros",
+      "Robert K. Katzschmann"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/01_旋转与换握/Proprioceptive_Transformer/paper.pdf",
+        "sha256": "227b837851422d95f4b9f4b05be9e5a8ddec87b667069de87d24e5638204b220"
+      }
+    ]
+  },
+  {
+    "folder": "02_双臂双手协同/AsymDex",
+    "title": "AsymDex: Asymmetry and Relative Coordinates for RL-based Bimanual Dexterity",
+    "url": "https://arxiv.org/abs/2411.13020",
+    "authors_from_pdf_metadata": [
+      "Zhaodong Yang",
+      "Yunhai Han",
+      "Ai-Ping Hu",
+      "Harish Ravichandar"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/02_双臂双手协同/AsymDex/paper.pdf",
+        "sha256": "56f529de716e2c5f72e697671752aea4546f543d74afd773f26da8ce6f315fd9"
+      }
+    ]
+  },
+  {
+    "folder": "02_双臂双手协同/BiDexHD",
+    "title": "Learning Diverse Bimanual Dexterous Manipulation Skills from Human Demonstrations",
+    "url": "https://arxiv.org/abs/2410.02477",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/02_双臂双手协同/BiDexHD/paper.pdf",
+        "sha256": "fc68717be9b461c3ecb3c382bd0c45504e3d2a794261717b9c4936a54d7a3675"
+      }
+    ]
+  },
+  {
+    "folder": "02_双臂双手协同/CHORD",
+    "title": "Learning Dexterous Manipulation Using Contact Wrench Guidance From Human Demonstration",
+    "url": "https://arxiv.org/abs/2607.00033",
+    "authors_from_pdf_metadata": [
+      "Xinghao Zhu",
+      "Zixi Liu",
+      "Shalin Jain",
+      "Chenran Li",
+      "Milad Noori",
+      "Michael Andres Lin",
+      "Huihua Zhao",
+      "John Welsh",
+      "Mrinal Verghese",
+      "Wei Liu",
+      "Tingwu Wang",
+      "Xingye Da",
+      "Zhengyi Luo",
+      "Vishal Kulkarni",
+      "Naema Bhatti",
+      "Yuke Zhu",
+      "Linxi Fan",
+      "Bowen Wen",
+      "Danfei Xu",
+      "Soha Pouya",
+      "Yan Chang"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/02_双臂双手协同/CHORD/paper.pdf",
+        "sha256": "1705882268b5e0d59e3712edb5d1a0cbbbb4a261be119590c99c93c02c823120"
+      }
+    ]
+  },
+  {
+    "folder": "02_双臂双手协同/DexImit",
+    "title": "DexImit: Learning Bimanual Dexterous Manipulation from Monocular Human Videos",
+    "url": "https://arxiv.org/search/?query=DexImit%3A+Learning+Bimanual+Dexterous+Manipulation+from+Monocular+Human+Videos&searchtype=title&abstracts=show&order=-announced_date_first&size=50",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/02_双臂双手协同/DexImit/paper.pdf",
+        "sha256": "8d2bf9659281c4cfcda8ec4fcbcf5cf132fff55a7e01e5d1ec510d15cc7da83f"
+      }
+    ]
+  },
+  {
+    "folder": "02_双臂双手协同/DexMachina",
+    "title": "DexMachina: Functional Retargeting for Bimanual Dexterous Manipulation",
+    "url": "https://arxiv.org/abs/2505.24853",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "02_双臂双手协同/DexMimicGen",
+    "title": "DexMimicGen: Automated Data Generation for Bimanual Dexterous Manipulation via Imitation Learning",
+    "url": "https://arxiv.org/abs/2410.24185",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/02_双臂双手协同/DexMimicGen/paper.html",
+        "sha256": "3c353efde975106686498871d2ccfcd422ef4ab8746fcbbd63ad54993816d9fc"
+      }
+    ]
+  },
+  {
+    "folder": "02_双臂双手协同/Grasp2Twist",
+    "title": "Grasp2Twist: Learning Bimanual Dexterous Jar Opening by Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2609.32064",
+    "authors_from_pdf_metadata": [
+      "Mo Xu",
+      "Yunfu Deng",
+      "Jianuo Wang",
+      "Josiah Hanna",
+      "Bilge Mutlu"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/02_双臂双手协同/Grasp2Twist/paper.pdf",
+        "sha256": "bc4c95e4dcd3339a8825262c370fae1463935c7ab97b9623da39735d72a76297"
+      }
+    ]
+  },
+  {
+    "folder": "02_双臂双手协同/HATO",
+    "title": "Learning Visuotactile Skills with Two Multifingered Hands",
+    "url": "https://arxiv.org/abs/2404.16823",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "02_双臂双手协同/PatternDex",
+    "title": "PatternDex: Learning Interaction Patterns to Guide Reinforcement Learning of Bimanual Dexterous Manipulation of Articulated Objects",
+    "url": "https://arxiv.org/abs/2610.04765",
+    "authors_from_pdf_metadata": [
+      "David Minkwan Kim",
+      "Runfa Blark Li",
+      "Beckham Po-Ju Lee",
+      "Nikolay Atanasov",
+      "Truong Nguyen"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/02_双臂双手协同/PatternDex/paper.pdf",
+        "sha256": "5c795d7d76474103c171195ba69f0c617d62bd507a4f53c85fe2f1a0b08d2a9f"
+      }
+    ]
+  },
+  {
+    "folder": "02_双臂双手协同/PhysGraph",
+    "title": "PhysGraph: Physically-Grounded Graph-Transformer Policies for Bimanual Dexterous Hand–Tool–Object Manipulation",
+    "url": "https://arxiv.org/abs/2603.01436",
+    "authors_from_pdf_metadata": [
+      "Runfa Blark Li",
+      "David Kim",
+      "Xinshuang Liu",
+      "Keito Suzuki",
+      "Dwait Bhatt",
+      "Nikola Raicevic",
+      "Xin Lin",
+      "Ki Myung Brian Lee",
+      "Nikolay Atanasov",
+      "Truong Nguyen"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/02_双臂双手协同/PhysGraph/paper.pdf",
+        "sha256": "cda9edd71846681fb3702b6128ec741ee88ddd0aa61ed557b9c1a10a0f367c0b"
+      }
+    ]
+  },
+  {
+    "folder": "02_双臂双手协同/Twisting_Lids",
+    "title": "Twisting Lids Off with Two Hands",
+    "url": "https://arxiv.org/abs/2403.02338",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/02_双臂双手协同/Twisting_Lids/paper.pdf",
+        "sha256": "869f0aacfe4c98a386c2ef4d5e221fecfa39b4c6398019da2a74d7332c7cfbbc"
+      }
+    ]
+  },
+  {
+    "folder": "03_sim2real/Dactyl",
+    "title": "Learning Dexterous In-Hand Manipulation",
+    "url": "https://arxiv.org/abs/1808.00177",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/03_sim2real/Dactyl/paper.pdf",
+        "sha256": "da6ec44dd0941d674ec58334ff630f83d7bd19e6062ab2837ccfa0b3b94f6f73"
+      }
+    ]
+  },
+  {
+    "folder": "03_sim2real/DeXtreme",
+    "title": "DeXtreme: Transfer of Agile In-hand Manipulation from Simulation to Reality",
+    "url": "https://arxiv.org/abs/2210.13702",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/03_sim2real/DeXtreme/paper.pdf",
+        "sha256": "753b6f9b9aa09b49d2dfd945d74a42a0513f6860e4665b6ca98f5eede719a28f"
+      }
+    ]
+  },
+  {
+    "folder": "03_sim2real/DexCtrl",
+    "title": "DexCtrl: Towards Sim-to-Real Dexterity with Adaptive Controller Learning",
+    "url": "https://arxiv.org/abs/2505.00991",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/03_sim2real/DexCtrl/paper.pdf",
+        "sha256": "e65825ba8fbaf20ca976f05dfaa92426e8176ef90da5c32757c32b61f51c9aaf"
+      }
+    ]
+  },
+  {
+    "folder": "03_sim2real/DexNDM",
+    "title": "DexNDM: Closing the Reality Gap for Dexterous In-Hand Rotation via Joint-Wise Neural Dynamics Model",
+    "url": "https://arxiv.org/abs/2510.08556",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "03_sim2real/IndustReal",
+    "title": "IndustReal: Transferring Contact-Rich Assembly Tasks from Simulation to Reality",
+    "url": "https://arxiv.org/abs/2305.17103",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/03_sim2real/IndustReal/paper.pdf",
+        "sha256": "c0eb22d58cdc63a9605f008e6204e99277b069b76fd19c10d48439217f0e102e"
+      }
+    ]
+  },
+  {
+    "folder": "03_sim2real/Inspire_Articulated_Tools",
+    "title": "In-Hand Manipulation of Articulated Tools with Dexterous Robot Hands with Sim-to-Real Transfer",
+    "url": "https://arxiv.org/abs/2509.23075",
+    "authors_from_pdf_metadata": [
+      "Soofiyan Atar",
+      "Daniel Huang",
+      "Florian Richter",
+      "Michael Yip"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/03_sim2real/Inspire_Articulated_Tools/paper.pdf",
+        "sha256": "acba413a9c7dbcdb11152da0360e70fb974d0fef8ad4788baa390b1b0e689a81"
+      }
+    ]
+  },
+  {
+    "folder": "03_sim2real/Rubiks_Cube",
+    "title": "Solving Rubik’s Cube with a Robot Hand",
+    "url": "https://arxiv.org/abs/1910.07113",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/03_sim2real/Rubiks_Cube/paper.pdf",
+        "sha256": "2a6fe43013ddc8d148b0cdebc8468dfe83d11319ed626a1aeaa79b510e2ed48c"
+      }
+    ]
+  },
+  {
+    "folder": "03_sim2real/SimToolReal",
+    "title": "SimToolReal: An Object-Centric Policy for Zero-Shot Dexterous Tool Manipulation",
+    "url": "https://arxiv.org/abs/2602.16863",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/03_sim2real/SimToolReal/paper.pdf",
+        "sha256": "0728ef52a93ac985697540edb1127506f309acd7f5cb77042719ec43002d6ba3"
+      }
+    ]
+  },
+  {
+    "folder": "03_sim2real/TRANSIC",
+    "title": "TRANSIC: Sim-to-Real Policy Transfer by Learning from Online Correction",
+    "url": "https://arxiv.org/abs/2405.10315",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/03_sim2real/TRANSIC/paper.html",
+        "sha256": "18f8438d4e2d43e03f265a3859227bc2c001fb3ba63dee2bc9b73d48c7315d40"
+      }
+    ]
+  },
+  {
+    "folder": "04_阀门与手部硬件/ArticuBot",
+    "title": "ArticuBot: Learning Universal Articulated Object Manipulation Policy via Large Scale Simulation",
+    "url": "https://arxiv.org/search/?query=ArticuBot%3A+Learning+Universal+Articulated+Object+Manipulation+Policy+via+Large+Scale+Simulation&searchtype=title",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "04_阀门与手部硬件/Atlas_Valve",
+    "title": "Atlas autonomous valve turning（此前记录使用的简称；完整题名待核实）",
+    "url": "https://arxiv.org/search/?query=Atlas+autonomous+valve+turning%EF%BC%88%E6%AD%A4%E5%89%8D%E8%AE%B0%E5%BD%95%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AE%80%E7%A7%B0%EF%BC%9B%E5%AE%8C%E6%95%B4%E9%A2%98%E5%90%8D%E5%BE%85%E6%A0%B8%E5%AE%9E%EF%BC%89&searchtype=title",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "04_阀门与手部硬件/COMAN_Valve",
+    "title": "A manipulation framework for compliant humanoid COMAN: Application to a valve turning task",
+    "url": "https://arxiv.org/search/?query=A+manipulation+framework+for+compliant+humanoid+COMAN%3A+Application+to+a+valve+turning+task&searchtype=title",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "04_阀门与手部硬件/CyberDemo",
+    "title": "CyberDemo: Augmenting Simulated Human Demonstration for Real-World Dexterous Manipulation",
+    "url": "https://arxiv.org/abs/2402.14795",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/04_阀门与手部硬件/CyberDemo/paper.pdf",
+        "sha256": "608910175ae8ffec96a2cff8e0857f3e7e6c4be6f3a05f6e150cdd993fdd833c"
+      }
+    ]
+  },
+  {
+    "folder": "04_阀门与手部硬件/DClaw",
+    "title": "Dexterous Manipulation with Deep Reinforcement Learning: Efficient, General, and Low-Cost",
+    "url": "https://arxiv.org/abs/1810.06045",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/04_阀门与手部硬件/DClaw/paper.pdf",
+        "sha256": "945d30213c15a9b9ca3ef0ca46611811c3ef19dfef1577e31a1132de98ce2641"
+      }
+    ]
+  },
+  {
+    "folder": "04_阀门与手部硬件/DexArt",
+    "title": "DexArt: Benchmarking Generalizable Dexterous Manipulation with Articulated Objects",
+    "url": "https://arxiv.org/abs/2305.05706",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/04_阀门与手部硬件/DexArt/paper.pdf",
+        "sha256": "44354c0496a14f9ef90e19cd93f1521075adb6daff5f0a882cc045a649fbff7e"
+      }
+    ]
+  },
+  {
+    "folder": "04_阀门与手部硬件/Inspire_RH56DFX",
+    "title": "Characterization, Analytical Planning, and Hybrid Force Control for the Inspire RH56DFX Hand",
+    "url": "https://arxiv.org/abs/2603.08988",
+    "authors_from_pdf_metadata": [
+      "Xuan Tan",
+      "William Xie",
+      "Nikolaus Correll"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/04_阀门与手部硬件/Inspire_RH56DFX/paper.pdf",
+        "sha256": "d0af15198878840f1726323c212c8f8fe3bc7d1e196733cc6c973ad2d5caab92"
+      }
+    ]
+  },
+  {
+    "folder": "04_阀门与手部硬件/RBO_Hand",
+    "title": "Learning Dexterous Manipulation for a Soft Robotic Hand from Human Demonstrations",
+    "url": "https://arxiv.org/abs/1603.06348",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/04_阀门与手部硬件/RBO_Hand/paper.pdf",
+        "sha256": "c34dd7cbb88dc1cac6a90f661ad7b80f5af1b429c6250c7f300b5859ccda60e2"
+      }
+    ]
+  },
+  {
+    "folder": "05_人形驾驶与驾驶行为/Humanoid_Steering_Admittance",
+    "title": "An Admittance Control Method Based on Parameters Fuzzification for Humanoid Steering Wheel Manipulation",
+    "url": "https://arxiv.org/search/?query=An+Admittance+Control+Method+Based+on+Parameters+Fuzzification+for+Humanoid+Steering+Wheel+Manipulation&searchtype=title",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "05_人形驾驶与驾驶行为/Musashi_Driving",
+    "title": "Toward Autonomous Driving by Musculoskeletal Humanoids: A Study of Developed Hardware and Learning-Based Software",
+    "url": "https://arxiv.org/abs/2406.05573",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/05_人形驾驶与驾驶行为/Musashi_Driving/paper.pdf",
+        "sha256": "257898a65b217593e02897870c15d3b7d5724095730cec6005e7d21a54e08760"
+      }
+    ]
+  },
+  {
+    "folder": "05_人形驾驶与驾驶行为/Natural_Driving_Hand_Position",
+    "title": "Hand Position on Steering Wheel During Driving",
+    "url": "https://arxiv.org/search/?query=Hand+Position+on+Steering+Wheel+During+Driving&searchtype=title",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "05_人形驾驶与驾驶行为/Steering_Hand_Coordination",
+    "title": "Introducing coordination in hand position analysis during a steering wheel-based tracking task using fuzzy sets",
+    "url": "https://arxiv.org/search/?query=Introducing+coordination+in+hand+position+analysis+during+a+steering+wheel-based+tracking+task+using+fuzzy+sets&searchtype=title",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "05_人形驾驶与驾驶行为/Steering_Hand_Position_Differences",
+    "title": "Inter and intra-individual differences in steering wheel hand positions during a simulated driving task",
+    "url": "https://arxiv.org/search/?query=Inter+and+intra-individual+differences+in+steering+wheel+hand+positions+during+a+simulated+driving+task&searchtype=title",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "05_人形驾驶与驾驶行为/Steering_Low_Speed_Maneuvers",
+    "title": "Steering wheel hand position in low-speed maneuvers",
+    "url": "https://arxiv.org/search/?query=Steering+wheel+hand+position+in+low-speed+maneuvers&searchtype=title",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "06_视觉与通用操作/CoDex",
+    "title": "CoDex: Learning Compositional Dexterous Functional Manipulation without Demonstrations",
+    "url": "https://arxiv.org/abs/2606.31909",
+    "authors_from_pdf_metadata": [
+      "Bowen Jiang",
+      "William Painter Reger",
+      "Roberto Martin-Martin"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/06_视觉与通用操作/CoDex/paper.pdf",
+        "sha256": "b6d155b8fcd9b471c9a123dbac80515070595b0f1f802254f09149e31ee231df"
+      }
+    ]
+  },
+  {
+    "folder": "06_视觉与通用操作/DextrAH_RGB",
+    "title": "DextrAH-RGB: Visuomotor Policies to Grasp Anything with Dexterous Hands",
+    "url": "https://arxiv.org/abs/2412.01791",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "06_视觉与通用操作/Extrinsic_Dexterity",
+    "title": "Emerging Extrinsic Dexterity in Cluttered Scenes via Dynamics-aware Policy Learning",
+    "url": "https://arxiv.org/search/?query=Emerging+Extrinsic+Dexterity+in+Cluttered+Scenes+via+Dynamics-aware+Policy+Learning&searchtype=title&abstracts=show&order=-announced_date_first&size=50",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/06_视觉与通用操作/Extrinsic_Dexterity/paper.pdf",
+        "sha256": "05f87ef056faee4e6d16f9da7bddebb7ef35d51e9a970b50653e1791af7776ab"
+      }
+    ]
+  },
+  {
+    "folder": "06_视觉与通用操作/One_Hand_to_Rule_Them_All",
+    "title": "One Hand to Rule Them All",
+    "url": "https://arxiv.org/search/?query=One+Hand+to+Rule+Them+All&searchtype=title",
+    "authors_from_pdf_metadata": [],
+    "attachments": []
+  },
+  {
+    "folder": "06_视觉与通用操作/ViserDex",
+    "title": "ViserDex: Visual Sim-to-Real for Robust Dexterous In-hand Reorientation",
+    "url": "https://arxiv.org/search/?query=ViserDex%3A+Visual+Sim-to-Real+for+Robust+Dexterous+In-hand+Reorientation&searchtype=title&abstracts=show&order=-announced_date_first&size=50",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/06_视觉与通用操作/ViserDex/paper.pdf",
+        "sha256": "2df1917bf28c8cbad70acae6ec4ec950063ed0018f6978009de01ba120c0e4fd"
+      }
+    ]
+  },
+  {
+    "folder": "07_抓持承载与拖拉/GD2P",
+    "title": "Learning Geometry-Aware Nonprehensile Pushing and Pulling with Dexterous Hands",
+    "url": "http://arxiv.org/abs/2509.18455v4",
+    "authors_from_pdf_metadata": [
+      "Yunshuang Li",
+      "Yiyang Ling",
+      "Gaurav S. Sukhatme",
+      "Daniel Seita"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/07_抓持承载与拖拉/GD2P/paper.pdf",
+        "sha256": "837eb089555b17041467b27103f6c40ea70f465d86bf2e415742fb55ef08ed8a"
+      }
+    ]
+  },
+  {
+    "folder": "07_抓持承载与拖拉/Grasp_Reflex",
+    "title": "Multi-Fingered End-Effector Grasp Reflex Modeling for One-Shot Tactile Servoing in Tool Manipulation Tasks",
+    "url": "https://doi.org/10.1109/IROS58592.2024.10801477",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/07_抓持承载与拖拉/Grasp_Reflex/paper.pdf",
+        "sha256": "e801747fdb59d191f38f89702bbc0158d41f6b47ec818f4abbc7abeda1905b81"
+      }
+    ]
+  },
+  {
+    "folder": "07_抓持承载与拖拉/Grasp_to_Act",
+    "title": "Grasp to Act: Dexterous Grasping for Tool Use in Dynamic Settings",
+    "url": "http://arxiv.org/abs/2602.20466v1",
+    "authors_from_pdf_metadata": [
+      "Harsh Gupta",
+      "Mohammad Amin Mirzaee",
+      "Wenzhen Yuan"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/07_抓持承载与拖拉/Grasp_to_Act/paper.pdf",
+        "sha256": "b304edac062377f78e3075d853f48acbe3a67325c230ef94a60481829012f03d"
+      }
+    ]
+  },
+  {
+    "folder": "07_抓持承载与拖拉/HANDFUL",
+    "title": "HANDFUL: Sequential Grasp-Conditioned Dexterous Manipulation with Resource Awareness",
+    "url": "http://arxiv.org/abs/2604.25126v2",
+    "authors_from_pdf_metadata": [
+      "Ethan Foong",
+      "Yunshuang Li",
+      "Hao Jiang",
+      "Gaurav S. Sukhatme",
+      "Daniel Seita"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/07_抓持承载与拖拉/HANDFUL/paper.pdf",
+        "sha256": "c8d812a830eb9271795a6559e41d8954316118b175571efa304f7ac216d145b9"
+      }
+    ]
+  },
+  {
+    "folder": "07_抓持承载与拖拉/Multi_Contact_Grasp_Control",
+    "title": "A Learning-based Controller for Multi-Contact Grasps on Unknown Objects with a Dexterous Hand",
+    "url": "https://doi.org/10.1109/IROS58592.2024.10801894",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/07_抓持承载与拖拉/Multi_Contact_Grasp_Control/paper.pdf",
+        "sha256": "702273a80b9557923815dfcc3d59395749da0029b8903e523f46b3a6fb9a934b"
+      }
+    ]
+  },
+  {
+    "folder": "07_抓持承载与拖拉/Rickshaw_Pulling",
+    "title": "Humanoid Rickshaw Pulling: Whole-Body Locomotion under Coupled Wheeled Loads",
+    "url": "http://arxiv.org/abs/2610.04238v2",
+    "authors_from_pdf_metadata": [
+      "Yangzhi Yang",
+      "Xiansheng Lin",
+      "Zhaoming Xie",
+      "Xiaobin Xiong"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/07_抓持承载与拖拉/Rickshaw_Pulling/paper.pdf",
+        "sha256": "f6459e915b822d703a8ae9cc47170213c8f31a364bf02264a2dd478bfa27f1f3"
+      }
+    ]
+  },
+  {
+    "folder": "07_抓持承载与拖拉/TAC_LOCO",
+    "title": "TAC-LOCO: Unified Whole-Body Control for Quadrupedal TACtile-Informed LOCO-Manipulation",
+    "url": "http://arxiv.org/abs/2607.10132v2",
+    "authors_from_pdf_metadata": [
+      "Muqun Hu",
+      "Yuhao Zhou",
+      "Kabir Ray Malik",
+      "Chi Lin",
+      "Won Suk Lee",
+      "Yu She",
+      "Yan Gu"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/07_抓持承载与拖拉/TAC_LOCO/paper.pdf",
+        "sha256": "9b8bc02cc502fb085129c7edb9a6b03298d57b7f63ca51efdaadb9c22883881b"
+      }
+    ]
+  },
+  {
+    "folder": "07_抓持承载与拖拉/TaskDexGrasp",
+    "title": "Task-Oriented Dexterous Hand Pose Synthesis Using Differentiable Grasp Wrench Boundary Estimator",
+    "url": "https://doi.org/10.1109/IROS58592.2024.10802652",
+    "authors_from_pdf_metadata": [],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/07_抓持承载与拖拉/TaskDexGrasp/paper.pdf",
+        "sha256": "798b1c0cf0b51a2a5f9c4b921996884e31ce5de07bb817144704aeea9b24b98b"
+      }
+    ]
+  },
+  {
+    "folder": "07_抓持承载与拖拉/Whole_Hand_Force_Regulation",
+    "title": "Real-Time Force Regulation for Whole-Hand Dexterous Grasping",
+    "url": "http://arxiv.org/abs/2609.30082v1",
+    "authors_from_pdf_metadata": [
+      "Sang Min Kim",
+      "Alexander Alexiev",
+      "Tzu-Yuan Lin",
+      "Sangbae Kim",
+      "Young Min Kim",
+      "Yonghyeon Lee"
+    ],
+    "attachments": [
+      {
+        "file": "/home/nubot/humanlike_drive/references/07_抓持承载与拖拉/Whole_Hand_Force_Regulation/paper.pdf",
+        "sha256": "8014313abe8016970623820722481039844c7739ae7c5665345ffe08ca60e08e"
+      }
+    ]
+  }
+]

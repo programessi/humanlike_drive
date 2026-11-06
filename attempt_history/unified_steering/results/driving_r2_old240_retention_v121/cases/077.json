@@ -1,0 +1,61 @@
+{
+  "record": {
+    "case": "negative",
+    "seed": 1307,
+    "seconds": 10.0,
+    "amplitude_deg": 10.0,
+    "support": "both",
+    "complete": true,
+    "rmse_deg": 0.29719157469187224,
+    "peak_error_deg": 0.7940402362878338,
+    "tail_peak_deg": 0.01876851207560602,
+    "min_arm_margin_deg": 15.195065575282378,
+    "collision_peak_n": 0.0,
+    "free_hand_peak_force_n": null,
+    "signed_progress_fraction": 0.9995900223815385,
+    "termination_reason": "",
+    "passed": true,
+    "qp_failures": 0,
+    "collision_qp_failures": 0,
+    "collision_constraints": 12979,
+    "workspace_clips": 0,
+    "peak_qp_position_error_mm": 1.4140069767695325,
+    "reset_options": {},
+    "preparation": {
+      "wheel_angle": 0.025083056183572733,
+      "left_force": 14.55134431627033,
+      "right_force": 13.862391974601943
+    },
+    "group": "screened",
+    "hard_failure": false
+  },
+  "baseline": {
+    "case": "negative",
+    "seed": 1307,
+    "seconds": 10.0,
+    "amplitude_deg": 10.0,
+    "support": "both",
+    "complete": true,
+    "rmse_deg": 8.328201836326267,
+    "peak_error_deg": 9.824558915462747,
+    "tail_peak_deg": 9.7804101534238,
+    "min_arm_margin_deg": 20.32522362993884,
+    "collision_peak_n": 0.0,
+    "free_hand_peak_force_n": null,
+    "signed_progress_fraction": 0.02669739665705937,
+    "termination_reason": "",
+    "passed": false,
+    "qp_failures": 0,
+    "collision_qp_failures": 0,
+    "collision_constraints": 0,
+    "workspace_clips": 0,
+    "peak_qp_position_error_mm": 0.0,
+    "reset_options": {},
+    "preparation": {
+      "wheel_angle": 0.025083056183572733,
+      "left_force": 14.55134431627033,
+      "right_force": 13.862391974601943
+    },
+    "group": "screened"
+  }
+}

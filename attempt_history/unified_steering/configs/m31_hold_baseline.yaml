@@ -1,0 +1,25 @@
+# Step 4.1 evaluation, frozen weights; no PPO updates or observation/reward changes.
+initial_checkpoint: runs/m2_smoke_seed7_v1/initial.pt
+fixed_reference_archive: results/m30_diagnosis_v1/frozen/initial/summary.json
+workers: 4
+noise_seeds: [201,202,203,204,205,206,207,208,209,210]
+noise_durations_s: [3.0,10.0]
+noise_groups:
+  default: [0.35,0.50]
+  arm_low: [0.10,0.50]
+cases:
+  - {name: hold_3s, seconds: 3.0, torque_nm: 0.0}
+  - {name: hold_10s, seconds: 10.0, torque_nm: 0.0}
+  - {name: pulse_plus, seconds: 10.0, torque_nm: 0.05}
+  - {name: pulse_minus, seconds: 10.0, torque_nm: -0.05}
+pulse_start_s: 2.0
+pulse_duration_s: 0.2
+gates:
+  hold_peak_error_deg: 2.0
+  disturbance_min_paired_deviation_deg: 0.25
+  recovery_band_deg: 0.5
+  recovery_dwell_s: 1.0
+  recovery_deadline_s: 2.0
+  noise_min_safety_completion_rate: 0.9
+  noise_max_common_complete_rmse_ratio: 0.8
+  noise_min_common_complete_pairs: 5

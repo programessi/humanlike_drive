@@ -1,0 +1,22 @@
+{
+  "parent": "runs/r2_sigma2_comparison_v1/qualified_development.zip",
+  "learning_rate": 2.5e-06,
+  "angle_sigma_deg": 2,
+  "hand_alpha": 0.995,
+  "wrist_std_override": 0.1,
+  "requested_steps": 65536,
+  "only_learning_change": "wrist sampling std checkpoint approx0.25 ->0.10; preserve mean actor, critic, hand log_std; reset corresponding wrist log_std Adam moments",
+  "development_seeds": [
+    1007,
+    1107,
+    1117
+  ],
+  "development_qualification_rmse_deg": 0.9,
+  "formal_acceptance_rmse_deg": 1,
+  "independent_seeds": [
+    1207,
+    1217,
+    1227
+  ],
+  "holdout_policy": "Previous1107/1117/1127 acceptance has been inspected and is no longer independent; no unseen seeds are evaluated before qualification."
+}

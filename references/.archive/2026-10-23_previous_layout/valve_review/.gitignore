@@ -1,0 +1,4 @@
+# Keep downloaded papers, search responses, HTML and code snapshots local.
+*
+!.gitignore
+!REVIEW.md

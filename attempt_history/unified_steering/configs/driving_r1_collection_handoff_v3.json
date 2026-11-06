@@ -1,0 +1,222 @@
+{
+  "interface": "driving-v3-grip-command-handoff",
+  "speed_deg_s": 5.0,
+  "acceleration_deg_s2": 40.0,
+  "tangent_geometry": "results/driving_r0_geometry_roll_v1/summary.json",
+  "phase_lead_deg": 30.0,
+  "demonstrator": {
+    "angle_gain": 6.0,
+    "preview_seconds": 0.15,
+    "position_gain": 3.0,
+    "orientation_gain": 3.0,
+    "hand_gain": 0.1
+  },
+  "criteria": "complete; motionRMSE<=1deg; every stop final3s physics peak<=1deg; overall>=95%, each direction>=90%; any physical/QP hard failure rejects candidate",
+  "template": "short=3s endpoint and zero holds;long=10s holds;sequence=two opposite complete roundtrips with3s holds",
+  "independence": "training410xx;development420xx;independent430xx reserved; R0 diagnostics400xx consumed",
+  "physical_scene": "original +/-450deg; all physical gates and v4 execution unchanged",
+  "experiment": "driving-R1-collection-handoff-v3",
+  "cases": [
+    [
+      30,
+      -1,
+      "short",
+      74101,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      30,
+      -1,
+      "long",
+      74102,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      30,
+      -1,
+      "sequence",
+      74103,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      30,
+      1,
+      "short",
+      74104,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      30,
+      1,
+      "long",
+      74105,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      30,
+      1,
+      "sequence",
+      74106,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      60,
+      -1,
+      "short",
+      74107,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      60,
+      -1,
+      "long",
+      74108,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      60,
+      -1,
+      "sequence",
+      74109,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      60,
+      1,
+      "short",
+      74110,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      60,
+      1,
+      "long",
+      74111,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      60,
+      1,
+      "sequence",
+      74112,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      90,
+      -1,
+      "short",
+      74113,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      90,
+      -1,
+      "long",
+      74114,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      90,
+      -1,
+      "sequence",
+      74115,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      90,
+      1,
+      "short",
+      74116,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      90,
+      1,
+      "long",
+      74117,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      90,
+      1,
+      "sequence",
+      74118,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      45,
+      -1,
+      "short",
+      74119,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      45,
+      -1,
+      "long",
+      74120,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      45,
+      1,
+      "short",
+      74121,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ],
+    [
+      45,
+      1,
+      "long",
+      74122,
+      {
+        "grip_preload_rad": 0.15
+      }
+    ]
+  ],
+  "arm_command_margin_deg": 6.0,
+  "guard_elbows_against_wheel": true,
+  "retain_preparation_hand_command": true
+}

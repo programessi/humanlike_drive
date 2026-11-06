@@ -1,0 +1,64 @@
+[
+  {
+    "case": [
+      180,
+      -1,
+      "sequence",
+      56051,
+      {
+        "phase_deg": 0.0
+      }
+    ],
+    "case_path": "results/driving_r2_independent_v121/cases/a180_d-1_sequence_s56051_b9085cc3f1.json",
+    "motion_rmse_deg": 0.6490020242978017,
+    "stop_peaks_deg": [
+      0.047789013148293306,
+      0.018559215386845622,
+      0.02624793374069703,
+      0.6057581644850611
+    ],
+    "internal_anchor_updates": [
+      {
+        "time_s": 136.44999999999678,
+        "wheel_deg": -0.06492242075104815
+      },
+      {
+        "time_s": 279.80000000002934,
+        "wheel_deg": -0.37106788197225277
+      }
+    ],
+    "both_hands_below_02N_samples": 0,
+    "contact_sampling_hz": 20
+  },
+  {
+    "case": [
+      180,
+      1,
+      "sequence",
+      56041,
+      {
+        "phase_deg": 2.0
+      }
+    ],
+    "case_path": "results/driving_r2_independent_v121/cases/a180_d+1_sequence_s56041_502158bfba.json",
+    "motion_rmse_deg": 0.6485226360188888,
+    "stop_peaks_deg": [
+      0.0832703156969203,
+      0.09719892910545351,
+      0.041182297358036093,
+      0.007439605239705108
+    ],
+    "internal_anchor_updates": [
+      {
+        "time_s": 134.3999999999963,
+        "wheel_deg": 0.33811305092240784
+      },
+      {
+        "time_s": 275.2500000000283,
+        "wheel_deg": -0.14464694024954355
+      }
+    ],
+    "both_hands_below_02N_samples": 0,
+    "contact_sampling_hz": 20
+  }
+]
