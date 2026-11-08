@@ -94,17 +94,27 @@ def render(output):
     print(output / "index.html")
 
 
-def view(preset="nine_three", camera="cabin"):
+def view(preset="nine_three", camera="cabin", scene_file=SCENE, pose_file=PRESET_FILE,
+         replay_file=None, replay_speed=1., max_frames=None):
     # Render directly: the installed 3.3.2 native viewer fails to construct its
     # mjvSceneState buffer for this model. Physics and rendering still use MuJoCo.
     import glfw
-    model = mujoco.MjModel.from_xml_path(str(SCENE))
+    model = mujoco.MjModel.from_xml_path(str(scene_file))
     data = mujoco.MjData(model)
-    poses = json.loads(PRESET_FILE.read_text())
+    poses = json.loads(Path(pose_file).read_text())
+    if "qpos" in poses:
+        poses = {"p0_clear": poses}
+    if preset not in poses:
+        raise ValueError(f"Unknown preset {preset}; available: {list(poses)}")
     apply(model, data, preset, poses)
     state = {"running": False, "preset": preset, "pending": None, "collision": False, "contacts": False,
-             "camera": CAMERAS.index(camera), "camera_pending": True}
-    names = list(PRESETS)
+             "camera": CAMERAS.index(camera), "camera_pending": True,
+             "replay_time": 0., "speed": replay_speed}
+    replay = None
+    if replay_file is not None:
+        with np.load(replay_file) as archive:
+            replay = {k: archive[k] for k in ("time", "qpos", "qvel", "ctrl", "qfrc_applied")}
+    names = list(poses)
     if not glfw.init():
         raise RuntimeError("GLFW could not connect to the display; use --render with MUJOCO_GL=egl for offline previews")
     window = glfw.create_window(1440, 960, "Humanlike Drive | H1-2 / Logitech G29", None, None)
@@ -120,7 +130,7 @@ def view(preset="nine_three", camera="cabin"):
     original_alpha = model.geom_rgba[:, 3].copy()
 
     def key(code):
-        if ord("1") <= code <= ord("4"):
+        if ord("1") <= code < ord("1") + min(len(names), 9):
             state["pending"] = names[code - ord("1")]
         elif code == 32:
             state["running"] = not state["running"]
@@ -128,6 +138,10 @@ def view(preset="nine_three", camera="cabin"):
             state["collision"] = not state["collision"]
         elif code == ord("T"):
             state["contacts"] = not state["contacts"]
+        elif code in (glfw.KEY_EQUAL, glfw.KEY_KP_ADD):
+            state["speed"] = min(16., state["speed"] * 2)
+        elif code in (glfw.KEY_MINUS, glfw.KEY_KP_SUBTRACT):
+            state["speed"] = max(.125, state["speed"] / 2)
         elif code in (ord("R"), ord("r")):
             state["pending"] = state["preset"]
         elif code in (ord("V"), ord("v")):
@@ -195,6 +209,7 @@ def view(preset="nine_three", camera="cabin"):
                 apply(model, data, state["preset"], poses)
                 state["pending"] = None
                 state["running"] = False
+                state["replay_time"] = 0.
                 accumulator = 0.
                 print(state["preset"], flush=True)
             if state["camera_pending"]:
@@ -209,7 +224,18 @@ def view(preset="nine_three", camera="cabin"):
                     cam.fixedcamid = model.camera(CAMERAS[state["camera"]]).id
                 state["camera_pending"] = False
                 print("Camera:", "free" if cam.type == mujoco.mjtCamera.mjCAMERA_FREE else CAMERAS[state["camera"]], flush=True)
-            if state["running"]:
+            if replay is not None:
+                if state["running"]:
+                    state["replay_time"] = min(replay["time"][-1], state["replay_time"] + elapsed * state["speed"])
+                    if state["replay_time"] >= replay["time"][-1]:
+                        state["running"] = False
+                index = min(len(replay["time"])-1, np.searchsorted(replay["time"], state["replay_time"]))
+                data.qpos[:] = replay["qpos"][index]
+                data.qvel[:] = replay["qvel"][index]
+                data.ctrl[:] = replay["ctrl"][index]
+                data.qfrc_applied[:] = replay["qfrc_applied"][index]
+                mujoco.mj_forward(model, data)
+            elif state["running"]:
                 accumulator += elapsed
                 while accumulator >= model.opt.timestep:
                     # Finite motor commands; only compensate robot arm gravity.
@@ -232,7 +258,11 @@ def view(preset="nine_three", camera="cabin"):
                 view_name = "free" if cam.type == mujoco.mjtCamera.mjCAMERA_FREE else CAMERAS[state["camera"]]
                 status = "RUNNING" if state["running"] else "PAUSED"
                 text = f"H1-2 / Logitech G29 | {state['preset']} | {status}\nView: {view_name} | Wheel: {np.rad2deg(data.qpos[wheelq]):+.2f} deg"
+                if replay is not None:
+                    text += f"\nRecorded-state replay | t={state['replay_time']:.2f}s | {state['speed']:g}x"
                 controls = "1-4: grasp   V: camera   F: free view   C: collision   T: loaded contacts\nSpace: run/pause   R: reset   Esc: close"
+                if replay is not None:
+                    controls += "\n+/-: playback speed; visualization only, not a new physics trial"
                 if state["contacts"]:
                     controls += "\nRim contacts >0.05 N: cyan=palm  gold=thumb  green=proximal  red=distal; magenta=NON-RIM"
                 mujoco.mjr_overlay(mujoco.mjtFont.mjFONT_NORMAL, mujoco.mjtGridPos.mjGRID_TOPLEFT, viewport, text, "", context)
@@ -241,6 +271,8 @@ def view(preset="nine_three", camera="cabin"):
                 if frames == 0:
                     print("Scene window ready; first frame rendered", flush=True)
                 frames += 1
+                if max_frames is not None and frames >= max_frames:
+                    break
             time.sleep(max(0, 1 / 60 - (time.monotonic() - start)))
     finally:
         context.free()
@@ -251,10 +283,14 @@ def view(preset="nine_three", camera="cabin"):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--render", type=Path)
-    parser.add_argument("--preset", choices=list(PRESETS), default="nine_three")
+    parser.add_argument("--preset", default="nine_three")
+    parser.add_argument("--poses", type=Path, default=PRESET_FILE)
+    parser.add_argument("--scene", type=Path, default=SCENE)
     parser.add_argument("--camera", choices=CAMERAS, default="cabin")
     args = parser.parse_args()
     if args.render:
+        if args.scene != SCENE or args.poses != PRESET_FILE:
+            parser.error("Custom --scene/--poses are for the interactive viewer; use P0 trajectory rendering for videos")
         render(args.render)
     else:
-        view(args.preset, args.camera)
+        view(args.preset, args.camera, args.scene, args.poses)

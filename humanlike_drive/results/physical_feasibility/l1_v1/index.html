@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Humanlike Drive · 层1物理可行性</title>
+<style>
+  :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #101923; color: #e6eef6; }
+  body { max-width: 1120px; margin: auto; padding: 30px 20px 64px; line-height: 1.7; }
+  h1 { font-size: 30px; margin-bottom: 8px; } h2 { margin-top: 34px; }
+  a { color: #87d5ff; } p { max-width: 980px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  figure { margin: 0; background: #182632; padding: 14px; border-radius: 10px; }
+  img, video { width: 100%; display: block; border-radius: 6px; }
+  figcaption { margin-top: 10px; } .muted { color: #b2c2d0; }
+  .result { background: #173a37; border-left: 4px solid #60d7b6; padding: 14px 20px; }
+</style>
+<h1>掌心摩擦驱动方向盘：层1验收</h1>
+<p class="result">仿真完成 0 → +180° → 0 与 0 → −180° → 0。无学习的显式控制系统，保留真实接触、原限位、mimic及有限驱动。</p>
+<p>名义速度 <strong>1°/s</strong>，合成负载 <strong>0.1 N·m</strong>。每条约600秒，8次接管，新手每次独立保持10秒。运动RMSE为0.117°／0.176°。视频是记录状态的完整<strong>4倍速回放，不剪辑</strong>；动作重新执行的物理核验另见报告。</p>
+<p><a href="README.md">验收报告</a> · <a href="case_results.md">45例结果与失败</a> · <a href="evidence_index.json">证据索引</a> · <a href="../../../docs/LAYER1_ENGINEERING.md">系统组成与复现</a></p>
+<h2>完整双向往返</h2>
+<div class="grid">
+  <figure><video controls preload="metadata" poster="positive180_preview.png" src="positive180_replay_driver.mp4"></video><figcaption>正向180°往返 · 驾驶员视角 · 4倍速</figcaption></figure>
+  <figure><video controls preload="metadata" poster="negative180_preview.png" src="negative180_replay_driver.mp4"></video><figcaption>负向180°往返 · 驾驶员视角 · 4倍速</figcaption></figure>
+</div>
+<h2>坐姿与双臂接力</h2>
+<figure><video controls preload="metadata" poster="initial_cabin.png" src="positive180_replay_cabin.mp4"></video><figcaption>正向180°完整往返 · 驾驶室全景 · 4倍速。每手40°短行程，停稳后接管。</figcaption></figure>
+<h2>初始接触与自然腕姿</h2>
+<div class="grid">
+  <figure><img src="initial_driver.png" alt="初始9点3点接触"><figcaption>9点／3点准备初态</figcaption></figure>
+  <figure><img src="initial_grip_side.png" alt="初始掌部侧视"><figcaption>掌面接触近景；四指保持轻握，但完整180°中未检出四指受力。</figcaption></figure>
+</div>
+<h2>工程诊断</h2>
+<div class="grid">
+  <figure><a href="positive180_tracking.png"><img src="positive180_tracking.png" alt="正向角度与接触诊断"></a><figcaption>正向跟踪、掌压、力矩及滑移</figcaption></figure>
+  <figure><a href="negative180_tracking.png"><img src="negative180_tracking.png" alt="负向角度与接触诊断"></a><figcaption>负向跟踪、掌压、力矩及滑移</figcaption></figure>
+</div>
+<figure style="margin-top:20px"><a href="workspace.png"><img src="workspace.png" alt="上半圆路径几何筛查"></a><figcaption>260个离散配置的路径筛查；不等同于整半圆动态通过。</figcaption></figure>
+<p class="muted">当前为仿真物理可行性证据。使用仿真掌力与逐手力矩反馈，未验证实物、任意在线目标、高速或360°／540°；四指辅助收益未成立。大负载和高速失败均保留在报告中。</p>
+</html>

@@ -1,0 +1,5759 @@
+{
+  "scope": "Simulation Layer-1 representative qualification; not full T1–T4, hardware or statistical reliability.",
+  "source_selection": "Explicit case-to-directory mapping in scripts/summarize_layer1.py; v3 replaces fixed-time v2 negative90. Other v2 local/load results retain their actual versions; no claim that all 45 cases were rerun on v3.",
+  "excluded": "Old l1_v2 checks_parallel perturb_* injected qpos at loaded contact and are excluded from target-registration tests; all development failures remain on disk.",
+  "counts": {
+    "nominal": {
+      "total": 11,
+      "passed": 11
+    },
+    "load": {
+      "total": 16,
+      "passed": 12
+    },
+    "robust": {
+      "total": 15,
+      "passed": 15
+    },
+    "diagnostic": {
+      "total": 3,
+      "passed": 2
+    }
+  },
+  "versions": {
+    "palm_primary_l1_v2": 24,
+    "palm_primary_l1_v3": 21
+  },
+  "cases": [
+    {
+      "name": "dual_hold",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "hold",
+        "--both-hands",
+        "--load",
+        "-.1"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks/dual_hold",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "4e11333722c96dae187c358c124a7ed2d8a6f987d4485d0e4f50ae0b2755771c",
+      "evaluation_sha256": "4345652284bff2d58ead1d22bdc13a64e3faddf60892c3e66963e1f02a7e143f",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.010762139264390933,
+        "max_error_deg": 0.040621827386945246,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.4972133896626,
+        "max_wrist_bend_deg": [
+          1.649422964597976,
+          1.6478113133656274
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.00021696623983065807,
+          6.30365425359362e-05
+        ],
+        "max_palm_slip_m_s": 0.00010304270228355646,
+        "max_palm_force_N": 3.0182799482727676,
+        "max_whole_hand_force_N": 3.0182799482727676,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 14.0,
+            "palm_friction_share": 1.1043796574134015
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 13.886000000000001,
+            "palm_friction_share": 1.1043478182193087
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.116659708091163e-12,
+        "max_wheel_dynamics_residual_Nm": 5.249133211426837e-10,
+        "stop_tail_peaks_deg": [
+          0.010762139264390933
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "positive15",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "roundtrip",
+        "--angle",
+        "15"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks/positive15",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "86f0d6ad3efcf3852a4956af02a29fa69f2fe5e9f11e0efbaae74e54d919135a",
+      "evaluation_sha256": "810ffae54e7a11754b28d19c931d3ac66bc7de40d04521dc8711c79a71833f65",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.07102627350234085,
+        "final_error_peak_deg": 0.03411636586535685,
+        "max_error_deg": 0.10876082268197709,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49721473294274,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.6185501538231404
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.001054400887720667,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0004991604181107002,
+        "max_palm_force_N": 3.2731785216013938,
+        "max_whole_hand_force_N": 3.2731785216013938,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.075731488821041
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.606,
+            "palm_friction_share": 1.0775883805624777
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.212,
+            "palm_friction_share": 1.0581703093508388
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.182,
+            "palm_friction_share": 1.0981841975042774
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.350075855086288e-12,
+        "max_wheel_dynamics_residual_Nm": 8.833820341891396e-10,
+        "stop_tail_peaks_deg": [
+          0.004115494428687679,
+          0.023351686743666836,
+          0.03411636586535685
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "negative15",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "roundtrip",
+        "--angle",
+        "-15"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks/negative15",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "163268ca85e4e94fe40cfc78f22a219bbb7c929d3b35376fd9628b7cfcdf5741",
+      "evaluation_sha256": "8acbd0dd8db71d5ee51bce6db89d357bd3015a054144231b86c7f9f7ae1580dc",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.09273762734528705,
+        "final_error_peak_deg": 0.056194878012913736,
+        "max_error_deg": 0.18227639339664342,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49816547138243,
+        "max_wrist_bend_deg": [
+          1.6398355829123594,
+          1.6102632023163816
+        ],
+        "palm_contact_fraction": [
+          null,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.0013789318386621336
+        ],
+        "max_palm_slip_m_s": 0.0012495829644484744,
+        "max_palm_force_N": 3.264670750888838,
+        "max_whole_hand_force_N": 3.264670750888838,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 42.0,
+            "palm_friction_share": 0.969640694618535
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 11.392,
+            "palm_friction_share": 0.9728302270123653
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 15.272,
+            "palm_friction_share": 0.9730856022155236
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 15.336,
+            "palm_friction_share": 0.9621983527259782
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.879396803796453e-12,
+        "max_wheel_dynamics_residual_Nm": 6.36332667114381e-10,
+        "stop_tail_peaks_deg": [
+          0.10129436789620799,
+          0.033381703728004086,
+          0.056194878012913736
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "positive30",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "roundtrip",
+        "--angle",
+        "30"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks/positive30",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "619a4b8efe9f10aa30b9bcac931f1744e0c5e48ddcc4b2ce6861ea6d5c2424e7",
+      "evaluation_sha256": "d6b40d6f9f9af6b4a1392c94b71fa3400377ba31b686329e032661b5b18fe15b",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.06320730866463646,
+        "final_error_peak_deg": 0.1167475903124772,
+        "max_error_deg": 0.13669654513224822,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.497214732942748,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.6185501538231404
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.002691833070119501,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0004991604181752841,
+        "max_palm_force_N": 3.2583191461030494,
+        "max_whole_hand_force_N": 3.2583191461030494,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 72.0,
+            "palm_friction_share": 1.0569561378712546
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.604000000000001,
+            "palm_friction_share": 1.0643373347577059
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 30.208000000000002,
+            "palm_friction_share": 1.0493448609265255
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 30.188000000000002,
+            "palm_friction_share": 1.0640478154922732
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.801894992745304e-12,
+        "max_wheel_dynamics_residual_Nm": 1.1195683269349388e-09,
+        "stop_tail_peaks_deg": [
+          0.004115494428557245,
+          0.052124328944986184,
+          0.1167475903124772
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 71.9980000000136
+      }
+    },
+    {
+      "name": "negative30",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "roundtrip",
+        "--angle",
+        "-30"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/negative30",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "b29afd1e6b7dc4dd9f9ac549fbae09ea4504e48201a88bdac4d27c5601ffcac9",
+      "evaluation_sha256": "7033b6e4ceaa9bd91e952974c0ac6a166d2e218f94a8b231159bbc13270e425d",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.07738213594778186,
+        "final_error_peak_deg": 0.13202020130844513,
+        "max_error_deg": 0.18227639339678506,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49816547138243,
+        "max_wrist_bend_deg": [
+          1.6398355829123594,
+          1.6102632023163816
+        ],
+        "palm_contact_fraction": [
+          null,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.0031485612146419143
+        ],
+        "max_palm_slip_m_s": 0.0012495829642680475,
+        "max_palm_force_N": 3.2544529834947387,
+        "max_whole_hand_force_N": 3.2544529834947387,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 72.0,
+            "palm_friction_share": 0.9518389327069274
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 11.396,
+            "palm_friction_share": 0.9608163535539236
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 30.268,
+            "palm_friction_share": 0.9647348990815764
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 30.336000000000002,
+            "palm_friction_share": 0.930503040441273
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.378428175577653e-12,
+        "max_wheel_dynamics_residual_Nm": 8.343034596514087e-10,
+        "stop_tail_peaks_deg": [
+          0.10129436789623136,
+          0.06548429615098941,
+          0.13202020130844513
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 71.9980000000136
+      }
+    },
+    {
+      "name": "positive90",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "90"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/positive90",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "e5c953a79f29af8d8e6531a0b9bcbda5c82c0623b4ef3e9a0f75625f76653a41",
+      "evaluation_sha256": "3ee0b2b8dc476b7e16a46553c45a9397599a7468f9158dd36e4db4ec3b08ed22",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "all_handovers": true
+        },
+        "motion_RMSE_deg": 0.06538964831431121,
+        "final_error_peak_deg": 0.14489679526167634,
+        "max_error_deg": 0.1840755696347543,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.243945260335323,
+        "max_wrist_bend_deg": [
+          1.812624297165829,
+          2.0139956693571777
+        ],
+        "palm_contact_fraction": [
+          0.9999771425959154,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.005302802510039532,
+          0.006826654034931162
+        ],
+        "max_palm_slip_m_s": 0.012252845765573606,
+        "max_palm_force_N": 3.2782196908383097,
+        "max_whole_hand_force_N": 3.2782196908383097,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 305.996,
+            "palm_friction_share": 0.9042352503430875
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 124.55,
+            "palm_friction_share": 0.8274128710925202
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 90.674,
+            "palm_friction_share": 0.9412986305619484
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 90.772,
+            "palm_friction_share": 0.9800248039630376
+          }
+        ],
+        "max_torque_audit_residual_Nm": 5.093481192375293e-12,
+        "max_wheel_dynamics_residual_Nm": 7.865458673261827e-09,
+        "stop_tail_peaks_deg": [
+          0.004100818747082463,
+          0.046270519014687206,
+          0.02134234328452466,
+          0.06229380338680104,
+          0.015232818446284357,
+          0.05074926415640867,
+          0.097874580231679,
+          0.0930226942499846,
+          0.10464751508974643,
+          0.015399735637335989,
+          0.02429454155231353,
+          0.01265464788605964,
+          0.0074156028305223266,
+          0.05150486690627347,
+          0.030703240960277354,
+          0.031175213081006917,
+          0.03182658472916911,
+          0.0807122430800541,
+          0.03234310084399043,
+          0.02595035362481509,
+          0.03434701775636098,
+          0.01509504822206825,
+          0.14489679526167634
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 305.998000000733,
+        "stop_reason": null,
+        "handovers": [
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 49.5,
+            "transfer_end": 59.5,
+            "solo_begin": 63.5,
+            "end": 73.5,
+            "reference": 0.6981317007977318,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.49,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10696572247571678,
+            "error_peak_deg": 0.06920370886378316,
+            "passed": true
+          },
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 118.0,
+            "transfer_end": 128.0,
+            "solo_begin": 132.0,
+            "end": 142.0,
+            "reference": 1.3962634015954636,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.798,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.11235134165581116,
+            "error_peak_deg": 0.10898290317547282,
+            "passed": true
+          },
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 170.0,
+            "transfer_end": 180.0,
+            "solo_begin": 184.0,
+            "end": 194.0,
+            "reference": 1.3962634015954636,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.194,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.11281207681252572,
+            "error_peak_deg": 0.05151472345638871,
+            "passed": true
+          },
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 238.5,
+            "transfer_end": 248.5,
+            "solo_begin": 252.5,
+            "end": 262.5,
+            "reference": 0.6981317007977318,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 3.0,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10774440805023,
+            "error_peak_deg": 0.07773911600244858,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "negative90",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "-90"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/negative90",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "fefd73077f1264fea5feb3a707ad634b28ca34d7cb484e7bd016f33f7976c9e7",
+      "evaluation_sha256": "7992af23f69f0a65cabb0f26cd53d6931bd0fc66fb9db05cfab8a57f8e03c7dc",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "all_handovers": true
+        },
+        "motion_RMSE_deg": 0.06922107239202992,
+        "final_error_peak_deg": 0.1412012746916546,
+        "max_error_deg": 0.18241443303030525,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.010012052698926,
+        "max_wrist_bend_deg": [
+          1.9819320795639794,
+          2.5451718422702276
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0046421968871830175,
+          0.005354203300867244
+        ],
+        "max_palm_slip_m_s": 0.011451122443806385,
+        "max_palm_force_N": 4.324600145565478,
+        "max_whole_hand_force_N": 6.071310433342894,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 306.2,
+            "palm_friction_share": 0.734341661932771
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 124.47200000000001,
+            "palm_friction_share": 0.5990175055311252
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 90.732,
+            "palm_friction_share": 0.8377258547283649
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 90.996,
+            "palm_friction_share": 0.8156733613609864
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.562947242270354e-12,
+        "max_wheel_dynamics_residual_Nm": 5.115327716964657e-09,
+        "stop_tail_peaks_deg": [
+          0.10131110134863762,
+          0.0638431885652794,
+          0.03466530178698454,
+          0.07315854572772272,
+          0.01393347618714211,
+          0.022964671687273664,
+          0.08730869164773258,
+          0.13729428883422765,
+          0.09220621864457484,
+          0.028943666480276197,
+          0.007314796221053268,
+          0.058878533783383015,
+          0.07075880929195093,
+          0.007924281799049809,
+          0.060824846031473916,
+          0.0048410326003618205,
+          0.012334045767893669,
+          0.06923379219487971,
+          0.028014574084498235,
+          0.024320289457504838,
+          0.034951385183124246,
+          0.017408864994850812,
+          0.1412012746916546
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 306.19800000073394,
+        "stop_reason": null,
+        "handovers": [
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 49.5,
+            "transfer_end": 59.5,
+            "solo_begin": 63.5,
+            "end": 73.5,
+            "reference": -0.6981317007977318,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.52,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10908959298271462,
+            "error_peak_deg": 0.07317525309557675,
+            "passed": true
+          },
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 118.0,
+            "transfer_end": 128.20000000000005,
+            "solo_begin": 132.20000000000005,
+            "end": 142.20000000000005,
+            "reference": -1.3962634015954636,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 3.0,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.11301145033359684,
+            "error_peak_deg": 0.13729428883422765,
+            "passed": true
+          },
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 170.20000000000005,
+            "transfer_end": 180.20000000000005,
+            "solo_begin": 184.20000000000005,
+            "end": 194.20000000000005,
+            "reference": -1.3962634015954636,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.198,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.1131687927824794,
+            "error_peak_deg": 0.06156728031142782,
+            "passed": true
+          },
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 238.70000000000005,
+            "transfer_end": 248.70000000000005,
+            "solo_begin": 252.70000000000005,
+            "end": 262.70000000000005,
+            "reference": -0.6981317007977318,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 3.0,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10975737160734761,
+            "error_peak_deg": 0.06744562390400656,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "positive180",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "180"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/core/positive180",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "4a9b8a596b373bf37bb8d8421bb207abc4db82ae94ff3270e28e1e9734dff094",
+      "evaluation_sha256": "4eea2d4fe3d9ca3a245d2124b06abb19e66c1ddcb086f739dbde11abb879b05c",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "all_handovers": true
+        },
+        "motion_RMSE_deg": 0.11700964573582896,
+        "final_error_peak_deg": 0.5993343074637142,
+        "max_error_deg": 0.6110297165918221,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.193240620828846,
+        "max_wrist_bend_deg": [
+          2.464041067851051,
+          2.415888219128515
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          0.9999650352095439
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.002
+        ],
+        "palm_cumulative_slip_m": [
+          0.010776224314331263,
+          0.013458234034310798
+        ],
+        "max_palm_slip_m_s": 0.012777494433422115,
+        "max_palm_force_N": 6.881877300987312,
+        "max_whole_hand_force_N": 6.881877300987312,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 599.99,
+            "palm_friction_share": 0.8556900949761315
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 237.608,
+            "palm_friction_share": 0.8258325691990335
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 181.22400000000002,
+            "palm_friction_share": 0.8877937698873992
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 181.15800000000002,
+            "palm_friction_share": 0.8587449063366286
+          }
+        ],
+        "max_torque_audit_residual_Nm": 5.285299975454905e-12,
+        "max_wheel_dynamics_residual_Nm": 7.865458673261827e-09,
+        "stop_tail_peaks_deg": [
+          0.004100818747082463,
+          0.046270519014687206,
+          0.02134234328452466,
+          0.06229380338680104,
+          0.015232818446284357,
+          0.05074926415640867,
+          0.097874580231679,
+          0.0930226942499846,
+          0.10464751508974643,
+          0.015399735637335989,
+          0.02429454155231353,
+          0.059129201027658417,
+          0.01278111866146063,
+          0.062445774411728314,
+          0.01901528292537364,
+          0.0512453710731862,
+          0.09964433179410141,
+          0.09067806240324973,
+          0.09759920949358619,
+          0.0053252590636974325,
+          0.0378957020358654,
+          0.06092183427893185,
+          0.09097082197170023,
+          0.10707424524997712,
+          0.016569358684453327,
+          0.04290289204884499,
+          0.02131186613530909,
+          0.08283066445170335,
+          0.02755942272702912,
+          0.021273437618059714,
+          0.033048343851079,
+          0.015286139023124149,
+          0.13126258103797286,
+          0.09440475109313164,
+          0.009563786206211466,
+          0.051309518171663335,
+          0.03394436954438178,
+          0.07746171442136414,
+          0.041560717974459024,
+          0.02633016119677994,
+          0.03625239637828672,
+          0.023153336244498546,
+          0.5993343074637142
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 599.9979999996357,
+        "stop_reason": null,
+        "handovers": [
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 49.5,
+            "transfer_end": 59.5,
+            "solo_begin": 63.5,
+            "end": 73.5,
+            "reference": 0.6981317007977318,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.49,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10696572247571678,
+            "error_peak_deg": 0.06920370886378316,
+            "passed": true
+          },
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 118.0,
+            "transfer_end": 128.0,
+            "solo_begin": 132.0,
+            "end": 142.0,
+            "reference": 1.3962634015954636,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.798,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.11235134165581116,
+            "error_peak_deg": 0.10898290317547282,
+            "passed": true
+          },
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 186.5,
+            "transfer_end": 196.5,
+            "solo_begin": 200.5,
+            "end": 210.5,
+            "reference": 2.0943951023931953,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.5,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.11170410581834421,
+            "error_peak_deg": 0.07477866888831605,
+            "passed": true
+          },
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 255.0,
+            "transfer_end": 265.0,
+            "solo_begin": 269.0,
+            "end": 279.0,
+            "reference": 2.792526803190927,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.684,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10530352804906966,
+            "error_peak_deg": 0.10143155426000097,
+            "passed": true
+          },
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 327.0,
+            "transfer_end": 337.0,
+            "solo_begin": 341.0,
+            "end": 351.0,
+            "reference": 2.792526803190927,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.286,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10606829676246934,
+            "error_peak_deg": 0.10707424524997712,
+            "passed": true
+          },
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 395.5,
+            "transfer_end": 405.5,
+            "solo_begin": 409.5,
+            "end": 419.5,
+            "reference": 2.0943951023931953,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 3.0,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.11237181230597602,
+            "error_peak_deg": 0.07790106375693161,
+            "passed": true
+          },
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 464.0,
+            "transfer_end": 474.0,
+            "solo_begin": 478.0,
+            "end": 488.0,
+            "reference": 1.3962634015954634,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.282,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.11305588881503843,
+            "error_peak_deg": 0.11911329426642973,
+            "passed": true
+          },
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 532.5,
+            "transfer_end": 542.5,
+            "solo_begin": 546.5,
+            "end": 556.5,
+            "reference": 0.6981317007977316,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 3.0,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10766483706325869,
+            "error_peak_deg": 0.07479521329950317,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "negative180",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "-180"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/core/negative180",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "8533d1e50a4c5a9d6d68faddbfa5b3ff4aac6c21cc39bf877d3088d81ce10225",
+      "evaluation_sha256": "4600ab2b9ce0a92a13268fc6f242aea8fbd4bd1ceeb8a0638f2ec95f4a2c3322",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "all_handovers": true
+        },
+        "motion_RMSE_deg": 0.17642692599604048,
+        "final_error_peak_deg": 0.886229511766618,
+        "max_error_deg": 0.888540677616998,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.010012052698926,
+        "max_wrist_bend_deg": [
+          2.5215145602833546,
+          2.586720959432632
+        ],
+        "palm_contact_fraction": [
+          0.9999790357859134,
+          0.9999940828052237
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.002
+        ],
+        "palm_cumulative_slip_m": [
+          0.012025285018046158,
+          0.011282783096105295
+        ],
+        "max_palm_slip_m_s": 0.013990156300249629,
+        "max_palm_force_N": 4.324600145565478,
+        "max_whole_hand_force_N": 6.071310433342894,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 600.192,
+            "palm_friction_share": 0.8086179371793863
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 237.6,
+            "palm_friction_share": 0.7665619450480917
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 181.266,
+            "palm_friction_share": 0.8136577211996369
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 181.326,
+            "palm_friction_share": 0.866510021800926
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.8386294970725885e-12,
+        "max_wheel_dynamics_residual_Nm": 6.985610492837857e-09,
+        "stop_tail_peaks_deg": [
+          0.10131110134863762,
+          0.0638431885652794,
+          0.03466530178698454,
+          0.07315854572772272,
+          0.01393347618714211,
+          0.022964671687273664,
+          0.08730869164773258,
+          0.13729428883422765,
+          0.09220621864457484,
+          0.028943666480276197,
+          0.007314796221053268,
+          0.056696626184486704,
+          0.009623052396722207,
+          0.06632644292936024,
+          0.012097057791361599,
+          0.0194005224711351,
+          0.0948580418165259,
+          0.08882634435049643,
+          0.09510481095325155,
+          0.005705412076953013,
+          0.036276766871126825,
+          0.06271816969786462,
+          0.08851690302545583,
+          0.10447980524578057,
+          0.015101538157349523,
+          0.04650361909442048,
+          0.032490128479775185,
+          0.11787442959467948,
+          0.08128557924756728,
+          0.05257555249262772,
+          0.05209088258646054,
+          0.022028041377746662,
+          0.13103434704058464,
+          0.09249635472827256,
+          0.007847438209875254,
+          0.050369166335980035,
+          0.03360039889170442,
+          0.0813742668082165,
+          0.06965426350241134,
+          0.07095975814296987,
+          0.11728159593986098,
+          0.17065675737275837,
+          0.886229511766618
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 600.197999999631,
+        "stop_reason": null,
+        "handovers": [
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 49.5,
+            "transfer_end": 59.5,
+            "solo_begin": 63.5,
+            "end": 73.5,
+            "reference": -0.6981317007977318,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.52,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10908959298271462,
+            "error_peak_deg": 0.07317525309557675,
+            "passed": true
+          },
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 118.0,
+            "transfer_end": 128.20000000000005,
+            "solo_begin": 132.20000000000005,
+            "end": 142.20000000000005,
+            "reference": -1.3962634015954636,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 3.0,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.11301145033359684,
+            "error_peak_deg": 0.13729428883422765,
+            "passed": true
+          },
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 186.70000000000005,
+            "transfer_end": 196.70000000000005,
+            "solo_begin": 200.70000000000005,
+            "end": 210.70000000000005,
+            "reference": -2.0943951023931953,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.512,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.11043324661537947,
+            "error_peak_deg": 0.08166143294091786,
+            "passed": true
+          },
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 255.20000000000005,
+            "transfer_end": 265.20000000000005,
+            "solo_begin": 269.20000000000005,
+            "end": 279.20000000000005,
+            "reference": -2.792526803190927,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.714,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10282048053482144,
+            "error_peak_deg": 0.0990010316513157,
+            "passed": true
+          },
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 327.20000000000005,
+            "transfer_end": 337.20000000000005,
+            "solo_begin": 341.20000000000005,
+            "end": 351.20000000000005,
+            "reference": -2.792526803190927,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.302,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10348962742049032,
+            "error_peak_deg": 0.10449399959780263,
+            "passed": true
+          },
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 395.70000000000005,
+            "transfer_end": 405.70000000000005,
+            "solo_begin": 409.70000000000005,
+            "end": 419.70000000000005,
+            "reference": -2.0943951023931953,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 3.0,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.11120523432411246,
+            "error_peak_deg": 0.11590082605871455,
+            "passed": true
+          },
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 464.20000000000005,
+            "transfer_end": 474.20000000000005,
+            "solo_begin": 478.20000000000005,
+            "end": 488.20000000000005,
+            "reference": -1.3962634015954634,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.2880000000000003,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.11351021482070033,
+            "error_peak_deg": 0.1201998721678278,
+            "passed": true
+          },
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 532.6999999999998,
+            "transfer_end": 542.6999999999998,
+            "solo_begin": 546.6999999999998,
+            "end": 556.6999999999998,
+            "reference": -0.6981317007977316,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 3.0,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10871821903124915,
+            "error_peak_deg": 0.17065675737275837,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "crosszero_+1",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "crosszero",
+        "--angle",
+        "30"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/crosszero_+1",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "de76348646ecb2b0d3ccb7e1da71799ec7cb5b13235c237fbf25ec69497cc03a",
+      "evaluation_sha256": "0fafb062420caba69c8bcb2a2b5d4a2984348cc314c00029f25fd60b9c0ac51c",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "all_handovers": true
+        },
+        "motion_RMSE_deg": 0.07364730740994578,
+        "final_error_peak_deg": 0.01707266812611323,
+        "max_error_deg": 0.15520771236371797,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.497214192444467,
+        "max_wrist_bend_deg": [
+          1.6461229467913814,
+          1.7864013766851474
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.002931242752365474,
+          0.0017460342640586851
+        ],
+        "max_palm_slip_m_s": 0.000422376955017983,
+        "max_palm_force_N": 3.2790579628830367,
+        "max_whole_hand_force_N": 3.2790579628830367,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 137.5,
+            "palm_friction_share": 1.0241522676539505
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 46.586,
+            "palm_friction_share": 1.0158444432373626
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 45.434,
+            "palm_friction_share": 1.0231806227805276
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 45.480000000000004,
+            "palm_friction_share": 1.0354467954413689
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.803560327282241e-12,
+        "max_wheel_dynamics_residual_Nm": 1.4559087546661686e-09,
+        "stop_tail_peaks_deg": [
+          0.004100818747082463,
+          0.052124956627936016,
+          0.009482340228033492,
+          0.10659328414144387,
+          0.09558892549028888,
+          0.003933452590638615,
+          0.035792962668449835,
+          0.02710819182146,
+          0.09047013118411687,
+          0.01707266812611323
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 137.49799999992842,
+        "stop_reason": null,
+        "handovers": [
+          {
+            "new": 1,
+            "old": 0,
+            "begin": 76.5,
+            "transfer_end": 86.5,
+            "solo_begin": 90.5,
+            "end": 100.5,
+            "reference": 0.0,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.234,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.0987929003702986,
+            "error_peak_deg": 0.09970970326992674,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "crosszero_-1",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "crosszero",
+        "--angle",
+        "-30"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/crosszero_-1",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "a086688f3148ea03cfc4d9b45b639ad152558b720f4f8b8e7198e2c4205653de",
+      "evaluation_sha256": "25c8df5b7d81e6ca9810ec0d44362c0a312db68a88bb5ebb4d68b94f785b63aa",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "all_handovers": true
+        },
+        "motion_RMSE_deg": 0.0799072001696956,
+        "final_error_peak_deg": 0.0034425086591122014,
+        "max_error_deg": 0.18241443303030525,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.483076918373893,
+        "max_wrist_bend_deg": [
+          1.8846154767409722,
+          1.6475017495196849
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0013595513936963037,
+          0.003494338846220438
+        ],
+        "max_palm_slip_m_s": 0.0015402646403633387,
+        "max_palm_force_N": 3.2892261922011015,
+        "max_whole_hand_force_N": 3.2892261922011015,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 137.5,
+            "palm_friction_share": 0.9119620358422009
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 46.356,
+            "palm_friction_share": 0.8958268188107256
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 45.518,
+            "palm_friction_share": 0.932311371356201
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 45.626,
+            "palm_friction_share": 0.9035263865629014
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.822420240913061e-12,
+        "max_wheel_dynamics_residual_Nm": 1.6283126930138891e-09,
+        "stop_tail_peaks_deg": [
+          0.10131110134863762,
+          0.06548303819894258,
+          0.030233519266730628,
+          0.12400210243493923,
+          0.11875393453166018,
+          0.022703258310417054,
+          0.04187116233648864,
+          0.018870920221843727,
+          0.07223771741332027,
+          0.0034425086591122014
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 137.49799999992842,
+        "stop_reason": null,
+        "handovers": [
+          {
+            "new": 0,
+            "old": 1,
+            "begin": 76.5,
+            "transfer_end": 86.5,
+            "solo_begin": 90.5,
+            "end": 100.5,
+            "reference": 0.0,
+            "solo_seconds": 10.0,
+            "transfer_witness_s": 2.25,
+            "solo_old_force_max": 0.0,
+            "solo_new_mean_counterload": 0.10162263464620078,
+            "error_peak_deg": 0.1208195012327825,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "hold_left_-0.05",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "-0.05"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_left_-0.05",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "e8e81798e260cadc540bea88790d3aa30c40ce82b1c5700c3bf00abd653b668c",
+      "evaluation_sha256": "98bd279a4cc8dba075b1d82ee1b6a7da41831d4e3b7928c007c20ba7b8b0a338",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.0075539956960498185,
+        "max_error_deg": 0.07646214842496873,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.497143006243455,
+        "max_wrist_bend_deg": [
+          1.655738275345236,
+          1.6159155951021853
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0001586518906904947,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0002200755534958959,
+        "max_palm_force_N": 2.994108625890438,
+        "max_whole_hand_force_N": 2.994108625890438,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 14.0,
+            "palm_friction_share": 1.1813604876590926
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 13.916,
+            "palm_friction_share": 1.1814808531198047
+          }
+        ],
+        "max_torque_audit_residual_Nm": 2.5734275821420738e-12,
+        "max_wheel_dynamics_residual_Nm": 3.742185866739689e-10,
+        "stop_tail_peaks_deg": [
+          0.0075539956960498185
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_left_+0.05",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "0.05"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_left_+0.05",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "91bdc2ecbb82399577c57500956f32368c248f5fdde7579fa3244eb9a0dc0c84",
+      "evaluation_sha256": "3e605dba979c15434b944ea10835f709bde07e5815e4f1298e3d5a5478d179dc",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.03220264636759859,
+        "max_error_deg": 0.17319749521286662,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.4958256109908,
+        "max_wrist_bend_deg": [
+          1.6943926641623288,
+          1.6119416510241105
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          7.544216418966307e-05,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0017749349913717008,
+        "max_palm_force_N": 3.006910934169156,
+        "max_whole_hand_force_N": 3.006910934169156,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 14.0,
+            "palm_friction_share": 0.8350649732216183
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 13.622,
+            "palm_friction_share": 0.83605948067319
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 0.28600000000000003,
+            "palm_friction_share": 0.7533071951039804
+          }
+        ],
+        "max_torque_audit_residual_Nm": 7.392211842649488e-13,
+        "max_wheel_dynamics_residual_Nm": 1.3180026514625354e-11,
+        "stop_tail_peaks_deg": [
+          0.03220264636759859
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_left_-0.10",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "-0.1"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_left_-0.10",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "609c0ec1760f045232a7891edf50e400aae7e84ff5454356bd187d9ea2951630",
+      "evaluation_sha256": "d1963022673ed6ebda2cdcf511e076ec935d1e0dc5d809989f0d477f326994a5",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.025607828008570883,
+        "max_error_deg": 0.04812557628912236,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.497214732942737,
+        "max_wrist_bend_deg": [
+          1.6410614619101334,
+          1.6185501538231404
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0002453019743189758,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0004991604180731039,
+        "max_palm_force_N": 3.0182799482727676,
+        "max_whole_hand_force_N": 3.0182799482727676,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 14.0,
+            "palm_friction_share": 1.0887450260460716
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 13.882,
+            "palm_friction_share": 1.0885802953544876
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.588004893195773e-12,
+        "max_wheel_dynamics_residual_Nm": 4.3862853627008036e-10,
+        "stop_tail_peaks_deg": [
+          0.025607828008570883
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_left_+0.10",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "0.1"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_left_+0.10",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "0ef98fe7b8cb716f14212f687128d6156f994e642bb7d4b1b94abb9be26dfbfa",
+      "evaluation_sha256": "07bb186c1c3f6e19f1a6e9c359e88075b0c115ba6b4a58bdd544e5be2ef38b40",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.05112755629221122,
+        "max_error_deg": 0.22687053155857098,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49515675514872,
+        "max_wrist_bend_deg": [
+          1.7181212754694886,
+          1.6102444236950397
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0001624958938456605,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.003525492477817294,
+        "max_palm_force_N": 3.028121790252531,
+        "max_whole_hand_force_N": 3.028121790252531,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 14.0,
+            "palm_friction_share": 0.9158640580377113
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 13.588000000000001,
+            "palm_friction_share": 0.9161101992011345
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 0.314,
+            "palm_friction_share": 0.9019449094555096
+          }
+        ],
+        "max_torque_audit_residual_Nm": 1.8028772919009839e-12,
+        "max_wheel_dynamics_residual_Nm": 8.613505603216609e-10,
+        "stop_tail_peaks_deg": [
+          0.05112755629221122
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_left_-0.20",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "-0.2"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_left_-0.20",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "c26c311aa3399605e297e0a5a2e0bcaf0edec1089fab55411d934ab3aecac1b8",
+      "evaluation_sha256": "175265876fabbdc18f090734a2f2f06ef30730dc72d0f0e7cd5c492456ebdac0",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.06541828587795383,
+        "max_error_deg": 0.1630057475095381,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.492873007251415,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.6256317121460593
+        ],
+        "palm_contact_fraction": [
+          0.9994285714285714,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0005886630596371103,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.006462479608445608,
+        "max_palm_force_N": 3.434330207296852,
+        "max_whole_hand_force_N": 3.434330207296852,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 13.992,
+            "palm_friction_share": 1.0425616241085949
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 13.524000000000001,
+            "palm_friction_share": 1.0423348705925057
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 0.194,
+            "palm_friction_share": 1.0454239210634053
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 0.274,
+            "palm_friction_share": 1.0518749912747842
+          }
+        ],
+        "max_torque_audit_residual_Nm": 5.528522084574661e-12,
+        "max_wheel_dynamics_residual_Nm": 7.627383169506174e-10,
+        "stop_tail_peaks_deg": [
+          0.06541828587795383
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_left_+0.20",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "0.2"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_left_+0.20",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "e328dd2febcf777e6b34646446ea503aa45217be8e3fc0c30f28e5b5e6944636",
+      "evaluation_sha256": "39e07f40c7af99e582114a7b2e18dda55332242fa484654e26defbbdff0f4798",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.08897608499406301,
+        "max_error_deg": 0.31763424636380616,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49380460750671,
+        "max_wrist_bend_deg": [
+          1.7739357388454784,
+          1.6092919615057923
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0003564075211776313,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.010445610763350589,
+        "max_palm_force_N": 3.07875229284139,
+        "max_whole_hand_force_N": 3.07875229284139,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 14.0,
+            "palm_friction_share": 0.9574191294868596
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 13.540000000000001,
+            "palm_friction_share": 0.9574549134901919
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 0.106,
+            "palm_friction_share": 0.9554090724253171
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 0.354,
+            "palm_friction_share": 0.9566284191261821
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.486216953480948e-12,
+        "max_wheel_dynamics_residual_Nm": 9.45805628260743e-10,
+        "stop_tail_peaks_deg": [
+          0.08897608499406301
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_left_-0.40",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "-0.4"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_left_-0.40",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "4d9def93ec83cc3d3d6239873e1027557b9dc540f286fa38062e3e0e1b8e10f1",
+      "evaluation_sha256": "bd50d21380310e107d0276a082b26a88c44b06838ef4c751229e3bacc507ea93",
+      "passed": false,
+      "failed_checks": [
+        "final_error_le_2deg",
+        "all_stop_tails_le_2deg",
+        "palm_contact_95pct",
+        "palm_contact_gap",
+        "palm_force_bounded",
+        "whole_hand_force_bounded",
+        "palm_slip_speed",
+        "palm_slip_distance"
+      ],
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": false,
+          "all_stop_tails_le_2deg": false,
+          "palm_contact_95pct": false,
+          "palm_contact_gap": false,
+          "palm_force_bounded": false,
+          "whole_hand_force_bounded": false,
+          "palm_upper_sector": true,
+          "palm_slip_speed": false,
+          "palm_slip_distance": false,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 213.9590456015242,
+        "max_error_deg": 213.9590456015242,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49143556189035,
+        "max_wrist_bend_deg": [
+          2.7349626382101286,
+          2.1702639426743677
+        ],
+        "palm_contact_fraction": [
+          0.9365714285714286,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.34,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.029702924087643894,
+          0.0
+        ],
+        "max_palm_slip_m_s": 1.077692397813198,
+        "max_palm_force_N": 54.526620981878395,
+        "max_whole_hand_force_N": 54.526620981878395,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 13.134,
+            "palm_friction_share": 0.9793174221750492
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 12.46,
+            "palm_friction_share": 0.9780870349453994
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 0.21,
+            "palm_friction_share": 1.0008703620410109
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 0.464,
+            "palm_friction_share": 0.9912071454004789
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.730260627638927e-11,
+        "max_wheel_dynamics_residual_Nm": 6.914326888818323e-10,
+        "stop_tail_peaks_deg": [
+          213.9590456015242
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_left_+0.40",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "0.4"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_left_+0.40",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "0d3f50fa931231a6f2a3e4930013b4081ad7db4d523dfe4cef68ca90d2eb1e72",
+      "evaluation_sha256": "19b13c5ebfad8f7e4608b64a11bdb1ff5911a4323673afba4c20476607cca92e",
+      "passed": false,
+      "failed_checks": [
+        "palm_slip_speed"
+      ],
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": false,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.23777049175136336,
+        "max_error_deg": 1.3434502177453658,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.47761235372609,
+        "max_wrist_bend_deg": [
+          2.199501928462871,
+          1.6092919615057923
+        ],
+        "palm_contact_fraction": [
+          0.9967142857142857,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0035822501584359713,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.034079749833720856,
+        "max_palm_force_N": 4.158478111216009,
+        "max_whole_hand_force_N": 4.158478111216009,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 13.966000000000001,
+            "palm_friction_share": 0.9590229505494793
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 12.954,
+            "palm_friction_share": 0.9584920689051397
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 0.41400000000000003,
+            "palm_friction_share": 0.9627341358633479
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 0.598,
+            "palm_friction_share": 0.967925537120892
+          }
+        ],
+        "max_torque_audit_residual_Nm": 8.467782031118531e-12,
+        "max_wheel_dynamics_residual_Nm": 5.081094144321341e-07,
+        "stop_tail_peaks_deg": [
+          0.23777049175136336
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_right_-0.05",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "-0.05"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_right_-0.05",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "41a8a1d7756726a6f7a77cbbd62d902d951af2f04a0299adb7a49fbe7af5e2e9",
+      "evaluation_sha256": "b6812913eeaec08d14ec8523bd833d9cf24dfdb23831e1c1e3fd92fa695325af",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.017347241711420422,
+        "max_error_deg": 0.06973671330463928,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.498046126582445,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.6542223963322709
+        ],
+        "palm_contact_fraction": [
+          null,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.0001441577153701105
+        ],
+        "max_palm_slip_m_s": 0.0016861980830526382,
+        "max_palm_force_N": 3.0038612725183507,
+        "max_whole_hand_force_N": 3.0038612725183507,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 14.0,
+            "palm_friction_share": 1.035988128925691
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 13.734,
+            "palm_friction_share": 1.0340288144356768
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 0.184,
+            "palm_friction_share": 1.137817335236586
+          }
+        ],
+        "max_torque_audit_residual_Nm": 2.156053113822054e-12,
+        "max_wheel_dynamics_residual_Nm": 4.258242369825638e-10,
+        "stop_tail_peaks_deg": [
+          0.017347241711420422
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_right_+0.05",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "0.05"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_right_+0.05",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "ede4435f44262aca1fd991e62f90ab37a60facf9d07eed50650c7e9a40b6648e",
+      "evaluation_sha256": "8eaec74c40caebce2153d91bd92262b45dd71405006cbb38af963f6b1740ac6b",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.03426600940634548,
+        "max_error_deg": 0.14379806412798782,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49816547138243,
+        "max_wrist_bend_deg": [
+          1.6396338773799968,
+          1.6316945958626867
+        ],
+        "palm_contact_fraction": [
+          null,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.0002102149748463682
+        ],
+        "max_palm_slip_m_s": 0.0005963913639814354,
+        "max_palm_force_N": 3.0045777621371017,
+        "max_whole_hand_force_N": 3.0045777621371017,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 14.0,
+            "palm_friction_share": 0.9648385412240138
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 13.752,
+            "palm_friction_share": 0.9672616392277241
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 0.10200000000000001,
+            "palm_friction_share": 0.8702470527055105
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 0.146,
+            "palm_friction_share": 0.7603544396187265
+          }
+        ],
+        "max_torque_audit_residual_Nm": 1.494630808007713e-12,
+        "max_wheel_dynamics_residual_Nm": 5.944643180488818e-10,
+        "stop_tail_peaks_deg": [
+          0.03426600940634548
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_right_-0.10",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "-0.1"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_right_-0.10",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "3d414fcc5add7dcb3cc67cdbdc5f8db806c05bfbef9a3f67af26152b6b93715a",
+      "evaluation_sha256": "c1b5cc8001af0a7b2e1504ff6823257937f0aeb96579e291379c7dbcdda1a11c",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.043113908998432746,
+        "max_error_deg": 0.08904681749821201,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49734955935866,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.6726428333610937
+        ],
+        "palm_contact_fraction": [
+          null,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.00029319298710202773
+        ],
+        "max_palm_slip_m_s": 0.0031058903256514455,
+        "max_palm_force_N": 3.0182799482727676,
+        "max_whole_hand_force_N": 3.0182799482727676,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 14.0,
+            "palm_friction_share": 1.0173581868067303
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 13.692,
+            "palm_friction_share": 1.016437458180614
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 0.122,
+            "palm_friction_share": 1.0623723959147564
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 0.186,
+            "palm_friction_share": 1.0570929789832153
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.0854208077357725e-12,
+        "max_wheel_dynamics_residual_Nm": 3.2059570276299354e-10,
+        "stop_tail_peaks_deg": [
+          0.043113908998432746
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_right_+0.10",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "0.1"
+      ],
+      "expectation": "pass",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_right_+0.10",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "8d0b308262478f76e572f361444f10c4deee2ec9d8b56923323b87f1444f7eda",
+      "evaluation_sha256": "1ed4c55ca4e27e66a72cb987aee3791f7ad0fc9d510cc091e1ea45424d046f5b",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.06020592161132157,
+        "max_error_deg": 0.18227639339670115,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49816547138243,
+        "max_wrist_bend_deg": [
+          1.6398355829123594,
+          1.6289595629483848
+        ],
+        "palm_contact_fraction": [
+          null,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.0003693297298984275
+        ],
+        "max_palm_slip_m_s": 0.0012495829643073765,
+        "max_palm_force_N": 3.025842605814209,
+        "max_whole_hand_force_N": 3.025842605814209,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 14.0,
+            "palm_friction_share": 0.9817775126119501
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 13.682,
+            "palm_friction_share": 0.9831176695347739
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 0.13,
+            "palm_friction_share": 0.9359492905326043
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 0.188,
+            "palm_friction_share": 0.9092401351973368
+          }
+        ],
+        "max_torque_audit_residual_Nm": 2.220751360582085e-12,
+        "max_wheel_dynamics_residual_Nm": 6.363327226255322e-10,
+        "stop_tail_peaks_deg": [
+          0.06020592161132157
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_right_-0.20",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "-0.2"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_right_-0.20",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "29a00c96ca0fb4ad73aef721c2be19d41864e63c730b13716d94ad6d39f7363b",
+      "evaluation_sha256": "44694e69370650cadf4e2f8a0f2054650329a78f0b58b54696028d4839b56afe",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.09434299030624946,
+        "max_error_deg": 0.18833946439611324,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.495193381385192,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.7261165024324427
+        ],
+        "palm_contact_fraction": [
+          null,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.0006169624773210038
+        ],
+        "max_palm_slip_m_s": 0.00885134830339286,
+        "max_palm_force_N": 3.072162279419514,
+        "max_whole_hand_force_N": 3.072162279419514,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 14.0,
+            "palm_friction_share": 1.0081299649205073
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 13.506,
+            "palm_friction_share": 1.0072467101775533
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 0.154,
+            "palm_friction_share": 1.0318086934719097
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 0.34,
+            "palm_friction_share": 1.0337381908784504
+          }
+        ],
+        "max_torque_audit_residual_Nm": 5.453804075017388e-12,
+        "max_wheel_dynamics_residual_Nm": 9.118435728705521e-10,
+        "stop_tail_peaks_deg": [
+          0.09434299030624946
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_right_+0.20",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "0.2"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_right_+0.20",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "b83810c9235c48b1954eb27b42639c9a989635d208a94c2f4c4a4e4672b16d35",
+      "evaluation_sha256": "3f3b96650aa576ee83131d45ddb3879b489516305835a991036d15512811fe14",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.11170457899076314,
+        "max_error_deg": 0.2660064686068486,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49816547138243,
+        "max_wrist_bend_deg": [
+          1.6471382498310234,
+          1.6412938730577724
+        ],
+        "palm_contact_fraction": [
+          null,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.0006957420313943979
+        ],
+        "max_palm_slip_m_s": 0.005511357268821939,
+        "max_palm_force_N": 3.076390370828096,
+        "max_whole_hand_force_N": 3.076390370828096,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 14.0,
+            "palm_friction_share": 0.9903842817162648
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 13.554,
+            "palm_friction_share": 0.9910673643637358
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 0.15,
+            "palm_friction_share": 0.9662731727382025
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 0.296,
+            "palm_friction_share": 0.9704954574950906
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.593880831293973e-12,
+        "max_wheel_dynamics_residual_Nm": 6.922013517929315e-10,
+        "stop_tail_peaks_deg": [
+          0.11170457899076314
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_right_-0.40",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "-0.4"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_right_-0.40",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "afe072a0097cf190cd7fb210cf9ff11272678ed167a57cca67c3bc92daec4e4b",
+      "evaluation_sha256": "5055aed867c03d351de2bcefcf46bdcb1da7cf15b6ec65f165e97fde1a59760c",
+      "passed": false,
+      "failed_checks": [
+        "palm_slip_speed"
+      ],
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": false,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 0.26459536711737086,
+        "max_error_deg": 1.4675354272766659,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49184510957195,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          2.2101942956943126
+        ],
+        "palm_contact_fraction": [
+          null,
+          0.9967142857142857
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.002
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.004455544792139174
+        ],
+        "max_palm_slip_m_s": 0.03524053857770653,
+        "max_palm_force_N": 4.401380247233249,
+        "max_whole_hand_force_N": 4.401380247233249,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 13.962,
+            "palm_friction_share": 0.9791766248003925
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 12.922,
+            "palm_friction_share": 0.9779434523565168
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 0.446,
+            "palm_friction_share": 0.9887724950045719
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 0.594,
+            "palm_friction_share": 0.9986101799747826
+          }
+        ],
+        "max_torque_audit_residual_Nm": 8.93418672376356e-12,
+        "max_wheel_dynamics_residual_Nm": 4.746296689006613e-10,
+        "stop_tail_peaks_deg": [
+          0.26459536711737086
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "hold_right_+0.40",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "0.4"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v2_20261107/checks_parallel/hold_right_+0.40",
+      "version": "palm_primary_l1_v2",
+      "config_sha256": "f2869cf46277498bd86d8fa24cd258232ae1f88be0de13bcf7dc2380e3cc8d8d",
+      "evaluation_sha256": "8864f70cf3859c90dcf83fe7326ef2edb44d20a5b6a3c908b5a2cfa7b4826e1e",
+      "passed": false,
+      "failed_checks": [
+        "final_error_le_2deg",
+        "all_stop_tails_le_2deg",
+        "palm_contact_95pct",
+        "palm_contact_gap",
+        "palm_force_bounded",
+        "whole_hand_force_bounded",
+        "palm_slip_speed",
+        "palm_slip_distance"
+      ],
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": false,
+          "all_stop_tails_le_2deg": false,
+          "palm_contact_95pct": false,
+          "palm_contact_gap": false,
+          "palm_force_bounded": false,
+          "whole_hand_force_bounded": false,
+          "palm_upper_sector": true,
+          "palm_slip_speed": false,
+          "palm_slip_distance": false,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": null,
+        "final_error_peak_deg": 203.565991495272,
+        "max_error_deg": 203.565991495272,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.431847231844124,
+        "max_wrist_bend_deg": [
+          2.0958230190384644,
+          2.782632719685325
+        ],
+        "palm_contact_fraction": [
+          null,
+          0.9205714285714286
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.164
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.04520501165802575
+        ],
+        "max_palm_slip_m_s": 0.9126516291479625,
+        "max_palm_force_N": 50.61830700623599,
+        "max_whole_hand_force_N": 50.61830700623599,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 12.902000000000001,
+            "palm_friction_share": 0.934133435976323
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 12.098,
+            "palm_friction_share": 0.92973335860082
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 0.20400000000000001,
+            "palm_friction_share": 0.957739046306897
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 0.6,
+            "palm_friction_share": 0.9717489312111207
+          }
+        ],
+        "max_torque_audit_residual_Nm": 5.305711425762638e-11,
+        "max_wheel_dynamics_residual_Nm": 7.75342956504943e-10,
+        "stop_tail_peaks_deg": [
+          203.565991495272
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 13.998000000001344
+      }
+    },
+    {
+      "name": "perturb_friction_seed0",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "0",
+        "--friction",
+        ".7"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_friction_seed0",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "de96a4c494e820d21359c25777a1b9f831ccf8511df2eb321865c558bccd9e6f",
+      "evaluation_sha256": "99a8c131df231f392e66df383154074f77658d9d95757a9e580131d2213e8e67",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.08092855197150534,
+        "final_error_peak_deg": 0.07822735317820431,
+        "max_error_deg": 0.22507420715587942,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.497518889320748,
+        "max_wrist_bend_deg": [
+          1.6401176907020965,
+          1.7303055322358583
+        ],
+        "palm_contact_fraction": [
+          0.9998095238095238,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.001997298648110596,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.002424689947019058,
+        "max_palm_force_N": 3.7847700489070686,
+        "max_whole_hand_force_N": 3.7847700489070686,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.0635219196046626
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.24,
+            "palm_friction_share": 1.0655790671827645
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.352,
+            "palm_friction_share": 1.053311276994328
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.408,
+            "palm_friction_share": 1.075685650385571
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.21681570270016e-12,
+        "max_wheel_dynamics_residual_Nm": 1.1203666883119467e-09,
+        "stop_tail_peaks_deg": [
+          0.06497950438717413,
+          0.022891649461870032,
+          0.07822735317820431
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_friction_seed1",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "1",
+        "--friction",
+        ".7"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_friction_seed1",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "7e42f7ce5f450f5a65af0b28eac9aac54097caa8d920c1d9484822df592d0af2",
+      "evaluation_sha256": "54f5514f29b41b780b6c28e319ca09536ac79ecc408c209573f3d6f8508b72cb",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.05772721095718246,
+        "final_error_peak_deg": 0.07788352502604819,
+        "max_error_deg": 0.2668659280994999,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49667733414943,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.727790422086171
+        ],
+        "palm_contact_fraction": [
+          0.9999047619047619,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0019249445796726975,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0015594736228427182,
+        "max_palm_force_N": 3.6940204514629373,
+        "max_whole_hand_force_N": 3.6940204514629373,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.065560349587754
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.274000000000001,
+            "palm_friction_share": 1.0687581912594857
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.34,
+            "palm_friction_share": 1.0545782116286824
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.386000000000001,
+            "palm_friction_share": 1.077831224192177
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.4326430586872902e-12,
+        "max_wheel_dynamics_residual_Nm": 1.9936656214802895e-09,
+        "stop_tail_peaks_deg": [
+          0.07959069161111662,
+          0.02995614565983003,
+          0.07788352502604819
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_friction_seed2",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "2",
+        "--friction",
+        ".7"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_friction_seed2",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "cac75bfeb2b5defabffef29649f7607ae768df94f064eb6a68cee013d51360dc",
+      "evaluation_sha256": "8a34b0cff8673f3b2f69750165eb558877e400e2b98ff0a6a923633f9a9802f1",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.07953750332751444,
+        "final_error_peak_deg": 0.07848259755434595,
+        "max_error_deg": 0.14628357097072353,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.47660232725205,
+        "max_wrist_bend_deg": [
+          1.6904774641771891,
+          1.6092919615057923
+        ],
+        "palm_contact_fraction": [
+          0.9999047619047619,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0019017176347229424,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0014399421929572225,
+        "max_palm_force_N": 3.9719650332611227,
+        "max_whole_hand_force_N": 3.9719650332611227,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.0658051120291574
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.438,
+            "palm_friction_share": 1.0693559804049266
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.24,
+            "palm_friction_share": 1.054611394661178
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.322000000000001,
+            "palm_friction_share": 1.0779351747113306
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.675060256114193e-12,
+        "max_wheel_dynamics_residual_Nm": 1.9571264608941874e-09,
+        "stop_tail_peaks_deg": [
+          0.04589037815209506,
+          0.021272970735042664,
+          0.07848259755434595
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_friction_seed3",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "3",
+        "--friction",
+        ".7"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_friction_seed3",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "08364e2778f679fa8f97a72a93bc18202e0bb78d08cf9554dafe8e770d58be2b",
+      "evaluation_sha256": "bbde30a9560c8932710808b0c018da00617b4f76f8fdeb5be698d81534ed2b18",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.08320181935721029,
+        "final_error_peak_deg": 0.07869618452402731,
+        "max_error_deg": 0.1548058442748773,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.46815211212068,
+        "max_wrist_bend_deg": [
+          1.7626553820633466,
+          1.6093016441129602
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0018503538272839294,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.004628883949697491,
+        "max_palm_force_N": 3.7792893650369557,
+        "max_whole_hand_force_N": 3.7792893650369557,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.066303696471565
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.522,
+            "palm_friction_share": 1.0707803798927376
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.176,
+            "palm_friction_share": 1.0545242628817602
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.302,
+            "palm_friction_share": 1.078337561798895
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.924166547264463e-12,
+        "max_wheel_dynamics_residual_Nm": 1.8303586840628938e-09,
+        "stop_tail_peaks_deg": [
+          0.05293254351017038,
+          0.018756138672368878,
+          0.07869618452402731
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_friction_seed4",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "4",
+        "--friction",
+        ".7"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_friction_seed4",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "18db19d83cc8f625ae2fd797a1c0b43926bff61d32173cb0814465c5a22090ab",
+      "evaluation_sha256": "a5902f3eeaa19fac64bcc6003e3764e6c908662723e9e598ac675238bb13572b",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.07149457214148958,
+        "final_error_peak_deg": 0.07798683824260878,
+        "max_error_deg": 0.12460990276731997,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49816547138243,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.6092919615057923
+        ],
+        "palm_contact_fraction": [
+          0.9997619047619047,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.00200637098670134,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0025258874823278765,
+        "max_palm_force_N": 3.570635010662558,
+        "max_whole_hand_force_N": 3.570635010662558,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.0618476682556608
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.432,
+            "palm_friction_share": 1.0633994890764298
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.24,
+            "palm_friction_share": 1.0521089378242823
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.328000000000001,
+            "palm_friction_share": 1.0737467957186528
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.2172736696978177e-12,
+        "max_wheel_dynamics_residual_Nm": 1.572504779168149e-09,
+        "stop_tail_peaks_deg": [
+          0.02111217458494887,
+          0.026136113106213735,
+          0.07798683824260878
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_load_seed0",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "0",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_load_seed0",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "63944b7eead55a3132f5f3c003a5548c2256e711ba02649fc59fe1e03e72a0a8",
+      "evaluation_sha256": "779d23b0496cffa5eafad5779e07b12530a7ae23c1adafa2cf64a3b49445203e",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.08259032022931005,
+        "final_error_peak_deg": 0.03791186858322671,
+        "max_error_deg": 0.21213527472992005,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.497370145501176,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.7291899163985938
+        ],
+        "palm_contact_fraction": [
+          0.9999047619047619,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0011975454788414686,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0018291213120680055,
+        "max_palm_force_N": 3.7780495272819286,
+        "max_whole_hand_force_N": 3.7780495272819286,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.0620561962391637
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.294,
+            "palm_friction_share": 1.0625322766991063
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.352,
+            "palm_friction_share": 1.049720374447552
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.354000000000001,
+            "palm_friction_share": 1.0776826231102452
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.288847055278211e-12,
+        "max_wheel_dynamics_residual_Nm": 9.125885824801117e-09,
+        "stop_tail_peaks_deg": [
+          0.06283029502413669,
+          0.017146931615214443,
+          0.03791186858322671
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_load_seed1",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "1",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_load_seed1",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "281b7063c366c0dbf1b82de91a14174778d917b8cd96d078d5ace123380cefb4",
+      "evaluation_sha256": "6db577c1bfe6b2ec7698fd0288bacbf3f096f739ffccdaf0d82666b6956e5e6d",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.05959817865631774,
+        "final_error_peak_deg": 0.03785388315332357,
+        "max_error_deg": 0.2675347856501679,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.494627744889694,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.7277993491282444
+        ],
+        "palm_contact_fraction": [
+          0.9999523809523809,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.001189129228853359,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0015034910928212219,
+        "max_palm_force_N": 3.6799663877189777,
+        "max_whole_hand_force_N": 3.6799663877189777,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.0627346827742283
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.266,
+            "palm_friction_share": 1.0641569355780756
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.34,
+            "palm_friction_share": 1.049871395680534
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.394,
+            "palm_friction_share": 1.0782137973913402
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.391736974085347e-12,
+        "max_wheel_dynamics_residual_Nm": 2.466617465834986e-09,
+        "stop_tail_peaks_deg": [
+          0.07203962361181218,
+          0.0237874355717842,
+          0.03785388315332357
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_load_seed2",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "2",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_load_seed2",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "8151c1fd23f2fa1a6c7801218d761d076f7f32e30e48e2669f258f34553e9e84",
+      "evaluation_sha256": "a739e8a4b06382582afb15b6faca1628cc2d66d481044fd2b82c7fedc7ea1918",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.08142142688563034,
+        "final_error_peak_deg": 0.0384932759058752,
+        "max_error_deg": 0.14473820653146358,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.47651115872159,
+        "max_wrist_bend_deg": [
+          1.6881190684139467,
+          1.6092919615057923
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0011389995354199255,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0003492218685873686,
+        "max_palm_force_N": 3.50590182725219,
+        "max_whole_hand_force_N": 3.50590182725219,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.062581330641541
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.434000000000001,
+            "palm_friction_share": 1.064063454834788
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.242,
+            "palm_friction_share": 1.0496110233594922
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.324,
+            "palm_friction_share": 1.0780836214415623
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.735156711177524e-12,
+        "max_wheel_dynamics_residual_Nm": 6.7670266612474e-10,
+        "stop_tail_peaks_deg": [
+          0.051952328577956904,
+          0.015765392477568464,
+          0.0384932759058752
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_load_seed3",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "3",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_load_seed3",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "ce1573df50cd81fac81f1a5497bf2a09c616f18c52ca0063c9031ae114468a19",
+      "evaluation_sha256": "4898ed34799c8ecdf252656699836b7836648269fa84ab557c569b0893e16ba7",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.08468367300916654,
+        "final_error_peak_deg": 0.0386191566071316,
+        "max_error_deg": 0.1543376750192489,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.46795321226052,
+        "max_wrist_bend_deg": [
+          1.760550320704435,
+          1.6093095958385295
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0011348848813919914,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.005330930164517639,
+        "max_palm_force_N": 3.7884622059795476,
+        "max_whole_hand_force_N": 3.7884622059795476,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.062881447347097
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.446,
+            "palm_friction_share": 1.064936842490839
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.23,
+            "palm_friction_share": 1.0496624125851506
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.324,
+            "palm_friction_share": 1.0782003575195132
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.41235936676776e-12,
+        "max_wheel_dynamics_residual_Nm": 6.545814723590837e-10,
+        "stop_tail_peaks_deg": [
+          0.06610731984015579,
+          0.014668000972260486,
+          0.0386191566071316
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_load_seed4",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "4",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_load_seed4",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "137fed2c8af1d3017b1d1a3b72a3177fcd23d74ac92959f64259e614a9f1b406",
+      "evaluation_sha256": "44c185e75d6876d574a7576802595b294632a78da90ee321333035607d347aba",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.0732396236573425,
+        "final_error_peak_deg": 0.037503730615350034,
+        "max_error_deg": 0.12069153778664192,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49816547138243,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.6092919615057923
+        ],
+        "palm_contact_fraction": [
+          0.9998095238095238,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0012106982164009424,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0019172543409379799,
+        "max_palm_force_N": 3.2713088079061663,
+        "max_whole_hand_force_N": 3.2713088079061663,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.0611092526350894
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.448,
+            "palm_friction_share": 1.0609578937922477
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.234,
+            "palm_friction_share": 1.0491220569010524
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.318,
+            "palm_friction_share": 1.0767311754798605
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.284059218484515e-12,
+        "max_wheel_dynamics_residual_Nm": 2.3074013116852754e-09,
+        "stop_tail_peaks_deg": [
+          0.021599723958730697,
+          0.020575105093622578,
+          0.037503730615350034
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_combined_seed0",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "0",
+        "--friction",
+        ".7",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_combined_seed0",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "bd23a7d3ce800e4ea7f47304cfdd4422bb05ebc8976eef24b2cb7ba635711c7f",
+      "evaluation_sha256": "ff726dfa6b66171e29e62c848a71f16b77783a1de257b4c744d69c8894414de5",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.08698548017423853,
+        "final_error_peak_deg": 0.08743063193421427,
+        "max_error_deg": 0.24817850784054613,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49767988811809,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.733561474225296
+        ],
+        "palm_contact_fraction": [
+          0.9997619047619047,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.002219862432234104,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0026954716615064252,
+        "max_palm_force_N": 3.758560873355844,
+        "max_whole_hand_force_N": 3.758560873355844,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.0499442392145748
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.214,
+            "palm_friction_share": 1.0518057242189853
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.344000000000001,
+            "palm_friction_share": 1.0443522305150215
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.442,
+            "palm_friction_share": 1.0556074568687013
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.097591627643226e-12,
+        "max_wheel_dynamics_residual_Nm": 1.741220834183821e-09,
+        "stop_tail_peaks_deg": [
+          0.08489770315178287,
+          0.014304463014109082,
+          0.08743063193421427
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_combined_seed1",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "1",
+        "--friction",
+        ".7",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_combined_seed1",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "1244b760759e81fdf4eb675bca0347b0a6ef827a1547aded7a6b2c25e93a39ac",
+      "evaluation_sha256": "95bbc30d12286dfb43a1273af35964441190b299170c010363f8684dda3cd86f",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.06030618138962484,
+        "final_error_peak_deg": 0.08652701860825483,
+        "max_error_deg": 0.2511494511283976,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49655101661406,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.7300984357837788
+        ],
+        "palm_contact_fraction": [
+          0.9999047619047619,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.002135174223884258,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0020935494790216376,
+        "max_palm_force_N": 3.682629540398969,
+        "max_whole_hand_force_N": 3.682629540398969,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.0517854767129848
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.258000000000001,
+            "palm_friction_share": 1.054578896486028
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.342,
+            "palm_friction_share": 1.0457943788879094
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.4,
+            "palm_friction_share": 1.0572198995811892
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.6914915568786455e-12,
+        "max_wheel_dynamics_residual_Nm": 1.532833415751611e-09,
+        "stop_tail_peaks_deg": [
+          0.062417402282270266,
+          0.02092519078730136,
+          0.08652701860825483
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_combined_seed2",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "2",
+        "--friction",
+        ".7",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_combined_seed2",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "81c8af95270167762b32578cf02b54d38012506761c90bf9e627803631ce054d",
+      "evaluation_sha256": "a471649080126c50d4e6bcc754c948f18c85129c10f4e96a1fdcb378fe04fdf4",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.08541277102250935,
+        "final_error_peak_deg": 0.08753215208088208,
+        "max_error_deg": 0.16156729212098256,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.47703268222258,
+        "max_wrist_bend_deg": [
+          1.689082519185362,
+          1.6092919615057923
+        ],
+        "palm_contact_fraction": [
+          0.9998571428571429,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.002118239595904265,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0015947524697089166,
+        "max_palm_force_N": 3.9874318201587204,
+        "max_whole_hand_force_N": 3.9874318201587204,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.052291154102445
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.424,
+            "palm_friction_share": 1.055522963925505
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.244,
+            "palm_friction_share": 1.0458446290755443
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.332,
+            "palm_friction_share": 1.0578588013028638
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.039019119161935e-12,
+        "max_wheel_dynamics_residual_Nm": 1.7977826727300084e-09,
+        "stop_tail_peaks_deg": [
+          0.06448111560289105,
+          0.013082719913712256,
+          0.08753215208088208
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_combined_seed3",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "3",
+        "--friction",
+        ".7",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_combined_seed3",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "798d1a840f3e9ff61fa878ac56450f6b4cc83766e3b192f1d7414a19691b9f09",
+      "evaluation_sha256": "2b4b7d72e1bbeeba025e13afeafb2db5f6aca1102aa761e350c16cbb2f60442e",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.08961856414938034,
+        "final_error_peak_deg": 0.08786423492074089,
+        "max_error_deg": 0.17066077106752026,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.467841308118974,
+        "max_wrist_bend_deg": [
+          1.7603470143187572,
+          1.609307127784086
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0020683509197521057,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0051845027251727184,
+        "max_palm_force_N": 3.7859716446414957,
+        "max_whole_hand_force_N": 3.7859716446414957,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.0526559701125906
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.462,
+            "palm_friction_share": 1.0563761267196974
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.200000000000001,
+            "palm_friction_share": 1.0458537227279718
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.338000000000001,
+            "palm_friction_share": 1.0582281079312663
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.335087844253849e-12,
+        "max_wheel_dynamics_residual_Nm": 1.5540805309299799e-09,
+        "stop_tail_peaks_deg": [
+          0.07050566770391882,
+          0.01069981206171733,
+          0.08786423492074089
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "perturb_combined_seed4",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "15",
+        "--target-offset-mm",
+        "1",
+        "--seed",
+        "4",
+        "--friction",
+        ".7",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/perturb_combined_seed4",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "db9720b0f994fa52c78d9ec131c29d52b681851634b0ed9027aca647d2098285",
+      "evaluation_sha256": "cf4fa62fa8c626b3b710ee2ce53b2d9781acd1cfcdce61e064b327a853de6e7a",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.07675951075678158,
+        "final_error_peak_deg": 0.08705014996391214,
+        "max_error_deg": 0.1426214705835263,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49816547138243,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.6092919615057923
+        ],
+        "palm_contact_fraction": [
+          0.9997142857142857,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.002,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.002228022589582414,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0030216964540894452,
+        "max_palm_force_N": 3.7378627442515406,
+        "max_whole_hand_force_N": 3.7378627442515406,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 42.0,
+            "palm_friction_share": 1.0484001409748291
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.422,
+            "palm_friction_share": 1.0500622541602274
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 15.242,
+            "palm_friction_share": 1.04321488525195
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 15.336,
+            "palm_friction_share": 1.0536745099926919
+          }
+        ],
+        "max_torque_audit_residual_Nm": 3.098465928275118e-12,
+        "max_wheel_dynamics_residual_Nm": 1.9347878299491583e-09,
+        "stop_tail_peaks_deg": [
+          0.04017840301461991,
+          0.017030931381595674,
+          0.08705014996391214
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 41.99800000000536
+      }
+    },
+    {
+      "name": "fingers_less_+1",
+      "group": "diagnostic",
+      "options": [
+        "--angle",
+        "30",
+        "--finger-closure",
+        ".10"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/fingers_less_+1",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "f8652324166328feb56601c5c3bbac235bcb0590fa7d937e48f1bbf3ba299870",
+      "evaluation_sha256": "90c94784e282fbf9dbc1466d56ab7a2a4070ba22e89e9febe03936ff51d86ffd",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.06320734052340887,
+        "final_error_peak_deg": 0.1167530070885558,
+        "max_error_deg": 0.13670287493540442,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.497484329571456,
+        "max_wrist_bend_deg": [
+          1.6396014713743927,
+          1.6183278836767627
+        ],
+        "palm_contact_fraction": [
+          1.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.002691484003281101,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.000533041046821676,
+        "max_palm_force_N": 3.2583342814726564,
+        "max_whole_hand_force_N": 3.2583342814726564,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": 1,
+            "seconds": 72.0,
+            "palm_friction_share": 1.0569564486740155
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": 1,
+            "activity": "holding",
+            "seconds": 11.604000000000001,
+            "palm_friction_share": 1.064332989848491
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "driving",
+            "seconds": 30.208000000000002,
+            "palm_friction_share": 1.049344181051879
+          },
+          {
+            "required_torque_sign": 1,
+            "activity": "braking",
+            "seconds": 30.188000000000002,
+            "palm_friction_share": 1.0640515437405602
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.801881114957496e-12,
+        "max_wheel_dynamics_residual_Nm": 1.0624836010997285e-09,
+        "stop_tail_peaks_deg": [
+          0.004110792125004146,
+          0.052123613542102876,
+          0.1167530070885558
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 71.9980000000136
+      }
+    },
+    {
+      "name": "fingers_less_-1",
+      "group": "diagnostic",
+      "options": [
+        "--angle",
+        "-30",
+        "--finger-closure",
+        ".10"
+      ],
+      "expectation": "observe",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/fingers_less_-1",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "64d144943ea6cc8886e87f308ab6108535d64481993ef5d8d268c6c9e3852c52",
+      "evaluation_sha256": "7b738973be985e3bae05dc091c528fb6ad40b0804d817d40dc524dea60559e1b",
+      "passed": true,
+      "failed_checks": [],
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": true,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": true,
+          "final_error_le_2deg": true,
+          "all_stop_tails_le_2deg": true,
+          "palm_contact_95pct": true,
+          "palm_contact_gap": true,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": true,
+          "palm_friction_primary_by_activity": true,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 0.07738253493538147,
+        "final_error_peak_deg": 0.13202550546816985,
+        "max_error_deg": 0.18225028419368408,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 17.49816547138243,
+        "max_wrist_bend_deg": [
+          1.6399165120380592,
+          1.610120988567538
+        ],
+        "palm_contact_fraction": [
+          null,
+          1.0
+        ],
+        "max_contact_gap_s": [
+          0.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.003147824040694048
+        ],
+        "max_palm_slip_m_s": 0.001708174740610921,
+        "max_palm_force_N": 3.2544676358626634,
+        "max_whole_hand_force_N": 3.2544676358626634,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [
+          {
+            "required_torque_sign": -1,
+            "seconds": 72.0,
+            "palm_friction_share": 0.9518400770577957
+          }
+        ],
+        "mechanism_by_activity": [
+          {
+            "required_torque_sign": -1,
+            "activity": "holding",
+            "seconds": 11.398,
+            "palm_friction_share": 0.9608215850668713
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "driving",
+            "seconds": 30.266000000000002,
+            "palm_friction_share": 0.9647342493237242
+          },
+          {
+            "required_torque_sign": -1,
+            "activity": "braking",
+            "seconds": 30.336000000000002,
+            "palm_friction_share": 0.9305051020981245
+          }
+        ],
+        "max_torque_audit_residual_Nm": 4.3784142977898455e-12,
+        "max_wheel_dynamics_residual_Nm": 8.659239714159384e-10,
+        "stop_tail_peaks_deg": [
+          0.10129067644308112,
+          0.06548405190437012,
+          0.13202550546816985
+        ],
+        "max_joint_violation_deg": 0.0,
+        "negative_control": false,
+        "duration_s": 71.9980000000136
+      }
+    },
+    {
+      "name": "no_wheel_contact",
+      "group": "diagnostic",
+      "options": [
+        "--angle",
+        "15",
+        "--negative-control"
+      ],
+      "expectation": "tracking_failure",
+      "directory": "outputs/physical_feasibility/l1_v3_20261107/remaining/no_wheel_contact",
+      "version": "palm_primary_l1_v3",
+      "config_sha256": "8ec0538bddfceabcc60aba50df12903da3fc4afc00f55c11f90edc2f6a3b7eb2",
+      "evaluation_sha256": "7480a535532d4e299b61c99c6fe442e2c9e90bb85ed763c2d9e5324934a29d5c",
+      "passed": false,
+      "failed_checks": [
+        "joint_limits",
+        "motion_RMSE_le_2deg",
+        "final_error_le_2deg",
+        "all_stop_tails_le_2deg",
+        "palm_contact_95pct",
+        "palm_contact_gap",
+        "palm_friction_primary",
+        "palm_friction_primary_by_activity"
+      ],
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete": true,
+          "finite": true,
+          "no_illegal_contact": true,
+          "no_nonrim_contact": true,
+          "rim_penetration_lt_0p5mm": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits": false,
+          "combined_effort_within_original": true,
+          "hand_effort_within_original": true,
+          "mimic_error_lt_0p1deg": true,
+          "torque_audit": true,
+          "wheel_dynamics_balance": true,
+          "wrist_bend": true,
+          "motion_RMSE_le_2deg": false,
+          "final_error_le_2deg": false,
+          "all_stop_tails_le_2deg": false,
+          "palm_contact_95pct": false,
+          "palm_contact_gap": false,
+          "palm_force_bounded": true,
+          "whole_hand_force_bounded": true,
+          "palm_upper_sector": true,
+          "palm_slip_speed": true,
+          "palm_slip_distance": true,
+          "palm_friction_primary": false,
+          "palm_friction_primary_by_activity": false,
+          "inactive_hand_clear": true
+        },
+        "motion_RMSE_deg": 457.5431709010532,
+        "final_error_peak_deg": 450.0208896985216,
+        "max_error_deg": 465.02088969852167,
+        "max_illegal_N": 0.0,
+        "max_nonrim_N": 0.0,
+        "max_penetration_mm": 0.0,
+        "min_arm_margin_deg": 16.286240886883462,
+        "max_wrist_bend_deg": [
+          3.1393454633045472,
+          2.6350002553682432
+        ],
+        "palm_contact_fraction": [
+          0.0,
+          null
+        ],
+        "max_contact_gap_s": [
+          42.0,
+          0.0
+        ],
+        "palm_cumulative_slip_m": [
+          0.0,
+          0.0
+        ],
+        "max_palm_slip_m_s": 0.0,
+        "max_palm_force_N": 0.0,
+        "max_whole_hand_force_N": 0.0,
+        "max_palm_below_upper_deg": 0.0,
+        "mechanism": [],
+        "mechanism_by_activity": [],
+        "max_torque_audit_residual_Nm": 0.0,
+        "max_wheel_dynamics_residual_Nm": 4.718447854656915e-16,
+        "stop_tail_peaks_deg": [
+          450.6456985940401,
+          465.02088969852167,
+          450.0208896985216
+        ],
+        "max_joint_violation_deg": 0.6456985925780455,
+        "negative_control": true,
+        "duration_s": 41.99800000000536
+      }
+    }
+  ],
+  "independent_checks": {
+    "positive180": {
+      "contact_CAD_audit.json": {
+        "scope": "stratified deterministic actual loaded contact samples versus original visual CAD; not a global Hausdorff bound",
+        "samples_per_palm": 250,
+        "verifier_sha256": "d030d5871adf58d64ca11f771379daeb2d688fc21f1598e4621ccc6f31b879cd",
+        "verifier_source": "contact_CAD_audit_verifier.py",
+        "left": {
+          "samples": 250,
+          "max_mm": 0.05427328711256705,
+          "p95_mm": 0.05313738775789948,
+          "mean_mm": 0.04883463197084113,
+          "local_palm_bounds_m": [
+            [
+              0.10831269148790182,
+              -0.02504095328592002,
+              -0.013579458128267694
+            ],
+            [
+              0.12042652279307484,
+              -0.02262505865129743,
+              0.005428848937318778
+            ]
+          ]
+        },
+        "right": {
+          "samples": 250,
+          "max_mm": 0.05057755979432649,
+          "p95_mm": 0.04835244183224692,
+          "mean_mm": 0.04623165169015188,
+          "local_palm_bounds_m": [
+            [
+              0.1149882975507756,
+              0.02493266016731332,
+              0.0046415451128638905
+            ],
+            [
+              0.11960366775019239,
+              0.02504978634955143,
+              0.004890745912502237
+            ]
+          ]
+        },
+        "wheel": {
+          "samples": 500,
+          "max_mm": 0.05000074703179054,
+          "p95_mm": 0.04955814350823418,
+          "mean_mm": 0.047115689330555835
+        },
+        "passed": true
+      },
+      "action_replay_check.json": {
+        "seconds": 599.998,
+        "steps": 299999,
+        "max_qpos_error_rad": 1.4172823643854304e-09,
+        "max_qvel_error_rad_s": 4.3784766753929283e-07,
+        "max_ctrl_error_rad": 0.0,
+        "interface": "actions",
+        "verifier_sha256": "d030d5871adf58d64ca11f771379daeb2d688fc21f1598e4621ccc6f31b879cd",
+        "verifier_source": "action_replay_check_verifier.py",
+        "passed": true,
+        "scope": "20 Hz normalized actions through live executor, 500 Hz interpolation, live bounded bias compensation and synthetic load"
+      }
+    },
+    "negative180": {
+      "contact_CAD_audit.json": {
+        "scope": "stratified deterministic actual loaded contact samples versus original visual CAD; not a global Hausdorff bound",
+        "samples_per_palm": 250,
+        "verifier_sha256": "d030d5871adf58d64ca11f771379daeb2d688fc21f1598e4621ccc6f31b879cd",
+        "verifier_source": "contact_CAD_audit_verifier.py",
+        "left": {
+          "samples": 250,
+          "max_mm": 0.06489217955488087,
+          "p95_mm": 0.06234760562589858,
+          "mean_mm": 0.04909105988703315,
+          "local_palm_bounds_m": [
+            [
+              0.11508709598850135,
+              -0.025048273358332627,
+              0.0008750549621447069
+            ],
+            [
+              0.11962700409237124,
+              -0.02427606293454386,
+              0.004874326848111572
+            ]
+          ]
+        },
+        "right": {
+          "samples": 250,
+          "max_mm": 0.12479432569214953,
+          "p95_mm": 0.11918902642963682,
+          "mean_mm": 0.053317705987161366,
+          "local_palm_bounds_m": [
+            [
+              0.10727883311812321,
+              0.02247800512749728,
+              -0.016106093187287323
+            ],
+            [
+              0.12021961512588045,
+              0.025046067896710267,
+              0.005429428333249133
+            ]
+          ]
+        },
+        "wheel": {
+          "samples": 500,
+          "max_mm": 0.3736609600975239,
+          "p95_mm": 0.04995145155565917,
+          "mean_mm": 0.05175645145811472
+        },
+        "passed": true
+      },
+      "action_replay_check.json": {
+        "seconds": 600.198,
+        "steps": 300099,
+        "max_qpos_error_rad": 2.66919469166238e-10,
+        "max_qvel_error_rad_s": 8.640016281938334e-08,
+        "max_ctrl_error_rad": 0.0,
+        "interface": "actions",
+        "verifier_sha256": "d030d5871adf58d64ca11f771379daeb2d688fc21f1598e4621ccc6f31b879cd",
+        "verifier_source": "action_replay_check_verifier.py",
+        "passed": true,
+        "scope": "20 Hz normalized actions through live executor, 500 Hz interpolation, live bounded bias compensation and synthetic load"
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "negative180_replay_driver.mp4": {
+    "sha256": "c359c161d96afc494f06297036a98e983d0cd9b18b529f9c3dffe7389faae7b3",
+    "programs": [],
+    "streams": [
+      {
+        "width": 960,
+        "height": 720,
+        "r_frame_rate": "15/1",
+        "nb_frames": "2251"
+      }
+    ],
+    "format": {
+      "duration": "150.067000"
+    },
+    "speed": 4,
+    "scope": "Uncut visualization of recorded states, separate from physical action replay audit"
+  },
+  "positive180_replay_cabin.mp4": {
+    "sha256": "425d623526c067095c85556f83873c6f2c9430a8f868eb15de13387a82e697ad",
+    "programs": [],
+    "streams": [
+      {
+        "width": 960,
+        "height": 720,
+        "r_frame_rate": "15/1",
+        "nb_frames": "2250"
+      }
+    ],
+    "format": {
+      "duration": "150.000000"
+    },
+    "speed": 4,
+    "scope": "Uncut visualization of recorded states, separate from physical action replay audit"
+  },
+  "positive180_replay_driver.mp4": {
+    "sha256": "b58a56cb5648adf1a41accb72f9c3484f672017cc71a837391a38541f46dbc68",
+    "programs": [],
+    "streams": [
+      {
+        "width": 960,
+        "height": 720,
+        "r_frame_rate": "15/1",
+        "nb_frames": "2250"
+      }
+    ],
+    "format": {
+      "duration": "150.000000"
+    },
+    "speed": 4,
+    "scope": "Uncut visualization of recorded states, separate from physical action replay audit"
+  }
+}

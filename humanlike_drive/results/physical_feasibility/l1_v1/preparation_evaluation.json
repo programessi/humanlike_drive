@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "checks": {
+    "complete": true,
+    "finite": true,
+    "no_illegal_contact": true,
+    "no_nonrim_contact": true,
+    "rim_penetration_lt_0p5mm": true,
+    "arm_margin_gt_2deg": true,
+    "joint_limits": true,
+    "combined_effort_within_original": true,
+    "hand_effort_within_original": true,
+    "mimic_error_lt_0p1deg": true,
+    "torque_audit": true,
+    "wheel_dynamics_balance": true,
+    "wrist_bend": true,
+    "motion_RMSE_le_2deg": true,
+    "final_error_le_2deg": true,
+    "all_stop_tails_le_2deg": true,
+    "palm_contact_95pct": true,
+    "palm_contact_gap": true,
+    "palm_force_bounded": true,
+    "whole_hand_force_bounded": true,
+    "palm_upper_sector": true,
+    "palm_slip_speed": true,
+    "palm_slip_distance": true,
+    "palm_friction_primary": true,
+    "palm_friction_primary_by_activity": true
+  },
+  "motion_RMSE_deg": null,
+  "final_error_peak_deg": 0.02986280246060838,
+  "max_error_deg": 0.04849620656927508,
+  "max_illegal_N": 0.0,
+  "max_nonrim_N": 0.0,
+  "max_penetration_mm": 0.0,
+  "min_arm_margin_deg": 17.49816649954122,
+  "max_wrist_bend_deg": [
+    1.6395905392967682,
+    1.6092795226447334
+  ],
+  "palm_contact_fraction": [
+    1.0,
+    1.0
+  ],
+  "max_contact_gap_s": [
+    0.0,
+    0.0
+  ],
+  "palm_cumulative_slip_m": [
+    0.00011029877269142538,
+    0.00019480076693984731
+  ],
+  "max_palm_slip_m_s": 3.892784914315732e-05,
+  "max_palm_force_N": 2.9726634390406814,
+  "max_whole_hand_force_N": 2.9726634390406814,
+  "max_palm_below_upper_deg": 0.0,
+  "mechanism": [],
+  "mechanism_by_activity": [],
+  "max_torque_audit_residual_Nm": 8.042329822932626e-13,
+  "max_wheel_dynamics_residual_Nm": 2.2863208114926037e-09,
+  "stop_tail_peaks_deg": [
+    0.04849620656927508,
+    0.02986280246060838
+  ],
+  "max_joint_violation_deg": 0.0,
+  "negative_control": false,
+  "duration_s": 11.998000000000676
+}

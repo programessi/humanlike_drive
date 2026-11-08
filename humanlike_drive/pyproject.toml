@@ -18,6 +18,12 @@ scene = [
     "trimesh>=4",
     "Pillow>=9",
 ]
+p0 = [
+    "humanlike-drive[scene]",
+    "matplotlib>=3.7",
+    "imageio>=2.31",
+    "imageio-ffmpeg>=0.4.9",
+]
 
 [tool.setuptools.packages.find]
 where = ["."]

@@ -1,0 +1,110 @@
+[
+  {
+    "run": "nominal_v4/B_right90",
+    "frames": 530,
+    "fps": 10.0,
+    "duration_s": 53.0,
+    "expected_duration_s": 53.0,
+    "first_and_last_frames_decoded": true,
+    "size": [
+      960,
+      720
+    ]
+  },
+  {
+    "run": "nominal_v4/B_left90",
+    "frames": 530,
+    "fps": 10.0,
+    "duration_s": 53.0,
+    "expected_duration_s": 53.0,
+    "first_and_last_frames_decoded": true,
+    "size": [
+      960,
+      720
+    ]
+  },
+  {
+    "run": "nominal_v4/D_right30",
+    "frames": 600,
+    "fps": 10.0,
+    "duration_s": 60.0,
+    "expected_duration_s": 60.0,
+    "first_and_last_frames_decoded": true,
+    "size": [
+      960,
+      720
+    ]
+  },
+  {
+    "run": "nominal_v4/D_left30",
+    "frames": 600,
+    "fps": 10.0,
+    "duration_s": 60.0,
+    "expected_duration_s": 60.0,
+    "first_and_last_frames_decoded": true,
+    "size": [
+      960,
+      720
+    ]
+  },
+  {
+    "run": "moving_right15_v4",
+    "frames": 698,
+    "fps": 12.0,
+    "duration_s": 58.166666666666664,
+    "expected_duration_s": 58.1,
+    "first_and_last_frames_decoded": true,
+    "size": [
+      960,
+      720
+    ]
+  },
+  {
+    "run": "moving_left15_v4",
+    "frames": 698,
+    "fps": 12.0,
+    "duration_s": 58.166666666666664,
+    "expected_duration_s": 58.1,
+    "first_and_last_frames_decoded": true,
+    "size": [
+      960,
+      720
+    ]
+  },
+  {
+    "run": "continuous_positive70_v5",
+    "frames": 1338,
+    "fps": 10.0,
+    "duration_s": 133.8,
+    "expected_duration_s": 133.8,
+    "first_and_last_frames_decoded": true,
+    "size": [
+      960,
+      720
+    ]
+  },
+  {
+    "run": "continuous_negative70_v4",
+    "frames": 1338,
+    "fps": 10.0,
+    "duration_s": 133.8,
+    "expected_duration_s": 133.8,
+    "first_and_last_frames_decoded": true,
+    "size": [
+      960,
+      720
+    ]
+  },
+  {
+    "run": "continuous_negative70_v5",
+    "frames": 1338,
+    "fps": 10.0,
+    "duration_s": 133.8,
+    "expected_duration_s": 133.8,
+    "first_and_last_frames_decoded": true,
+    "size": [
+      960,
+      720
+    ]
+  }
+]

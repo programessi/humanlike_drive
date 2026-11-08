@@ -1,0 +1,6 @@
+{
+  "samples": 4000,
+  "source": "preparation.npz replayed with qpos, qvel, ctrl and applied forces; mj_forward only; no new physics",
+  "max_moving_robot_contact_outside_rim_N": 0.0,
+  "events_gt_0p05N": []
+}

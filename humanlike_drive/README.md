@@ -4,6 +4,49 @@
 
 当前已实现一套重新构建的 **H1-2 / Inspire 双手 / Logitech G29 坐姿驾驶室**，包含大屏幕、仪表台、座椅、中控、踏板，以及四种基础抓握预设。场景不加载旧场景、旧抓握数据或旧策略；策略训练和实物控制尚未开始。
 
+## 当前研究主线
+
+[研究计划v4.2](docs/plans/RESEARCH_PLAN.md)按三层推进：
+
+1. **物理可行性：**显式控制／规划验证局部接触、接管和代表性完整任务，给出设备与负载范围。
+2. **现有方法适用性：**筛选相近工作与可复用开源实现，合理适配少量代表性方法，测出能力、成本和失败边界。
+3. **针对性提升：**有明确、可重复的不足后再做原因诊断与方法设计；不预设网络或创新模块。
+
+场景、查看器、原始结果和代码保留；[历史尝试凝练为经验](docs/experiments/HISTORICAL_LESSONS.md)。此前左右90°已[独立备份](results/archive/20261107_pre_palm_primary/README.md)，仅作历史参考，不自动成为新主线数据或通过证据。
+
+当前第一层采用**掌心径向预紧、切向摩擦主驱，手指顺应维持**；优先从9点／3点自然腕姿出发，检查两手上半圆可达性与干涉，再逐级向0—180°受载往返推进。360°／540°轨迹有条件则扩展和保留为专家数据候选，不作为当前阶段前置要求。[第一层物理协议](docs/experiments/PALM_PRIMARY_P0.md)与[第二层评价协议](docs/experiments/EXISTING_METHODS_EVALUATION_V1.md)规定证据要求；[B0草案](docs/plans/BASELINE_IMPLEMENTATION_V1.md)仅作为第二层候选。层1非学习工程系统已实现，实际验收范围见[新层1报告](results/physical_feasibility/l1_v1/README.md)，使用方法见[工程系统手册](docs/LAYER1_ENGINEERING.md)。学习训练尚未开展，实物仍按[R0](docs/plans/R0_HARDWARE_CALIBRATION.md)后续落实。
+
+## 当前层1入口
+
+掌心摩擦主驱的新控制器使用离线自然腕姿路径、轮角／掌压反馈和带真实负载检查的上半圆接力，原26维有限驱动与被动轮轴保持有效。当前名义速度为1°/s，采用未标定的0.1 N·m合成负载。它用于验证物理可行性，不是学习策略或实物验收。
+
+- [层1报告、完整视频与通过边界](results/physical_feasibility/l1_v1/README.md)。
+- [系统组成、一键复现、查看及动作重执行](docs/LAYER1_ENGINEERING.md)。
+- [冻结控制配置](humanlike_drive/config/controller/palm_primary_l1.json)。
+
+```bash
+bash scripts/run.sh -m humanlike_drive.env_runner.replay_p0 \
+  --run outputs/physical_feasibility/l1_v3_20261107/core/positive180
+```
+
+## 历史仿真P0结果与回放
+
+[本轮仿真P0报告](results/p0_complete_20261107/README.md)汇总双向30°／60°／90°往返、左右单手承载、静止和低速交接，以及含同侧反向和跨零的连续序列；报告保留向±180°扩展时的失败边界，不能据此宣称完整±180°或多圈策略已完成。实物接口与标定按用户要求在[R0](docs/plans/R0_HARDWARE_CALIBRATION.md)后续单列。
+
+查看完整连续序列（默认暂停，空格播放，V切换相机，鼠标调整视角，+／-变速）：
+
+```bash
+bash scripts/run.sh -m humanlike_drive.env_runner.replay_p0 \
+  --run outputs/p0_complete_20261107/continuous_negative70_v5
+```
+
+重跑旧协议回归需使用新的输出目录；下面命令属于历史路线，不是新P0入口：
+
+```bash
+OPENBLAS_NUM_THREADS=1 bash scripts/run.sh -m humanlike_drive.env_runner.p0_suite \
+  --output outputs/p0_regression_new --jobs 2
+```
+
 ## 先看场景
 
 在本项目根目录执行：
@@ -20,7 +63,7 @@ bash scripts/run.sh -m humanlike_drive.env_runner.inspect_scene
 
 - [驾驶室预览](results/logitech_scene_v1/nine_three_cabin.png)、[完整图集](results/logitech_scene_v1/index.html)、[抓握预览](results/logitech_scene_v1/grasps_overview.png)。
 - [场景说明与重建方法](docs/SCENE_LOGITECH_G29.md)：模型来源、参数、抓握准备过程和验证范围。
-- [研究计划第2.1版](docs/plans/RESEARCH_PLAN.md)：2号10点／2点为主要初态，保留人类行为模仿目标，统一完成±180°双向连续追踪与360°／540°换握操作，涵盖参考引导RL、历史学生和实物实验；[下一步可行性协议](docs/experiments/TEN_TWO_FEASIBILITY_V1.md)已列出具体操作。
+- [三层研究计划v4.2](docs/plans/RESEARCH_PLAN.md)：阶段问题、完整可行性、已有方法适配、针对性提升与实物验证。原静态抓握预设保留作查看工具；当前掌心主驱初态与结果以新层1报告为准。
 
 脚本默认使用本机已有的 `mujoco` Conda 环境，也可通过 `HUMANLIKE_PYTHON=/path/to/python` 指定解释器。另建环境时可安装 `pip install -e '.[scene]'`。
 

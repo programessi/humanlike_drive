@@ -1,0 +1,3062 @@
+{
+  "date": "2026-11-07",
+  "status": "partial P0; uncalibrated simulation engineering trials, seed 0; no hardware or learned policy",
+  "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+  "grasp_sha256": "c1666b5084ffc8a5e14c95ba473c02096d30e3d8fb4c2bc8e97e54bea263c273",
+  "cases": {
+    "hold_v1": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/hold_v1",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": null,
+        "hold_tail_peak_deg": {
+          "0": 0.04208495066977824
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 15.632931476491082,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.0,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.024875769889697443,
+        "max_load_torque_Nm": 7.765597581372258e-05,
+        "max_wheel_angle_deg": 0.04445327438574773,
+        "max_contact_minus_constraint_torque_Nm": 0.0007113047139246597,
+        "minimum_paddle_clearance_mm_at_50Hz": 17.203994386472434,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.679724347595423,
+        "wrist_bend_max_deg_left_right": [
+          14.70935050699454,
+          14.678951435927836
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          9.696044731949266,
+          0.1109276336642564,
+          0.12126952414729075,
+          3.6873477177726497,
+          0.05533323036215432,
+          0.5134186522210848,
+          0.275254545427047,
+          9.487763807602896,
+          0.17143445064086205,
+          0.1904084354233997,
+          3.5420927763998336,
+          0.019293466664985104,
+          0.43035104246038225,
+          0.2983881344264359,
+          0.053753780277423946,
+          0.0124930817840615,
+          0.04108930309404735,
+          0.022315029679795595,
+          0.0399880444077334,
+          0.0809412638071012,
+          0.08568206429760972,
+          0.008328701672128513,
+          0.04845192625883743,
+          0.03006426342703783,
+          0.0337834985776686,
+          0.08604035460930581
+        ],
+        "first_failure_s": {},
+        "duration_s": 9.998000000000008,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "d27445ecd3e276f24b42c3e6ee6a6208a46bd45006c85c4c51be97b509b1de2d"
+    },
+    "center_release_right_v3": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/center_release_right_v3",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": null,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.008703031808848639,
+          "6": 0.09838232828922205,
+          "8": 0.07102074292193605,
+          "4": 0.07223215970007939
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 4.043185483982196,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.041172407689547816,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.03144066540357009,
+        "max_load_torque_Nm": 0.00024799857214722503,
+        "max_wheel_angle_deg": 0.10522607569953045,
+        "max_contact_minus_constraint_torque_Nm": 0.0150000000078086,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.2373155962161375,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.703614135511935,
+        "wrist_bend_max_deg_left_right": [
+          14.714454582350893,
+          23.712293763125803
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          9.802514335838575,
+          0.2196872650115438,
+          0.19278293128940405,
+          3.713857381146058,
+          0.0762624113412751,
+          0.528405426885725,
+          0.30531258959004776,
+          9.985950013850442,
+          2.3707974879725553,
+          0.9167301835646713,
+          5.211946596185111,
+          0.390815191076924,
+          1.2233626571994296,
+          0.3067986814566838,
+          0.05391956960188837,
+          0.012521955589032185,
+          0.04115610651973789,
+          0.02377730855870097,
+          0.041717149464838066,
+          0.0822693388550999,
+          0.090894335375168,
+          0.12632904238602166,
+          0.08484288639482962,
+          0.08480280247186278,
+          0.08637962355511775,
+          0.10524384806702525
+        ],
+        "first_failure_s": {},
+        "duration_s": 28.997999999994807,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "3d1fd7669965f4beb3c95b4ecd1f82295175764c5bb0e3788caa57d730abebb7"
+    },
+    "center_release_left_v3": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/center_release_left_v3",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": null,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.008703031808848639,
+          "6": 0.1070014610499005,
+          "8": 0.1951052203293265,
+          "4": 0.20323599350529128
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 4.030728808254486,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.0,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.029459117162445373,
+        "max_load_torque_Nm": 0.00035535774363331085,
+        "max_wheel_angle_deg": 0.20323599350529128,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000008284628,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.513966535705729,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.193893077782439,
+        "wrist_bend_max_deg_left_right": [
+          23.717503989092997,
+          14.678951435927836
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          9.985805367436113,
+          2.346283518216018,
+          0.9386441751547414,
+          5.210769274090821,
+          0.3656829308330609,
+          1.2215630441394199,
+          0.30531258959004776,
+          9.507034404355737,
+          0.2201873166094499,
+          0.21260574985852632,
+          3.5457588303249326,
+          0.040447295200516376,
+          0.47220708320533555,
+          0.3110982362684449,
+          0.09080217089079534,
+          0.12592173976252558,
+          0.0848445605608984,
+          0.08479850376303755,
+          0.08634313722540576,
+          0.10524241996621964,
+          0.0858828979794497,
+          0.008333522988054953,
+          0.04856399232408526,
+          0.03242074335407441,
+          0.03688751892300979,
+          0.08813104150803608
+        ],
+        "first_failure_s": {},
+        "duration_s": 28.997999999994807,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "67369d629dcd3b8664b80093a128a5c8bbf63ce98a6642a9f39ce05d04059839"
+    },
+    "right30": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/right30",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.22847135474713123,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.15323204128157383,
+          "4": 0.2555920518212345
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 3.2897329830760516,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.058397161096417814,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.031821387549962145,
+        "max_load_torque_Nm": 0.05275027268192521,
+        "max_wheel_angle_deg": 29.84770119786031,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000003825592,
+        "minimum_paddle_clearance_mm_at_50Hz": 17.123154312567923,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.413564659467392,
+        "wrist_bend_max_deg_left_right": [
+          23.465929673778458,
+          26.17628040730917
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          11.676905572123824,
+          1.422504598226503,
+          1.457157227857043,
+          3.7436931861532456,
+          0.20761752187935345,
+          0.6795867654944978,
+          0.39822973757369173,
+          9.870472753027666,
+          1.6554399472056325,
+          1.58562246451528,
+          4.040157131998354,
+          0.5264915963174754,
+          0.6663212496356372,
+          0.697073884863677,
+          0.05876647214707642,
+          0.014313922646015442,
+          0.04269090857805846,
+          0.021745179538013915,
+          0.04103901133335608,
+          0.08024834607400178,
+          0.09079943311315097,
+          0.008333522988054953,
+          0.05397864824702836,
+          0.03204718599982215,
+          0.03320280471299397,
+          0.08686330672723042
+        ],
+        "first_failure_s": {},
+        "duration_s": 20.99799999999924,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "25888f83382da880d22b06e5a3e63b9c548c4f3b528e04da865e715416374084"
+    },
+    "left30": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/left30",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.23766565855785834,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.06678662453402592,
+          "4": 0.14141212981299564
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 3.399133177268071,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.03270262228716003,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.026989727132572406,
+        "max_load_torque_Nm": 0.05292421921762674,
+        "max_wheel_angle_deg": 29.94310113665392,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000003346212,
+        "minimum_paddle_clearance_mm_at_50Hz": 17.199857138414266,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.727052423236445,
+        "wrist_bend_max_deg_left_right": [
+          26.03909735915032,
+          23.34386885923032
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.059620019619585,
+          1.6779772208661718,
+          1.5461687459638467,
+          4.210566381146229,
+          0.4648160036573987,
+          0.7574739921208797,
+          0.6859980759420599,
+          11.298737437507473,
+          1.5861327580333047,
+          1.4273740490167217,
+          3.5815544074349024,
+          0.16575732381607455,
+          0.5745093532784913,
+          0.42101915652602784,
+          0.05663165298069073,
+          0.013011336465082124,
+          0.04591490925237385,
+          0.024489374688899668,
+          0.039531250740934665,
+          0.08175529821138339,
+          0.0858828979794497,
+          0.008333522988054953,
+          0.049793946026841285,
+          0.030637016164756004,
+          0.03530500098721623,
+          0.08712846033126898
+        ],
+        "first_failure_s": {},
+        "duration_s": 20.99799999999924,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "1f6d1d5daec67b7166431e9cac5de8e3c51c19d719980ec71f0436b2a4eb714a"
+    },
+    "left_support30_v2": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/left_support30_v2",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true,
+          "single_hold_declared_load_ge_0p02Nm": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.3164695770221198,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.15323204128157383,
+          "6": 0.29999256623380705,
+          "8": 0.5194725469619587,
+          "4": 0.6361865294210067
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 3.273727362643675,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.058397161096417814,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.031821387549962145,
+        "max_load_torque_Nm": 0.05275027268192521,
+        "max_wheel_angle_deg": 29.899673452496366,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000008005443,
+        "minimum_paddle_clearance_mm_at_50Hz": 4.713021448396439,
+        "minimum_spoke_clearance_mm_at_50Hz": 6.914876313335643,
+        "wrist_bend_max_deg_left_right": [
+          23.496072013255322,
+          26.36612873923275
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          11.676905572123824,
+          1.422504598226503,
+          1.4985744762249116,
+          3.7436931861532456,
+          0.20016132946545362,
+          0.6702129021642189,
+          0.39822973757369173,
+          9.876986983874284,
+          1.6554399472056325,
+          1.58562246451528,
+          5.745873128467165,
+          0.5270633308985642,
+          1.1751755571218319,
+          0.7015334015888397,
+          0.05876647214707642,
+          0.014237441659489647,
+          0.04269090857805846,
+          0.02317169744289571,
+          0.04511043773289547,
+          0.08105109701558955,
+          0.09552502290519116,
+          0.12881615703567303,
+          0.08646543320513878,
+          0.08661240264272818,
+          0.0865939627489255,
+          0.1047682418857585
+        ],
+        "first_failure_s": {},
+        "duration_s": 41.99800000000536,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "dc3e2226d61cf7eab2d3aa0703b7f4eba760b82abfbd2c1d3f125b939d97854b"
+    },
+    "right_support30_v2": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/right_support30_v2",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true,
+          "single_hold_declared_load_ge_0p02Nm": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.2358081569769656,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.06678662453402592,
+          "6": 0.2636885662679203,
+          "8": 0.3693754065790444,
+          "4": 0.4827163247798247
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 3.3746822872398647,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.021151075012701998,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.028842770460720545,
+        "max_load_torque_Nm": 0.05292421921762674,
+        "max_wheel_angle_deg": 29.944823930242094,
+        "max_contact_minus_constraint_torque_Nm": 0.01500000000921748,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.328648816629619,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.727052423236445,
+        "wrist_bend_max_deg_left_right": [
+          26.20784358120243,
+          23.37938825104492
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.038416809252498,
+          1.6779772208661718,
+          1.5461687459638467,
+          5.742101147037655,
+          0.4628444822672515,
+          1.1717825761299188,
+          0.686399810971815,
+          11.298737437507473,
+          1.5861327580333047,
+          1.4037605055583366,
+          3.5815544074349024,
+          0.15987286667421197,
+          0.578565414606645,
+          0.42101915652602784,
+          0.08872374494887003,
+          0.128406501497877,
+          0.08647315567294334,
+          0.08660954640160445,
+          0.08659136156839009,
+          0.10476786586855025,
+          0.0858828979794497,
+          0.008867773835127601,
+          0.049793946026841285,
+          0.03070823501994213,
+          0.037646766322170455,
+          0.08829777870872846
+        ],
+        "first_failure_s": {},
+        "duration_s": 41.99800000000536,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "5e4982e60124da05c312a3f278661306047530bf2c8df3ccf4c45c64ad278948"
+    },
+    "handover_right30_v2": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/handover_right30_v2",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true,
+          "single_hold_declared_load_ge_0p02Nm": true,
+          "handover_old_hand_clear_during_new_support": true,
+          "handover_new_hand_holds_10s": true,
+          "handover_new_hand_mean_counterload_torque_ge_0p02Nm": true,
+          "handover_load_transfer_overlap_ge_0p1s": true,
+          "handover_wheel_retreat_le_2deg": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.5818424947059038,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.15323204128157383,
+          "6": 0.29999256623380705,
+          "8": 0.3861403909355368,
+          "4": 1.0643276780368547,
+          "10": 0.6134636897493219,
+          "12": 0.9537400663666528
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "12": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.9953333333333333,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.0932479333082306,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.058397161096417814,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.031821387549962145,
+        "max_load_torque_Nm": 0.05275027268192521,
+        "max_wheel_angle_deg": 29.899673452496366,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000008005443,
+        "minimum_paddle_clearance_mm_at_50Hz": 4.713021448396439,
+        "minimum_spoke_clearance_mm_at_50Hz": 6.304418572831345,
+        "wrist_bend_max_deg_left_right": [
+          43.424651802010565,
+          26.976560113714903
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          13.19200164214355,
+          10.200039789952296,
+          8.690501822395142,
+          4.352176667274212,
+          2.7409970109162134,
+          0.7385329430278709,
+          2.8404105019370256,
+          9.890230567464963,
+          1.6554399472056325,
+          1.58562246451528,
+          5.745873128467165,
+          0.5185211322099477,
+          1.1751755571218319,
+          0.6996296559592481,
+          0.09230502916791172,
+          0.1233800428813279,
+          0.0834974581638066,
+          0.08329893845418501,
+          0.08634909290284143,
+          0.10559612808321073,
+          0.09552502290519116,
+          0.12881615703567303,
+          0.08646543320513878,
+          0.08661240264272818,
+          0.0865939627489255,
+          0.1047682418857585
+        ],
+        "first_failure_s": {},
+        "duration_s": 62.99800000003103,
+        "handover": {
+          "new_support_side": "right",
+          "mean_new_support_counterload_torque_Nm": 0.05406661007100597,
+          "max_absolute_wheel_change_during_transfer_and_hold_deg": 0.23723160481648853,
+          "continuous_load_transfer_overlap_s": 0.154,
+          "old_hand_max_rim_force_during_new_support_N": 0.0
+        },
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "cc152a9e937e15675239b5af21b73b7e36c71406349a3fce0051adb7b27b3360"
+    },
+    "handover_left30_v2": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/handover_left30_v2",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true,
+          "single_hold_declared_load_ge_0p02Nm": true,
+          "handover_old_hand_clear_during_new_support": true,
+          "handover_new_hand_holds_10s": true,
+          "handover_new_hand_mean_counterload_torque_ge_0p02Nm": true,
+          "handover_load_transfer_overlap_ge_0p1s": true,
+          "handover_wheel_retreat_le_2deg": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.43207728707047494,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.06678662453402592,
+          "6": 0.2636885662679203,
+          "8": 0.3029670139623954,
+          "4": 0.8297508237072468,
+          "10": 0.5832121907140093,
+          "12": 0.7514433454146989
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "12": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.0929973311063717,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.021151075012701998,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.028842770460720545,
+        "max_load_torque_Nm": 0.05292421921762674,
+        "max_wheel_angle_deg": 29.944823930242094,
+        "max_contact_minus_constraint_torque_Nm": 0.01500000000921748,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.328648816629619,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.727052423236445,
+        "wrist_bend_max_deg_left_right": [
+          26.638595610719232,
+          43.37082986148758
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.063669851060553,
+          1.6779772208661718,
+          1.5461687459638467,
+          5.742101147037655,
+          0.46867494062688086,
+          1.1717825761299188,
+          0.6906807829108397,
+          13.047075448502826,
+          9.537347345852668,
+          8.677108521291679,
+          4.3415022541951025,
+          2.763478491639435,
+          0.7360464247935472,
+          2.8396087262980907,
+          0.08872374494887003,
+          0.128406501497877,
+          0.08647315567294334,
+          0.08660954640160445,
+          0.08659136156839009,
+          0.10476786586855025,
+          0.0923612383606085,
+          0.12367053336901837,
+          0.0835060671158957,
+          0.08330520000727737,
+          0.08639087895752895,
+          0.10557125746151819
+        ],
+        "first_failure_s": {},
+        "duration_s": 62.99800000003103,
+        "handover": {
+          "new_support_side": "left",
+          "mean_new_support_counterload_torque_Nm": 0.05600970428981263,
+          "max_absolute_wheel_change_during_transfer_and_hold_deg": 0.28497962935205506,
+          "continuous_load_transfer_overlap_s": 0.154,
+          "old_hand_max_rim_force_during_new_support_N": 0.0
+        },
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "d02a67e19259da10a9e20bbd821e78fb675e337c879f7cf1370c350d585bfc05"
+    },
+    "right60": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/right60",
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": false,
+          "arm_margin_gt_2deg": false,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": false,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 1.4047717328379965,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 2.6484982912521735,
+          "4": 1.9122389314880994
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              0.9993333333333333,
+              1.0,
+              1.0,
+              0.8046666666666666,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 1.9100456479109391,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.06665525370624557,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.04689159246038673,
+        "max_load_torque_Nm": 0.10106342557960259,
+        "max_wheel_angle_deg": 57.50517782341453,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000010556777,
+        "minimum_paddle_clearance_mm_at_50Hz": 16.646296220747,
+        "minimum_spoke_clearance_mm_at_50Hz": 4.47184140424613,
+        "wrist_bend_max_deg_left_right": [
+          32.833455197892974,
+          47.05497389295768
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          13.225340157960204,
+          2.693830695482303,
+          2.9169003014736505,
+          3.7436931861532456,
+          0.817098050871599,
+          0.6820853491532635,
+          0.7552938716196587,
+          9.812740501175275,
+          2.0042770814003754,
+          1.58562246451528,
+          4.477939936219908,
+          0.6906395492027295,
+          0.7284413732047685,
+          0.718289578538917,
+          0.08500837015209273,
+          0.020306633262032303,
+          0.04863033094783109,
+          0.03625967561662913,
+          0.07001765542713412,
+          0.09688629359697853,
+          0.09361630223523965,
+          0.015111256921855276,
+          0.06623818635680179,
+          0.0571751973797443,
+          0.1250587937776244,
+          0.24513097060883315
+        ],
+        "first_failure_s": {
+          "arm_margin": 12.498000000000843
+        },
+        "duration_s": 32.99799999999436,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "144b58a3cfd42a16b82e6a1ca9eb95cfb11951ccfa102e57972a5e6ab442031f"
+    },
+    "left60": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/left60",
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": false,
+          "arm_margin_gt_2deg": false,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": false,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 1.2281938063935671,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 2.316962192201091,
+          "4": 1.786100713964742
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.736,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 1.945391343007031,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.048916803037948306,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.04489117476463396,
+        "max_load_torque_Nm": 0.10179172493280753,
+        "max_wheel_angle_deg": 57.887925436655046,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000009609257,
+        "minimum_paddle_clearance_mm_at_50Hz": 16.56560034280381,
+        "minimum_spoke_clearance_mm_at_50Hz": 6.204797178694247,
+        "wrist_bend_max_deg_left_right": [
+          46.95677689240761,
+          32.65011512255434
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.044843169581753,
+          2.0096002052955724,
+          1.5461687459638467,
+          4.550132719099912,
+          0.6585051179593115,
+          0.8320211789487457,
+          0.6940164532771989,
+          12.89674351090928,
+          2.5324333671283776,
+          2.7808376106675006,
+          3.5815544074349024,
+          0.6330810143634498,
+          0.5885441610960327,
+          0.6808934616265345,
+          0.06244904683309849,
+          0.01458263709941221,
+          0.06068698520067084,
+          0.051495017941764365,
+          0.12845046883373157,
+          0.2288860195329483,
+          0.10636528646974153,
+          0.009663710634194467,
+          0.054027946443324426,
+          0.04102525318542605,
+          0.06317955442347767,
+          0.09958474059269307
+        ],
+        "first_failure_s": {
+          "arm_margin": 12.85000000000096
+        },
+        "duration_s": 32.99799999999436,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "ced6f8738caacbbb4bb310205be49363e0b554201db7753346cdbb53e5ef46ec"
+    },
+    "no_contact": {
+      "scope": "current batch",
+      "run": "outputs/p0_restart_20261107/no_contact",
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": false,
+          "hold_tail_peak_le_2deg": false,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": false,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true
+        },
+        "negative_control": true,
+        "motion_RMSE_deg": 17.598732762170414,
+        "hold_tail_peak_deg": {
+          "0": 0.022733937221812522,
+          "2": 29.940138654403828,
+          "4": 0.1397586230638898
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "2": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "4": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.5186510544793768,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.0,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.02403858883475031,
+        "max_load_torque_Nm": 0.0002463999824772926,
+        "max_wheel_angle_deg": 0.1397586230638898,
+        "max_contact_minus_constraint_torque_Nm": 0.001383430116992791,
+        "minimum_paddle_clearance_mm_at_50Hz": 13.538386233646982,
+        "minimum_spoke_clearance_mm_at_50Hz": -1.30246811841737,
+        "wrist_bend_max_deg_left_right": [
+          24.66238042060979,
+          30.418147558911556
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          11.706535567351231,
+          2.252388271665547,
+          2.120155244961297,
+          3.7086556064630654,
+          0.18707381487627917,
+          0.7634935415487378,
+          0.3786094918481659,
+          9.99007666762844,
+          1.5100998075298353,
+          1.0173075811602605,
+          4.016967761753893,
+          0.4834539322328659,
+          0.8223415892814039,
+          0.455268426385716,
+          0.053753780277423946,
+          0.0124930817840615,
+          0.04108817459202463,
+          0.0191533035110798,
+          0.034589639491072965,
+          0.07809367693862201,
+          0.08568206429760972,
+          0.008372207486600447,
+          0.04845105525889015,
+          0.02622700431199876,
+          0.027463805308170608,
+          0.08212890172830178
+        ],
+        "first_failure_s": {},
+        "duration_s": 20.99799999999924,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "c08e7ad56bad1709b9bee35839a6e332bc052577176630ff27a0b73bcf1e8ad7"
+    },
+    "center_left_support": {
+      "scope": "earlier development in this restart",
+      "run": "outputs/p0_restart_20261107/center_left_support",
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": false,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": null,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.008703031808848639,
+          "6": 0.09517341494529254,
+          "8": 0.05287616231487643,
+          "4": 0.06258318085723157
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.9993333333333333,
+              0.988,
+              0.9393333333333334,
+              0.8786666666666667,
+              0.9946666666666667,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 4.043189996597321,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.10977114544978286,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.05100598651417355,
+        "max_load_torque_Nm": 0.0002342335918240944,
+        "max_wheel_angle_deg": 0.09999039034961413,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000006893305,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.240310300799735,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.694502143618151,
+        "wrist_bend_max_deg_left_right": [
+          14.714454582350893,
+          23.712014394526356
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          9.802514335838575,
+          0.2196872650115438,
+          0.19278293128940405,
+          3.713857381146058,
+          0.07562226829573548,
+          0.528405426885725,
+          0.30531258959004776,
+          10.002264520636125,
+          2.3778720402547755,
+          0.9151646551402197,
+          5.215158965912353,
+          0.3643620086368138,
+          1.1499324674880762,
+          0.3067986814566838,
+          0.05391956960188837,
+          0.0124930817840615,
+          0.04115610651973789,
+          0.023769242602284413,
+          0.041729030360049046,
+          0.08226176337538815,
+          0.0908242533528415,
+          0.10704041333161668,
+          0.1054694505876177,
+          0.10547085397497691,
+          0.1053910940645677,
+          0.10524889227072531
+        ],
+        "first_failure_s": {},
+        "duration_s": 26.997999999995915,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "4d9dcc5276fe4f71339df739e979537d6a491a4a76ef8188a5144a1c08f8ccd9"
+    },
+    "center_right_support": {
+      "scope": "earlier development in this restart",
+      "run": "outputs/p0_restart_20261107/center_right_support",
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": false,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": null,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.008703031808848639,
+          "6": 0.10290424500365941,
+          "8": 0.14256441994488028,
+          "4": 0.15788289941553132
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8": [
+            [
+              0.9993333333333333,
+              0.9853333333333333,
+              0.9466666666666667,
+              0.878,
+              0.9973333333333333,
+              0.9766666666666667
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 4.030733041963095,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.13060136001605158,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.049338061974558416,
+        "max_load_torque_Nm": 0.00027671729927541906,
+        "max_wheel_angle_deg": 0.15788289941553132,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000008484008,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.515403650442839,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.251575049247679,
+        "wrist_bend_max_deg_left_right": [
+          23.717225564634514,
+          14.678951435927836
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          9.92831113464472,
+          2.3533703813298725,
+          0.9371669293037326,
+          5.2138854050511165,
+          0.3370423054168299,
+          1.1484364215879697,
+          0.30531258959004776,
+          9.507034404355737,
+          0.219857561880203,
+          0.21244255569436588,
+          3.5457588303249326,
+          0.04609077819127405,
+          0.47220708320533555,
+          0.3119259776202878,
+          0.09073202091412369,
+          0.10665944487310791,
+          0.10546863417189067,
+          0.10547375215732313,
+          0.10539118389939173,
+          0.10526963910918574,
+          0.0858828979794497,
+          0.008333522988054953,
+          0.04856399232408526,
+          0.03193392340745982,
+          0.0362432445299512,
+          0.08769770369525753
+        ],
+        "first_failure_s": {},
+        "duration_s": 26.997999999995915,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "16865ed8d61c8ce3a5957996b9be55b96d0f3893f6877b01eaf496e8a9d874ed"
+    },
+    "left_support30": {
+      "scope": "earlier development in this restart",
+      "run": "outputs/p0_restart_20261107/left_support30",
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": false,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": false,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true,
+          "single_hold_declared_load_ge_0p02Nm": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.2906038803482256,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.15323204128157383,
+          "6": 0.30761621376959714,
+          "8": 0.4757779194559192,
+          "4": 0.5763276163203441
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              0.9986666666666667,
+              0.9986666666666667,
+              0.9993333333333333,
+              0.912,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 3.2669646553181875,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.18756452403514245,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 5.825314876815362,
+        "max_mimic_error_deg": 0.08238316365314138,
+        "max_load_torque_Nm": 0.05275027268192521,
+        "max_wheel_angle_deg": 29.882179272442123,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000006989742,
+        "minimum_paddle_clearance_mm_at_50Hz": 4.930878757713675,
+        "minimum_spoke_clearance_mm_at_50Hz": 6.986203290360853,
+        "wrist_bend_max_deg_left_right": [
+          23.502645027599918,
+          26.64815823883962
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          11.676905572123824,
+          1.422504598226503,
+          1.5057141832619187,
+          3.7436931861532456,
+          0.20014463518462122,
+          0.6673302762485305,
+          0.39822973757369173,
+          9.821575957643848,
+          3.0995423378303624,
+          2.337327741810954,
+          5.744390302824328,
+          0.5368849445324395,
+          1.0884813615249032,
+          1.1629378412494504,
+          0.05876647214707642,
+          0.014237441659489647,
+          0.04269090857805846,
+          0.0240740743327017,
+          0.046233282108852025,
+          0.08154586414230747,
+          0.09079943311315097,
+          0.10949143972588701,
+          0.10406760421532568,
+          0.10401701813517672,
+          0.10443578811242571,
+          0.35
+        ],
+        "first_failure_s": {
+          "illegal_collision": 12.444000000000825
+        },
+        "duration_s": 41.99800000000536,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "a08dbf7a9505d594cf701cdfe693e203355b18e2ed24afa19db486a7df2bc351"
+    },
+    "right_support30": {
+      "scope": "earlier development in this restart",
+      "run": "outputs/p0_restart_20261107/right_support30",
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": false,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true,
+          "single_hold_declared_load_ge_0p02Nm": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.23127159659782703,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.06678662453402592,
+          "6": 0.2664518014601458,
+          "8": 0.35212869661009455,
+          "4": 0.47507808325773887
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8": [
+            [
+              0.9993333333333333,
+              0.9986666666666667,
+              0.9993333333333333,
+              0.9993333333333333,
+              0.9993333333333333,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 3.3567317147058118,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.0984893632527825,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 5.841683938798731,
+        "max_mimic_error_deg": 0.08344835275808973,
+        "max_load_torque_Nm": 0.05292421921762674,
+        "max_wheel_angle_deg": 29.94310113665392,
+        "max_contact_minus_constraint_torque_Nm": 0.01500000000725546,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.354175348620529,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.727052423236445,
+        "wrist_bend_max_deg_left_right": [
+          26.616712648745647,
+          23.40017967187419
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          9.991582569684102,
+          3.180939734680587,
+          2.377259550151981,
+          5.741828272503348,
+          0.4736523274663611,
+          1.0867080420422435,
+          1.2502183770590283,
+          11.298737437507473,
+          1.5861327580333047,
+          1.408283383582142,
+          3.5815544074349024,
+          0.15738761041104343,
+          0.5776399954934242,
+          0.42101915652602784,
+          0.08863142036732785,
+          0.1090195883048479,
+          0.10405915956378009,
+          0.10401771240733082,
+          0.10443018917611091,
+          0.35,
+          0.0858828979794497,
+          0.008843730211884726,
+          0.049793946026841285,
+          0.03147931685305316,
+          0.03837233114792582,
+          0.08903570342231859
+        ],
+        "first_failure_s": {
+          "illegal_collision": 12.440000000000824
+        },
+        "duration_s": 41.99800000000536,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "37f61068dd2222b358155fa1a7999ff5ca8c7a659fc46b9b2bd84fbec0ec9d57"
+    },
+    "handover_right30": {
+      "scope": "earlier development in this restart",
+      "run": "outputs/p0_restart_20261107/handover_right30",
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true,
+          "single_hold_declared_load_ge_0p02Nm": true,
+          "handover_old_hand_clear_during_new_support": true,
+          "handover_new_hand_holds_10s": true,
+          "handover_new_hand_mean_counterload_torque_ge_0p02Nm": true,
+          "handover_load_transfer_overlap_ge_0p1s": false,
+          "handover_wheel_retreat_le_2deg": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.6190906812401062,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.15323204128157383,
+          "6": 0.29999256623380705,
+          "8": 0.5194725469619587,
+          "4": 1.1123322490474317,
+          "10": 0.8295404277106246,
+          "12": 1.0247189493550057
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "12": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.0930503704197796,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.058397161096417814,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.031821387549962145,
+        "max_load_torque_Nm": 0.05275027268192521,
+        "max_wheel_angle_deg": 29.899673452496366,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000008005443,
+        "minimum_paddle_clearance_mm_at_50Hz": 4.713021448396439,
+        "minimum_spoke_clearance_mm_at_50Hz": 6.03649302049266,
+        "wrist_bend_max_deg_left_right": [
+          43.42465180201058,
+          26.659214451656148
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          13.203793111092118,
+          10.204065147457381,
+          8.69296739385232,
+          4.353716669378349,
+          2.741123661158829,
+          0.7374478583625961,
+          2.8407603594668376,
+          9.87482496369998,
+          1.6554399472056325,
+          1.58562246451528,
+          5.745873128467165,
+          0.5104739535400578,
+          1.1751755571218319,
+          0.699133195062509,
+          0.09230854527188304,
+          0.12336673719259736,
+          0.0834974581638066,
+          0.0832989384541849,
+          0.08635956125566713,
+          0.10559495175609701,
+          0.09552502290519116,
+          0.12881615703567303,
+          0.08646543320513878,
+          0.08661240264272818,
+          0.0865939627489255,
+          0.1047682418857585
+        ],
+        "first_failure_s": {},
+        "duration_s": 62.99800000003103,
+        "handover": {
+          "new_support_side": "right",
+          "mean_new_support_counterload_torque_Nm": 0.05359201183159398,
+          "max_absolute_wheel_change_during_transfer_and_hold_deg": 0.31004009461630366,
+          "continuous_load_transfer_overlap_s": 0.004,
+          "old_hand_max_rim_force_during_new_support_N": 0.0
+        },
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "1a68549130acdaee75b9dc6d1a7019d7a94ee5fbe93f8744ab5867cf9af32fc4"
+    },
+    "handover_left30": {
+      "scope": "earlier development in this restart",
+      "run": "outputs/p0_restart_20261107/handover_left30",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "released_hand_clear_of_rim_during_single_hold": true,
+          "single_hold_lasts_10s": true,
+          "single_hold_declared_load_ge_0p02Nm": true,
+          "handover_old_hand_clear_during_new_support": true,
+          "handover_new_hand_holds_10s": true,
+          "handover_new_hand_mean_counterload_torque_ge_0p02Nm": true,
+          "handover_load_transfer_overlap_ge_0p1s": true,
+          "handover_wheel_retreat_le_2deg": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.48360166467203947,
+        "hold_tail_peak_deg": {
+          "0": 0.0056142779375441985,
+          "2": 0.06678662453402592,
+          "6": 0.2636885662679203,
+          "8": 0.3693754065790444,
+          "4": 0.9367701172994057,
+          "10": 0.6984539062866113,
+          "12": 0.8184897964922048
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.999,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "12": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.093002605474177,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.021151075012701998,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.028842770460720545,
+        "max_load_torque_Nm": 0.05292421921762674,
+        "max_wheel_angle_deg": 29.944823930242094,
+        "max_contact_minus_constraint_torque_Nm": 0.01500000000921748,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.328648816629619,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.727052423236445,
+        "wrist_bend_max_deg_left_right": [
+          26.465747797386374,
+          43.37082986148758
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.03422820477764,
+          1.6779772208661718,
+          1.5461687459638467,
+          5.742101147037655,
+          0.45926159496802876,
+          1.1717825761299188,
+          0.6878055840338149,
+          13.053385502687634,
+          9.539481254387102,
+          8.678361951223255,
+          4.342216291989021,
+          2.7635313625609306,
+          0.7354639460501071,
+          2.8397960298517777,
+          0.08872374494887003,
+          0.128406501497877,
+          0.08647315567294334,
+          0.08660954640160445,
+          0.08659136156839009,
+          0.10476786586855025,
+          0.09236292665569401,
+          0.12368570996392833,
+          0.0835060671158957,
+          0.08330520000727737,
+          0.08639846134851292,
+          0.10557070813857883
+        ],
+        "first_failure_s": {},
+        "duration_s": 62.99800000003103,
+        "handover": {
+          "new_support_side": "left",
+          "mean_new_support_counterload_torque_Nm": 0.055806125650160174,
+          "max_absolute_wheel_change_during_transfer_and_hold_deg": 0.32905875868702167,
+          "continuous_load_transfer_overlap_s": 0.1,
+          "old_hand_max_rim_force_during_new_support_N": 0.0
+        },
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "manifest_sha256": "d72fc9fe4519cff9c7111eba78e5598ea6b5bee2d17ab05f5b19962e35df65f6"
+    }
+  }
+}

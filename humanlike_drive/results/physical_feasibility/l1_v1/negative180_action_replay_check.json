@@ -1,0 +1,12 @@
+{
+  "seconds": 600.198,
+  "steps": 300099,
+  "max_qpos_error_rad": 2.66919469166238e-10,
+  "max_qvel_error_rad_s": 8.640016281938334e-08,
+  "max_ctrl_error_rad": 0.0,
+  "interface": "actions",
+  "verifier_sha256": "d030d5871adf58d64ca11f771379daeb2d688fc21f1598e4621ccc6f31b879cd",
+  "verifier_source": "action_replay_check_verifier.py",
+  "passed": true,
+  "scope": "20 Hz normalized actions through live executor, 500 Hz interpolation, live bounded bias compensation and synthetic load"
+}

@@ -1,0 +1,19 @@
+test_full_sequence_is_continuous_and_within_rate_limit (test_p0_motion.MotionPlanTest) ... ok
+test_handover_moves_through_all_four_stages (test_p0_motion.MotionPlanTest) ... ok
+test_intermediate_shuffle_keeps_final_task_goal (test_p0_motion.MotionPlanTest) ... ok
+test_contact_without_signed_load_transfer_fails (test_p0_motion.TransferEvidenceTest) ... ok
+test_old_hand_contact_or_missing_finger_cannot_pass_solo_support (test_p0_motion.TransferEvidenceTest) ... ok
+test_paused_reference_cannot_pass_moving_handover (test_p0_motion.TransferEvidenceTest) ... ok
+test_unvisited_future_cycle_fails_without_crashing_evaluator (test_p0_motion.TransferEvidenceTest) ... ok
+test_blocked_targets_keep_rate_range_and_preload_bounds (test_p0_restart.RestartTest) ... ok
+test_fingers_stay_curled_near_housing_during_release_and_approach (test_p0_restart.RestartTest) ... ok
+test_inactive_control_range_does_not_zero_arm_targets (test_p0_restart.RestartTest) ... ok
+test_new_grasp_clears_paddles_through_full_opening (test_p0_restart.RestartTest) ... ok
+test_recorder_includes_finite_controls_and_clearance_sampling (test_p0_restart.RestartTest) ... ok
+test_reference_respects_speed_and_complete_return (test_p0_restart.RestartTest) ... ok
+test_scene_remains_passive_and_original_unchanged (test_p0_restart.RestartTest) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 2.140s
+
+OK

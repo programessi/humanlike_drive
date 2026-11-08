@@ -1,0 +1,27 @@
+{
+  "completed_at_UTC": "2026-11-07T12:31:59.482941+00:00",
+  "nominal": {
+    "total": 11,
+    "passed": 11
+  },
+  "boundary_load": {
+    "total": 16,
+    "passed": 12
+  },
+  "target_registration": {
+    "total": 15,
+    "passed": 15
+  },
+  "diagnostics": "2 finger-closure probes pass; no-contact negative control fails as expected",
+  "unit_tests": {
+    "command": "OPENBLAS_NUM_THREADS=1 bash scripts/run.sh -m unittest discover -s tests -p 'test_palm_*.py' -v",
+    "passed": 7,
+    "scope": "New Layer-1 checks only; historical missing-module tests documented separately"
+  },
+  "syntax_compile": "passed",
+  "git_diff_check": "passed",
+  "local_report_links": "passed",
+  "full_action_reexecution": "both directions approximately 600 s passed",
+  "video_scope": "3 complete uncut 4x state visualizations; ffprobe metadata and SHA256 in video_manifest.json",
+  "scope": "Current simulation Layer-1 representative scope; hardware, arbitrary online command sequences and 360/540 not qualified"
+}

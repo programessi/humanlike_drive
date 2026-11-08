@@ -1,0 +1,919 @@
+{
+  "archive_id": "20261107_pre_palm_primary",
+  "status": "historical_reference_only",
+  "included_runs": [
+    "B_left90",
+    "B_right90"
+  ],
+  "source": "outputs/p0_complete_20261107/nominal_v4",
+  "new_mainline": "docs/plans/RESEARCH_PLAN.md v3.0",
+  "storage": "local_only_gitignored_outputs",
+  "external_assets": "scene.xml and snapshots may reference original robot/CAD mesh paths; not a standalone portable bundle",
+  "files": [
+    {
+      "path": "project_snapshot/assets/scenes/p0_clear_grasp_v1.json",
+      "bytes": 19611,
+      "sha256": "c1666b5084ffc8a5e14c95ba473c02096d30e3d8fb4c2bc8e97e54bea263c273"
+    },
+    {
+      "path": "project_snapshot/docs/decisions/2026-11-07_P0_CLEAR_GRASP.md",
+      "bytes": 4182,
+      "sha256": "b679b731a817e7393701259487f4b52dcc62467dcd62be7aa4a8d38a9d34bf8f"
+    },
+    {
+      "path": "project_snapshot/docs/experiments/TEN_TWO_FEASIBILITY_V1.md",
+      "bytes": 10949,
+      "sha256": "767e4ecc32cdf02c7b38d1e78558d2207561ccbc5ff399cc1d27bd72a3e7c86c"
+    },
+    {
+      "path": "project_snapshot/docs/plans/RESEARCH_PLAN.md",
+      "bytes": 26898,
+      "sha256": "308f87e602c21ad8a82cda5b3083fdb515db01101bd4b61faaa1964091b2aedb"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/__init__.py",
+      "bytes": 75,
+      "sha256": "da605cc3d06e3ad7a00ea0691878cb068f67373dbc19288b5ad9d83684d5e84d"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/common/README.md",
+      "bytes": 214,
+      "sha256": "02d9cdc67ea9aa7be3790cd7ed9adb2d953260d46df4c158d96c528502cf7c06"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/common/__init__.py",
+      "bytes": 81,
+      "sha256": "3d7a2e362122df0686ad3e04fd4707fb349050da1087431112471b0bbe022fe4"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/config/README.md",
+      "bytes": 949,
+      "sha256": "aa504cc8be4c6373cd92ba8a4746efb953ffc2b1e8e48361d98651e050bfb59f"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/config/controller/.gitkeep",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/config/controller/grasp_targets.json",
+      "bytes": 3275,
+      "sha256": "09f3fc1050136a3b0e1bea71b14aee65a0c665467eb7917c6c6eda38a53a86d0"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/config/controller/p0_clear_grasp.json",
+      "bytes": 1326,
+      "sha256": "474ce9d7a8b2e218ba0bef3993144415f92843cabb540e5d9a0a73b5437993ea"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/config/dataset/.gitkeep",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/config/env_runner/.gitkeep",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/config/model/.gitkeep",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/config/policy/.gitkeep",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/config/real_world/.gitkeep",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/config/task/.gitkeep",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/config/workspace/.gitkeep",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/controller/README.md",
+      "bytes": 488,
+      "sha256": "f585163cc7be3d81645d985de656b0894924f05a84eec0baca02e11715acbce2"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/controller/__init__.py",
+      "bytes": 85,
+      "sha256": "be47b9303112cb1216de2ef63f73b7ff301834fcf8bf0b5fc55d5fd772560ea8"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/controller/basic_grasps.py",
+      "bytes": 13254,
+      "sha256": "072a99c82ffbb00c77c387f1698fae138ea3b923e40bbd3e09e7fcd9e54bb9d2"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/controller/clearance_grasp.py",
+      "bytes": 9483,
+      "sha256": "920d158fd3d6500d3c1b2e7e0536321465041b827dcae10caebd16bc9181f61b"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/controller/grasp_contacts.py",
+      "bytes": 4029,
+      "sha256": "95c7ca45fac9fd1d620fc3a1accf3d480dfd41580897154ac41070be7b2c14d8"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/controller/handover_plan.py",
+      "bytes": 4371,
+      "sha256": "d9a6aa49a1ad28865908cd2bfd393e13c2683fffae40508c87f15782e3008f13"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/controller/p0_control.py",
+      "bytes": 11288,
+      "sha256": "2056508cadcecfd641a044bf9e855a95009aeea4d80b6459b43b8d6bc9f8de70"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/controller/steering_ik.py",
+      "bytes": 4803,
+      "sha256": "1f854cf4d10731980568b58d798f3627416f3a6a704e5a15290eee2ecc5a8d1e"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/dataset/README.md",
+      "bytes": 270,
+      "sha256": "70d161548ad1ab0eedee45bc3972357c039cbfc1f82b9e7789be6be6221b0627"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/dataset/__init__.py",
+      "bytes": 82,
+      "sha256": "0e3207bf2d1a91949e19ae741f90a93804294288748d85325f199fc3608d1488"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env/README.md",
+      "bytes": 445,
+      "sha256": "69284a9e8aa59ed122606ddb8f5fd2c6d51def8a2e3009ad32b0624bc5bfe11e"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env/__init__.py",
+      "bytes": 78,
+      "sha256": "732345113250c4849defa1dcab13f746dc26a43faede168e8f81e7b26685c37a"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env/cabin.py",
+      "bytes": 8238,
+      "sha256": "ecf3b24ca1654f34c24d2d4526c3447902582907bc7b50c4ddb26bb5b9111074"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env/inspire_hand.py",
+      "bytes": 2573,
+      "sha256": "75d6423880fe7e7f10592d22e9f158ecbd3ed22acf149fb9c580e49f6c51f525"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env/logitech_scene.py",
+      "bytes": 18648,
+      "sha256": "a7f7d09ff70729acca8427ad317da8e8b4e764eaaf5b4b83281ae1e77186eea7"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env/p0_scene.py",
+      "bytes": 1543,
+      "sha256": "94f2e7f8af9db5a898f62a410d0c7014949c16ddb1f479e48b5fd1c27e969f23"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env_runner/README.md",
+      "bytes": 523,
+      "sha256": "1f0a909f85a33358399ee7c54e2c6f2faf0d3845866eb761fa0f96373259d685"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env_runner/__init__.py",
+      "bytes": 85,
+      "sha256": "12ce13d94e3ca2b6477d8d098b8bd415074c7b7d6eb2b48c71e820103370c68c"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env_runner/audit_scene.py",
+      "bytes": 21527,
+      "sha256": "5c1f099584f83e70c6557768c27ba8cc7b7338496dbc269168e193abd9e37272"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env_runner/inspect_scene.py",
+      "bytes": 15316,
+      "sha256": "9cd50d92b3b1c30fe00d4dbaeaf7376cc56f59cef2ad2e6aa9a0994d30cb1501"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env_runner/p0_motion.py",
+      "bytes": 16668,
+      "sha256": "81ccee1cc18cd9b776e2941a58963c69501519dc0a575d6a437cbce40ce71655"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env_runner/p0_restart.py",
+      "bytes": 30532,
+      "sha256": "4466e50a81568b7fbfab28a0e750bf061082a657dcee9901706fa4adc92b9025"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env_runner/p0_suite.py",
+      "bytes": 3372,
+      "sha256": "27c550c5611b3ea4183ee33841de70c89a1165a7d46b64b9282c5bcc6b14a04c"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/env_runner/replay_p0.py",
+      "bytes": 932,
+      "sha256": "6908cf8e0bf115f35594faae16b480c884dca6fefe51374d203636c14edc4301"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/model/README.md",
+      "bytes": 270,
+      "sha256": "e9996f4e5823ea40b8ea24e003bf63cb77c9b1b72af6f98251b8320b1650bf80"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/model/__init__.py",
+      "bytes": 80,
+      "sha256": "2ec4c40b95f12f432a4aaf174fbf0dabc537864d86a1f5b3b9bfc586ae36526f"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/policy/README.md",
+      "bytes": 308,
+      "sha256": "3cd558963d64cdaeafcdc3bbd2d103dce4b4f35694258f81d220d6b7e23baa26"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/policy/__init__.py",
+      "bytes": 81,
+      "sha256": "c53c35802faef7ea205cd11593696e7de9517938082ed98f8f8336f010279eab"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/real_world/README.md",
+      "bytes": 302,
+      "sha256": "5925faad35ed83083d740681d7b9a1d33ec34660ce33cec41859a98f4fe27425"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/real_world/__init__.py",
+      "bytes": 85,
+      "sha256": "9c5a7b67c25f9e504dbfb32001844e36b88fe7f4f8fbe471da2c2cc93e784a25"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/task/README.md",
+      "bytes": 318,
+      "sha256": "b2a034cb76c43884c8697bdb7b720f76d0c3faa72ac607afad8b6c6951269fa2"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/task/__init__.py",
+      "bytes": 79,
+      "sha256": "d767594d927a4d2e34ea94dcf092550b2a0558c2e3a8a828a31739fef561b147"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/workspace/README.md",
+      "bytes": 311,
+      "sha256": "0e43e47e6113a631c8da64ca3aba3f1807e65d7c9192bc273b1896931d259c70"
+    },
+    {
+      "path": "project_snapshot/humanlike_drive/workspace/__init__.py",
+      "bytes": 84,
+      "sha256": "ede27c0202848d3ea6da6d307569e8bb68e022089964449fd66943ed10bd4b0f"
+    },
+    {
+      "path": "project_snapshot/pyproject.toml",
+      "bytes": 728,
+      "sha256": "5b79b9187d9b554f087d49d1bc385fd243c7d9c1b3a9c3b2a4a28fd0363d190b"
+    },
+    {
+      "path": "project_snapshot/scripts/README.md",
+      "bytes": 277,
+      "sha256": "c5c91b7efef4f128ebd94c5b063dfd556e2884732f023255e4c0318eb75c4545"
+    },
+    {
+      "path": "project_snapshot/scripts/run.sh",
+      "bytes": 303,
+      "sha256": "b0d6850bfdcfc03b0d1ad528a31c3ae690f26fc5925532add0f4c3397009e76d"
+    },
+    {
+      "path": "project_snapshot/tests/README.md",
+      "bytes": 993,
+      "sha256": "72662eb03a8a2f133d849616eaaa40bf2ceb7a2ca69ca4ff215050557bcbfc31"
+    },
+    {
+      "path": "project_snapshot/tests/test_p0_motion.py",
+      "bytes": 4509,
+      "sha256": "b705469b25821820c938231955914896a4c11e2322a3971a190bd6bf8de997dd"
+    },
+    {
+      "path": "project_snapshot/tests/test_p0_restart.py",
+      "bytes": 4923,
+      "sha256": "0dd2abcca1d1cf79757db1d91f595f66e6e178a2e4750891af7afc9595a123bd"
+    },
+    {
+      "path": "report_snapshot/README.md",
+      "bytes": 13193,
+      "sha256": "4a39a96927415d89efb133dc5d2222ddcd7c50559a23fae315e3d47785ac69b3"
+    },
+    {
+      "path": "report_snapshot/all_trials.json",
+      "bytes": 13491,
+      "sha256": "8cb9419c5b720b3842d197e385b76b21560685bc018ce7945329a50e30f28cb1"
+    },
+    {
+      "path": "report_snapshot/boundary.png",
+      "bytes": 175251,
+      "sha256": "c3dae398eb3be219b251b5e65f6cd95401aa5084c8b1b268602cf9112b233b77"
+    },
+    {
+      "path": "report_snapshot/cabin.png",
+      "bytes": 149716,
+      "sha256": "c683f356b45a989e499c7436ad9e2fa1efefa6c7c1f6dd158fdd709cbfcceeab"
+    },
+    {
+      "path": "report_snapshot/case_table.md",
+      "bytes": 2454,
+      "sha256": "41802ebe7e581755397d8f1f07d462018a5502065d5a74b56af959a6f34f2b4d"
+    },
+    {
+      "path": "report_snapshot/contact_location_audit.json",
+      "bytes": 3692,
+      "sha256": "08aba166d63bfbe4c4ce18d523e8057d63614ce4a7cd373e9ae59a664d967d9c"
+    },
+    {
+      "path": "report_snapshot/contact_locations.png",
+      "bytes": 634789,
+      "sha256": "ca9e62bf6d028b4cc34f76b1f1ecceaa8ee580e66855c48399bc60e4fec8d6e4"
+    },
+    {
+      "path": "report_snapshot/continuous_negative70_v4_last.jpg",
+      "bytes": 59617,
+      "sha256": "992e25342111026713d16fe75c86bbb6307766304f228b6af48dfe55a7425661"
+    },
+    {
+      "path": "report_snapshot/continuous_negative70_v5_last.jpg",
+      "bytes": 59076,
+      "sha256": "16b395130a6d54b7e61066ca44dca5f88d32f6b80a4ea49f4e1aea18e711251b"
+    },
+    {
+      "path": "report_snapshot/continuous_negative70_v5_tracking.png",
+      "bytes": 292537,
+      "sha256": "aba48b67c5a3373d5027a6fe08c7421110f57c22d6095bfe051eacef5bc8cc0c"
+    },
+    {
+      "path": "report_snapshot/continuous_positive70_v5_last.jpg",
+      "bytes": 59446,
+      "sha256": "e8410779f08c3f913855080b8314534b749cea3386885491e09057209469ee4f"
+    },
+    {
+      "path": "report_snapshot/continuous_positive70_v5_tracking.png",
+      "bytes": 293736,
+      "sha256": "2529b6626008ca19370f0411e4051776dcbd767ed3f544fe82b59933afcd2915"
+    },
+    {
+      "path": "report_snapshot/feasibility_map.png",
+      "bytes": 101719,
+      "sha256": "e0ed5f9939e8d924148b8590b24efe29b0d5ef8e9cbff0ef73c9dd825cb1034c"
+    },
+    {
+      "path": "report_snapshot/implementation_manifest.json",
+      "bytes": 1118,
+      "sha256": "cd4b1b6a21bd9c9148aed53f8ab60a8f0f7ab94eafff530fc78c4ee764242496"
+    },
+    {
+      "path": "report_snapshot/index.html",
+      "bytes": 5127,
+      "sha256": "7639209b40802a78b5a355dfc6d8b1118c85134daf70cd8a40d0442522dd3285"
+    },
+    {
+      "path": "report_snapshot/measured_results.json",
+      "bytes": 181142,
+      "sha256": "20a28413b6226678eff03b8a6aeebffeec962540a6c71f0480340aab79bc917f"
+    },
+    {
+      "path": "report_snapshot/moving_left15_v4_last.jpg",
+      "bytes": 59423,
+      "sha256": "a2cbb9c8017e112fe69fe922aa9b4a6431c2efecdbcc408d019e357e9f0aeb5c"
+    },
+    {
+      "path": "report_snapshot/moving_right15_v4_last.jpg",
+      "bytes": 59062,
+      "sha256": "e0c4a25c9f372deeac809410bac4c6713d0a3b3f1a870a2f2cb48c64fff8741d"
+    },
+    {
+      "path": "report_snapshot/moving_right15_v4_tracking.png",
+      "bytes": 258394,
+      "sha256": "6dc66a7ed342bb78ded5ae3eb7bdc5d2fa3c035ec75a2dd4772e38ea25523970"
+    },
+    {
+      "path": "report_snapshot/nominal_v4_B_left90_last.jpg",
+      "bytes": 58670,
+      "sha256": "d38408c722b5a66476bbf4007fedcc4d0f515ee1ab26ae98ea6803ac79174d9b"
+    },
+    {
+      "path": "report_snapshot/nominal_v4_B_right90_last.jpg",
+      "bytes": 58727,
+      "sha256": "dbf8b721cd3f8da1b38b8372f3293b24f37836b8b21972d937c359dfc3755427"
+    },
+    {
+      "path": "report_snapshot/nominal_v4_D_left30_last.jpg",
+      "bytes": 59350,
+      "sha256": "01d7f0b06e4d4b61b73841fba193bafe659ad2bd2a81dee8f405de1046a0b4ef"
+    },
+    {
+      "path": "report_snapshot/nominal_v4_D_right30_last.jpg",
+      "bytes": 57918,
+      "sha256": "21cebcf9e2018af4722e5296193f8faa71b88437632a9c5ea7c536e134341d0b"
+    },
+    {
+      "path": "report_snapshot/offline_posture_scan.json",
+      "bytes": 81591,
+      "sha256": "3fb21118fa3e091f8fcfea48e0f6ad766ac1cfe8acbb44efe0b9779db902f3d8"
+    },
+    {
+      "path": "report_snapshot/overview.png",
+      "bytes": 687451,
+      "sha256": "0410d9d28cbba7e28ebe4c67287e28a2fed2eb52e87bde3f3db86cd9eb1c2256"
+    },
+    {
+      "path": "report_snapshot/right90.png",
+      "bytes": 163910,
+      "sha256": "991fa2178476b3c998e28a41e98a208034b36f6e8750c544447dcf7fb94c20b9"
+    },
+    {
+      "path": "report_snapshot/tests.txt",
+      "bytes": 1415,
+      "sha256": "cb4c40b37f7d2fe09f5d512b776a2ff548d7ac6cf33cff07ae3c4195ac5b4d1e"
+    },
+    {
+      "path": "report_snapshot/tracking_overview.png",
+      "bytes": 207749,
+      "sha256": "43d96fec8de2bd630186bd1d307cc1f8e217b036874192a80cb2a234b09717b4"
+    },
+    {
+      "path": "report_snapshot/transfer.png",
+      "bytes": 191907,
+      "sha256": "f81ec03dd798d48c708bb3f30fc4e382879f34550f9415015599f3864823996a"
+    },
+    {
+      "path": "report_snapshot/video_audit.json",
+      "bytes": 2032,
+      "sha256": "36dfdd5762423b24a135b205a94b58856fce94be7c906d5f3b5c8342f481d4e5"
+    },
+    {
+      "path": "report_snapshot/zero_crossing.png",
+      "bytes": 184250,
+      "sha256": "9be0593de9cc9a79997c0a1ab47ad099b55e6bcd865776b70a3db2454d882674"
+    },
+    {
+      "path": "runs/B_left90/collision_events.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "runs/B_left90/config.json",
+      "bytes": 2677,
+      "sha256": "f27461f3460732c0e399773ed7fccc79791aedc3b390c8cdaa2952d171194db8"
+    },
+    {
+      "path": "runs/B_left90/contact_schema.json",
+      "bytes": 22202,
+      "sha256": "4fbbac05272384f2b1e391013a2fc3c60923c6af8d222544557a93ff17c307be"
+    },
+    {
+      "path": "runs/B_left90/contacts.npz",
+      "bytes": 19925029,
+      "sha256": "e6fbe8a2e89e791abd31c4fa7e50cdc9bbe8dfb0c37b8829918a92af875a590a"
+    },
+    {
+      "path": "runs/B_left90/evaluation.json",
+      "bytes": 3012,
+      "sha256": "1c3295bb6a7d9f427aa42b06debf36c05ce438b82a6b54529142c808158009aa"
+    },
+    {
+      "path": "runs/B_left90/grasp_used.json",
+      "bytes": 19611,
+      "sha256": "c1666b5084ffc8a5e14c95ba473c02096d30e3d8fb4c2bc8e97e54bea263c273"
+    },
+    {
+      "path": "runs/B_left90/manifest.json",
+      "bytes": 118835,
+      "sha256": "817f4cda352ed44957d379b5a5b1908f64f0d74d1693bd9be5e311e581f509a0"
+    },
+    {
+      "path": "runs/B_left90/preview_driver.png",
+      "bytes": 286560,
+      "sha256": "3b09c2fcb80a35c3faaff47587f5f4c49e09ee4ff256d6094de4bec432b47429"
+    },
+    {
+      "path": "runs/B_left90/reachability.json",
+      "bytes": 131729,
+      "sha256": "ebd1790c1c82892b3342b123b71d6ad6eb8eca18854a3fe0882be8e9a69d6d06"
+    },
+    {
+      "path": "runs/B_left90/replay_driver.mp4",
+      "bytes": 6128433,
+      "sha256": "e576ec6a1113d7439cc1feb74065c98e4d2285e9ef4e5520fdb04d3212b1ee7a"
+    },
+    {
+      "path": "runs/B_left90/scene.xml",
+      "bytes": 242805,
+      "sha256": "7dfbdea9e0602da4740eadb1eb8a0c8298280cbbe515de7bee73c2cb099bbce2"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/assets/scenes/logitech_g29.xml",
+      "bytes": 210438,
+      "sha256": "381abf2b8ba95e6b4664f16920a336e789735a26f7ea6b24f128dae5b5a2caed"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/assets/scenes/p0_clear_grasp_v1.json",
+      "bytes": 19611,
+      "sha256": "c1666b5084ffc8a5e14c95ba473c02096d30e3d8fb4c2bc8e97e54bea263c273"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/__init__.py",
+      "bytes": 75,
+      "sha256": "da605cc3d06e3ad7a00ea0691878cb068f67373dbc19288b5ad9d83684d5e84d"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/common/__init__.py",
+      "bytes": 81,
+      "sha256": "3d7a2e362122df0686ad3e04fd4707fb349050da1087431112471b0bbe022fe4"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/config/controller/grasp_targets.json",
+      "bytes": 3275,
+      "sha256": "09f3fc1050136a3b0e1bea71b14aee65a0c665467eb7917c6c6eda38a53a86d0"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/config/controller/p0_clear_grasp.json",
+      "bytes": 1326,
+      "sha256": "474ce9d7a8b2e218ba0bef3993144415f92843cabb540e5d9a0a73b5437993ea"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/controller/__init__.py",
+      "bytes": 85,
+      "sha256": "be47b9303112cb1216de2ef63f73b7ff301834fcf8bf0b5fc55d5fd772560ea8"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/controller/basic_grasps.py",
+      "bytes": 13254,
+      "sha256": "072a99c82ffbb00c77c387f1698fae138ea3b923e40bbd3e09e7fcd9e54bb9d2"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/controller/clearance_grasp.py",
+      "bytes": 9483,
+      "sha256": "920d158fd3d6500d3c1b2e7e0536321465041b827dcae10caebd16bc9181f61b"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/controller/continuous_plan.py",
+      "bytes": 6054,
+      "sha256": "48be9f7788480a9d9778c1a576fec0cfde7e00cb351565a77ab2e6787339259a"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/controller/grasp_contacts.py",
+      "bytes": 4029,
+      "sha256": "95c7ca45fac9fd1d620fc3a1accf3d480dfd41580897154ac41070be7b2c14d8"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/controller/handover_plan.py",
+      "bytes": 4371,
+      "sha256": "d9a6aa49a1ad28865908cd2bfd393e13c2683fffae40508c87f15782e3008f13"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/controller/p0_control.py",
+      "bytes": 11288,
+      "sha256": "2056508cadcecfd641a044bf9e855a95009aeea4d80b6459b43b8d6bc9f8de70"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/controller/steering_ik.py",
+      "bytes": 4803,
+      "sha256": "1f854cf4d10731980568b58d798f3627416f3a6a704e5a15290eee2ecc5a8d1e"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/dataset/__init__.py",
+      "bytes": 82,
+      "sha256": "0e3207bf2d1a91949e19ae741f90a93804294288748d85325f199fc3608d1488"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env/__init__.py",
+      "bytes": 78,
+      "sha256": "732345113250c4849defa1dcab13f746dc26a43faede168e8f81e7b26685c37a"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env/cabin.py",
+      "bytes": 8238,
+      "sha256": "ecf3b24ca1654f34c24d2d4526c3447902582907bc7b50c4ddb26bb5b9111074"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env/inspire_hand.py",
+      "bytes": 2573,
+      "sha256": "75d6423880fe7e7f10592d22e9f158ecbd3ed22acf149fb9c580e49f6c51f525"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env/logitech_scene.py",
+      "bytes": 18648,
+      "sha256": "a7f7d09ff70729acca8427ad317da8e8b4e764eaaf5b4b83281ae1e77186eea7"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env/p0_scene.py",
+      "bytes": 1543,
+      "sha256": "94f2e7f8af9db5a898f62a410d0c7014949c16ddb1f479e48b5fd1c27e969f23"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env_runner/__init__.py",
+      "bytes": 85,
+      "sha256": "12ce13d94e3ca2b6477d8d098b8bd415074c7b7d6eb2b48c71e820103370c68c"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env_runner/audit_scene.py",
+      "bytes": 21527,
+      "sha256": "5c1f099584f83e70c6557768c27ba8cc7b7338496dbc269168e193abd9e37272"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env_runner/inspect_scene.py",
+      "bytes": 15316,
+      "sha256": "9cd50d92b3b1c30fe00d4dbaeaf7376cc56f59cef2ad2e6aa9a0994d30cb1501"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env_runner/p0_motion.py",
+      "bytes": 21026,
+      "sha256": "05f4355dcf7512b6645985d81303faac993f07b3219a40cfb263f79d6ec15045"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env_runner/p0_restart.py",
+      "bytes": 31387,
+      "sha256": "cc9401c4b623a7301bd45d19010267d2b216446eae8bfd893ddbc3bd6d012b9e"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env_runner/p0_suite.py",
+      "bytes": 3372,
+      "sha256": "27c550c5611b3ea4183ee33841de70c89a1165a7d46b64b9282c5bcc6b14a04c"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/env_runner/replay_p0.py",
+      "bytes": 2165,
+      "sha256": "38c3abf2c6e0c920256f830c20c8b01babe00cd1096f365155bc209a20ad5e52"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/model/__init__.py",
+      "bytes": 80,
+      "sha256": "2ec4c40b95f12f432a4aaf174fbf0dabc537864d86a1f5b3b9bfc586ae36526f"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/policy/__init__.py",
+      "bytes": 81,
+      "sha256": "c53c35802faef7ea205cd11593696e7de9517938082ed98f8f8336f010279eab"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/real_world/__init__.py",
+      "bytes": 85,
+      "sha256": "9c5a7b67c25f9e504dbfb32001844e36b88fe7f4f8fbe471da2c2cc93e784a25"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/task/__init__.py",
+      "bytes": 79,
+      "sha256": "d767594d927a4d2e34ea94dcf092550b2a0558c2e3a8a828a31739fef561b147"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/humanlike_drive/workspace/__init__.py",
+      "bytes": 84,
+      "sha256": "ede27c0202848d3ea6da6d307569e8bb68e022089964449fd66943ed10bd4b0f"
+    },
+    {
+      "path": "runs/B_left90/source_snapshot/inspire_source.urdf",
+      "bytes": 53441,
+      "sha256": "504b0cc9ea5311044876f4be4e3148fbc285aa1439e33b19d93c357a7468066c"
+    },
+    {
+      "path": "runs/B_left90/tracking.png",
+      "bytes": 288547,
+      "sha256": "c2337643996e71cf1033fe4db1a950bd0b0bb1b765e525bbb24cefb62d525f03"
+    },
+    {
+      "path": "runs/B_left90/trajectory.npz",
+      "bytes": 48445745,
+      "sha256": "f1660d34ab13c031186df808b11d7cd8663e320b9848124769f9c3d7c5c7f96a"
+    },
+    {
+      "path": "runs/B_right90/collision_events.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "runs/B_right90/config.json",
+      "bytes": 2677,
+      "sha256": "80ded3373f20d6645ac714d6ce7bcea58d5ffb6e74f225f15169d190870d3339"
+    },
+    {
+      "path": "runs/B_right90/contact_schema.json",
+      "bytes": 22202,
+      "sha256": "4fbbac05272384f2b1e391013a2fc3c60923c6af8d222544557a93ff17c307be"
+    },
+    {
+      "path": "runs/B_right90/contacts.npz",
+      "bytes": 18560846,
+      "sha256": "1e5e7b4406d90352e730cf2b0dee66671d4274b0168317358caf05230437f337"
+    },
+    {
+      "path": "runs/B_right90/evaluation.json",
+      "bytes": 3004,
+      "sha256": "06e16ec310bea9cd81755b5d5c910a74352acf3889e7d00b6d30f986b03626ed"
+    },
+    {
+      "path": "runs/B_right90/grasp_used.json",
+      "bytes": 19611,
+      "sha256": "c1666b5084ffc8a5e14c95ba473c02096d30e3d8fb4c2bc8e97e54bea263c273"
+    },
+    {
+      "path": "runs/B_right90/manifest.json",
+      "bytes": 118836,
+      "sha256": "dd1a2e418deb3ecffd439da46434328e71e6de84bb4df901abcbc28f250e6b0b"
+    },
+    {
+      "path": "runs/B_right90/preview_driver.png",
+      "bytes": 292478,
+      "sha256": "7843c82d1c120f4310e719218a6b5565839e3c1b39ff7c377d1a4d1b621e9a53"
+    },
+    {
+      "path": "runs/B_right90/reachability.json",
+      "bytes": 131781,
+      "sha256": "75d4a832219d0b5cf68682cc42df7478ecd1823eb6332c8ba25026d9443b7ef7"
+    },
+    {
+      "path": "runs/B_right90/replay_driver.mp4",
+      "bytes": 6550741,
+      "sha256": "f679d325630a8301e58ce90fc8b27517c31ec2e4a396ac4507948a44dceb4111"
+    },
+    {
+      "path": "runs/B_right90/scene.xml",
+      "bytes": 242805,
+      "sha256": "7dfbdea9e0602da4740eadb1eb8a0c8298280cbbe515de7bee73c2cb099bbce2"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/assets/scenes/logitech_g29.xml",
+      "bytes": 210438,
+      "sha256": "381abf2b8ba95e6b4664f16920a336e789735a26f7ea6b24f128dae5b5a2caed"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/assets/scenes/p0_clear_grasp_v1.json",
+      "bytes": 19611,
+      "sha256": "c1666b5084ffc8a5e14c95ba473c02096d30e3d8fb4c2bc8e97e54bea263c273"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/__init__.py",
+      "bytes": 75,
+      "sha256": "da605cc3d06e3ad7a00ea0691878cb068f67373dbc19288b5ad9d83684d5e84d"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/common/__init__.py",
+      "bytes": 81,
+      "sha256": "3d7a2e362122df0686ad3e04fd4707fb349050da1087431112471b0bbe022fe4"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/config/controller/grasp_targets.json",
+      "bytes": 3275,
+      "sha256": "09f3fc1050136a3b0e1bea71b14aee65a0c665467eb7917c6c6eda38a53a86d0"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/config/controller/p0_clear_grasp.json",
+      "bytes": 1326,
+      "sha256": "474ce9d7a8b2e218ba0bef3993144415f92843cabb540e5d9a0a73b5437993ea"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/controller/__init__.py",
+      "bytes": 85,
+      "sha256": "be47b9303112cb1216de2ef63f73b7ff301834fcf8bf0b5fc55d5fd772560ea8"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/controller/basic_grasps.py",
+      "bytes": 13254,
+      "sha256": "072a99c82ffbb00c77c387f1698fae138ea3b923e40bbd3e09e7fcd9e54bb9d2"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/controller/clearance_grasp.py",
+      "bytes": 9483,
+      "sha256": "920d158fd3d6500d3c1b2e7e0536321465041b827dcae10caebd16bc9181f61b"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/controller/continuous_plan.py",
+      "bytes": 6054,
+      "sha256": "48be9f7788480a9d9778c1a576fec0cfde7e00cb351565a77ab2e6787339259a"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/controller/grasp_contacts.py",
+      "bytes": 4029,
+      "sha256": "95c7ca45fac9fd1d620fc3a1accf3d480dfd41580897154ac41070be7b2c14d8"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/controller/handover_plan.py",
+      "bytes": 4371,
+      "sha256": "d9a6aa49a1ad28865908cd2bfd393e13c2683fffae40508c87f15782e3008f13"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/controller/p0_control.py",
+      "bytes": 11288,
+      "sha256": "2056508cadcecfd641a044bf9e855a95009aeea4d80b6459b43b8d6bc9f8de70"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/controller/steering_ik.py",
+      "bytes": 4803,
+      "sha256": "1f854cf4d10731980568b58d798f3627416f3a6a704e5a15290eee2ecc5a8d1e"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/dataset/__init__.py",
+      "bytes": 82,
+      "sha256": "0e3207bf2d1a91949e19ae741f90a93804294288748d85325f199fc3608d1488"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env/__init__.py",
+      "bytes": 78,
+      "sha256": "732345113250c4849defa1dcab13f746dc26a43faede168e8f81e7b26685c37a"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env/cabin.py",
+      "bytes": 8238,
+      "sha256": "ecf3b24ca1654f34c24d2d4526c3447902582907bc7b50c4ddb26bb5b9111074"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env/inspire_hand.py",
+      "bytes": 2573,
+      "sha256": "75d6423880fe7e7f10592d22e9f158ecbd3ed22acf149fb9c580e49f6c51f525"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env/logitech_scene.py",
+      "bytes": 18648,
+      "sha256": "a7f7d09ff70729acca8427ad317da8e8b4e764eaaf5b4b83281ae1e77186eea7"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env/p0_scene.py",
+      "bytes": 1543,
+      "sha256": "94f2e7f8af9db5a898f62a410d0c7014949c16ddb1f479e48b5fd1c27e969f23"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env_runner/__init__.py",
+      "bytes": 85,
+      "sha256": "12ce13d94e3ca2b6477d8d098b8bd415074c7b7d6eb2b48c71e820103370c68c"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env_runner/audit_scene.py",
+      "bytes": 21527,
+      "sha256": "5c1f099584f83e70c6557768c27ba8cc7b7338496dbc269168e193abd9e37272"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env_runner/inspect_scene.py",
+      "bytes": 15316,
+      "sha256": "9cd50d92b3b1c30fe00d4dbaeaf7376cc56f59cef2ad2e6aa9a0994d30cb1501"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env_runner/p0_motion.py",
+      "bytes": 21026,
+      "sha256": "05f4355dcf7512b6645985d81303faac993f07b3219a40cfb263f79d6ec15045"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env_runner/p0_restart.py",
+      "bytes": 31387,
+      "sha256": "cc9401c4b623a7301bd45d19010267d2b216446eae8bfd893ddbc3bd6d012b9e"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env_runner/p0_suite.py",
+      "bytes": 3372,
+      "sha256": "27c550c5611b3ea4183ee33841de70c89a1165a7d46b64b9282c5bcc6b14a04c"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/env_runner/replay_p0.py",
+      "bytes": 2165,
+      "sha256": "38c3abf2c6e0c920256f830c20c8b01babe00cd1096f365155bc209a20ad5e52"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/model/__init__.py",
+      "bytes": 80,
+      "sha256": "2ec4c40b95f12f432a4aaf174fbf0dabc537864d86a1f5b3b9bfc586ae36526f"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/policy/__init__.py",
+      "bytes": 81,
+      "sha256": "c53c35802faef7ea205cd11593696e7de9517938082ed98f8f8336f010279eab"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/real_world/__init__.py",
+      "bytes": 85,
+      "sha256": "9c5a7b67c25f9e504dbfb32001844e36b88fe7f4f8fbe471da2c2cc93e784a25"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/task/__init__.py",
+      "bytes": 79,
+      "sha256": "d767594d927a4d2e34ea94dcf092550b2a0558c2e3a8a828a31739fef561b147"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/humanlike_drive/workspace/__init__.py",
+      "bytes": 84,
+      "sha256": "ede27c0202848d3ea6da6d307569e8bb68e022089964449fd66943ed10bd4b0f"
+    },
+    {
+      "path": "runs/B_right90/source_snapshot/inspire_source.urdf",
+      "bytes": 53441,
+      "sha256": "504b0cc9ea5311044876f4be4e3148fbc285aa1439e33b19d93c357a7468066c"
+    },
+    {
+      "path": "runs/B_right90/tracking.png",
+      "bytes": 296610,
+      "sha256": "3b57bb9bfa6ea5d73e2491e261f3e026b17ca09485891df609237a17bdfe1c48"
+    },
+    {
+      "path": "runs/B_right90/trajectory.npz",
+      "bytes": 48454861,
+      "sha256": "30f12d0cc44181837c32c1f6d9a5eab9aebb5250dac11338d6197206bbf1be46"
+    }
+  ]
+}

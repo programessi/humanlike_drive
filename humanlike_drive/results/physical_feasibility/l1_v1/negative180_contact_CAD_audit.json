@@ -1,0 +1,49 @@
+{
+  "scope": "stratified deterministic actual loaded contact samples versus original visual CAD; not a global Hausdorff bound",
+  "samples_per_palm": 250,
+  "verifier_sha256": "d030d5871adf58d64ca11f771379daeb2d688fc21f1598e4621ccc6f31b879cd",
+  "verifier_source": "contact_CAD_audit_verifier.py",
+  "left": {
+    "samples": 250,
+    "max_mm": 0.06489217955488087,
+    "p95_mm": 0.06234760562589858,
+    "mean_mm": 0.04909105988703315,
+    "local_palm_bounds_m": [
+      [
+        0.11508709598850135,
+        -0.025048273358332627,
+        0.0008750549621447069
+      ],
+      [
+        0.11962700409237124,
+        -0.02427606293454386,
+        0.004874326848111572
+      ]
+    ]
+  },
+  "right": {
+    "samples": 250,
+    "max_mm": 0.12479432569214953,
+    "p95_mm": 0.11918902642963682,
+    "mean_mm": 0.053317705987161366,
+    "local_palm_bounds_m": [
+      [
+        0.10727883311812321,
+        0.02247800512749728,
+        -0.016106093187287323
+      ],
+      [
+        0.12021961512588045,
+        0.025046067896710267,
+        0.005429428333249133
+      ]
+    ]
+  },
+  "wheel": {
+    "samples": 500,
+    "max_mm": 0.3736609600975239,
+    "p95_mm": 0.04995145155565917,
+    "mean_mm": 0.05175645145811472
+  },
+  "passed": true
+}

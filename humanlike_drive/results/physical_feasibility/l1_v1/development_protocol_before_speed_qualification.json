@@ -1,0 +1,740 @@
+{
+  "controller": {
+    "version": "palm_primary_l1_v1",
+    "contact_route": "palm radial pressure, tangential friction drive; compliant finger preshape",
+    "palm_point_x_m": 0.1,
+    "palm_point_y_abs_m": 0.025,
+    "palm_target_axial_m": -0.02,
+    "palm_target_radius_m": 0.14,
+    "hand_drives": [
+      -0.04,
+      0.05,
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "palm_force_target_N": 3.0,
+    "palm_force_limit_N": 8.0,
+    "pressure_admittance_m_per_N_s": 0.001,
+    "pressure_inset_bounds_m": [
+      -0.015,
+      0.02
+    ],
+    "angle_kp": 1.5,
+    "angle_ki_per_s": 0.35,
+    "angle_lead_limit_deg": 6.0,
+    "stroke_deg": 40.0,
+    "speed_deg_s": 5.0,
+    "nominal_constant_load_Nm": 0.1,
+    "load_damping_Nm_s": 0.02,
+    "initial_wrist_bend_limit_deg": 15.0,
+    "operating_wrist_bend_limit_deg": 25.0,
+    "max_palm_slip_m_s": 0.03,
+    "max_cumulative_slip_m": 0.025,
+    "max_palm_contact_gap_s": 0.1,
+    "notes": "Frozen engineering qualification settings. Synthetic uncalibrated load; privileged contact feedback; no learned policy, wheel servo, added contact pad or altered joint mimic. Numerical wheel-balance tolerance 1e-4 Nm is distinct from the 1e-5 Nm wrench transformation audit.",
+    "whole_hand_force_limit_N": 10.0,
+    "max_wheel_dynamics_residual_Nm": 0.0001,
+    "upper_sector_endpoint_allowance_deg": 10.0,
+    "simulation_solver": {
+      "cone": "elliptic",
+      "impratio": 10,
+      "iterations": 150,
+      "tolerance": 1e-10
+    }
+  },
+  "cases": [
+    {
+      "name": "dual_hold",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "hold",
+        "--both-hands",
+        "--load",
+        "-.1"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "positive15",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "roundtrip",
+        "--angle",
+        "15"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "negative15",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "roundtrip",
+        "--angle",
+        "-15"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "positive30",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "roundtrip",
+        "--angle",
+        "30"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "negative30",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "roundtrip",
+        "--angle",
+        "-30"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "positive60",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "60"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "negative60",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "-60"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "positive90",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "90"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "negative90",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "-90"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "positive120",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "120"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "negative120",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "-120"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "positive150",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "150"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "negative150",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "-150"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "positive180",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "180"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "negative180",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "-180"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "crosszero_+1",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "crosszero",
+        "--angle",
+        "60"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "crosszero_-1",
+      "group": "nominal",
+      "options": [
+        "--case",
+        "crosszero",
+        "--angle",
+        "-60"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "hold_left_-0.05",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "-0.05"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "hold_left_+0.05",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "0.05"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "hold_left_-0.10",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "-0.1"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "hold_left_+0.10",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "0.1"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "hold_left_-0.20",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "-0.2"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "hold_left_+0.20",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "0.2"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "hold_left_-0.40",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "-0.4"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "hold_left_+0.40",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "left",
+        "--load",
+        "0.4"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "hold_right_-0.05",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "-0.05"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "hold_right_+0.05",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "0.05"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "hold_right_-0.10",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "-0.1"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "hold_right_+0.10",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "0.1"
+      ],
+      "expectation": "pass"
+    },
+    {
+      "name": "hold_right_-0.20",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "-0.2"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "hold_right_+0.20",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "0.2"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "hold_right_-0.40",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "-0.4"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "hold_right_+0.40",
+      "group": "load",
+      "options": [
+        "--case",
+        "hold",
+        "--side",
+        "right",
+        "--load",
+        "0.4"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_friction_seed0",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "0",
+        "--friction",
+        ".7"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_friction_seed1",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "1",
+        "--friction",
+        ".7"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_friction_seed2",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "2",
+        "--friction",
+        ".7"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_friction_seed3",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "3",
+        "--friction",
+        ".7"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_friction_seed4",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "4",
+        "--friction",
+        ".7"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_load_seed0",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "0",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_load_seed1",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "1",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_load_seed2",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "2",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_load_seed3",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "3",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_load_seed4",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "4",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_combined_seed0",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "0",
+        "--friction",
+        ".7",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_combined_seed1",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "1",
+        "--friction",
+        ".7",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_combined_seed2",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "2",
+        "--friction",
+        ".7",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_combined_seed3",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "3",
+        "--friction",
+        ".7",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "perturb_combined_seed4",
+      "group": "robust",
+      "options": [
+        "--angle",
+        "30",
+        "--offset-mm",
+        "1",
+        "--seed",
+        "4",
+        "--friction",
+        ".7",
+        "--load",
+        "-.12"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "fingers_less_+1",
+      "group": "diagnostic",
+      "options": [
+        "--angle",
+        "30",
+        "--finger-closure",
+        ".10"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "fingers_less_-1",
+      "group": "diagnostic",
+      "options": [
+        "--angle",
+        "-30",
+        "--finger-closure",
+        ".10"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "no_wheel_contact",
+      "group": "diagnostic",
+      "options": [
+        "--angle",
+        "15",
+        "--negative-control"
+      ],
+      "expectation": "tracking_failure"
+    },
+    {
+      "name": "extension_+360",
+      "group": "extension",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "360"
+      ],
+      "expectation": "observe"
+    },
+    {
+      "name": "extension_-360",
+      "group": "extension",
+      "options": [
+        "--case",
+        "relay",
+        "--angle",
+        "-360"
+      ],
+      "expectation": "observe"
+    }
+  ],
+  "scope": "Simulation Layer 1 engineering qualification; boundary probes are not claimed successes; seeds are finite engineering samples",
+  "numerical_audit": {
+    "wrench_residual_Nm": 1e-05,
+    "wheel_dynamics_residual_Nm": 0.0001
+  },
+  "real_calibration": false
+}

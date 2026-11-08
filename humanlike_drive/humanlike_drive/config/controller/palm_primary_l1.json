@@ -1,0 +1,46 @@
+{
+  "version": "palm_primary_l1_v3",
+  "contact_route": "palm radial pressure, tangential friction drive; compliant finger preshape",
+  "palm_point_x_m": 0.1,
+  "palm_point_y_abs_m": 0.025,
+  "palm_target_axial_m": -0.02,
+  "palm_target_radius_m": 0.14,
+  "hand_drives": [
+    -0.04,
+    0.05,
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "palm_force_target_N": 3.0,
+  "palm_force_limit_N": 8.0,
+  "pressure_admittance_m_per_N_s": 0.001,
+  "pressure_inset_bounds_m": [
+    -0.015,
+    0.02
+  ],
+  "angle_kp": 1.5,
+  "angle_ki_per_s": 0.35,
+  "angle_lead_limit_deg": 6.0,
+  "stroke_deg": 40.0,
+  "speed_deg_s": 1.0,
+  "nominal_constant_load_Nm": 0.1,
+  "load_damping_Nm_s": 0.02,
+  "initial_wrist_bend_limit_deg": 15.0,
+  "operating_wrist_bend_limit_deg": 25.0,
+  "max_palm_slip_m_s": 0.03,
+  "max_cumulative_slip_m": 0.025,
+  "max_palm_contact_gap_s": 0.1,
+  "notes": "Frozen 1 deg/s controller with bounded extra stationary waits for measured palm contact/load transfer. 5 deg/s pressure spikes and fixed-time contact failures are retained as development boundaries. Synthetic uncalibrated load and privileged contacts; original finite drives, geometry and mimic retained.",
+  "whole_hand_force_limit_N": 10.0,
+  "max_wheel_dynamics_residual_Nm": 0.0001,
+  "upper_sector_endpoint_allowance_deg": 10.0,
+  "simulation_solver": {
+    "cone": "elliptic",
+    "impratio": 10,
+    "iterations": 150,
+    "tolerance": 1e-10
+  },
+  "handover_max_guard_wait_s": 5.0
+}

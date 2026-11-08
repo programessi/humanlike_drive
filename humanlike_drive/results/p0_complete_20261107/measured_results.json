@@ -1,0 +1,6199 @@
+{
+  "cases": [
+    {
+      "case": "A_hold",
+      "run": "outputs/p0_complete_20261107/nominal_v4/A_hold",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": null,
+        "hold_tail_peak_deg": {
+          "0": 0.04208495066977824
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 15.632931476491082,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.0,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.024875769889697443,
+        "max_load_torque_Nm": 7.765597581372258e-05,
+        "max_wheel_angle_deg": 0.04445327438574773,
+        "max_contact_minus_constraint_torque_Nm": 0.0007113047139246597,
+        "minimum_paddle_clearance_mm_at_50Hz": 17.203994386472434,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.679724347595423,
+        "wrist_bend_max_deg_left_right": [
+          14.70935050699454,
+          14.678951435927836
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          9.696044731949266,
+          0.1109276336642564,
+          0.12126952414729075,
+          3.6873477177726497,
+          0.05533323036215432,
+          0.5134186522210848,
+          0.275254545427047,
+          9.487763807602896,
+          0.17143445064086205,
+          0.1904084354233997,
+          3.5420927763998336,
+          0.019293466664985104,
+          0.43035104246038225,
+          0.2983881344264359,
+          0.053753780277423946,
+          0.0124930817840615,
+          0.04108930309404735,
+          0.022315029679795595,
+          0.0399880444077334,
+          0.0809412638071012,
+          0.08568206429760972,
+          0.008328701672128513,
+          0.04845192625883743,
+          0.03006426342703783,
+          0.0337834985776686,
+          0.08604035460930581
+        ],
+        "first_failure_s": {},
+        "duration_s": 9.998000000000008,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/A_hold",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "case": "hold",
+        "release_side": "right",
+        "angle": 30.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 0.5,
+        "scan": null,
+        "duration": null,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "render_existing": false,
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "action_joint_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "normalized target rate [-1,1]",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "preload_limit_rad": [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.45,
+          0.45,
+          0.45,
+          0.45,
+          0.45,
+          0.45,
+          0.45,
+          0.45,
+          0.45,
+          0.45,
+          0.45,
+          0.45
+        ],
+        "arm_command_limit_margin_deg": 2.1,
+        "positive_wheel_direction": "driver clockwise / right",
+        "load_model": "uncalibrated synthetic tau=-k*theta-b*omega; original joint damping/friction also active",
+        "setup_fixture": "none during rollout; new finite-motor grasp preparation recorded separately",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs only; logged each physics step",
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "wheel_joint_range_deg": [
+          -450.000000001462,
+          450.000000001462
+        ],
+        "expected_duration_s": 10.0,
+        "run_duration_s": 10.0,
+        "motion_scene_version": "p0_clearance_restart_v1",
+        "seed": 0,
+        "nonrim_geometry_measurement_Hz": 50.0,
+        "retreat_direction": null,
+        "regrasp_version": null,
+        "single_release_schedule_s_after_arrival": null,
+        "handover_schedule_s_after_arrival": null,
+        "handover_criteria": null
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "c9a5672c372c1d4202a13196309751948829a8e91eec2935eded3ec04b5d1b17"
+    },
+    {
+      "case": "A_left_support",
+      "run": "outputs/p0_complete_20261107/nominal_v4/A_left_support",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "inactive_hand_clear_of_rim_during_target_hold": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": null,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "6": 0.0765313697340836,
+          "4": 0.3116330095579551
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.991741242242097,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.3274627859377257,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.07598268687944418,
+        "max_load_torque_Nm": 0.0017271100980897373,
+        "max_wheel_angle_deg": 0.44962600444394546,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000011480968,
+        "minimum_paddle_clearance_mm_at_50Hz": 4.826143973917226,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.339517114158798,
+        "wrist_bend_max_deg_left_right": [
+          14.869590508710443,
+          23.573461862787788
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.173186246911783,
+          0.22086681828200394,
+          0.30338571239395007,
+          3.8465210722735375,
+          0.12523573881217542,
+          0.5995807651978502,
+          0.3637324793015095,
+          10.141294523019305,
+          2.4094780122926522,
+          3.389885285495033,
+          3.8589414461390157,
+          0.6203722136162888,
+          2.2378923877217884,
+          1.5966261316738792,
+          0.07388528605470457,
+          0.012723305116875694,
+          0.04288354596046018,
+          0.027262797537004113,
+          0.0456195012332854,
+          0.08504565185634494,
+          0.09447290275544584,
+          0.10736990994770387,
+          0.05528125709576148,
+          0.24272698328185527,
+          0.2689737006013351,
+          0.35
+        ],
+        "first_failure_s": {},
+        "duration_s": 22.997999999998132,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/A_left_support",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": 1.0,
+        "case": "release",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 23.0,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.025057701413769295,
+        0.015482101010490499,
+        0.012902096797176788,
+        0.005311060881407927,
+        0.025185778415662354,
+        0.038744110111198875,
+        0.02178862461803086,
+        0.11862460872276072,
+        0.3974708715964795,
+        0.5642784007604458,
+        0.33771672673468794,
+        0.6000000000003358,
+        0.24375224171152196,
+        0.5844919797576473,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000003049,
+        0.8222500000003049,
+        0.8321325835478427,
+        1.000000000000111
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "f9e5db94d7f8beeb094748d3245ff19e7e906a0c899e33ffb6988561297e0958"
+    },
+    {
+      "case": "A_right_support",
+      "run": "outputs/p0_complete_20261107/nominal_v4/A_right_support",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "inactive_hand_clear_of_rim_during_target_hold": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": null,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "6": 0.10575656897985855,
+          "4": 0.15646962302274167
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 3.044670192451958,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.32856870996673515,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.07628742344196596,
+        "max_load_torque_Nm": 0.0015120382635611753,
+        "max_wheel_angle_deg": 0.3665789334572971,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000012852597,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.453832580884108,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.743991841663343,
+        "wrist_bend_max_deg_left_right": [
+          23.51933100097847,
+          14.816875000885629
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.085206990731205,
+          2.460591091006167,
+          3.231985871385695,
+          3.8373487067467273,
+          0.6290009653729203,
+          2.1373895323072576,
+          1.6050997099790105,
+          10.026139231025738,
+          0.225361082901693,
+          0.4483870884302381,
+          3.599058472549303,
+          0.10755647054962525,
+          0.47583086387042073,
+          0.40386935133181073,
+          0.053753780277423946,
+          0.10696318131580743,
+          0.045957370487967,
+          0.234867984325573,
+          0.26443237542566933,
+          0.3471170802192104,
+          0.10368722533653774,
+          0.008571754987141245,
+          0.05170783301374837,
+          0.03458459085597965,
+          0.039268965524154265,
+          0.08964868125744441
+        ],
+        "first_failure_s": {},
+        "duration_s": 22.997999999998132,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/A_right_support",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": -1.0,
+        "case": "release",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 23.0,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.12087305988401946,
+        0.40022326806932856,
+        0.5675441601701291,
+        0.3381861584453046,
+        0.6000000000003358,
+        0.24195401776246991,
+        0.5842081652384691,
+        0.02301952668211259,
+        0.01638192434694422,
+        0.01280185795338189,
+        0.005373034629499653,
+        0.021193772628017672,
+        0.035273140264294296,
+        0.016839162317243035,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000003049,
+        0.8222500000003049,
+        0.8321325835478427,
+        1.000000000000111,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "bb7250e1e1c381d112fbc5c09aacac2174c829c2d4ab82f437e7dda53b5452a9"
+    },
+    {
+      "case": "B_left30",
+      "run": "outputs/p0_complete_20261107/nominal_v4/B_left30",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "inactive_hand_clear_of_rim_during_target_hold": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.18699542509971934,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "2": 0.016384813954451048,
+          "4": 0.26312933214825757
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 3.044670192451958,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.34806295553963446,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.07137936949593067,
+        "max_load_torque_Nm": 0.052959554500769404,
+        "max_wheel_angle_deg": 30.043420275603957,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000014416159,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.407925701811192,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.743991841663343,
+        "wrist_bend_max_deg_left_right": [
+          23.51921230187095,
+          22.805105976421313
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.096818005473786,
+          2.457961633554845,
+          3.2181033074306,
+          3.8461312130823457,
+          0.6283694925755237,
+          2.2061220391242182,
+          1.6119437639013814,
+          10.594911073105708,
+          1.4684573334134026,
+          1.1527904786063354,
+          3.605817596103356,
+          0.10507801319886134,
+          0.4816520587335946,
+          0.42985882489540617,
+          0.053753780277423946,
+          0.10696318131580743,
+          0.04681390083456316,
+          0.24062451085750802,
+          0.2647267364998356,
+          0.34668385051830075,
+          0.10457837992682162,
+          0.009931835454522475,
+          0.05031929643456046,
+          0.03461220541077603,
+          0.040253746370227717,
+          0.09019159773650864
+        ],
+        "first_failure_s": {},
+        "duration_s": 28.997999999994807,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/B_left30",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": -30.0,
+        "case": "dominant",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 29.0,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.11986600417092079,
+        0.3980119578078231,
+        0.5650545554104709,
+        0.3381674722512819,
+        0.6000000000003358,
+        0.24311531860257293,
+        0.5845468024151166,
+        0.05981132848146498,
+        0.0606600652025216,
+        0.11900643729755211,
+        0.013502676340366658,
+        0.1369187630294496,
+        0.04946828529458203,
+        0.13631658090512622,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000001748,
+        0.8222500000001748,
+        0.8321325835478427,
+        1.000000000000111,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "97b21c0ccecf5f07bd19fe4a2d0bd818442dd178deaf5c34fceaffec825862f9"
+    },
+    {
+      "case": "B_left60",
+      "run": "outputs/p0_complete_20261107/nominal_v4/B_left60",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "inactive_hand_clear_of_rim_during_target_hold": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.16443169681755698,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "2": 0.2658365810416743,
+          "4": 0.4519272464690984
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 3.009766247392497,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.3752834188432292,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.0796937625109908,
+        "max_load_torque_Nm": 0.10484413759104706,
+        "max_wheel_angle_deg": 59.77750259270137,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000015689765,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.367499070786282,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.743991841663343,
+        "wrist_bend_max_deg_left_right": [
+          23.518144253647602,
+          24.665657525537934
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.125856954915179,
+          2.387220463785214,
+          3.3432723613213353,
+          3.864763755097378,
+          0.6212799218484921,
+          2.243545001706523,
+          1.5402337374414907,
+          11.664276305641657,
+          2.446129178054942,
+          2.793504688991728,
+          3.590358728122368,
+          0.10091455074295075,
+          0.46251420619372596,
+          0.4357613517034688,
+          0.053753780277423946,
+          0.10696318131580743,
+          0.047568101267769336,
+          0.2421169217271737,
+          0.26401012578480476,
+          0.3468159356018349,
+          0.10239932334046276,
+          0.010798672158179257,
+          0.04860155409110467,
+          0.03389661233892127,
+          0.042017678718152096,
+          0.09111187576471558
+        ],
+        "first_failure_s": {},
+        "duration_s": 40.99800000000414,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/B_left60",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": -60.0,
+        "case": "dominant",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 41.0,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.11299398926831251,
+        0.39467677250465394,
+        0.5608896320438754,
+        0.33897224809656606,
+        0.59999999999927,
+        0.24390702598898362,
+        0.5848959203145625,
+        0.11091473364505706,
+        0.10339674843104675,
+        0.2325208181501349,
+        0.037331943597666714,
+        0.19448649046540878,
+        0.049606110454153154,
+        0.13641414138328073,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000008514,
+        0.8222500000008514,
+        0.8321325835478427,
+        1.000000000000111,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "a88c563efac7dd5f29ad9d093448a006c4c6acd89716203b2bcd3503f97634e4"
+    },
+    {
+      "case": "B_left90",
+      "run": "outputs/p0_complete_20261107/nominal_v4/B_left90",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "inactive_hand_clear_of_rim_during_target_hold": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.42852530471958444,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "2": 0.7384915814413283,
+          "4": 0.7750107767275634
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 3.0071032105222493,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.3517524767430294,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.0722022673733233,
+        "max_load_torque_Nm": 0.15645463700121046,
+        "max_wheel_angle_deg": 89.33929223003182,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000011935534,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.3920674703183185,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.743991841663343,
+        "wrist_bend_max_deg_left_right": [
+          23.521148707760346,
+          24.665657525537885
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.02912740285669,
+          2.4053952320445973,
+          2.9501999291370797,
+          3.7651527813012766,
+          0.6012717916457708,
+          1.7447969576026143,
+          1.6040193730323224,
+          11.82368501103813,
+          3.548355074130975,
+          2.825164544078252,
+          3.543647925472517,
+          0.09766476204326313,
+          0.43883521440238793,
+          0.44324190612270087,
+          0.053753780277423946,
+          0.10696318131580743,
+          0.04663667687681938,
+          0.15152248521728806,
+          0.2642367404012047,
+          0.3472733790210982,
+          0.11086284374838029,
+          0.01164187549082546,
+          0.05452661587081442,
+          0.03247823762996416,
+          0.04670665507636551,
+          0.09235608181220933
+        ],
+        "first_failure_s": {},
+        "duration_s": 52.998000000018806,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/B_left90",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": -90.0,
+        "case": "dominant",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 53.0,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.11230971158019007,
+        0.4062355278988541,
+        0.5758520793037221,
+        0.3383306220400451,
+        0.59999999999927,
+        0.24718780555100006,
+        0.5840821424379092,
+        0.1109147335456921,
+        0.10331982237547639,
+        0.23259697193605428,
+        0.053278728006896474,
+        0.19490097903289894,
+        0.05011479621480632,
+        0.1361327633720018,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000016008,
+        0.8222500000016008,
+        0.8321325835478427,
+        1.000000000000111,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "f1660d34ab13c031186df808b11d7cd8663e320b9848124769f9c3d7c5c7f96a"
+    },
+    {
+      "case": "B_right30",
+      "run": "outputs/p0_complete_20261107/nominal_v4/B_right30",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "inactive_hand_clear_of_rim_during_target_hold": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.18378212332034388,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "2": 0.018625236087746674,
+          "4": 0.350038704243205
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.9919509995193354,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.366682054875644,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.07612241134982745,
+        "max_load_torque_Nm": 0.05290760250495523,
+        "max_wheel_angle_deg": 30.01336158892481,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000011672468,
+        "minimum_paddle_clearance_mm_at_50Hz": 4.8119096070379,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.25828476133994,
+        "wrist_bend_max_deg_left_right": [
+          22.906358062739763,
+          23.573246628185412
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.861269574726787,
+          1.4362050046851094,
+          1.3136847073994673,
+          3.8064519006741415,
+          0.1506819800320396,
+          0.5976395524535434,
+          0.3663799032016899,
+          10.096668739180409,
+          2.38527034285425,
+          3.2618957771615764,
+          3.8067627692268027,
+          0.6220538785465526,
+          2.0520818597649924,
+          1.56266931525873,
+          0.07219475305662915,
+          0.014249583811340394,
+          0.04177925702536922,
+          0.027481911819491556,
+          0.04713680109493512,
+          0.08539164439613622,
+          0.09410149182411143,
+          0.10736990994770387,
+          0.055375693380057545,
+          0.20874072856438342,
+          0.2683668123589952,
+          0.34984764216900077
+        ],
+        "first_failure_s": {},
+        "duration_s": 28.997999999994807,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/B_right30",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": 30.0,
+        "case": "dominant",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 29.0,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.06033248849022438,
+        0.06099082917867444,
+        0.11860373980939123,
+        0.013579924681881756,
+        0.13700434308995843,
+        0.050228886065323254,
+        0.1363613944486967,
+        0.11670085562893535,
+        0.40448390540798135,
+        0.5784220496635424,
+        0.3373036269959866,
+        0.6000000000003358,
+        0.24536442648517562,
+        0.5854574459912191,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000001748,
+        0.8222500000001748,
+        0.8321325835478427,
+        1.000000000000111
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "db934da74d7c064f16f0d6e97d49a1467c0b5291ba08ade80c01c3f41ad45441"
+    },
+    {
+      "case": "B_right60",
+      "run": "outputs/p0_complete_20261107/nominal_v4/B_right60",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "inactive_hand_clear_of_rim_during_target_hold": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.18503570033838995,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "2": 0.29623749717664916,
+          "4": 0.578067752997331
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.9921064330157954,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.33790877247107076,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.07140945194776288,
+        "max_load_torque_Nm": 0.10478392061217565,
+        "max_wheel_angle_deg": 59.74246321131076,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000011748602,
+        "minimum_paddle_clearance_mm_at_50Hz": 4.7082691778529,
+        "minimum_spoke_clearance_mm_at_50Hz": 6.790335223048729,
+        "wrist_bend_max_deg_left_right": [
+          24.726830182156952,
+          23.573103391424723
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          11.97132982626438,
+          2.3669461028456347,
+          3.0091357895948123,
+          3.7849206041801438,
+          0.14875489026864042,
+          0.5729664906033047,
+          0.3864956507489914,
+          10.145314946967684,
+          2.4034355616816256,
+          3.3558393633787422,
+          3.8690836407907754,
+          0.6141681772342302,
+          2.292394668274121,
+          1.5794540942249453,
+          0.07233530118203113,
+          0.014935623643093532,
+          0.04225457983883496,
+          0.026854724243541073,
+          0.050236834644181494,
+          0.08523131111441407,
+          0.0938183791295768,
+          0.10736990994770387,
+          0.05555216052380474,
+          0.24321585701801696,
+          0.26947812230538293,
+          0.35
+        ],
+        "first_failure_s": {},
+        "duration_s": 40.99800000000414,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/B_right60",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": 60.0,
+        "case": "dominant",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 41.0,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.11119105472463033,
+        0.10961435158910429,
+        0.22889864848395422,
+        0.03739974166629819,
+        0.19525277305511704,
+        0.050228886065323254,
+        0.1362786642555214,
+        0.11566173718538261,
+        0.39518096582857803,
+        0.5613002398048998,
+        0.3384321986014779,
+        0.59999999999927,
+        0.24460115058026005,
+        0.5846814772733218,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000008514,
+        0.8222500000008514,
+        0.8321325835478427,
+        1.000000000000111
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "2fccdbdbaaabbdf5e6c126ca31a6dc7027d13edb6cd3d6ee32d4aa91437657ec"
+    },
+    {
+      "case": "B_right90",
+      "run": "outputs/p0_complete_20261107/nominal_v4/B_right90",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "inactive_hand_clear_of_rim_during_target_hold": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.5863252684292178,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "2": 0.9193277816390902,
+          "4": 1.0907733667309514
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.9927018030855352,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.3437597179487842,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.07991506097713878,
+        "max_load_torque_Nm": 0.1562669756805882,
+        "max_wheel_angle_deg": 89.2327451260306,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000011732184,
+        "minimum_paddle_clearance_mm_at_50Hz": 4.592631172944182,
+        "minimum_spoke_clearance_mm_at_50Hz": 5.6357580753917,
+        "wrist_bend_max_deg_left_right": [
+          24.730210618904625,
+          23.57387741367336
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          12.01526366148388,
+          3.403231397485685,
+          2.9923151429044275,
+          3.74698147265891,
+          0.1445886969634267,
+          0.5621100080405819,
+          0.4248671941034188,
+          10.115826802170998,
+          2.430434264159322,
+          3.3058612708827892,
+          3.8827278167329156,
+          0.5890804300835257,
+          2.3363528057897494,
+          1.644274703755678,
+          0.08596728623236194,
+          0.015505944193635768,
+          0.050011429920953976,
+          0.025982434162091117,
+          0.056294573903549194,
+          0.0857571083531401,
+          0.0882228032548451,
+          0.10736990994770387,
+          0.05271893745785072,
+          0.24668814850334564,
+          0.26765834211323136,
+          0.3493228479381636
+        ],
+        "first_failure_s": {},
+        "duration_s": 52.998000000018806,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/B_right90",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": 90.0,
+        "case": "dominant",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 53.0,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.11119105472574055,
+        0.10985029152966072,
+        0.22977982092811328,
+        0.05378796101998745,
+        0.19580633962621935,
+        0.050342929642122204,
+        0.13647503409483483,
+        0.10993179881538694,
+        0.3888067101284859,
+        0.5529826517381473,
+        0.33952972167510115,
+        0.59999999999927,
+        0.25284814476827694,
+        0.5849315903304132,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000016008,
+        0.8222500000016008,
+        0.8321325835478427,
+        1.000000000000111
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "30f12d0cc44181837c32c1f6d9a5eab9aebb5250dac11338d6197206bbf1be46"
+    },
+    {
+      "case": "D_left30",
+      "run": "outputs/p0_complete_20261107/nominal_v4/D_left30",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "handover_overlap_ge_0p1s": true,
+          "handover_new_hand_alone_10s": true,
+          "handover_old_hand_clear": true,
+          "handover_nonzero_load": true,
+          "handover_new_mean_counterload_torque_ge_0p02Nm": true,
+          "handover_new_six_parts_support_95pct": true,
+          "handover_angle_retreat_le_2deg": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.22588295330191058,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "6": 0.06500667074308718,
+          "8": 0.3474728347136265,
+          "10": 0.49556252429056913,
+          "2": 0.524862725590773,
+          "4": 0.04776812585775566
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.859145635543933,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.3260838294626127,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.07945286188655161,
+        "max_load_torque_Nm": 0.05296003287353377,
+        "max_wheel_angle_deg": 30.043687922009386,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000011998416,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.003063002695605,
+        "minimum_spoke_clearance_mm_at_50Hz": 7.743964290852843,
+        "wrist_bend_max_deg_left_right": [
+          23.518438774517477,
+          25.824152187396766
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          11.147883816625875,
+          2.3749737304234273,
+          3.1923907659699866,
+          3.834574075063648,
+          0.6108551073037161,
+          2.0840147348266904,
+          1.531095244427613,
+          11.039077313169717,
+          3.661728989831187,
+          3.4263829438961695,
+          3.84980976746728,
+          1.1669802975697787,
+          2.222570847180652,
+          1.8881950888786778,
+          0.08106435440571103,
+          0.10696322422709723,
+          0.055917118617130335,
+          0.2265233806655369,
+          0.2566024330374691,
+          0.33646594462649004,
+          0.10810717522890534,
+          0.10450325799322271,
+          0.05287651467655996,
+          0.2460198301388592,
+          0.26869826847794553,
+          0.35
+        ],
+        "first_failure_s": {},
+        "duration_s": 59.99800000002736,
+        "handover": {
+          "new_support": "left",
+          "moving": false,
+          "overlap_s": 3.576,
+          "new_mean_counterload_torque_Nm": 0.05784723097368357,
+          "relative_angle_retreat_deg": 0.15991827734475283,
+          "receiving_grip_epoch_deg": -29.999999999999996,
+          "final_outbound_angle_deg": -29.999999999999996
+        },
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/D_left30",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": -30.0,
+        "case": "handover",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "stop_on_constraint": false,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 60.0,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.11665868979883003,
+        0.39807678929426116,
+        0.5651171765454359,
+        0.3389081838335415,
+        0.6000000000003358,
+        0.24269048127617115,
+        0.5845331228043321,
+        0.2156844032219026,
+        0.5396907797674343,
+        0.6000000000003497,
+        0.3373507330232678,
+        0.6000000000003497,
+        0.24327209648734271,
+        0.6000000000003358,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000002303,
+        0.8222500000002303,
+        0.8321325835478427,
+        1.000000000000111,
+        1.000000000000569,
+        0.5255672627498541,
+        0.8222500000030163,
+        0.8222500000030163,
+        0.8321325835493225,
+        1.0000000000005551
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "9c756d46080c00218742095fcd66feed85411cfed031844b179714494d64ffcf",
+      "hand_phase_range_deg": [
+        [
+          0.0,
+          -29.999999999999996
+        ],
+        [
+          29.999999999999996,
+          0.0
+        ]
+      ]
+    },
+    {
+      "case": "D_right30",
+      "run": "outputs/p0_complete_20261107/nominal_v4/D_right30",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "handover_overlap_ge_0p1s": true,
+          "handover_new_hand_alone_10s": true,
+          "handover_old_hand_clear": true,
+          "handover_nonzero_load": true,
+          "handover_new_mean_counterload_torque_ge_0p02Nm": true,
+          "handover_new_six_parts_support_95pct": true,
+          "handover_angle_retreat_le_2deg": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.20937887490988302,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "6": 0.07550251016382262,
+          "8": 0.4022436480810513,
+          "10": 0.4631630562844289,
+          "2": 0.4751334448977447,
+          "4": 0.09170314762395042
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.877141634977795,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.3701220605641969,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.07096778586708881,
+        "max_load_torque_Nm": 0.05290844611028973,
+        "max_wheel_angle_deg": 30.013836172001795,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000012890738,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.177422490299357,
+        "minimum_spoke_clearance_mm_at_50Hz": 5.011283218364028,
+        "wrist_bend_max_deg_left_right": [
+          25.74679595557878,
+          23.571323481742883
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          11.34154353189057,
+          3.8370413897066173,
+          3.1246884586364883,
+          3.77780985476849,
+          1.1836559040494903,
+          1.9418779226329155,
+          1.8833014487854858,
+          10.80210053442489,
+          2.312058947380155,
+          3.1893822995364816,
+          3.807800586889487,
+          0.5828788413629087,
+          2.0150549335623325,
+          1.5043541351955128,
+          0.08122526307262357,
+          0.10474531085600422,
+          0.04400678941940184,
+          0.20282730625991374,
+          0.2656500743354556,
+          0.3490387906522451,
+          0.11721256473342345,
+          0.10736982394659131,
+          0.06257265182759864,
+          0.2102682668195579,
+          0.2547473037482415,
+          0.3354773661234892
+        ],
+        "first_failure_s": {},
+        "duration_s": 59.99800000002736,
+        "handover": {
+          "new_support": "right",
+          "moving": false,
+          "overlap_s": 2.928,
+          "new_mean_counterload_torque_Nm": 0.05628308115562271,
+          "relative_angle_retreat_deg": 0.07370294115160297,
+          "receiving_grip_epoch_deg": 29.999999999999996,
+          "final_outbound_angle_deg": 29.999999999999996
+        },
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/D_right30",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": 30.0,
+        "case": "handover",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "stop_on_constraint": false,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 60.0,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.21855797444831804,
+        0.5611808156793436,
+        0.6000000000003497,
+        0.3374626792439291,
+        0.6000000000003497,
+        0.24020402419376372,
+        0.6000000000003358,
+        0.11472786408329413,
+        0.39563009959578466,
+        0.5618940756754619,
+        0.3378919790442483,
+        0.6000000000003358,
+        0.24729732000222487,
+        0.5846521624051894,
+        1.000000000000569,
+        0.5255672627498541,
+        0.8222500000030163,
+        0.8222500000030163,
+        0.8321325835493225,
+        1.0000000000005551,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000002303,
+        0.8222500000002303,
+        0.8321325835478427,
+        1.000000000000111
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "1f0a0127dd39509eeec00215ecc520524ffcf8f2d9f9932a7acec6f85ff91503",
+      "hand_phase_range_deg": [
+        [
+          0.0,
+          -29.999999999999996
+        ],
+        [
+          29.999999999999996,
+          0.0
+        ]
+      ]
+    },
+    {
+      "case": "negative_no_contact",
+      "run": "outputs/p0_complete_20261107/nominal_v4/negative_no_contact",
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": false,
+          "hold_tail_peak_le_2deg": false,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": false,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "inactive_hand_clear_of_rim_during_target_hold": true
+        },
+        "negative_control": true,
+        "motion_RMSE_deg": 17.57563012311498,
+        "hold_tail_peak_deg": {
+          "0": 0.022733937221812522,
+          "2": 29.916154777740317,
+          "4": 0.19356534397302422
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "2": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "4": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.980511410869394,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.0,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.02403858883475031,
+        "max_load_torque_Nm": 0.00034006011878797023,
+        "max_wheel_angle_deg": 0.19356534397302422,
+        "max_contact_minus_constraint_torque_Nm": 0.001383430116992791,
+        "minimum_paddle_clearance_mm_at_50Hz": 2.745260169870253,
+        "minimum_spoke_clearance_mm_at_50Hz": -1.9060651290866288,
+        "wrist_bend_max_deg_left_right": [
+          23.357282063879975,
+          23.567917978053476
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          11.216013409949149,
+          2.283156232439816,
+          2.114015396813792,
+          3.688197684167275,
+          0.0974408121975805,
+          0.5117546317269168,
+          0.2755234097024735,
+          9.540915853480872,
+          1.0541839865491474,
+          0.5812106088520741,
+          3.5412489103214995,
+          0.11822183450787416,
+          0.47884700087679044,
+          0.29807889356627065,
+          0.053753780277423946,
+          0.0124930817840615,
+          0.04108817459202463,
+          0.0191533035110798,
+          0.034589639491072965,
+          0.07809367693862201,
+          0.08568206429760972,
+          0.1075986961499949,
+          0.04845105525889015,
+          0.039885100948204855,
+          0.04115900113952509,
+          0.08212890172830178
+        ],
+        "first_failure_s": {},
+        "duration_s": 28.997999999994807,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/nominal_v4/negative_no_contact",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": 30.0,
+        "case": "dominant",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "stop_on_constraint": false,
+        "negative_control": true,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 29.0,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.07104702665442345,
+        0.08077746516965538,
+        0.1862005516090889,
+        0.019240095185484977,
+        0.3254379447320043,
+        0.12035510258774372,
+        0.32615122821689474,
+        0.11975557406358449,
+        0.4034219275797569,
+        0.5695323907316043,
+        0.3361812755878029,
+        0.6000000000003358,
+        0.22631763647044997,
+        0.5828770780087447,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000001748,
+        0.8222500000001748,
+        0.8321325835478427,
+        1.000000000000111
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "a3355937ce929e7e8af8b3207078345a7a09ac41a0f595ae52af880d30ecc8c9"
+    },
+    {
+      "case": "moving_right15_v4",
+      "run": "outputs/p0_complete_20261107/moving_right15_v4",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "handover_overlap_ge_0p1s": true,
+          "handover_new_hand_alone_10s": true,
+          "handover_old_hand_clear": true,
+          "handover_nonzero_load": true,
+          "handover_new_mean_counterload_torque_ge_0p02Nm": true,
+          "handover_new_six_parts_support_95pct": true,
+          "handover_angle_retreat_le_2deg": true,
+          "handover_reference_keeps_moving": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.6118244353140257,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "6": 0.019843709816186307,
+          "8": 0.4333150465106465,
+          "10": 0.8561817881380007,
+          "2": 0.889964808526566,
+          "4": 0.8754624328577733
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.9273622882575387,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.3591002975375869,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.07587101324723398,
+        "max_load_torque_Nm": 0.06062598873973737,
+        "max_wheel_angle_deg": 34.678613819852025,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000011990873,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.177422490299357,
+        "minimum_spoke_clearance_mm_at_50Hz": 3.932011469128852,
+        "wrist_bend_max_deg_left_right": [
+          25.124743810031653,
+          23.578407929360576
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.873506400482366,
+          2.4256202335146675,
+          2.959179224346385,
+          3.688443036824563,
+          0.6472997924543877,
+          1.4732451107826783,
+          1.5873750722182502,
+          10.446343142796849,
+          2.5152462318915987,
+          3.0296892267208224,
+          3.7783326525750396,
+          0.632199425413027,
+          1.647667542856479,
+          1.55320995733048,
+          0.08851734851072512,
+          0.1061499287042385,
+          0.04505789692283635,
+          0.14391711417236897,
+          0.26915244415191153,
+          0.35,
+          0.11999525911155251,
+          0.10736982394659131,
+          0.05516014674811842,
+          0.15875113915627348,
+          0.2629451571821406,
+          0.3435324803982155
+        ],
+        "first_failure_s": {},
+        "duration_s": 58.09800000002504,
+        "handover": {
+          "new_support": "right",
+          "moving": true,
+          "overlap_s": 2.876,
+          "new_mean_counterload_torque_Nm": 0.07350950244081138,
+          "relative_angle_retreat_deg": 0.423275805649536,
+          "receiving_grip_epoch_deg": 17.55,
+          "final_outbound_angle_deg": 35.5
+        },
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/moving_right15_v4",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": 15.0,
+        "case": "moving_handover",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 58.1,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.12425751932661158,
+        0.4408340212227344,
+        0.571418707632369,
+        0.33593389795426715,
+        0.5945994236086651,
+        0.2329224928237712,
+        0.5676276389277488,
+        0.11296086720536545,
+        0.4206056732320828,
+        0.5932224939968712,
+        0.33846381538349424,
+        0.6000000000003358,
+        0.2468437197951903,
+        0.5821414279881288,
+        1.000000000000569,
+        0.5255672627495765,
+        0.8222500000026277,
+        0.8222500000026277,
+        0.8321325835489339,
+        1.0000000000005551,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000000638,
+        0.8222500000000638,
+        0.8321325835478427,
+        1.000000000000111
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "441cebc20d4a525715523f2b1df5dd1059caa586df07ec4472bc123f1723ecf9",
+      "hand_phase_range_deg": [
+        [
+          0.0,
+          -17.55
+        ],
+        [
+          25.74999999999453,
+          17.95
+        ]
+      ]
+    },
+    {
+      "case": "moving_left15_v4",
+      "run": "outputs/p0_complete_20261107/moving_left15_v4",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "handover_overlap_ge_0p1s": true,
+          "handover_new_hand_alone_10s": true,
+          "handover_old_hand_clear": true,
+          "handover_nonzero_load": true,
+          "handover_new_mean_counterload_torque_ge_0p02Nm": true,
+          "handover_new_six_parts_support_95pct": true,
+          "handover_angle_retreat_le_2deg": true,
+          "handover_reference_keeps_moving": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.4462204828893472,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "6": 0.04129859905712715,
+          "8": 0.33685242320727066,
+          "10": 0.6238249092000461,
+          "2": 0.6111368779117673,
+          "4": 0.4304793886202831
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "6": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.908817346851289,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.36655955560991044,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.0790089827260877,
+        "max_load_torque_Nm": 0.06104357060398877,
+        "max_wheel_angle_deg": 34.91996144084459,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000011791567,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.36109743346942,
+        "minimum_spoke_clearance_mm_at_50Hz": 5.88014416990088,
+        "wrist_bend_max_deg_left_right": [
+          23.52572549570365,
+          25.19701634740176
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          10.673457814268355,
+          2.5572589771346,
+          3.0470206709948147,
+          3.7914983210428876,
+          0.6708596051025659,
+          1.7689422455136294,
+          1.5622004482893899,
+          10.606455291470274,
+          2.4053524891721594,
+          3.1770427004043817,
+          3.841750128031702,
+          0.5975022282364844,
+          2.20096256611143,
+          1.6071560557370244,
+          0.09045518124235863,
+          0.10696322422709723,
+          0.048136662748773595,
+          0.18984333835587397,
+          0.26010358484285323,
+          0.33817372031684645,
+          0.11503360495580561,
+          0.10519923310542578,
+          0.05165869626652997,
+          0.257217246883255,
+          0.266390145099054,
+          0.35
+        ],
+        "first_failure_s": {},
+        "duration_s": 58.09800000002504,
+        "handover": {
+          "new_support": "left",
+          "moving": true,
+          "overlap_s": 3.646,
+          "new_mean_counterload_torque_Nm": 0.07612484564643522,
+          "relative_angle_retreat_deg": 0.2912542923278254,
+          "receiving_grip_epoch_deg": -17.55,
+          "final_outbound_angle_deg": -35.5
+        },
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/moving_left15_v4",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": -15.0,
+        "case": "moving_handover",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 58.1,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.1138192441825301,
+        0.405978455149013,
+        0.5787109019967198,
+        0.33904594858238296,
+        0.6000000000003358,
+        0.24377824483106847,
+        0.5836954717614627,
+        0.1244065895158043,
+        0.4399582712250788,
+        0.5690636904677299,
+        0.33714541398523806,
+        0.59999999999927,
+        0.23934993471451285,
+        0.58433070089492,
+        1.000000000000125,
+        0.5255672627489129,
+        0.8222500000000638,
+        0.8222500000000638,
+        0.8321325835478427,
+        1.000000000000111,
+        1.000000000000569,
+        0.5255672627495765,
+        0.8222500000026277,
+        0.8222500000026277,
+        0.8321325835489339,
+        1.0000000000005551
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "65af9524b433c0d6d7f6dc8ac0e671d64fc18f58d469d2daa1dd2693de102ced",
+      "hand_phase_range_deg": [
+        [
+          -17.95,
+          -25.74999999999453
+        ],
+        [
+          17.55,
+          0.0
+        ]
+      ]
+    },
+    {
+      "case": "continuous_positive70_v5",
+      "run": "outputs/p0_complete_20261107/continuous_positive70_v5",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "cycle_0_handover_overlap_ge_0p1s": true,
+          "cycle_0_handover_new_hand_alone_10s": true,
+          "cycle_0_handover_old_hand_clear": true,
+          "cycle_0_handover_new_six_parts_support_95pct": true,
+          "cycle_0_handover_angle_retreat_le_2deg": true,
+          "cycle_0_handover_reference_keeps_moving": true,
+          "cycle_1_handover_overlap_ge_0p1s": true,
+          "cycle_1_handover_new_hand_alone_10s": true,
+          "cycle_1_handover_old_hand_clear": true,
+          "cycle_1_handover_new_six_parts_support_95pct": true,
+          "cycle_1_handover_angle_retreat_le_2deg": true,
+          "cycle_1_handover_reference_keeps_moving": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.380309044328282,
+        "hold_tail_peak_deg": {
+          "0": 0.017487349340231093,
+          "8:0": 0.47763109048669966,
+          "8:1": 0.23215935064815543,
+          "10:0": 0.5046703137679258,
+          "10:1": 0.22602021911450482,
+          "2:0": 0.46831938523461303,
+          "2:1": 0.44796030325055897,
+          "2:2": 0.2176077339217099,
+          "2:3": 0.6560719010430838,
+          "4": 0.7108117849722161
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8:0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8:1": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10:0": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10:1": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "2:0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "2:1": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "2:2": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2:3": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.957471233746133,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.34327875488231635,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.07132612590721266,
+        "max_load_torque_Nm": 0.12199237734387865,
+        "max_wheel_angle_deg": 69.60095422291836,
+        "max_contact_minus_constraint_torque_Nm": 0.01500000001159632,
+        "minimum_paddle_clearance_mm_at_50Hz": 4.661333884410009,
+        "minimum_spoke_clearance_mm_at_50Hz": 3.5417925580665983,
+        "wrist_bend_max_deg_left_right": [
+          24.74194030528151,
+          24.80313195308503
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          12.195338425065401,
+          2.86178573010514,
+          3.1246258680657677,
+          3.688441116882761,
+          0.5649492596983037,
+          1.3950831023439525,
+          1.646854187632692,
+          11.675588116393165,
+          2.5537721366377757,
+          3.2038760418014185,
+          3.809919871670937,
+          0.5950472951770247,
+          2.100047740874862,
+          1.6580126978394971,
+          0.08505356462710267,
+          0.10548860597044565,
+          0.04785950668836181,
+          0.11489535994356692,
+          0.2605317240230537,
+          0.3459713526919772,
+          0.11027268441545468,
+          0.10734331981887868,
+          0.05496921668439403,
+          0.20576887597595528,
+          0.2707664256526344,
+          0.35
+        ],
+        "first_failure_s": {},
+        "duration_s": 133.79799999991076,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof",
+        "handover_cycles": [
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": true,
+              "handover_new_hand_alone_10s": true,
+              "handover_old_hand_clear": true,
+              "handover_new_six_parts_support_95pct": true,
+              "handover_angle_retreat_le_2deg": true,
+              "handover_reference_keeps_moving": true
+            },
+            "handover": {
+              "new_support": "right",
+              "moving": true,
+              "overlap_s": 3.144,
+              "new_mean_counterload_torque_Nm": 0.00041011627214984864,
+              "relative_angle_retreat_deg": 0.040675181742657274,
+              "receiving_grip_epoch_deg": 22.45,
+              "final_outbound_angle_deg": 4.5
+            }
+          },
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": true,
+              "handover_new_hand_alone_10s": true,
+              "handover_old_hand_clear": true,
+              "handover_new_six_parts_support_95pct": true,
+              "handover_angle_retreat_le_2deg": true,
+              "handover_reference_keeps_moving": true
+            },
+            "handover": {
+              "new_support": "left",
+              "moving": true,
+              "overlap_s": 3.73,
+              "new_mean_counterload_torque_Nm": 0.025235912978731925,
+              "relative_angle_retreat_deg": 0.050552466241174765,
+              "receiving_grip_epoch_deg": -7.449999999999999,
+              "final_outbound_angle_deg": 10.5
+            }
+          }
+        ],
+        "continuous_scope": {
+          "maximum_requested_deg": 70.0,
+          "no_physics_reset": true,
+          "load_capacity_proof": "separate nonzero-load D/E cases"
+        }
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/continuous_positive70_v5",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": 1.0,
+        "case": "continuous",
+        "maximum": 70.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "stop_on_constraint": false,
+        "negative_control": false,
+        "contact_grip": true,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 133.8,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.11947287944141882,
+        0.40198316852776117,
+        0.5691407584078716,
+        0.33614364567751825,
+        0.6000000000014016,
+        0.24074341336297642,
+        0.584255480304165,
+        0.11757616699386776,
+        0.4063716461877443,
+        0.5786988060148704,
+        0.33808718874011673,
+        0.59999999999927,
+        0.2466303824257751,
+        0.5852009345148992,
+        0.9999999999987926,
+        0.5255672627500724,
+        0.8222500000009693,
+        0.8222500000009693,
+        0.8321325835496762,
+        0.9999999999987788,
+        1.0000000000023455,
+        0.5255672627510236,
+        0.8222500000186773,
+        0.8222500000186773,
+        0.8321325835511892,
+        1.0000000000023315
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "77543e2e36d20b45bebd67d2d0de9ed613c6f910f759e200a89fc1376f52f450",
+      "hand_phase_range_deg": [
+        [
+          0.0,
+          -62.449999999999996
+        ],
+        [
+          77.44999999999999,
+          0.0
+        ]
+      ],
+      "max_finger_recovery_offset_rad": [
+        [
+          0.00225,
+          0.003017951903660949,
+          0.00225,
+          0.00225
+        ],
+        [
+          0.00225,
+          0.00225,
+          0.00225,
+          0.00225
+        ]
+      ]
+    },
+    {
+      "case": "continuous_negative70_v5",
+      "run": "outputs/p0_complete_20261107/continuous_negative70_v5",
+      "evaluation": {
+        "passed": true,
+        "checks": {
+          "complete_finite_execution": true,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": true,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": true,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "cycle_0_handover_overlap_ge_0p1s": true,
+          "cycle_0_handover_new_hand_alone_10s": true,
+          "cycle_0_handover_old_hand_clear": true,
+          "cycle_0_handover_new_six_parts_support_95pct": true,
+          "cycle_0_handover_angle_retreat_le_2deg": true,
+          "cycle_0_handover_reference_keeps_moving": true,
+          "cycle_1_handover_overlap_ge_0p1s": true,
+          "cycle_1_handover_new_hand_alone_10s": true,
+          "cycle_1_handover_old_hand_clear": true,
+          "cycle_1_handover_new_six_parts_support_95pct": true,
+          "cycle_1_handover_angle_retreat_le_2deg": true,
+          "cycle_1_handover_reference_keeps_moving": true
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.367398248340119,
+        "hold_tail_peak_deg": {
+          "0": 0.017487349340231093,
+          "8:0": 0.37225563968803344,
+          "8:1": 0.05357433401301515,
+          "10:0": 0.3839528030996619,
+          "10:1": 0.16045630856917997,
+          "2:0": 0.419438989005746,
+          "2:1": 0.3482965038983976,
+          "2:2": 0.0678142839775519,
+          "2:3": 0.8525420867822091,
+          "4": 0.7733389726301232
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8:0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8:1": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10:0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "10:1": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2:0": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2:1": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2:2": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "2:3": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.925848780025807,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.36439419485639246,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.0,
+        "max_mimic_error_deg": 0.07161668869272698,
+        "max_load_torque_Nm": 0.12206614597489447,
+        "max_wheel_angle_deg": 69.64743346568648,
+        "max_contact_minus_constraint_torque_Nm": 0.01500000001178542,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.387393010102497,
+        "minimum_spoke_clearance_mm_at_50Hz": 3.817345511026361,
+        "wrist_bend_max_deg_left_right": [
+          24.76902439448463,
+          24.6953434745202
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          11.865542402665621,
+          2.4738789816764775,
+          2.971072533853617,
+          3.76205433803152,
+          0.6016936257462198,
+          1.8061496259794407,
+          1.6110359862646852,
+          11.8158801918197,
+          2.9880360708870883,
+          2.828738676474595,
+          3.7356303337929457,
+          0.5433415908771431,
+          1.8993352454348735,
+          1.455859894319212,
+          0.08104744112656292,
+          0.10694198404130414,
+          0.04747837377261255,
+          0.16889057995311196,
+          0.2646588669766038,
+          0.3476062963406359,
+          0.1083107282250817,
+          0.10560700410732113,
+          0.053846781087405926,
+          0.1823347428267812,
+          0.2588837668905535,
+          0.3454144500379527
+        ],
+        "first_failure_s": {},
+        "duration_s": 133.79799999991076,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof",
+        "handover_cycles": [
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": true,
+              "handover_new_hand_alone_10s": true,
+              "handover_old_hand_clear": true,
+              "handover_new_six_parts_support_95pct": true,
+              "handover_angle_retreat_le_2deg": true,
+              "handover_reference_keeps_moving": true
+            },
+            "handover": {
+              "new_support": "left",
+              "moving": true,
+              "overlap_s": 3.162,
+              "new_mean_counterload_torque_Nm": 0.0032589678127599676,
+              "relative_angle_retreat_deg": 0.045499074926878935,
+              "receiving_grip_epoch_deg": -22.45,
+              "final_outbound_angle_deg": -4.5
+            }
+          },
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": true,
+              "handover_new_hand_alone_10s": true,
+              "handover_old_hand_clear": true,
+              "handover_new_six_parts_support_95pct": true,
+              "handover_angle_retreat_le_2deg": true,
+              "handover_reference_keeps_moving": true
+            },
+            "handover": {
+              "new_support": "right",
+              "moving": true,
+              "overlap_s": 3.242,
+              "new_mean_counterload_torque_Nm": 0.0280877396656321,
+              "relative_angle_retreat_deg": 0.10687857365870086,
+              "receiving_grip_epoch_deg": 7.449999999999999,
+              "final_outbound_angle_deg": -10.5
+            }
+          }
+        ],
+        "continuous_scope": {
+          "maximum_requested_deg": 70.0,
+          "no_physics_reset": true,
+          "load_capacity_proof": "separate nonzero-load D/E cases"
+        }
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/continuous_negative70_v5",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": -1.0,
+        "case": "continuous",
+        "maximum": 70.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "stop_on_constraint": false,
+        "negative_control": false,
+        "contact_grip": true,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 133.8,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.12050346688547205,
+        0.4134403853320025,
+        0.5748190581031603,
+        0.33864244529650284,
+        0.59999999999927,
+        0.24609201914373613,
+        0.5847523414099055,
+        0.11902540282088243,
+        0.40889209085123607,
+        0.5740876192381014,
+        0.33650353716777065,
+        0.6000000000014016,
+        0.24132308972419533,
+        0.5818852505638547,
+        1.0000000000023455,
+        0.5255672627510236,
+        0.8222500000186773,
+        0.8222500000186773,
+        0.8321325835511892,
+        1.0000000000023315,
+        0.9999999999987926,
+        0.5255672627500724,
+        0.8222500000009693,
+        0.8222500000009693,
+        0.8321325835496762,
+        0.9999999999987788
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "de28dbdd25a7dcb152b8104b58e21f5da0a80044f0dc0df6e2816f1c7c9e8ef9",
+      "hand_phase_range_deg": [
+        [
+          0.0,
+          -77.44999999999999
+        ],
+        [
+          62.449999999999996,
+          0.0
+        ]
+      ],
+      "max_finger_recovery_offset_rad": [
+        [
+          0.00225,
+          0.00225,
+          0.014406988689587659,
+          0.00225
+        ],
+        [
+          0.00225,
+          0.00225,
+          0.00225,
+          0.00225
+        ]
+      ]
+    },
+    {
+      "case": "boundary_positive180_v4",
+      "run": "outputs/p0_complete_20261107/boundary_positive180_v4",
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete_finite_execution": false,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": false,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": false,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": true,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "cycle_0_handover_overlap_ge_0p1s": true,
+          "cycle_0_handover_new_hand_alone_10s": true,
+          "cycle_0_handover_old_hand_clear": true,
+          "cycle_0_handover_new_six_parts_support_95pct": true,
+          "cycle_0_handover_angle_retreat_le_2deg": true,
+          "cycle_0_handover_reference_keeps_moving": true,
+          "cycle_1_handover_overlap_ge_0p1s": true,
+          "cycle_1_handover_new_hand_alone_10s": true,
+          "cycle_1_handover_old_hand_clear": true,
+          "cycle_1_handover_new_six_parts_support_95pct": true,
+          "cycle_1_handover_angle_retreat_le_2deg": true,
+          "cycle_1_handover_reference_keeps_moving": true,
+          "cycle_2_handover_overlap_ge_0p1s": false,
+          "cycle_2_handover_new_hand_alone_10s": false,
+          "cycle_2_handover_old_hand_clear": false,
+          "cycle_2_handover_new_six_parts_support_95pct": false,
+          "cycle_2_handover_angle_retreat_le_2deg": false,
+          "cycle_2_handover_reference_keeps_moving": true,
+          "cycle_3_handover_overlap_ge_0p1s": false,
+          "cycle_3_handover_new_hand_alone_10s": false,
+          "cycle_3_handover_old_hand_clear": false,
+          "cycle_3_handover_new_six_parts_support_95pct": false,
+          "cycle_3_handover_angle_retreat_le_2deg": false,
+          "cycle_3_handover_reference_keeps_moving": false,
+          "cycle_4_handover_overlap_ge_0p1s": false,
+          "cycle_4_handover_new_hand_alone_10s": false,
+          "cycle_4_handover_old_hand_clear": false,
+          "cycle_4_handover_new_six_parts_support_95pct": false,
+          "cycle_4_handover_angle_retreat_le_2deg": false,
+          "cycle_4_handover_reference_keeps_moving": false
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.39286866302774137,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "8:0": 0.4785251565812766,
+          "8:1": 0.26137158808456595,
+          "10:0": 0.5072754957447915,
+          "10:1": 0.26076892313007377,
+          "2:0": 0.4601520191654499,
+          "2:1": 0.44656156641620137,
+          "2:2": 0.22356387756117105
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8:0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8:1": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10:0": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10:1": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "2:0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "2:1": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "2:2": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.957111551486982,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.3431836887025453,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.4573485695393248,
+        "max_mimic_error_deg": 0.0692628199285311,
+        "max_load_torque_Nm": 0.12200426486163109,
+        "max_wheel_angle_deg": 69.64528819018716,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000010878353,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.177422490299898,
+        "minimum_spoke_clearance_mm_at_50Hz": 3.5496626492285346,
+        "wrist_bend_max_deg_left_right": [
+          24.74177208516601,
+          24.80311738782397
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          12.039968417653402,
+          2.764739659047136,
+          3.109178573576697,
+          3.688443036824563,
+          0.5652926159071541,
+          1.4180795801143422,
+          1.6363587924117136,
+          11.671305838400535,
+          2.557254461355931,
+          2.7845954755192635,
+          3.7783326525739076,
+          0.532808076080705,
+          1.7550148315617449,
+          1.4940827076348484,
+          0.0846778186778725,
+          0.10551105711182268,
+          0.04697944418067923,
+          0.11803743163933089,
+          0.2602640943470703,
+          0.3459718686183436,
+          0.10715952959500408,
+          0.10736982394659164,
+          0.05397622709061811,
+          0.14629231504167062,
+          0.255054761745076,
+          0.3398805835858987
+        ],
+        "first_failure_s": {
+          "illegal_collision": 108.89599999992761
+        },
+        "duration_s": 108.89599999992761,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof",
+        "handover_cycles": [
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": true,
+              "handover_new_hand_alone_10s": true,
+              "handover_old_hand_clear": true,
+              "handover_new_six_parts_support_95pct": true,
+              "handover_angle_retreat_le_2deg": true,
+              "handover_reference_keeps_moving": true
+            },
+            "handover": {
+              "new_support": "right",
+              "moving": true,
+              "overlap_s": 3.146,
+              "new_mean_counterload_torque_Nm": 0.00040579215897276055,
+              "relative_angle_retreat_deg": 0.04244839509648579,
+              "receiving_grip_epoch_deg": 22.45,
+              "final_outbound_angle_deg": 4.5
+            }
+          },
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": true,
+              "handover_new_hand_alone_10s": true,
+              "handover_old_hand_clear": true,
+              "handover_new_six_parts_support_95pct": true,
+              "handover_angle_retreat_le_2deg": true,
+              "handover_reference_keeps_moving": true
+            },
+            "handover": {
+              "new_support": "left",
+              "moving": true,
+              "overlap_s": 3.73,
+              "new_mean_counterload_torque_Nm": 0.025166859163667645,
+              "relative_angle_retreat_deg": 0.044988066056258214,
+              "receiving_grip_epoch_deg": -7.449999999999999,
+              "final_outbound_angle_deg": 10.5
+            }
+          },
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": false,
+              "handover_new_hand_alone_10s": false,
+              "handover_old_hand_clear": false,
+              "handover_new_six_parts_support_95pct": false,
+              "handover_angle_retreat_le_2deg": false,
+              "handover_reference_keeps_moving": true
+            },
+            "handover": {
+              "new_support": "right",
+              "moving": true,
+              "overlap_s": 0.0,
+              "new_mean_counterload_torque_Nm": null,
+              "relative_angle_retreat_deg": null,
+              "receiving_grip_epoch_deg": 72.55,
+              "final_outbound_angle_deg": 90.5
+            }
+          },
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": false,
+              "handover_new_hand_alone_10s": false,
+              "handover_old_hand_clear": false,
+              "handover_new_six_parts_support_95pct": false,
+              "handover_angle_retreat_le_2deg": false,
+              "handover_reference_keeps_moving": false
+            },
+            "handover": {
+              "new_support": "left",
+              "moving": true,
+              "overlap_s": 0.0,
+              "new_mean_counterload_torque_Nm": null,
+              "relative_angle_retreat_deg": null,
+              "receiving_grip_epoch_deg": 93.04999999999998,
+              "final_outbound_angle_deg": 110.99999999999999
+            }
+          },
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": false,
+              "handover_new_hand_alone_10s": false,
+              "handover_old_hand_clear": false,
+              "handover_new_six_parts_support_95pct": false,
+              "handover_angle_retreat_le_2deg": false,
+              "handover_reference_keeps_moving": false
+            },
+            "handover": {
+              "new_support": "right",
+              "moving": true,
+              "overlap_s": 0.0,
+              "new_mean_counterload_torque_Nm": null,
+              "relative_angle_retreat_deg": null,
+              "receiving_grip_epoch_deg": 97.45,
+              "final_outbound_angle_deg": 79.5
+            }
+          }
+        ],
+        "reevaluation_note": "Physics stopped on first constraint failure. Evaluator fixed for unvisited empty future cycles; no threshold changes or physics rerun.",
+        "continuous_scope": {
+          "maximum_requested_deg": 180,
+          "no_physics_reset": true
+        },
+        "evaluation_source_sha256": "6653c2edd09cf59782a437b7ce6837124c93e2d0a6075b01a5123ab7c8fc2152"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/boundary_positive180_v4",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": 1.0,
+        "case": "continuous",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "stop_on_constraint": true,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 229.50000000000003,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.12042680354507374,
+        0.4024665851421276,
+        0.5693207898677577,
+        0.3358575220778086,
+        0.6000000000014016,
+        0.2391255399318026,
+        0.5839663454427986,
+        0.11737678958228681,
+        0.4065742848349793,
+        0.5753580542215639,
+        0.33728154300556656,
+        0.59999999999927,
+        0.24550131750944976,
+        0.5834219427778858,
+        0.9999999999987926,
+        0.5255672627500724,
+        0.8222500000009693,
+        0.8222500000009693,
+        0.8321325835496762,
+        0.9999999999987788,
+        1.0000000000023455,
+        0.5255672627510236,
+        0.8222500000119327,
+        0.8222500000119327,
+        0.8321325835511892,
+        1.0000000000023315
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "322b7a527918ad22a7629254a29fe774947194c900fe4342e8e032f4f5faeec1",
+      "hand_phase_range_deg": [
+        [
+          0.0,
+          -62.449999999999996
+        ],
+        [
+          77.79599999992759,
+          0.0
+        ]
+      ]
+    },
+    {
+      "case": "boundary_negative180_v4",
+      "run": "outputs/p0_complete_20261107/boundary_negative180_v4",
+      "evaluation": {
+        "passed": false,
+        "checks": {
+          "complete_finite_execution": false,
+          "motion_RMSE_le_2deg": true,
+          "hold_tail_peak_le_2deg": false,
+          "arm_margin_gt_2deg": true,
+          "joint_limits_respected": true,
+          "finite_actuator_limits": true,
+          "rim_penetration_lt_0p5mm": true,
+          "no_illegal_collision_gt_0p05N": false,
+          "no_nonrim_contact_gt_0p05N": true,
+          "support_hold_fractions_ge_0p95": false,
+          "wheel_applied_equals_declared_load": true,
+          "motor_plus_compensation_within_force_limits": true,
+          "contact_torque_accounting": true,
+          "sampled_paddle_clearance_ge_1mm": true,
+          "cycle_0_handover_overlap_ge_0p1s": true,
+          "cycle_0_handover_new_hand_alone_10s": true,
+          "cycle_0_handover_old_hand_clear": true,
+          "cycle_0_handover_new_six_parts_support_95pct": true,
+          "cycle_0_handover_angle_retreat_le_2deg": true,
+          "cycle_0_handover_reference_keeps_moving": true,
+          "cycle_1_handover_overlap_ge_0p1s": true,
+          "cycle_1_handover_new_hand_alone_10s": true,
+          "cycle_1_handover_old_hand_clear": true,
+          "cycle_1_handover_new_six_parts_support_95pct": true,
+          "cycle_1_handover_angle_retreat_le_2deg": true,
+          "cycle_1_handover_reference_keeps_moving": true,
+          "cycle_2_handover_overlap_ge_0p1s": false,
+          "cycle_2_handover_new_hand_alone_10s": false,
+          "cycle_2_handover_old_hand_clear": false,
+          "cycle_2_handover_new_six_parts_support_95pct": false,
+          "cycle_2_handover_angle_retreat_le_2deg": false,
+          "cycle_2_handover_reference_keeps_moving": true,
+          "cycle_3_handover_overlap_ge_0p1s": false,
+          "cycle_3_handover_new_hand_alone_10s": false,
+          "cycle_3_handover_old_hand_clear": false,
+          "cycle_3_handover_new_six_parts_support_95pct": false,
+          "cycle_3_handover_angle_retreat_le_2deg": false,
+          "cycle_3_handover_reference_keeps_moving": false,
+          "cycle_4_handover_overlap_ge_0p1s": false,
+          "cycle_4_handover_new_hand_alone_10s": false,
+          "cycle_4_handover_old_hand_clear": false,
+          "cycle_4_handover_new_six_parts_support_95pct": false,
+          "cycle_4_handover_angle_retreat_le_2deg": false,
+          "cycle_4_handover_reference_keeps_moving": false
+        },
+        "negative_control": false,
+        "motion_RMSE_deg": 0.323425818501992,
+        "hold_tail_peak_deg": {
+          "0": 0.01739625401672844,
+          "8:0": 0.3726649854847812,
+          "8:1": 0.03163359014672182,
+          "10:0": 0.3844601678720914,
+          "10:1": 0.14004267756562916,
+          "2:0": 0.4172536569513197,
+          "2:1": 0.3489768215294473,
+          "2:2": 0.06954627839615293
+        },
+        "hold_tail_support_fraction_left_right": {
+          "0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8:0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "8:1": [
+            [
+              1.0,
+              1.0,
+              0.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "10:0": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "10:1": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2:0": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2:1": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "2:2": [
+            [
+              1.0,
+              1.0,
+              0.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        "minimum_arm_margin_deg": 2.924785005267684,
+        "max_all_joint_limit_violation_deg": 0.0,
+        "max_rim_penetration_mm": 0.34846652446328197,
+        "max_nonrim_force_N": 0.0,
+        "max_illegal_force_N": 0.49720822210288507,
+        "max_mimic_error_deg": 0.07069838487947978,
+        "max_load_torque_Nm": 0.12207207718930811,
+        "max_wheel_angle_deg": 69.64947594473794,
+        "max_contact_minus_constraint_torque_Nm": 0.015000000010708545,
+        "minimum_paddle_clearance_mm_at_50Hz": 5.492877847106842,
+        "minimum_spoke_clearance_mm_at_50Hz": 3.94596466305919,
+        "wrist_bend_max_deg_left_right": [
+          24.764911069652552,
+          24.695371687163384
+        ],
+        "max_motor_plus_compensation_abs_Nm_by_drive": [
+          11.848647827538894,
+          2.503241475531582,
+          2.8811332344285834,
+          3.765078592215822,
+          0.5455991440576144,
+          1.8396710546448423,
+          1.5097755110851578,
+          11.781738618154336,
+          2.9287758547381637,
+          2.807590094216172,
+          3.7491114645896784,
+          0.5434904044532809,
+          1.9303062907502995,
+          1.4567539066273953,
+          0.07881028530980183,
+          0.10696322422709723,
+          0.04787908433232024,
+          0.17399047558557945,
+          0.26166241635345133,
+          0.34637292237418205,
+          0.10829213104905078,
+          0.10563144235852603,
+          0.05245340674803933,
+          0.18646385803719645,
+          0.2588737555425862,
+          0.3454092926589921
+        ],
+        "first_failure_s": {
+          "illegal_collision": 108.89199999992762
+        },
+        "duration_s": 108.89199999992762,
+        "handover": null,
+        "hold_support_scope": "entire hold for support fractions, final 1 s for peak angle error; not force closure proof",
+        "handover_cycles": [
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": true,
+              "handover_new_hand_alone_10s": true,
+              "handover_old_hand_clear": true,
+              "handover_new_six_parts_support_95pct": true,
+              "handover_angle_retreat_le_2deg": true,
+              "handover_reference_keeps_moving": true
+            },
+            "handover": {
+              "new_support": "left",
+              "moving": true,
+              "overlap_s": 3.158,
+              "new_mean_counterload_torque_Nm": 0.0032535729344871393,
+              "relative_angle_retreat_deg": 0.049984673948510416,
+              "receiving_grip_epoch_deg": -22.45,
+              "final_outbound_angle_deg": -4.5
+            }
+          },
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": true,
+              "handover_new_hand_alone_10s": true,
+              "handover_old_hand_clear": true,
+              "handover_new_six_parts_support_95pct": true,
+              "handover_angle_retreat_le_2deg": true,
+              "handover_reference_keeps_moving": true
+            },
+            "handover": {
+              "new_support": "right",
+              "moving": true,
+              "overlap_s": 3.254,
+              "new_mean_counterload_torque_Nm": 0.028126946877621167,
+              "relative_angle_retreat_deg": 0.10840533217268723,
+              "receiving_grip_epoch_deg": 7.449999999999999,
+              "final_outbound_angle_deg": -10.5
+            }
+          },
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": false,
+              "handover_new_hand_alone_10s": false,
+              "handover_old_hand_clear": false,
+              "handover_new_six_parts_support_95pct": false,
+              "handover_angle_retreat_le_2deg": false,
+              "handover_reference_keeps_moving": true
+            },
+            "handover": {
+              "new_support": "left",
+              "moving": true,
+              "overlap_s": 0.0,
+              "new_mean_counterload_torque_Nm": null,
+              "relative_angle_retreat_deg": null,
+              "receiving_grip_epoch_deg": -72.55,
+              "final_outbound_angle_deg": -90.5
+            }
+          },
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": false,
+              "handover_new_hand_alone_10s": false,
+              "handover_old_hand_clear": false,
+              "handover_new_six_parts_support_95pct": false,
+              "handover_angle_retreat_le_2deg": false,
+              "handover_reference_keeps_moving": false
+            },
+            "handover": {
+              "new_support": "right",
+              "moving": true,
+              "overlap_s": 0.0,
+              "new_mean_counterload_torque_Nm": null,
+              "relative_angle_retreat_deg": null,
+              "receiving_grip_epoch_deg": -93.04999999999998,
+              "final_outbound_angle_deg": -110.99999999999999
+            }
+          },
+          {
+            "checks": {
+              "handover_overlap_ge_0p1s": false,
+              "handover_new_hand_alone_10s": false,
+              "handover_old_hand_clear": false,
+              "handover_new_six_parts_support_95pct": false,
+              "handover_angle_retreat_le_2deg": false,
+              "handover_reference_keeps_moving": false
+            },
+            "handover": {
+              "new_support": "left",
+              "moving": true,
+              "overlap_s": 0.0,
+              "new_mean_counterload_torque_Nm": null,
+              "relative_angle_retreat_deg": null,
+              "receiving_grip_epoch_deg": -97.45,
+              "final_outbound_angle_deg": -79.5
+            }
+          }
+        ],
+        "reevaluation_note": "Physics stopped on first constraint failure. Evaluator fixed for unvisited empty future cycles; no threshold changes or physics rerun.",
+        "continuous_scope": {
+          "maximum_requested_deg": 180,
+          "no_physics_reset": true
+        },
+        "evaluation_source_sha256": "6653c2edd09cf59782a437b7ce6837124c93e2d0a6075b01a5123ab7c8fc2152"
+      },
+      "config": {
+        "output": "outputs/p0_complete_20261107/boundary_negative180_v4",
+        "grasp": "assets/scenes/p0_clear_grasp_v1.json",
+        "angle": -1.0,
+        "case": "continuous",
+        "maximum": 180.0,
+        "load_k": 0.1,
+        "load_b": 0.02,
+        "feedback_gain": 1.5,
+        "duration": null,
+        "stop_on_constraint": true,
+        "negative_control": false,
+        "video": false,
+        "camera": "driver",
+        "expected_duration_s": 229.50000000000003,
+        "method": "offline posture-aware IK, finite-motor contact-driven dominant steering",
+        "palm_regulation": {
+          "target_N": 1.5,
+          "gain_m_per_N_s": 0.003,
+          "inset_limit_m": 0.003,
+          "feedback_window_s": 0.05,
+          "scope": "simulation contact feedback; local scratch-Jacobian arm target adjustment"
+        },
+        "physics_dt_s": 0.002,
+        "control_dt_s": 0.05,
+        "collision_exclusions": [
+          [
+            "torso_link",
+            "left_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "torso_link",
+            "right_shoulder_pitch_link",
+            "direct shoulder joint assembly"
+          ],
+          [
+            "left_wrist_yaw_link",
+            "L_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ],
+          [
+            "right_wrist_yaw_link",
+            "R_thumb_proximal",
+            "two-axis thumb root assembly convex overlap"
+          ]
+        ],
+        "load_scope": "uncalibrated synthetic load, not measured G29 response",
+        "arm_compensation": "qfrc_bias on 14 arm DOFs, motor plus compensation checked",
+        "wheel_control": "passive, declared load only; no task-time qpos reset",
+        "action_order": [
+          "left_shoulder_pitch_joint",
+          "left_shoulder_roll_joint",
+          "left_shoulder_yaw_joint",
+          "left_elbow_joint",
+          "left_wrist_roll_joint",
+          "left_wrist_pitch_joint",
+          "left_wrist_yaw_joint",
+          "right_shoulder_pitch_joint",
+          "right_shoulder_roll_joint",
+          "right_shoulder_yaw_joint",
+          "right_elbow_joint",
+          "right_wrist_roll_joint",
+          "right_wrist_pitch_joint",
+          "right_wrist_yaw_joint",
+          "L_thumb_proximal_yaw_joint",
+          "L_thumb_proximal_pitch_joint",
+          "L_index_proximal_joint",
+          "L_middle_proximal_joint",
+          "L_ring_proximal_joint",
+          "L_pinky_proximal_joint",
+          "R_thumb_proximal_yaw_joint",
+          "R_thumb_proximal_pitch_joint",
+          "R_index_proximal_joint",
+          "R_middle_proximal_joint",
+          "R_ring_proximal_joint",
+          "R_pinky_proximal_joint"
+        ],
+        "action": "26 normalized target rates",
+        "rate_limit_rad_s": [
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          0.6,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed": 0,
+        "motor_target_interpolation": "linear at 500 Hz between successive 20 Hz rate-limited targets"
+      },
+      "max_actual_motor_target_rate_rad_s": [
+        0.12064014625129765,
+        0.4139389710424229,
+        0.5734000506282118,
+        0.33749941603551525,
+        0.59999999999927,
+        0.24430464826425533,
+        0.5836323650691714,
+        0.11915767088199762,
+        0.40731991119148175,
+        0.5733039792699197,
+        0.33678830743154214,
+        0.6000000000014016,
+        0.24153841279709545,
+        0.5823943763306548,
+        1.0000000000023455,
+        0.5255672627510236,
+        0.8222500000119327,
+        0.8222500000119327,
+        0.8321325835511892,
+        1.0000000000023315,
+        0.9999999999987926,
+        0.5255672627500724,
+        0.8222500000009693,
+        0.8222500000009693,
+        0.8321325835496762,
+        0.9999999999987788
+      ],
+      "interpolated_target_rate_passed": true,
+      "trajectory_sha256": "9e44dc6f5bdf62bb4b621e768ca08688489f2e0147c19e2292a1b45eddf66db8",
+      "hand_phase_range_deg": [
+        [
+          0.0,
+          -77.7919999999276
+        ],
+        [
+          62.449999999999996,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "single_support": [
+    {
+      "case": "D_left30",
+      "phase": 6,
+      "hand": "right",
+      "duration_s": 10.002,
+      "min_part_contact_fraction": 1.0,
+      "other_hand_peak_rim_force_N": 0.0,
+      "minimum_declared_load_abs_Nm": 0.05224295266708019,
+      "mean_counterload_torque_Nm": 0.058501045864004474,
+      "passed": true
+    },
+    {
+      "case": "D_left30",
+      "phase": 10,
+      "hand": "left",
+      "duration_s": 9.998,
+      "min_part_contact_fraction": 1.0,
+      "other_hand_peak_rim_force_N": 0.0,
+      "minimum_declared_load_abs_Nm": 0.05149151329759417,
+      "mean_counterload_torque_Nm": 0.05784723097368357,
+      "passed": true
+    },
+    {
+      "case": "D_right30",
+      "phase": 6,
+      "hand": "left",
+      "duration_s": 10.002,
+      "min_part_contact_fraction": 1.0,
+      "other_hand_peak_rim_force_N": 0.0,
+      "minimum_declared_load_abs_Nm": 0.05222520495914823,
+      "mean_counterload_torque_Nm": 0.056447560546399815,
+      "passed": true
+    },
+    {
+      "case": "D_right30",
+      "phase": 10,
+      "hand": "right",
+      "duration_s": 9.998,
+      "min_part_contact_fraction": 1.0,
+      "other_hand_peak_rim_force_N": 0.0,
+      "minimum_declared_load_abs_Nm": 0.051549991268201756,
+      "mean_counterload_torque_Nm": 0.05628308115562271,
+      "passed": true
+    }
+  ]
+}

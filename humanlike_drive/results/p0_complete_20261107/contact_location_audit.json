@@ -1,0 +1,103 @@
+[
+  {
+    "case": "nominal_v4/A_hold",
+    "phase": 0,
+    "hands": {
+      "left": {
+        "seconds": 10.0,
+        "mean_normal_force_by_geom_N": {
+          "left_wrist_yaw_link_geom_2": 1.6363347282669944,
+          "L_thumb_intermediate_geom_1": 1.0479189502425812,
+          "L_thumb_distal_geom_1": 0.006132545188688297,
+          "L_index_intermediate_geom_1": 0.41501541392002544,
+          "L_middle_intermediate_geom_1": 0.2662142055133759,
+          "L_ring_intermediate_geom_1": 0.6304725391881173,
+          "L_pinky_intermediate_geom_1": 1.192044186236578
+        },
+        "sum_mean_normal_N": 5.194132568556361
+      },
+      "right": {
+        "seconds": 10.0,
+        "mean_normal_force_by_geom_N": {
+          "right_wrist_yaw_link_geom_2": 1.2825483439860477,
+          "R_thumb_intermediate_geom_1": 1.2611785153472337,
+          "R_thumb_distal_geom_1": 0.43936668646391475,
+          "R_index_intermediate_geom_1": 0.496935649813903,
+          "R_middle_intermediate_geom_1": 0.35212616767143934,
+          "R_ring_intermediate_geom_1": 0.5351198357881098,
+          "R_pinky_intermediate_geom_1": 1.3204086544579845
+        },
+        "sum_mean_normal_N": 5.6876838535286325
+      }
+    }
+  },
+  {
+    "case": "nominal_v4/B_right90",
+    "phase": 2,
+    "hands": {
+      "left": {
+        "seconds": 3.0,
+        "mean_normal_force_by_geom_N": {
+          "left_wrist_yaw_link_geom_2": 1.5057710572118612,
+          "L_thumb_intermediate_geom_1": 1.179901210198937,
+          "L_thumb_distal_geom_1": 0.5846120143019167,
+          "L_index_intermediate_geom_1": 0.548421680048881,
+          "L_middle_intermediate_geom_1": 0.2195332288721238,
+          "L_ring_intermediate_geom_1": 0.5951996580271859,
+          "L_pinky_intermediate_geom_1": 1.1546706112219531
+        },
+        "sum_mean_normal_N": 5.788109459882858
+      }
+    }
+  },
+  {
+    "case": "nominal_v4/D_right30",
+    "phase": 10,
+    "hands": {
+      "right": {
+        "seconds": 9.998,
+        "mean_normal_force_by_geom_N": {
+          "right_wrist_yaw_link_geom_2": 1.5012563721658707,
+          "R_thumb_intermediate_geom_1": 0.8709648444154443,
+          "R_thumb_distal_geom_1": 0.8337119187072008,
+          "R_index_intermediate_geom_1": 0.5832508582424812,
+          "R_middle_intermediate_geom_1": 0.43441343882234273,
+          "R_ring_intermediate_geom_1": 0.30145855537451477,
+          "R_pinky_intermediate_geom_1": 1.9553744886391466
+        },
+        "sum_mean_normal_N": 6.480430476367002
+      }
+    }
+  },
+  {
+    "case": "continuous_negative70_v5",
+    "phase": 2,
+    "hands": {
+      "left": {
+        "seconds": 3.0,
+        "mean_normal_force_by_geom_N": {
+          "left_wrist_yaw_link_geom_2": 1.3524118327752004,
+          "L_thumb_intermediate_geom_1": 1.594598346943089,
+          "L_index_intermediate_geom_1": 0.48588240368046476,
+          "L_middle_intermediate_geom_1": 0.1883501852949469,
+          "L_ring_intermediate_geom_1": 0.19204972841843862,
+          "L_pinky_intermediate_geom_1": 1.992631765489591
+        },
+        "sum_mean_normal_N": 5.8059242626017316
+      },
+      "right": {
+        "seconds": 9.002,
+        "mean_normal_force_by_geom_N": {
+          "right_wrist_yaw_link_geom_2": 1.5007381227082188,
+          "R_thumb_intermediate_geom_1": 1.3089633548408215,
+          "R_thumb_distal_geom_1": 0.6972609236387699,
+          "R_index_intermediate_geom_1": 0.5514350401570848,
+          "R_middle_intermediate_geom_1": 0.3204806671967391,
+          "R_ring_intermediate_geom_1": 0.5981303976462449,
+          "R_pinky_intermediate_geom_1": 1.317256620398523
+        },
+        "sum_mean_normal_N": 6.294265126586403
+      }
+    }
+  }
+]

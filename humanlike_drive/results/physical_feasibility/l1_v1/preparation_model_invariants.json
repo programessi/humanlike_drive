@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "checks": {
+    "same_state_and_drive_dimensions": true,
+    "body_mass_unchanged": true,
+    "body_inertia_unchanged": true,
+    "body_ipos_unchanged": true,
+    "body_iquat_unchanged": true,
+    "jnt_range_unchanged": true,
+    "jnt_axis_unchanged": true,
+    "dof_frictionloss_unchanged": true,
+    "dof_armature_unchanged": true,
+    "dof_damping_unchanged": true,
+    "actuator_forcerange_unchanged": true,
+    "actuator_gainprm_unchanged": true,
+    "actuator_biasprm_unchanged": true,
+    "eq_data_unchanged": true,
+    "26_finite_robot_motors_passive_wheel": true,
+    "palm_assets_match_original_CAD_and_piece_hashes": true
+  },
+  "max_abs_changes": {
+    "body_mass": 0.0,
+    "body_inertia": 0.0,
+    "body_ipos": 0.0,
+    "body_iquat": 0.0,
+    "jnt_range": 0.0,
+    "jnt_axis": 0.0,
+    "dof_frictionloss": 0.0,
+    "dof_armature": 0.0,
+    "dof_damping": 0.0,
+    "actuator_forcerange": 0.0,
+    "actuator_gainprm": 0.0,
+    "actuator_biasprm": 0.0,
+    "eq_data": 0.0
+  },
+  "asset_mismatches": [],
+  "wheel_limits_deg": [
+    -450.000000001462,
+    450.000000001462
+  ],
+  "verifier_sha256": "d030d5871adf58d64ca11f771379daeb2d688fc21f1598e4621ccc6f31b879cd",
+  "verifier_source": "model_invariants_verifier.py",
+  "scope": "Compared with the preserved original scene. Intended changes are palm collision decomposition, collision masks/documented assembly exclusions and solver settings; they do not change inertia, kinematics, mimic or finite drive limits."
+}
